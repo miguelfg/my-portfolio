@@ -1,4 +1,4 @@
-.PHONY: nk-build nk-serve nk-clean nk-new-post nk-new-page nk-github nk-auto nk-check nk-deploy
+.PHONY: nk-build nk-serve nk-clean nk-new-post nk-new-page nk-github-deploy nk-auto nk-check nk-deploy
 
 nk-build:
 	cd portfolio && uv run nikola build
@@ -15,7 +15,7 @@ nk-new-post:
 nk-new-page:
 	cd portfolio && uv run nikola new_page
 
-nk-github:
+nk-github-deploy:
 	cd portfolio && uv run nikola github_deploy
 
 nk-auto:

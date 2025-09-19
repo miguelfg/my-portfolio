@@ -113,7 +113,476 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../es/posts/ollama-day-1-guide/" class="u-url">Ollama day-1 guide</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../es/posts/crewai-cli-quick-quide/" class="u-url">CrewAI CLI Quick Quide</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Miguel Fiandor
+                    </span></p>
+            <p class="dateline">
+            <a href="../es/posts/crewai-cli-quick-quide/" rel="bookmark">
+            <time class="published dt-published" datetime="2025-09-19T12:28:39+02:00" itemprop="datePublished" title="2025-09-19 12:28">2025-09-19 12:28</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>CrewAI CLI Quick Guide</h2>
+<h3>Overview</h3>
+<p>CrewAI is a lean, lightning-fast Python framework for orchestrating autonomous AI agents. It offers both high-level simplicity and precise low-level control, with two main approaches:</p>
+<ul>
+<li>
+<strong>CrewAI Crews</strong>: Autonomous AI agent teams with specialized roles working collaboratively</li>
+<li>
+<strong>CrewAI Flows</strong>: Structured, event-driven workflows with precise execution control</li>
+</ul>
+<h3>Installation</h3>
+<h4>Basic Installation</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Install CrewAI core</span>
+pip<span class="w"> </span>install<span class="w"> </span>crewai
+
+<span class="c1"># Install CrewAI with additional tools</span>
+pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'crewai[tools]'</span>
+</pre></div>
+
+<h4>Prerequisites</h4>
+<ul>
+<li>Python ≥3.10 &lt;3.14</li>
+<li>Environment variables for LLM providers (OpenAI, Anthropic, etc.)</li>
+</ul>
+<h4>Common Dependencies Issues</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Fix tiktoken issues</span>
+pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'crewai[embeddings]'</span>
+</pre></div>
+
+<h3>CLI Commands</h3>
+<h4>Project Creation</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Create a new CrewAI project</span>
+crewai<span class="w"> </span>create<span class="w"> </span>crew<span class="w"> </span>&lt;project_name&gt;
+
+<span class="c1"># Example</span>
+crewai<span class="w"> </span>create<span class="w"> </span>crew<span class="w"> </span>my-ai-team
+</pre></div>
+
+<h4>Project Structure Created</h4>
+<div class="code"><pre class="code literal-block"><span class="n">my_project</span><span class="o">/</span>
+<span class="err">├──</span><span class="w"> </span><span class="o">.</span><span class="n">gitignore</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">pyproject</span><span class="o">.</span><span class="n">toml</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">README</span><span class="o">.</span><span class="n">md</span>
+<span class="err">├──</span><span class="w"> </span><span class="o">.</span><span class="n">env</span>
+<span class="err">└──</span><span class="w"> </span><span class="n">src</span><span class="o">/</span>
+<span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">my_project</span><span class="o">/</span>
+<span class="w">        </span><span class="err">├──</span><span class="w"> </span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="w">        </span><span class="err">├──</span><span class="w"> </span><span class="n">main</span><span class="o">.</span><span class="n">py</span>
+<span class="w">        </span><span class="err">├──</span><span class="w"> </span><span class="n">crew</span><span class="o">.</span><span class="n">py</span>
+<span class="w">        </span><span class="err">├──</span><span class="w"> </span><span class="n">tools</span><span class="o">/</span>
+<span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">custom_tool</span><span class="o">.</span><span class="n">py</span>
+<span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="w">        </span><span class="err">└──</span><span class="w"> </span><span class="n">config</span><span class="o">/</span>
+<span class="w">            </span><span class="err">├──</span><span class="w"> </span><span class="n">agents</span><span class="o">.</span><span class="n">yaml</span>
+<span class="w">            </span><span class="err">└──</span><span class="w"> </span><span class="n">tasks</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+
+<h4>Project Management</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Install dependencies (optional)</span>
+crewai<span class="w"> </span>install
+
+<span class="c1"># Run the crew</span>
+crewai<span class="w"> </span>run
+
+<span class="c1"># Update CrewAI version</span>
+crewai<span class="w"> </span>update
+</pre></div>
+
+<h4>Alternative Execution</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Direct Python execution</span>
+python<span class="w"> </span>src/my_project/main.py
+</pre></div>
+
+<h3>Configuration Files</h3>
+<h4>agents.yaml</h4>
+<div class="code"><pre class="code literal-block"><span class="nt">researcher</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">{topic} Senior Data Researcher</span>
+<span class="w">  </span><span class="nt">goal</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">Uncover cutting-edge developments in {topic}</span>
+<span class="w">  </span><span class="nt">backstory</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">You're a seasoned researcher with a knack for uncovering the latest</span>
+<span class="w">    </span><span class="no">developments in {topic}. Known for your ability to find the most</span>
+<span class="w">    </span><span class="no">relevant information and present it clearly.</span>
+
+<span class="nt">reporting_analyst</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">{topic} Reporting Analyst</span>
+<span class="w">  </span><span class="nt">goal</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">Create detailed reports based on {topic} data analysis and research findings</span>
+<span class="w">  </span><span class="nt">backstory</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">You're a meticulous analyst with a keen eye for detail. You turn complex</span>
+<span class="w">    </span><span class="no">data into clear and actionable reports.</span>
+</pre></div>
+
+<h4>tasks.yaml</h4>
+<div class="code"><pre class="code literal-block"><span class="nt">research_task</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">Conduct thorough research about {topic}. Make sure you find any interesting</span>
+<span class="w">    </span><span class="no">and relevant information given the current year is 2025.</span>
+<span class="w">  </span><span class="nt">expected_output</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">A list with 10 bullet points of the most relevant information about {topic}</span>
+<span class="w">  </span><span class="nt">agent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">researcher</span>
+
+<span class="nt">reporting_task</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">Review the context you got and expand each topic into a full section for a</span>
+<span class="w">    </span><span class="no">report. Make sure the report is detailed and contains all relevant information.</span>
+<span class="w">  </span><span class="nt">expected_output</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;</span>
+<span class="w">    </span><span class="no">A fully fledged report with main topics, each with a full section of</span>
+<span class="w">    </span><span class="no">information. Formatted as markdown without '```'</span>
+<span class="w">  </span><span class="nt">agent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reporting_analyst</span>
+<span class="w">  </span><span class="nt">output_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">report.md</span>
+</pre></div>
+
+<h3>Core Components</h3>
+<h4>Agents</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Agent</span>
+
+<span class="c1"># Define agent with specific role and capabilities</span>
+<span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+    <span class="n">role</span><span class="o">=</span><span class="s2">"Senior Data Researcher"</span><span class="p">,</span>
+    <span class="n">goal</span><span class="o">=</span><span class="s2">"Uncover cutting-edge developments in AI"</span><span class="p">,</span>
+    <span class="n">backstory</span><span class="o">=</span><span class="s2">"Expert researcher with deep domain knowledge"</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">SerperDevTool</span><span class="p">()],</span>  <span class="c1"># Add tools as needed</span>
+    <span class="n">llm</span><span class="o">=</span><span class="n">llm_instance</span>  <span class="c1"># Optional: specify LLM</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Tasks</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Task</span>
+
+<span class="c1"># Define task with clear objectives</span>
+<span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">"Research the latest trends in AI"</span><span class="p">,</span>
+    <span class="n">expected_output</span><span class="o">=</span><span class="s2">"Comprehensive report with key findings"</span><span class="p">,</span>
+    <span class="n">agent</span><span class="o">=</span><span class="n">researcher</span><span class="p">,</span>
+    <span class="n">output_file</span><span class="o">=</span><span class="s2">"research_report.md"</span>  <span class="c1"># Optional: save output</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Crews (Autonomous Teams)</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Crew</span><span class="p">,</span> <span class="n">Process</span>
+
+<span class="c1"># Create crew with agents and tasks</span>
+<span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">researcher</span><span class="p">,</span> <span class="n">analyst</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">research_task</span><span class="p">,</span> <span class="n">analysis_task</span><span class="p">],</span>
+    <span class="n">process</span><span class="o">=</span><span class="n">Process</span><span class="o">.</span><span class="n">sequential</span><span class="p">,</span>  <span class="c1"># or Process.hierarchical</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># Execute crew</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="s1">'AI Agents'</span><span class="p">})</span>
+</pre></div>
+
+<h4>Flows (Structured Workflows)</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai.flow.flow</span><span class="w"> </span><span class="kn">import</span> <span class="n">Flow</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">listen</span><span class="p">,</span> <span class="n">router</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">AnalysisFlow</span><span class="p">(</span><span class="n">Flow</span><span class="p">):</span>
+    <span class="nd">@start</span><span class="p">()</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fetch_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"data"</span><span class="p">:</span> <span class="s2">"initial_data"</span><span class="p">}</span>
+
+    <span class="nd">@listen</span><span class="p">(</span><span class="n">fetch_data</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">analyze_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="c1"># Process data with crew or custom logic</span>
+        <span class="k">return</span> <span class="n">analysis_results</span>
+
+    <span class="nd">@router</span><span class="p">(</span><span class="n">analyze_data</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">route_next_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Conditional routing based on results</span>
+        <span class="k">if</span> <span class="n">confidence</span> <span class="o">&gt;</span> <span class="mf">0.8</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">"high_confidence"</span>
+        <span class="k">return</span> <span class="s2">"needs_review"</span>
+</pre></div>
+
+<h3>Process Types</h3>
+<h4>Sequential Process</h4>
+<ul>
+<li>Tasks executed in order</li>
+<li>Each task waits for previous completion</li>
+<li>Default process type</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent1</span><span class="p">,</span> <span class="n">agent2</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task1</span><span class="p">,</span> <span class="n">task2</span><span class="p">],</span>
+    <span class="n">process</span><span class="o">=</span><span class="n">Process</span><span class="o">.</span><span class="n">sequential</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Hierarchical Process</h4>
+<ul>
+<li>Manager agent oversees workflow</li>
+<li>Automatic task delegation</li>
+<li>Validation of results</li>
+</ul>
+<div class="code"><pre class="code literal-block"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent1</span><span class="p">,</span> <span class="n">agent2</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task1</span><span class="p">,</span> <span class="n">task2</span><span class="p">],</span>
+    <span class="n">process</span><span class="o">=</span><span class="n">Process</span><span class="o">.</span><span class="n">hierarchical</span>
+<span class="p">)</span>
+</pre></div>
+
+<h3>Common Tools</h3>
+<h4>Search and Research</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai_tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">SerperDevTool</span><span class="p">,</span> <span class="n">WebsiteSearchTool</span>
+
+<span class="c1"># Web search</span>
+<span class="n">search_tool</span> <span class="o">=</span> <span class="n">SerperDevTool</span><span class="p">()</span>
+
+<span class="c1"># Website content search</span>
+<span class="n">website_tool</span> <span class="o">=</span> <span class="n">WebsiteSearchTool</span><span class="p">()</span>
+</pre></div>
+
+<h4>File Operations</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai_tools</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">FileReadTool</span><span class="p">,</span>
+    <span class="n">DirectoryReadTool</span><span class="p">,</span>
+    <span class="n">PDFSearchTool</span><span class="p">,</span>
+    <span class="n">CSVSearchTool</span>
+<span class="p">)</span>
+
+<span class="c1"># File operations</span>
+<span class="n">file_tool</span> <span class="o">=</span> <span class="n">FileReadTool</span><span class="p">()</span>
+<span class="n">pdf_tool</span> <span class="o">=</span> <span class="n">PDFSearchTool</span><span class="p">()</span>
+<span class="n">csv_tool</span> <span class="o">=</span> <span class="n">CSVSearchTool</span><span class="p">()</span>
+</pre></div>
+
+<h4>Code and Development</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai_tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">CodeDocsSearchTool</span><span class="p">,</span> <span class="n">GithubSearchTool</span>
+
+<span class="c1"># Code documentation search</span>
+<span class="n">code_docs</span> <span class="o">=</span> <span class="n">CodeDocsSearchTool</span><span class="p">()</span>
+
+<span class="c1"># GitHub repository search</span>
+<span class="n">github_tool</span> <span class="o">=</span> <span class="n">GithubSearchTool</span><span class="p">()</span>
+</pre></div>
+
+<h3>Environment Setup</h3>
+<h4>Required Environment Variables</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># .env file</span>
+<span class="nv">OPENAI_API_KEY</span><span class="o">=</span>sk-...
+<span class="nv">SERPER_API_KEY</span><span class="o">=</span>your_serper_key
+<span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span>your_anthropic_key<span class="w">  </span><span class="c1"># If using Claude</span>
+</pre></div>
+
+<h4>LLM Configuration</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_anthropic</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatAnthropic</span>
+
+<span class="c1"># OpenAI</span>
+<span class="n">openai_llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4"</span><span class="p">)</span>
+
+<span class="c1"># Anthropic</span>
+<span class="n">anthropic_llm</span> <span class="o">=</span> <span class="n">ChatAnthropic</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"claude-3-sonnet-20240229"</span><span class="p">)</span>
+
+<span class="c1"># Local models with Ollama</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_ollama</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOllama</span>
+<span class="n">local_llm</span> <span class="o">=</span> <span class="n">ChatOllama</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">"llama3"</span><span class="p">)</span>
+</pre></div>
+
+<h3>Execution Patterns</h3>
+<h4>Basic Execution</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Simple crew execution</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+<h4>Parameterized Execution</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Pass input parameters</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'topic'</span><span class="p">:</span> <span class="s1">'Machine Learning'</span><span class="p">,</span>
+    <span class="s1">'industry'</span><span class="p">:</span> <span class="s1">'Healthcare'</span><span class="p">,</span>
+    <span class="s1">'timeframe'</span><span class="p">:</span> <span class="s1">'2024'</span>
+<span class="p">}</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">)</span>
+</pre></div>
+
+<h4>Async Execution</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">run_crew</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff_async</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="c1"># Run async</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">run_crew</span><span class="p">())</span>
+</pre></div>
+
+<h4>Bulk Execution</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Run crew multiple times with different inputs</span>
+<span class="n">inputs_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="s1">'AI'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="s1">'ML'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="s1">'NLP'</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff_for_each</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs_list</span><span class="p">)</span>
+</pre></div>
+
+<h3>Advanced Features</h3>
+<h4>Custom Tools</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai.tools</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseTool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyCustomTool</span><span class="p">(</span><span class="n">BaseTool</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"My Custom Tool"</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Description of what the tool does"</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="c1"># Tool implementation</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Processed: </span><span class="si">{</span><span class="n">query</span><span class="si">}</span><span class="s2">"</span>
+</pre></div>
+
+<h4>Human-in-the-Loop</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Task</span>
+
+<span class="n">task_with_human_input</span> <span class="o">=</span> <span class="n">Task</span><span class="p">(</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">"Analyze data and get human approval"</span><span class="p">,</span>
+    <span class="n">expected_output</span><span class="o">=</span><span class="s2">"Analysis with human validation"</span><span class="p">,</span>
+    <span class="n">agent</span><span class="o">=</span><span class="n">analyst</span><span class="p">,</span>
+    <span class="n">human_input</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Memory and Context</h4>
+<div class="code"><pre class="code literal-block"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task</span><span class="p">],</span>
+    <span class="n">memory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Enable memory</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Training and Fine-tuning</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Train crew based on execution results</span>
+<span class="n">crew</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+    <span class="n">n_iterations</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">"training_data.pkl"</span>
+<span class="p">)</span>
+</pre></div>
+
+<h3>Monitoring and Observability</h3>
+<h4>Built-in Logging</h4>
+<div class="code"><pre class="code literal-block"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task</span><span class="p">],</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Enable detailed logging</span>
+    <span class="n">share_crew</span><span class="o">=</span><span class="kc">False</span>  <span class="c1"># Control telemetry</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Enterprise Observability</h4>
+<ul>
+<li>Real-time monitoring dashboard</li>
+<li>Performance metrics tracking</li>
+<li>Execution tracing</li>
+<li>Error handling and recovery</li>
+</ul>
+<h3>Best Practices</h3>
+<h4>Development</h4>
+<ul>
+<li>Start with simple sequential processes</li>
+<li>Test agents individually before integration</li>
+<li>Use clear, specific task descriptions</li>
+<li>Implement proper error handling</li>
+</ul>
+<h4>Production</h4>
+<ul>
+<li>Use environment variables for API keys</li>
+<li>Implement monitoring and logging</li>
+<li>Design for scalability</li>
+<li>Include human oversight for critical decisions</li>
+</ul>
+<h4>Performance</h4>
+<ul>
+<li>Optimize LLM calls to reduce costs</li>
+<li>Use appropriate process types</li>
+<li>Cache results when possible</li>
+<li>Monitor token usage</li>
+</ul>
+<h3>Troubleshooting</h3>
+<h4>Common Issues</h4>
+<div class="code"><pre class="code literal-block"><span class="c1"># Module not found errors</span>
+pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'crewai[tools]'</span>
+
+<span class="c1"># Dependency conflicts</span>
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>crewai
+
+<span class="c1"># Memory issues with large crews</span>
+<span class="c1"># Reduce agent count or use hierarchical process</span>
+</pre></div>
+
+<h4>Debug Mode</h4>
+<div class="code"><pre class="code literal-block"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent</span><span class="p">],</span>
+    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task</span><span class="p">],</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Enable debug output</span>
+<span class="p">)</span>
+</pre></div>
+
+<h4>Error Handling</h4>
+<div class="code"><pre class="code literal-block"><span class="k">try</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Crew execution failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="c1"># Implement recovery logic</span>
+</pre></div>
+
+<h3>Integration Examples</h3>
+<h4>With Streamlit</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">import</span><span class="w"> </span><span class="nn">streamlit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Crew</span><span class="p">,</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Task</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"CrewAI Interface"</span><span class="p">)</span>
+<span class="n">topic</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">text_input</span><span class="p">(</span><span class="s2">"Enter research topic:"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">st</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="s2">"Run Analysis"</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="n">topic</span><span class="p">})</span>
+    <span class="n">st</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+
+<h4>With FastAPI</h4>
+<div class="code"><pre class="code literal-block"><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">crewai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Crew</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"/analyze"</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">analyze</span><span class="p">(</span><span class="n">topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff_async</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">{</span><span class="s1">'topic'</span><span class="p">:</span> <span class="n">topic</span><span class="p">})</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">"result"</span><span class="p">:</span> <span class="n">result</span><span class="p">}</span>
+</pre></div>
+
+<h3>Resources</h3>
+<h4>Official Documentation</h4>
+<ul>
+<li><a href="https://docs.crewai.com">docs.crewai.com</a></li>
+<li><a href="https://docs.crewai.com/api-reference">API Reference</a></li>
+<li><a href="https://github.com/crewAIInc/crewAI-examples">Examples Repository</a></li>
+</ul>
+<h4>Community</h4>
+<ul>
+<li><a href="https://community.crewai.com">CrewAI Forum</a></li>
+<li><a href="https://github.com/crewAIInc/crewAI">GitHub Repository</a></li>
+<li><a href="https://learn.crewai.com">Learning Resources</a></li>
+</ul>
+<h4>Learning Paths</h4>
+<ul>
+<li>
+<strong>Beginners</strong>: Sequential processes → Custom agents → Basic tools</li>
+<li>
+<strong>Intermediate</strong>: Hierarchical processes → Conditional tasks → Async execution</li>
+<li>
+<strong>Advanced</strong>: Custom tools → Multi-agent orchestration → Enterprise deployment</li>
+</ul>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="../es/posts/ollama-day-1-guide/" class="u-url">Ollama day-1 guide</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Miguel Fiandor
