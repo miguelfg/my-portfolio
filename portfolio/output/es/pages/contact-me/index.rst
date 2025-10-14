@@ -10,6 +10,9 @@
 
 If you would like to get in touch with me for data analysis and engineering projects, please use any of the following contact methods:
 
+.. raw:: html
+    <p> holas probando raw html </p>
+
 * **Phone:** +34 666 91 62 99
 * **Email:** miguel.fiandor.gutierrez@gmail.com
 * **GitHub:** `https://github.com/miguelfg <https://github.com/miguelfg>`_
