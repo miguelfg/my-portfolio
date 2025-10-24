@@ -180,3 +180,6 @@ cache
 .doit.db*
 output
 nikolaserve.pid
+
+
+.mcp.json
