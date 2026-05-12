@@ -141,24 +141,20 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        # ("/archive.html", "Archive"),
-        # ("/", "Home"),
         ("/", "Blog"),
+        ("/pages/ai-news", "AI News"),
         ("/pages/services", "Services"),
         ("/pages/portfolio", "Portfolio"),
         ("/pages/contact-me", "Contact"),
         ("/pages/about-me", "About"),
-        # ("/categories/", "Tags"),
-        # ("/rss.xml", "RSS feed"),
     ),
 
     "es": (
-        # ("/es/", "Home"),
+        ("/es/pages/ai-news", "Noticias IA"),
         ("/es/pages/services", "Servicios"),
         ("/es/pages/portfolio", "Portfolio"),
         ("/es/pages/contact-me", "Contactar"),
         ("/es/pages/about-me", "Sobre Mí"),
-        # ("/es/categories", "Categorías"),
     ),
 }
 
