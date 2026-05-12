@@ -1282,6 +1282,9 @@ SHOW_SOURCELINK = False
 # EXTRA_HEAD_DATA = ""
 
 EXTRA_HEAD_DATA = """
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <style>
     /* ===== DESIGN TOKENS ===== */
     :root {
@@ -1307,29 +1310,35 @@ EXTRA_HEAD_DATA = """
 
         /* On-accent text */
         --c-on-accent:   oklch(97.5% 0.008 75);
+
+        /* Typography */
+        --font-sans:    'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-display: 'Barlow Semi Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     }
 
     /* ===== TYPOGRAPHY FOUNDATION ===== */
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                     "Helvetica Neue", Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.7;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        line-height: 1.75;
         color: var(--c-text);
         background-color: var(--c-bg);
+        font-kerning: normal;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-        line-height: 1.3;
+        font-family: var(--font-display);
+        font-weight: 700;
+        line-height: 1.15;
         color: var(--c-text);
         margin-top: 1.5em;
         margin-bottom: 0.75em;
     }
 
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
+    h1 { font-size: clamp(2.25rem, 5vw, 3.25rem);  letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.625rem, 3.5vw, 2.375rem); letter-spacing: -0.015em; }
+    h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); letter-spacing: -0.01em; }
     h4 { font-size: 1.25rem; }
     h5 { font-size: 1.125rem; }
     h6 { font-size: 1rem; }
@@ -1371,7 +1380,7 @@ EXTRA_HEAD_DATA = """
 
     /* ===== CODE BLOCKS ===== */
     code {
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-family: var(--font-mono);
         font-size: 0.9em;
         padding: 0.2em 0.4em;
         background-color: var(--c-surface);
@@ -1380,7 +1389,7 @@ EXTRA_HEAD_DATA = """
     }
 
     pre {
-        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-family: var(--font-mono);
         font-size: 14px;
         line-height: 1.5;
         background-color: var(--c-surface);
@@ -1429,8 +1438,14 @@ EXTRA_HEAD_DATA = """
 
     th {
         background-color: var(--c-surface);
+        font-family: var(--font-display);
         font-weight: 600;
         color: var(--c-text);
+        font-variant-numeric: tabular-nums;
+    }
+
+    td {
+        font-variant-numeric: tabular-nums;
     }
 
     tr:nth-child(even) {
@@ -1473,9 +1488,11 @@ EXTRA_HEAD_DATA = """
 
     /* ===== POST METADATA ===== */
     .metadata {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         color: var(--c-text-muted);
         margin: 1rem 0;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.01em;
     }
 
     .metadata a {
@@ -1515,10 +1532,12 @@ EXTRA_HEAD_DATA = """
     /* ===== POST TITLES ===== */
     .post-title,
     h1.p-name {
-        font-size: 2.5rem;
+        font-family: var(--font-display);
+        font-size: clamp(2.25rem, 5vw, 3.25rem);
         font-weight: 700;
         color: var(--c-text);
-        line-height: 1.2;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
         margin-bottom: 1rem;
     }
 
@@ -1531,9 +1550,12 @@ EXTRA_HEAD_DATA = """
 
     .blog-header-logo,
     a.blog-header-logo {
+        font-family: var(--font-display) !important;
         color: var(--c-on-accent) !important;
         white-space: nowrap;
         font-weight: 700;
+        letter-spacing: -0.02em;
+        font-size: 1.5rem;
     }
 
     .blog-header-logo:hover,
@@ -1554,8 +1576,10 @@ EXTRA_HEAD_DATA = """
 
     .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link {
+        font-family: var(--font-display);
         color: oklch(91% 0.010 70) !important;
-        font-weight: 500;
+        font-weight: 600;
+        letter-spacing: 0.01em;
         padding: 0.75rem 1rem;
         transition: color 0.15s ease-out;
     }
@@ -1647,15 +1671,6 @@ EXTRA_HEAD_DATA = """
     @media (max-width: 991px) {
         .col-md-6.col-xs-10.col-sm-10.bootblog4-brand {
             width: 80% !important;
-        }
-
-        h1 { font-size: 2rem; }
-        h2 { font-size: 1.75rem; }
-        h3 { font-size: 1.5rem; }
-
-        .post-title,
-        h1.p-name {
-            font-size: 2rem;
         }
     }
 
