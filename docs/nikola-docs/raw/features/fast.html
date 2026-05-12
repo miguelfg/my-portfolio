@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/features/fast.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Fast">
+<meta property="og:url" content="https://getnikola.com/features/fast.html">
+<meta property="og:description" content="Thanks to doit, Nikola builds are incremental, which makes them extremely fast.
+Nikola rebuilds only the files that need rebuilding — in other words, all the assets (JS, CSS) and older posts are left ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-07-10T15:38:40Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="127c7b797d7e73527e7b707760733c717a7366">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../blog/index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="fast.rst" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Fast</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p class="lead">Thanks to <a class="reference external" href="http://pydoit.org">doit</a>, Nikola builds are incremental, which makes them extremely fast.</p>
+<p>Nikola rebuilds only the files that <em>need</em> rebuilding — in other words, all the assets (JS, CSS) and older posts are left in place. Incremental rebuilds save CPU time, wall clock time and upload bandwidth (rsync will only upload some of the files).</p>
+<nav class="contents" id="contents" role="doc-toc"><p class="topic-title"><a class="reference internal" href="fast.html#top">Contents</a></p>
+<ul class="simple">
+<li>
+<p><a class="reference internal" href="fast.html#speed-test-average-build-times-in-seconds" id="toc-entry-1">Speed test: Average build times (in seconds)</a></p>
+<ul>
+<li><p><a class="reference internal" href="fast.html#full-results-and-methodology" id="toc-entry-2">Full results and methodology</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="fast.html#real-life-example" id="toc-entry-3">Real life example</a></p></li>
+</ul></nav><section id="speed-test-average-build-times-in-seconds"><h2><a class="toc-backref" href="fast.html#toc-entry-1" role="doc-backlink">Speed test: Average build times (in seconds)</a><a href="#speed-test-average-build-times-in-seconds" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://chriswarrick.com/blog/2015/07/23/ssg-speed-test/">Speed test</a> performed by Chris Warrick on 2015-07-23:</p>
+<table class="table table-bordered table-hover">
+<thead><tr>
+<th>#</th>
+<th>Generator</th>
+<th>Average of 11 runs (with fresh build)</th>
+<th>Average of 10 runs (rebuilds only)</th>
+</tr></thead>
+<tbody>
+<tr>
+<th scope="row">1</th>
+<td>Nikola</td>
+<td>2.38290</td>
+<td>2.06057</td>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td>Pelican</td>
+<td>2.61924</td>
+<td>2.62352</td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td>Hexo</td>
+<td>6.27361</td>
+<td>6.21267</td>
+</tr>
+<tr>
+<th scope="row">4</th>
+<td>Octopress</td>
+<td>9.57618</td>
+<td>9.47550</td>
+</tr>
+</tbody>
+</table>
+<section id="full-results-and-methodology"><h3><a class="toc-backref" href="fast.html#toc-entry-2" role="doc-backlink">Full results and methodology</a><a href="#full-results-and-methodology" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Full results are available in <a class="reference external" href="https://chriswarrick.com/pub/ssg-test-results.ods">ods format</a>. The methodology was described in the post about the results on <a class="reference external" href="https://chriswarrick.com/blog/2015/07/23/ssg-speed-test/">Chris Warrick’s blog</a>.</p>
+</section></section><section id="real-life-example"><h2><a class="toc-backref" href="fast.html#toc-entry-3" role="doc-backlink">Real life example</a><a href="#real-life-example" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>When Nikola is run, it lists all the tasks that are run, with all the file names.</p>
+<p>Let’s create an empty site:</p>
+<p><a class="reference external" href="../listings/build-logs/empty-site/0-fresh.txt.html">build-logs/empty-site/0-fresh.txt</a>  <a class="reference external" href="../listings/build-logs/empty-site/0-fresh.txt">(Source)</a></p>
+<div class="code"><pre class="code console"><a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-1" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-1" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>init<span class="w"> </span>-q<span class="w"> </span>empty-site
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-2" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-2" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-2"></a><span class="go">INFO: init: Created empty site at empty-site.</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-3" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-3" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-3"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-4" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-4" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-4"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-5" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-5" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-5"></a><span class="go">.  render_galleries:output/galleries</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-6" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-6" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-6"></a><span class="go">.  render_galleries:output/galleries/index.html</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-7" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-7" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-7"></a><span class="go">.  render_galleries:output/galleries/rss.xml</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-8" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-8" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-8"></a><span class="go">.  render_indexes:output/index.html</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-9" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-9" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-9"></a><span class="go">.  render_archive:output/archive.html</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-10" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-10" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-10"></a><span class="go">.  copy_assets:output/assets/css/bootstrap.min.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-11" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-11" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-11"></a><span class="go">.  copy_assets:output/assets/css/bootstrap-theme.min.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-12" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-12" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-12"></a><span class="go">.  copy_assets:output/assets/css/theme.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-13" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-13" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-13"></a><span class="go">.  copy_assets:output/assets/css/bootstrap.css.map</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-14" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-14" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-14"></a><span class="go">.  copy_assets:output/assets/css/bootstrap-theme.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-15" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-15" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-15"></a><span class="go">.  copy_assets:output/assets/css/docs.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-16" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-16" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-16"></a><span class="go">.  copy_assets:output/assets/css/bootstrap.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-17" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-17" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-17"></a><span class="go">.  copy_assets:output/assets/css/bootstrap-theme.css.map</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-18" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-18" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-18"></a><span class="go">.  copy_assets:output/assets/css/colorbox.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-19" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-19" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-19"></a><span class="go">.  copy_assets:output/assets/css/images/controls.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-20" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-20" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-20"></a><span class="go">.  copy_assets:output/assets/css/images/loading.gif</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-21" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-21" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-21"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderTopLeft.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-22" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-22" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-22"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderBottomRight.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-23" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-23" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-23"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderTopCenter.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-24" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-24" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-24"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderBottomCenter.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-25" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-25" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-25"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderBottomLeft.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-26" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-26" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-26"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderMiddleLeft.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-27" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-27" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-27"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderTopRight.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-28" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-28" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-28"></a><span class="go">.  copy_assets:output/assets/css/images/ie6/borderMiddleRight.png</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-29" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-29" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-29"></a><span class="go">.  copy_assets:output/assets/js/jquery.colorbox.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-30" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-30" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-30"></a><span class="go">.  copy_assets:output/assets/js/jquery.min.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-31" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-31" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-31"></a><span class="go">.  copy_assets:output/assets/js/bootstrap.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-32" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-32" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-32"></a><span class="go">.  copy_assets:output/assets/js/bootstrap.min.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-33" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-33" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-33"></a><span class="go">.  copy_assets:output/assets/js/flowr.plugin.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-34" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-34" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-34"></a><span class="go">.  copy_assets:output/assets/js/jquery.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-35" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-35" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-35"></a><span class="go">.  copy_assets:output/assets/js/jquery.min.map</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-36" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-36" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-36"></a><span class="go">.  copy_assets:output/assets/js/jquery.colorbox-min.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-37" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-37" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-37"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-ca.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-38" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-38" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-38"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-tr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-39" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-39" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-39"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-no.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-40" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-40" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-40"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-he.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-41" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-41" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-41"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-nl.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-42" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-42" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-42"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-de.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-43" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-43" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-43"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-hr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-44" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-44" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-44"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-ja.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-45" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-45" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-45"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-gr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-46" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-46" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-46"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-ro.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-47" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-47" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-47"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-hu.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-48" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-48" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-48"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-fi.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-49" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-49" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-49"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-ru.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-50" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-50" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-50"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-gl.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-51" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-51" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-51"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-fr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-52" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-52" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-52"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-pt-BR.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-53" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-53" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-53"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-sk.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-54" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-54" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-54"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-ar.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-55" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-55" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-55"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-bn.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-56" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-56" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-56"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-kr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-57" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-57" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-57"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-lt.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-58" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-58" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-58"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-es.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-59" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-59" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-59"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-it.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-60" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-60" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-60"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-da.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-61" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-61" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-61"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-62" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-62" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-62"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-fa.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-63" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-63" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-63"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-sv.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-64" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-64" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-64"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-zh-TW.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-65" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-65" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-65"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-cs.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-66" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-66" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-66"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-my.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-67" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-67" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-67"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-uk.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-68" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-68" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-68"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-id.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-69" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-69" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-69"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-sr.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-70" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-70" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-70"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-et.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-71" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-71" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-71"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-lv.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-72" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-72" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-72"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-si.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-73" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-73" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-73"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-bg.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-74" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-74" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-74"></a><span class="go">.  copy_assets:output/assets/js/colorbox-i18n/jquery.colorbox-pl.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-75" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-75" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-75"></a><span class="go">.  copy_assets:output/assets/fonts/glyphicons-halflings-regular.svg</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-76" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-76" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-76"></a><span class="go">.  copy_assets:output/assets/fonts/glyphicons-halflings-regular.woff</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-77" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-77" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-77"></a><span class="go">.  copy_assets:output/assets/fonts/glyphicons-halflings-regular.ttf</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-78" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-78" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-78"></a><span class="go">.  copy_assets:output/assets/fonts/glyphicons-halflings-regular.woff2</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-79" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-79" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-79"></a><span class="go">.  copy_assets:output/assets/fonts/glyphicons-halflings-regular.eot</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-80" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-80" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-80"></a><span class="go">.  copy_assets:output/assets/css/ipython.min.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-81" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-81" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-81"></a><span class="go">.  copy_assets:output/assets/css/ipython.min.css.map</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-82" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-82" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-82"></a><span class="go">.  copy_assets:output/assets/css/nikola_ipython.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-83" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-83" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-83"></a><span class="go">.  copy_assets:output/assets/css/rst.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-84" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-84" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-84"></a><span class="go">.  copy_assets:output/assets/xml/atom.xsl</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-85" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-85" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-85"></a><span class="go">.  copy_assets:output/assets/xml/rss.xsl</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-86" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-86" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-86"></a><span class="go">.  copy_assets:output/assets/js/mathjax.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-87" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-87" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-87"></a><span class="go">.  copy_assets:output/assets/js/fancydates.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-88" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-88" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-88"></a><span class="go">.  copy_assets:output/assets/js/html5.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-89" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-89" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-89"></a><span class="go">.  copy_assets:output/assets/js/moment-with-locales.min.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-90" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-90" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-90"></a><span class="go">.  copy_assets:output/assets/css/code.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-91" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-91" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-91"></a><span class="go">.  render_listings:output/listings/index.html</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-92" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-92" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-92"></a><span class="go">.  render_tags:output/categories/index.html</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-93" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-93" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-93"></a><span class="go">.  render_posts:timeline_changes</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-94" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-94" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-94"></a><span class="go">.  generate_rss:output/rss.xml</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-95" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-95" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-95"></a><span class="go">.  create_bundles:output/assets/css/all.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-96" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-96" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-96"></a><span class="go">.  create_bundles:output/assets/js/all-nocdn.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-97" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-97" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-97"></a><span class="go">.  create_bundles:output/assets/css/all-nocdn.css</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-98" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-98" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-98"></a><span class="go">.  create_bundles:output/assets/js/all.js</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-99" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-99" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-99"></a><span class="go">.  sitemap:output/sitemap.xml</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-100" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-100" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-100"></a><span class="go">.  sitemap:output/sitemapindex.xml</span>
+<a id="rest_code_69d754a1209e48b7a2b0306998f8f9fd-101" name="rest_code_69d754a1209e48b7a2b0306998f8f9fd-101" href="fast.html#rest_code_69d754a1209e48b7a2b0306998f8f9fd-101"></a><span class="go">.  robots_file:output/robots.txt</span>
+</pre></div>
+<p>As you can see, many files are created.  We create the resources for galleries, indexes, archives, listings, tags/categories, RSS, sitemaps, robots.txt, and assets (CSS/JS).</p>
+<p>Let’s try building again:</p>
+<p><a class="reference external" href="../listings/build-logs/empty-site/1-nochanges.txt.html">build-logs/empty-site/1-nochanges.txt</a>  <a class="reference external" href="../listings/build-logs/empty-site/1-nochanges.txt">(Source)</a></p>
+<div class="code"><pre class="code console"><a id="rest_code_372b3ab251e243e4bfabdfd9956e6ccf-1" name="rest_code_372b3ab251e243e4bfabdfd9956e6ccf-1" href="fast.html#rest_code_372b3ab251e243e4bfabdfd9956e6ccf-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_372b3ab251e243e4bfabdfd9956e6ccf-2" name="rest_code_372b3ab251e243e4bfabdfd9956e6ccf-2" href="fast.html#rest_code_372b3ab251e243e4bfabdfd9956e6ccf-2"></a><span class="go">Scanning posts....done!</span>
+</pre></div>
+<p>Nothing was changed.  Let’s add a new post:</p>
+<p><a class="reference external" href="../listings/build-logs/empty-site/post-1.txt.html">build-logs/empty-site/post-1.txt</a>  <a class="reference external" href="../listings/build-logs/empty-site/post-1.txt">(Source)</a></p>
+<div class="code"><pre class="code console"><a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-1" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-1" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>new_post<span class="w"> </span>--title<span class="o">=</span><span class="s2">"Post 1"</span><span class="w"> </span>--tags<span class="o">=</span><span class="s2">"foo,bar"</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-2" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-2" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-2"></a><span class="go">Creating New Post</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-3" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-3" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-3"></a><span class="go">-----------------</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-4" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-4" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-4"></a>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-5" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-5" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-5"></a><span class="go">Title: Post 1</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-6" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-6" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-6"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-7" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-7" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-7"></a><span class="go">INFO: new_post: Your post's text is at: posts/post-1.rst</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-8" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-8" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-8"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-9" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-9" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-9"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-10" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-10" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-10"></a><span class="go">.  render_archive:output/2015/index.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-11" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-11" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-11"></a><span class="go">.  render_archive:output/archive.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-12" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-12" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-12"></a><span class="go">.  render_tags:output/categories/index.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-13" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-13" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-13"></a><span class="go">.  render_tags:output/assets/js/tag_cloud_data.json</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-14" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-14" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-14"></a><span class="go">.  render_sources:output/posts/post-1.rst</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-15" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-15" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-15"></a><span class="go">.  render_posts:timeline_changes</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-16" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-16" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-16"></a><span class="go">.  render_posts:cache/posts/post-1.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-17" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-17" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-17"></a><span class="go">.  render_indexes:output/index.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-18" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-18" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-18"></a><span class="go">.  render_tags:output/categories/bar.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-19" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-19" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-19"></a><span class="go">.  render_tags:output/categories/foo.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-20" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-20" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-20"></a><span class="go">.  render_pages:output/posts/post-1.html</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-21" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-21" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-21"></a><span class="go">.  render_tags:output/categories/bar.xml</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-22" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-22" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-22"></a><span class="go">.  render_tags:output/categories/foo.xml</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-23" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-23" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-23"></a><span class="go">.  generate_rss:output/rss.xml</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-24" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-24" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-24"></a><span class="go">.  sitemap:output/sitemap.xml</span>
+<a id="rest_code_bacae2fcd12041c3bc4542a20db2fe05-25" name="rest_code_bacae2fcd12041c3bc4542a20db2fe05-25" href="fast.html#rest_code_bacae2fcd12041c3bc4542a20db2fe05-25"></a><span class="go">.  sitemap:output/sitemapindex.xml</span>
+</pre></div>
+<p>Only a handful of files were changed or created this time.  Nikola created/updated archives, tag/category pages, tag cloud data, post sources, post pages, indexes, RSS and sitemaps.  A lot of things were left untouched, including the assets.</p>
+<p>Let’s try one more post:</p>
+<p><a class="reference external" href="../listings/build-logs/empty-site/post-2.txt.html">build-logs/empty-site/post-2.txt</a>  <a class="reference external" href="../listings/build-logs/empty-site/post-2.txt">(Source)</a></p>
+<div class="code"><pre class="code console"><a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-1" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-1" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>new_post<span class="w"> </span>--title<span class="o">=</span><span class="s2">"Post 2"</span><span class="w"> </span>--tags<span class="o">=</span><span class="s2">"bar,baz"</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-2" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-2" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-2"></a><span class="go">Creating New Post</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-3" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-3" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-3"></a><span class="go">-----------------</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-4" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-4" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-4"></a>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-5" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-5" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-5"></a><span class="go">Title: Post 2</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-6" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-6" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-6"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-7" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-7" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-7"></a><span class="go">INFO: new_post: Your post's text is at: posts/post-2.rst</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-8" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-8" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-8"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-9" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-9" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-9"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-10" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-10" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-10"></a><span class="go">.  render_archive:output/2015/index.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-11" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-11" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-11"></a><span class="go">.  render_tags:output/categories/index.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-12" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-12" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-12"></a><span class="go">.  render_tags:output/assets/js/tag_cloud_data.json</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-13" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-13" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-13"></a><span class="go">.  render_sources:output/posts/post-2.rst</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-14" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-14" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-14"></a><span class="go">.  render_posts:timeline_changes</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-15" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-15" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-15"></a><span class="go">.  render_posts:cache/posts/post-2.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-16" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-16" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-16"></a><span class="go">.  render_tags:output/categories/baz.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-17" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-17" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-17"></a><span class="go">.  render_indexes:output/index.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-18" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-18" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-18"></a><span class="go">.  render_tags:output/categories/bar.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-19" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-19" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-19"></a><span class="go">.  render_tags:output/categories/bar.xml</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-20" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-20" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-20"></a><span class="go">.  generate_rss:output/rss.xml</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-21" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-21" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-21"></a><span class="go">.  render_pages:output/posts/post-1.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-22" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-22" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-22"></a><span class="go">.  render_pages:output/posts/post-2.html</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-23" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-23" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-23"></a><span class="go">.  render_tags:output/categories/baz.xml</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-24" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-24" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-24"></a><span class="go">.  sitemap:output/sitemap.xml</span>
+<a id="rest_code_3abb0121c6824f3c9711c5a4398650ed-25" name="rest_code_3abb0121c6824f3c9711c5a4398650ed-25" href="fast.html#rest_code_3abb0121c6824f3c9711c5a4398650ed-25"></a><span class="go">.  sitemap:output/sitemapindex.xml</span>
+</pre></div>
+<p>The list is pretty similar.  The archives page links to years, so it did not have to be changed.  The first post was changed to add a link to the second one.  Note that the tag page for <em>foo</em> was left untouched, the new post does not use it.</p>
+<p>Let’s try a third post:</p>
+<p><a class="reference external" href="../listings/build-logs/empty-site/post-3.txt.html">build-logs/empty-site/post-3.txt</a>  <a class="reference external" href="../listings/build-logs/empty-site/post-3.txt">(Source)</a></p>
+<div class="code"><pre class="code console"><a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-1" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-1" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>new_post<span class="w"> </span>--title<span class="o">=</span><span class="s2">"Post 3"</span><span class="w"> </span>--tags<span class="o">=</span><span class="s2">"foobar"</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-2" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-2" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-2"></a><span class="go">Creating New Post</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-3" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-3" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-3"></a><span class="go">-----------------</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-4" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-4" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-4"></a>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-5" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-5" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-5"></a><span class="go">Title: Post 3</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-6" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-6" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-6"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-7" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-7" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-7"></a><span class="go">INFO: new_post: Your post's text is at: posts/post-3.rst</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-8" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-8" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-8"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-9" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-9" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-9"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-10" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-10" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-10"></a><span class="go">.  render_archive:output/2015/index.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-11" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-11" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-11"></a><span class="go">.  render_tags:output/categories/index.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-12" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-12" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-12"></a><span class="go">.  render_tags:output/assets/js/tag_cloud_data.json</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-13" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-13" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-13"></a><span class="go">.  render_sources:output/posts/post-3.rst</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-14" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-14" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-14"></a><span class="go">.  render_posts:timeline_changes</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-15" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-15" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-15"></a><span class="go">.  render_posts:cache/posts/post-3.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-16" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-16" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-16"></a><span class="go">.  render_tags:output/categories/foobar.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-17" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-17" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-17"></a><span class="go">.  render_indexes:output/index.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-18" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-18" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-18"></a><span class="go">.  generate_rss:output/rss.xml</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-19" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-19" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-19"></a><span class="go">.  render_pages:output/posts/post-3.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-20" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-20" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-20"></a><span class="go">.  render_pages:output/posts/post-2.html</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-21" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-21" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-21"></a><span class="go">.  render_tags:output/categories/foobar.xml</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-22" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-22" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-22"></a><span class="go">.  sitemap:output/sitemap.xml</span>
+<a id="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-23" name="rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-23" href="fast.html#rest_code_81c9f8ca54f2400c9f964a1a3dcc8290-23"></a><span class="go">.  sitemap:output/sitemapindex.xml</span>
+</pre></div>
+<p>Once again, the other tags were not rebuilt, and the first post did not need changing.</p>
+</section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

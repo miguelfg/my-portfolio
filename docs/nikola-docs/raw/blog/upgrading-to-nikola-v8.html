@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="How to upgrade to Nikola v8? This is a list of all things you need to take care of first.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upgrading to Nikola v8 | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/blog/upgrading-to-nikola-v8.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="description" itemprop="description" content="How to upgrade to Nikola v8? This is a list of all things you need to take care of first.">
+<meta name="author" content="Chris Warrick">
+<link rel="prev" href="nikola-v7814-is-out.html" title="Nikola v7.8.14 is out!" type="text/html">
+<link rel="next" href="nikola-v7815-and-v800b1-are-out.html" title="Nikola v7.8.15 and v8.0.0b1 are out!" type="text/html">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Upgrading to Nikola v8">
+<meta property="og:url" content="https://getnikola.com/blog/upgrading-to-nikola-v8.html">
+<meta property="og:description" content="How to upgrade to Nikola v8? This is a list of all things you need to take care of first.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-05-05T18:55:43Z">
+<meta property="article:tag" content="documentation">
+<meta property="article:tag" content="nikola">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="127c7b797d7e73527e7b707760733c717a7366">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="upgrading-to-nikola-v8.txt" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Upgrading to Nikola v8</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2018-05-05T18:55:43Z" itemprop="datePublished" title="2018-05-05 18:55">2018-05-05 18:55</time><span class="updated"> (updated
+                    <time class="updated dt-updated" datetime="2018-09-10T19:00:00Z" itemprop="dateUpdated" title="2018-09-10 19:00">2018-09-10 19:00</time>)</span>
+            </a>
+            </p>
+                <p class="commentline">
+    
+    <a href="upgrading-to-nikola-v8.html#disqus_thread" data-disqus-identifier="cache/posts/upgrading-to-nikola-v8.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="upgrading-to-nikola-v8.txt" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p class="lead">Nikola v8 is a huge release with lots of new features and fixed bugs. However,
+a few manual changes are required to upgrade.</p>
+<nav class="contents alert alert-primary" id="contents" role="doc-toc"><p class="topic-title"><a class="reference internal" href="upgrading-to-nikola-v8.html#top">Contents</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#revisions-to-this-document" id="toc-entry-1">Revisions to this document</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#how-to-upgrade" id="toc-entry-2">How to upgrade</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#upgrading-post-metadata" id="toc-entry-3">Upgrading post metadata</a></p></li>
+<li>
+<p><a class="reference internal" href="upgrading-to-nikola-v8.html#changes-to-themes-and-templates" id="toc-entry-4">Changes to themes and templates</a></p>
+<ul>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#zen-modernized-and-uses-new-font-awesome" id="toc-entry-5">zen modernized and uses new Font Awesome</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#backwards-incompatible-changes" id="toc-entry-6">Backwards incompatible changes</a></p></li>
+<li>
+<p><a class="reference internal" href="upgrading-to-nikola-v8.html#babel-and-i18n-changes-added-2018-08-07" id="toc-entry-7">Babel and i18n changes (added 2018-08-07)</a></p>
+<ul>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#date-format-changed" id="toc-entry-8">DATE_FORMAT changed</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#babeldates-plugin-obsoleted-localeborg-internal-api-changed" id="toc-entry-9">babeldates plugin obsoleted, LocaleBorg internal API changed</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#translation-help-wanted" id="toc-entry-10">Translation help wanted</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#removed-and-renamed-settings" id="toc-entry-11">Removed and renamed settings</a></p></li>
+<li>
+<p><a class="reference internal" href="upgrading-to-nikola-v8.html#sections-were-replaced-by-categories" id="toc-entry-12">Sections were replaced by categories</a></p>
+<ul>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#changes-to-posts" id="toc-entry-13">Changes to posts</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#changes-to-configuration" id="toc-entry-14">Changes to configuration</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#recreating-the-old-behavior-of-sections" id="toc-entry-15">Recreating the old behavior of sections</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#colorizing-categories-or-anything-really" id="toc-entry-16">Colorizing categories (or anything, really)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#plugins" id="toc-entry-17">Plugins</a></p></li>
+<li><p><a class="reference internal" href="upgrading-to-nikola-v8.html#on-yaml-configuration" id="toc-entry-18">On YAML configuration</a></p></li>
+</ul></nav><section id="revisions-to-this-document"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-1" role="doc-backlink">Revisions to this document</a><a href="#revisions-to-this-document" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><strong>2018-09-08:</strong> moved <code class="docutils literal">tag_cloud_data.json</code> generation to separate plugin</p>
+<p><strong>2018-09-06:</strong> Removed <code class="docutils literal">NO_DOCUTILS_TITLE_TRANSFORM</code> setting</p>
+<p><strong>2018-07-07:</strong> Beta 3: Babel and changes to i18n</p>
+<p><strong>2018-05-13:</strong> Beta 2: bootblog4 has featured posts, zen modernized; one new backwards
+incompatible change found and described (<code class="docutils literal">reference</code> replaces
+<code class="docutils literal"><span class="pre">image-reference</span></code> in thumbnails)</p>
+<p><strong>2018-05-09:</strong> fixes to style and missing sentences</p>
+<p><strong>2018-05-05:</strong> initial version</p>
+</section><section id="how-to-upgrade"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-2" role="doc-backlink">How to upgrade</a><a href="#how-to-upgrade" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Upgrade to the latest v7 version: <code class="docutils literal">pip install <span class="pre">Nikola==7.8.15</span></code> and make sure
+there are no outstanding warnings.</p></li>
+<li><p>Upgrade to v8: <code class="docutils literal">pip install <span class="pre">-U</span> <span class="pre">--upgrade-strategy=eager</span> <span class="pre">Nikola==8.0.0</span></code></p></li>
+<li><p>Read the upgrade notes below and <a class="reference external" href="https://getnikola.com/changes.html">the full changelog</a></p></li>
+<li><p>Upgrade all third-party plugins and themes. (<code class="docutils literal">nikola plugin <span class="pre">--upgrade</span></code>,
+<code class="docutils literal">nikola theme <span class="pre">--upgrade</span></code>)</p></li>
+<li><p>Run <code class="docutils literal">nikola status</code> and fix all warnings.</p></li>
+<li><p>When all warnings are fixed, run <code class="docutils literal">nikola build</code>.</p></li>
+<li><p>Run <code class="docutils literal">nikola check <span class="pre">-l</span></code> and <code class="docutils literal">nikola check <span class="pre">-f</span></code>. If there are broken links
+or orphaned files, take care of them.</p></li>
+</ol></section><section id="upgrading-post-metadata"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-3" role="doc-backlink">Upgrading post metadata</a><a href="#upgrading-post-metadata" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>There are a few changes in post metadata you should make:</p>
+<ul class="simple">
+<li><p><code class="docutils literal">draft</code> and <code class="docutils literal">private</code> tags are now <code class="docutils literal">status</code> metadata values (eg. <code class="docutils literal">..
+status: draft</code>)</p></li>
+<li><p><code class="docutils literal">mathjax</code> tag is now a <code class="docutils literal">has_math</code> metadata key (eg. <code class="docutils literal">.. has_math: yes</code>)</p></li>
+</ul>
+<p>Both changes can be applied by using the <a class="reference external" href="https://plugins.getnikola.com/v8/upgrade_metadata_v8/">upgrade_metadata_v8</a> plugin.</p>
+</section><section id="changes-to-themes-and-templates"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-4" role="doc-backlink">Changes to themes and templates</a><a href="#changes-to-themes-and-templates" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>The default theme for Nikola was changed to <code class="docutils literal">bootblog4</code>, which has a modern,
+clean look, and can optionally display <a class="reference external" href="https://getnikola.com/handbook.html#featured-posts">featured posts</a>.
+There’s also <code class="docutils literal">bootstrap4</code> with the classic look.  The <code class="docutils literal">bootstrap3</code> theme is
+not included by default, but can still be installed (<code class="docutils literal">nikola theme <span class="pre">-i</span>
+bootstrap3</code>)</p>
+<p>Moreover, there are a few changes to templates that you must take care of if
+you’ve customized any:</p>
+<ul class="simple">
+<li><p>Rename <code class="docutils literal">crumbs.tmpl</code> to <code class="docutils literal">ui_helper.tmpl</code> and the breadcrumbs
+<code class="docutils literal">bar</code> function to <code class="docutils literal">breadcrumbs</code> (your templates may need
+changing as well)</p></li>
+<li><p>Rename <code class="docutils literal">post.is_mathjax</code> to <code class="docutils literal">post.has_math</code>. Themes using
+<code class="docutils literal">post.is_mathjax</code> must be updated; it is recommended that they are
+changed to use <code class="docutils literal">math_helper.tmpl</code>.</p></li>
+<li><p>For galeries and images, colorbox was replaced by baguetteBox.</p></li>
+</ul>
+<section id="zen-modernized-and-uses-new-font-awesome"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-5" role="doc-backlink">zen modernized and uses new Font Awesome</a><a href="#zen-modernized-and-uses-new-font-awesome" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>The Zen theme was thoroughly modernized. The modernization means that:</p>
+<ul class="simple">
+<li><p>Font Awesome v5 is used by default, you can switch to Fork Awesome v1 by
+installing <code class="docutils literal"><span class="pre">zen-forkawesome</span></code></p></li>
+<li><p>Your <code class="docutils literal">conf.py</code> needs changing to reflect new icon names and classes
+(Font Awesome v5 examples: <code class="docutils literal">'fa <span class="pre">fa-tags'</span></code> and <code class="docutils literal">'fab <span class="pre">fa-twitter'</span></code>)</p></li>
+<li><p>the <code class="docutils literal"><span class="pre">zen-ipython</span></code> theme is not needed anymore, <code class="docutils literal">zen</code> and <code class="docutils literal"><span class="pre">zen-jinja</span></code>
+handle Jupyter posts correctly (as do the built-in themes)</p></li>
+<li><p>the theme internals were rewritten to more closely match built-in themes
+(notably, galleries Just Work™)</p></li>
+</ul></section></section><section id="backwards-incompatible-changes"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-6" role="doc-backlink">Backwards incompatible changes</a><a href="#backwards-incompatible-changes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>The following changes may cause issues with blog appearance and links.
+Please make sure you’ve taken care of them before deploying.</p>
+<ul class="simple">
+<li><p>Sections are replaced by categories (Issue #2833) — <em>see below</em></p></li>
+<li><p>Reading reST docinfo metadata, including first heading as title,
+requires <code class="docutils literal">USE_REST_DOCINFO_METADATA</code> now (Issue #2987)</p></li>
+<li><p><code class="docutils literal">NO_DOCUTILS_TITLE_TRANSFORM</code> setting removed, behavior now
+depends on <code class="docutils literal">USE_REST_DOCINFO_METADATA</code> (Issue #3124) <strong>(added 2018-09-06)</strong></p></li>
+<li><p>RSS feeds might have changed their places due to <code class="docutils literal">RSS_PATH</code>
+behavior changes (you may need to change <code class="docutils literal">RSS_PATH</code>,
+<code class="docutils literal">RSS_FILENAME_BASE</code>)</p></li>
+<li><p>Atom feeds for archives and Atom pagination are no longer supported
+(Issue #3016)</p></li>
+<li><p><strong>(added 2018-05-10)</strong> You need <code class="docutils literal">&lt;a <span class="pre">class="reference"&gt;</span></code> (instead of
+<code class="docutils literal"><span class="pre">image-reference</span></code>) to activate the lightbox now</p></li>
+<li><p><strong>(added 2018-09-08)</strong> <code class="docutils literal">tag_cloud_data.json</code> now requires a separate plugin: <code class="docutils literal">nikola theme <span class="pre">-i</span>
+tagcloud</code></p></li>
+</ul></section><section id="babel-and-i18n-changes-added-2018-08-07"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-7" role="doc-backlink">Babel and i18n changes (added 2018-08-07)</a><a href="#babel-and-i18n-changes-added-2018-08-07" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>For a long time, Nikola’s i18n features depended on the system locale support.
+That led to a bunch of issues and strange bugs. We’ve replaced this with the Babel
+library. New features include:</p>
+<ul class="simple">
+<li><p>more flexible date formatting</p></li>
+<li><p>no more strange bugs related to system locale configuration</p></li>
+<li><p>translated dates even if system support was not there
+(eg. on Alpine Linux, cf. discussion on issue #2606)</p></li>
+<li><p>proper forms for some Slavic languages (eg. marzec vs marca)</p></li>
+</ul>
+<section id="date-format-changed"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-8" role="doc-backlink">DATE_FORMAT changed</a><a href="#date-format-changed" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>DATE_FORMAT uses different tokens. If you customized <code class="docutils literal">DATE_FORMAT</code>, you need
+to change it to use <a class="reference external" href="http://cldr.unicode.org/translation/date-time">CLDR formats</a>. (Hint: the new default value
+is <code class="docutils literal"><span class="pre">YYYY-MM-dd</span> HH:mm</code>)</p>
+</section><section id="babeldates-plugin-obsoleted-localeborg-internal-api-changed"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-9" role="doc-backlink">babeldates plugin obsoleted, LocaleBorg internal API changed</a><a href="#babeldates-plugin-obsoleted-localeborg-internal-api-changed" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>The babeldates plugin is obsoleted by the changes. If you were using it, rename
+<code class="docutils literal">BABEL_DATE_FORMAT</code> to <code class="docutils literal">DATE_FORMAT</code> and remove the plugin.</p>
+<p>In addition, the LocaleBorg extension API was simplified. The new API expects
+extension authors to create functions matching the signatures and assign them
+to the following names:</p>
+<ul class="simple">
+<li><p><code class="docutils literal">LocaleBorg.datetime_formatter(date, date_format, lang, locale)</code></p></li>
+<li><p><code class="docutils literal">LocaleBorg.in_string_formatter(date, mode, custom_format, lang, locale)</code></p></li>
+</ul></section><section id="translation-help-wanted"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-10" role="doc-backlink">Translation help wanted</a><a href="#translation-help-wanted" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>However, this means that we needed to reorganize translations. In order
+to have things in a working state, I used some guessworks and tried to
+produce a working form. However, not all languages will have
+grammatically correct output at this point. This is why we need help
+from our community around the world.</p>
+<p>So, if you have the time, please help us check if our translations (on
+<a class="reference external" href="https://www.transifex.com/ralsina/nikola/dashboard/">Transifex</a>
+or <a class="reference external" href="https://github.com/getnikola/nikola/tree/master/nikola/data/themes/base/messages">GitHub</a>) are correct. Specifically, we need to know
+if the date tags (in “Posts for XX” messages) are correctly placed. We
+also need to know if the translation for those fits the required form.
+To find out, you can run the <a class="reference external" href="https://gist.github.com/Kwpolska/3c0d1af8bd641229d4ab64f1b98d88de">test script</a> and check how all the forms
+look for your locale. If they don't fit, they can be overridden:
+for example, Polish uses “Posty z {month_year:MMMM yyyy}” and takes
+advantage of the last bullet point.</p>
+<p>As a bonus, the use of Babel means that it's even easier to use
+"human-friendly" dates on your blog — try setting <code class="docutils literal">DATE_FORMAT = 'long'</code>.</p>
+</section></section><section id="removed-and-renamed-settings"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-11" role="doc-backlink">Removed and renamed settings</a><a href="#removed-and-renamed-settings" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>The following settings have been removed. Nikola will now always
+behave as if the value was what is displayed afer the setting name.</p>
+<ul class="simple">
+<li><p><code class="docutils literal">FEED_PREVIEWIMAGE = True</code></p></li>
+<li><p><code class="docutils literal">SITEMAP_INCLUDE_FILELESS_DIRS = True</code></p></li>
+<li><p><code class="docutils literal">USE_OPEN_GRAPH = True</code></p></li>
+<li><p><code class="docutils literal">USE_BASE_TAG = False</code></p></li>
+<li><p><code class="docutils literal">NO_DOCUTILS_TITLE_TRANSFORM</code> — behavior now depends on <code class="docutils literal">USE_REST_DOCINFO_METADATA</code> (Issue #3124) <strong>(added 2018-09-06)</strong></p></li>
+</ul>
+<p>The following settings were renamed:</p>
+<ul class="simple">
+<li><p><code class="docutils literal">UNSLUGIFY_TITLES</code> → <code class="docutils literal">FILE_METADATA_UNSLUGIFY_TITLES</code></p></li>
+<li><p><code class="docutils literal">TAG_PAGES_TITLES</code> → <code class="docutils literal">TAG_TITLES</code></p></li>
+<li><p><code class="docutils literal">TAG_PAGES_DESCRIPTIONS</code> → <code class="docutils literal">TAG_DESCRIPTIONS</code></p></li>
+<li><p><code class="docutils literal">CATEGORY_PAGES_TITLES</code> → <code class="docutils literal">CATEGORY_TITLES</code></p></li>
+<li><p><code class="docutils literal">CATEGORY_PAGES_DESCRIPTIONS</code> → <code class="docutils literal">CATEGORY_DESCRIPTIONS</code></p></li>
+<li><p><code class="docutils literal">DISABLE_INDEXES_PLUGIN_INDEX_AND_ATOM_FEED</code> → <code class="docutils literal">DISABLE_INDEXES</code> and
+<code class="docutils literal">DISABLE_MAIN_ATOM_FEED</code></p></li>
+<li><p><code class="docutils literal">DISABLE_INDEXES_PLUGIN_RSS_FEED</code> → <code class="docutils literal">DISABLE_MAIN_RSS_FEED</code></p></li>
+</ul></section><section id="sections-were-replaced-by-categories"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-12" role="doc-backlink">Sections were replaced by categories</a><a href="#sections-were-replaced-by-categories" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://github.com/getnikola/nikola/issues/2833">Sections were an unfinished feature.</a> Having both sections and categories at the same time made no sense. The sections feature was removed and replaced by categories. Categories now support using the destination path, with the possibility to ignore common prefixes, and to use subdirectories. Categories can do everything sections used to.</p>
+<p>The way to migrate depends on what your blog setup was:</p>
+<ul class="simple">
+<li><p>if you were only using categories, you don’t need to do anything (except for
+the two renamed settings mentioned above)</p></li>
+<li><p>if you were only using sections, read on or details of required changes</p></li>
+<li><p>if you were using both, you’ll need to pick one of the two (beware: might
+break links)</p></li>
+</ul>
+<p>PS. the <code class="docutils literal">section_prevnext</code> plugin has been renamed <code class="docutils literal">category_prevnext</code> for
+v8.</p>
+<section id="changes-to-posts"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-13" role="doc-backlink">Changes to posts</a><a href="#changes-to-posts" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>If your posts are using the <code class="docutils literal">section</code> metadata field, you should rename it to <code class="docutils literal">category</code>.  Nikola will do this conversion automatically if no category is specified, while also issuing a warning.</p>
+</section><section id="changes-to-configuration"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-14" role="doc-backlink">Changes to configuration</a><a href="#changes-to-configuration" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal">POSTS_SECTION_TITLE</code> has been merged into <code class="docutils literal">CATEGORY_TITLES</code> (whose name has changed from <code class="docutils literal">CATEGORY_PAGES_TITLES</code>)</p></li>
+<li><p><code class="docutils literal">POSTS_SECTION_DESCRIPTIONS</code> has been merged into <code class="docutils literal">CATEGORY_DESCRIPTIONS</code> (whose name has changed from <code class="docutils literal">CATEGORY_PAGES_DESCRPTIONS</code>)</p></li>
+<li><p>In order to activate the path-based behavior, enable <code class="docutils literal">CATEGORY_DESTPATH_AS_DEFAULT</code></p></li>
+<li><p>To control what is used to generate paths, you can set <code class="docutils literal">CATEGORY_DESTPATH_TRIM_PREFIX</code> and <code class="docutils literal">CATEGORY_DESTPATH_FIRST_DIRECTORY_ONLY</code> (old sections behavior/default values are False and True respectively, but flipping them makes the feature much more flexible)</p></li>
+<li><p><code class="docutils literal">POSTS_SECTION_NAME</code> is now <code class="docutils literal">CATEGORY_DESTPATH_NAMES</code></p></li>
+<li><p><code class="docutils literal">POSTS_SECTION_COLORS</code> is not supported by default, but you can replace it with some manual tinkering</p></li>
+<li><p><code class="docutils literal">CATEGORY_ALLOW_HIERARCHIES</code>, <code class="docutils literal">CATEGORY_OUTPUT_FLAT_HIERARCHY</code> are heavily recommended if you use <code class="docutils literal">CATEGORY_DESTPATH_AS_DEFAULT</code>, and required if you use <code class="docutils literal">CATEGORY_PAGES_FOLLOW_DESTPATH</code></p></li>
+</ul></section><section id="recreating-the-old-behavior-of-sections"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-15" role="doc-backlink">Recreating the old behavior of sections</a><a href="#recreating-the-old-behavior-of-sections" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<div class="code"><pre class="code python"><a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-1" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-1" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-1"></a><span class="n">CATEGORY_ALLOW_HIERARCHIES</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-2" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-2" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-2"></a><span class="n">CATEGORY_OUTPUT_FLAT_HIERARCHY</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-3" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-3" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-3"></a><span class="n">CATEGORY_DESTPATH_AS_DEFAULT</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-4" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-4" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-4"></a><span class="n">CATEGORY_DESTPATH_TRIM_PREFIX</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-5" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-5" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-5"></a><span class="n">CATEGORY_DESTPATH_FIRST_DIRECTORY_ONLY</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-6" name="rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-6" href="upgrading-to-nikola-v8.html#rest_code_13615f6ab7c6440c827fcf3cd8ceaa6f-6"></a><span class="n">CATEGORY_PAGES_FOLLOW_DESTPATH</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</section><section id="colorizing-categories-or-anything-really"><h3><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-16" role="doc-backlink">Colorizing categories (or anything, really)</a><a href="#colorizing-categories-or-anything-really" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>The colorization feature is now available for <em>anything</em>, not only sections.
+Templates can use the <code class="docutils literal">colorize_str(string, base_color, presets)</code> function,
+like so:</p>
+<div class="code"><pre class="code mako"><a id="rest_code_402a131e60fe4edfbf9d97cdcbbfcb45-1" name="rest_code_402a131e60fe4edfbf9d97cdcbbfcb45-1" href="upgrading-to-nikola-v8.html#rest_code_402a131e60fe4edfbf9d97cdcbbfcb45-1"></a><span class="cp">${</span><span class="n">colorize_str</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">meta</span><span class="p">(</span><span class="s1">'category'</span><span class="p">),</span> <span class="n">theme_color</span><span class="p">,</span> <span class="n">category_colors</span><span class="p">)</span><span class="cp">}</span>
+</pre></div>
+<p>You need to add <code class="docutils literal">category_colors</code> to the global context manually — this
+expects a regular (untranslated) dict mapping category names to hex colors.</p>
+</section></section><section id="plugins"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-17" role="doc-backlink">Plugins</a><a href="#plugins" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>If you are using <code class="docutils literal">section_prevnext</code>, remove it and install
+<code class="docutils literal">category_prevnext</code> instead.</p>
+<p>If you are using the <code class="docutils literal">projectpages</code> plugin, you can migrate your metadata like this:</p>
+<div class="code"><pre class="code text"><a id="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-1" name="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-1" href="upgrading-to-nikola-v8.html#rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-1"></a>sed 's/.. status:/.. devstatus:/g' *.rst -i
+<a id="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-2" name="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-2" href="upgrading-to-nikola-v8.html#rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-2"></a>sed '/.. featured: False/d' *.rst -i
+<a id="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-3" name="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-3" href="upgrading-to-nikola-v8.html#rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-3"></a>sed 's/.. featured: True/.. status: featured/g' *.rst -i
+<a id="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-4" name="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-4" href="upgrading-to-nikola-v8.html#rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-4"></a>sed '/.. hidden: False/d' *.rst -i
+<a id="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-5" name="rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-5" href="upgrading-to-nikola-v8.html#rest_code_b124fe3af2d34ebe9eda6c83ea9cb0a8-5"></a>sed 's/.. hidden: True/.. status: private/g' *.rst -i
+</pre></div>
+</section><section id="on-yaml-configuration"><h2><a class="toc-backref" href="upgrading-to-nikola-v8.html#toc-entry-18" role="doc-backlink">On YAML configuration</a><a href="#on-yaml-configuration" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>One of the features we’ve promised for Nikola v8 was YAML config. We’re afraid
+we won’t offer this in the v8.0.0 release just yet. Doing this <em>right</em> will require
+substantial amounts of time, and the v8 project has been going for over a year.</p>
+<p>Rest assured: we haven’t scrapped this idea. YAML config will appear in a
+future v8.x.0 release. Before that happens, we need to build a configuration
+management framework, with support for <a class="reference external" href="https://github.com/getnikola/nikola/issues/2475#issuecomment-384064771">migrations</a>
+among other things — its main focus will be Nikola config, but we hope
+to make it flexible enough to work anywhere.
+(If you’re aware of a good project that does this, do tell us!)</p>
+</section>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/documentation.html" rel="tag">documentation</a></li>
+            <li><a class="tag p-category" href="../categories/nikola.html" rel="tag">nikola</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="nikola-v7814-is-out.html" rel="prev" title="Nikola v7.8.14 is out!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="nikola-v7815-and-v800b1-are-out.html" rel="next" title="Nikola v7.8.15 and v8.0.0b1 are out!">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+    
+        <div id="disqus_thread"></div>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        var disqus_shortname ="nikolaweb",
+            disqus_url="https://getnikola.com/blog/upgrading-to-nikola-v8.html",
+        disqus_title="Upgrading to Nikola v8",
+        disqus_identifier="cache/posts/upgrading-to-nikola-v8.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="nikolaweb";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

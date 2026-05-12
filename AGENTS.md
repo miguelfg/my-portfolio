@@ -27,4 +27,5 @@ Este archivo guía a los agentes autónomos en la orquestación y mantenimiento 
 ## Notas Técnicas para Agentes
 - Los comandos Nikola requieren `uv run`.
 - El directorio de trabajo operativo es `portfolio/`.
+- Documentación técnica local: `docs/nikola-docs/`.
 - No modificar `conf.py` sin verificar primero si el cambio afecta a los menús de navegación bilingüe.

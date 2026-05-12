@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating a Site (Not a Blog) with Nikola | Nikola</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Creating a Site (Not a Blog) with Nikola">
+<meta property="og:url" content="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html">
+<meta property="og:description" content="One of the most frequent questions I get about Nikola is “but how do
+I create a site that’s not a blog?”. And of course, that’s because the
+documentation is heavily blog–oriented. This document will c">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-01-10T10:00:00Z">
+<meta property="article:tag" content="nikola">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href=".">
+            <img src="assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="conf.html" class="dropdown-item">conf.py</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="extending.html" class="dropdown-item">Extending</a>
+                    <a href="internals.html" class="dropdown-item">Internals</a>
+                    <a href="#" class="dropdown-item active">Creating a Site (Not a Blog) <span class="sr-only">(active)</span></a>
+                    <a href="license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="147a7d7f7b787554787d767166753a777c7560">[email&#160;protected]</span>)</a>
+                    <a href="contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="license.html" class="dropdown-item">License</a>
+                    <a href="authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="blog/index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="creating-a-site-not-a-blog-with-nikola.rst" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Creating a Site (Not a Blog) with Nikola</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p class="lead">One of the most frequent questions I get about Nikola is “but how do
+I create a site that’s not a blog?”. And of course, that’s because the
+documentation is heavily blog–oriented. This document will change that ;-)</p>
+<p>Since it started, Nikola has had the capabilities to create generic sites. For example,
+Nikola’s <a class="reference external" href="https://getnikola.com/">own site</a> is a fairly generic one. Let’s go
+step by step on how you can do something like that.</p>
+<p>As usual when starting a nikola site, you start with <code class="docutils literal">nikola init</code> which creates a
+empty (mostly) configured site:</p>
+<div class="code"><pre class="code console"><a id="rest_code_16609396d85c4595844276698fe04880-1" name="rest_code_16609396d85c4595844276698fe04880-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_16609396d85c4595844276698fe04880-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>init<span class="w"> </span>mysite
+<a id="rest_code_16609396d85c4595844276698fe04880-2" name="rest_code_16609396d85c4595844276698fe04880-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_16609396d85c4595844276698fe04880-2"></a><span class="go">Creating Nikola Site</span>
+<a id="rest_code_16609396d85c4595844276698fe04880-3" name="rest_code_16609396d85c4595844276698fe04880-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_16609396d85c4595844276698fe04880-3"></a><span class="go">====================</span>
+<a id="rest_code_16609396d85c4595844276698fe04880-4" name="rest_code_16609396d85c4595844276698fe04880-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_16609396d85c4595844276698fe04880-4"></a><span class="go">⋮</span>
+<a id="rest_code_16609396d85c4595844276698fe04880-5" name="rest_code_16609396d85c4595844276698fe04880-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_16609396d85c4595844276698fe04880-5"></a><span class="go">[1970-01-01T00:00:00Z] INFO: init: Created empty site at mysite.</span>
+</pre></div>
+<p>Then we go into the new <code class="docutils literal">mysite</code> folder, and make the needed changes in the <code class="docutils literal">conf.py</code>
+configuration file:</p>
+<div class="code"><pre class="code python"><a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-1" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-1"></a><span class="c1"># Data about this site</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-2" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-2"></a><span class="n">BLOG_AUTHOR</span> <span class="o">=</span> <span class="s2">"Roberto Alsina"</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-3" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-3"></a><span class="n">BLOG_TITLE</span> <span class="o">=</span> <span class="s2">"Not a Blog"</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-4" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-4"></a><span class="c1"># This is the main URL for your site. It will be used</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-5" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-5"></a><span class="c1"># in a prominent link</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-6" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-6" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-6"></a><span class="n">SITE_URL</span> <span class="o">=</span> <span class="s2">"https://getnikola.com/"</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-7" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-7" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-7"></a><span class="n">BLOG_EMAIL</span> <span class="o">=</span> <span class="s2">"<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dcaebdb0afb5b2bd9cb9a4bdb1acb0b9f2bfb3b1">[email&#160;protected]</a>"</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-8" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-8" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-8"></a><span class="n">BLOG_DESCRIPTION</span> <span class="o">=</span> <span class="s2">"This is a demo site (not a blog) for Nikola."</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-9" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-9" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-9"></a>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-10" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-10" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-10"></a><span class="c1">#</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-11" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-11" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-11"></a><span class="c1"># Some things in the middle you don't really need to change...</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-12" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-12" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-12"></a><span class="c1">#</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-13" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-13" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-13"></a>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-14" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-14" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-14"></a><span class="c1"># you can also keep the current content of POSTS if you want a blog with your site</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-15" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-15" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-15"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">()</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-16" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-16" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-16"></a><span class="c1"># remove destination directory to generate pages in the root directory</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-17" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-17" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-17"></a><span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-18" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-18" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-18"></a>    <span class="p">(</span><span class="s2">"pages/*.rst"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-19" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-19" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-19"></a>    <span class="p">(</span><span class="s2">"pages/*.txt"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-20" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-20" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-20"></a>    <span class="p">(</span><span class="s2">"pages/*.html"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="s2">"page.tmpl"</span><span class="p">),</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-21" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-21" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-21"></a><span class="p">)</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-22" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-22" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-22"></a>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-23" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-23" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-23"></a><span class="c1"># And to avoid a conflict because blogs try to generate /index.html</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-24" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-24" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-24"></a><span class="n">INDEX_PATH</span> <span class="o">=</span> <span class="s2">"blog"</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-25" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-25" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-25"></a>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-26" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-26" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-26"></a><span class="c1"># Or you can disable blog indexes altogether:</span>
+<a id="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-27" name="rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-27" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_25bd8c8dbd4b4bd0aeb61544035276a0-27"></a><span class="c1"># DISABLE_INDEXES = True</span>
+</pre></div>
+<p>And now we are ready to create our first page:</p>
+<div class="code"><pre class="code console"><a id="rest_code_2500bdcf84a441a09ae57fc7af692908-1" name="rest_code_2500bdcf84a441a09ae57fc7af692908-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>new_page
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-2" name="rest_code_2500bdcf84a441a09ae57fc7af692908-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-2"></a><span class="go">Creating New Page</span>
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-3" name="rest_code_2500bdcf84a441a09ae57fc7af692908-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-3"></a><span class="go">-----------------</span>
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-4" name="rest_code_2500bdcf84a441a09ae57fc7af692908-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-4"></a>
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-5" name="rest_code_2500bdcf84a441a09ae57fc7af692908-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-5"></a><span class="go">Title: index</span>
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-6" name="rest_code_2500bdcf84a441a09ae57fc7af692908-6" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-6"></a><span class="go">Scanning posts....done!</span>
+<a id="rest_code_2500bdcf84a441a09ae57fc7af692908-7" name="rest_code_2500bdcf84a441a09ae57fc7af692908-7" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_2500bdcf84a441a09ae57fc7af692908-7"></a><span class="go">[1970-01-01T00:00:00Z] INFO: new_page: Your page's text is at: pages/index.rst</span>
+</pre></div>
+<p>We can now build and preview our site:</p>
+<div class="code"><pre class="code console"><a id="rest_code_14288fa94024461b86ddee4d72ef7d42-1" name="rest_code_14288fa94024461b86ddee4d72ef7d42-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-1"></a><span class="gp">$ </span>nikola<span class="w"> </span>build
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-2" name="rest_code_14288fa94024461b86ddee4d72ef7d42-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-2"></a><span class="go">Scanning posts.done!</span>
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-3" name="rest_code_14288fa94024461b86ddee4d72ef7d42-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-3"></a><span class="go">.  render_site:output/categories/index.html</span>
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-4" name="rest_code_14288fa94024461b86ddee4d72ef7d42-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-4"></a><span class="go">.  render_sources:output/index.txt</span>
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-5" name="rest_code_14288fa94024461b86ddee4d72ef7d42-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-5"></a><span class="go">.  render_rss:output/rss.xml</span>
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-6" name="rest_code_14288fa94024461b86ddee4d72ef7d42-6" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-6"></a><span class="go">⋮</span>
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-7" name="rest_code_14288fa94024461b86ddee4d72ef7d42-7" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-7"></a><span class="gp">$ </span>nikola<span class="w"> </span>serve
+<a id="rest_code_14288fa94024461b86ddee4d72ef7d42-8" name="rest_code_14288fa94024461b86ddee4d72ef7d42-8" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_14288fa94024461b86ddee4d72ef7d42-8"></a><span class="go">[1970-01-01T00:00:00Z] INFO: serve: Serving HTTP on 0.0.0.0 port 8000...</span>
+</pre></div>
+<p>And you can see your (very empty) site in <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a></p>
+<p>So, what’s in that <code class="docutils literal">pages/index.txt</code> file?</p>
+<div class="code"><pre class="code rest"><a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-1" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-1"></a><span class="c">.. title: index</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-2" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-2"></a><span class="c">.. slug: index</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-3" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-3"></a><span class="c">.. date: 1970-01-01 00:00:00 UTC</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-4" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-4"></a><span class="c">.. tags:</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-5" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-5"></a><span class="c">.. link:</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-6" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-6" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-6"></a><span class="c">.. description:</span>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-7" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-7" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-7"></a>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-8" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-8" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-8"></a>
+<a id="rest_code_91c183f44add4fcda62aac92ebb6e9a3-9" name="rest_code_91c183f44add4fcda62aac92ebb6e9a3-9" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_91c183f44add4fcda62aac92ebb6e9a3-9"></a>Write your post here.
+</pre></div>
+<p><code class="docutils literal">title</code> is the page title, <code class="docutils literal">slug</code> is the name of the generated HTML file
+(in this case it would be <code class="docutils literal">index.html</code>). <code class="docutils literal">date</code>, <code class="docutils literal">tags</code> and <code class="docutils literal">link</code>
+doesn’t matter at all in pages. <code class="docutils literal">description</code> is useful for SEO purposes
+if you care for that.</p>
+<p>And below, the content. By default Nikola uses
+<a class="reference external" href="https://getnikola.com/quickstart.html">reStructuredText</a> but it supports
+a ton of formats, including Markdown, plain HTML, Jupyter Notebooks, BBCode,
+Wiki, and Textile. We will use reStructuredText for this example, but some
+people might find it a bit too limiting — if that is the case, try using HTML
+for your pages (Nikola does this on the index page, for example).</p>
+<p>So, let's give the page a nicer title, and some fake content. Since the default
+Nikola theme (called <code class="docutils literal">bootblog4</code>) is based on <a class="reference external" href="https://getbootstrap.com/">Bootstrap</a>
+you can use anything you like from it:</p>
+<div class="code"><pre class="code rest"><a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-1" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-1"></a><span class="c">.. title: Welcome To The Fake Site</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-2" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-2"></a><span class="c">.. slug: index</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-3" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-3"></a><span class="c">.. date: 1970-01-01 00:00:00 UTC</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-4" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-4"></a><span class="c">.. tags:</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-5" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-5"></a><span class="c">.. link:</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-6" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-6" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-6"></a><span class="c">.. description: Fake Site version 1, welcome page!</span>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-7" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-7" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-7"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-8" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-8" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-8"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-9" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-9" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-9"></a><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> jumbotron col-md-6
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-10" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-10" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-10"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-11" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-11" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-11"></a><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> This is a Fake Site
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-12" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-12" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-12"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-13" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-13" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-13"></a>    It pretends to be about things, but is really just an example.
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-14" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-14" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-14"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-15" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-15" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-15"></a><span class="p">    ..</span> <span class="ow">raw</span><span class="p">::</span> html
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-16" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-16" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-16"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-17" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-17" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-17"></a>       &lt;a href="https://getnikola.com/" class="btn btn-primary btn-lg"&gt;Click Me!&lt;/a&gt;
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-18" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-18" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-18"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-19" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-19" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-19"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-20" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-20" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-20"></a><span class="p">..</span> <span class="ow">class</span><span class="p">::</span> col-md-5
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-21" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-21" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-21"></a>
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-22" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-22" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-22"></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non nunc turpis.
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-23" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-23" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-23"></a>Phasellus a ullamcorper leo. Sed fringilla dapibus orci eu ornare. Quisque
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-24" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-24" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-24"></a>gravida quam a mi dignissim consequat. Morbi sed iaculis mi. Vivamus ultrices
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-25" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-25" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-25"></a>mattis euismod. Mauris aliquet magna eget mauris volutpat a egestas leo rhoncus.
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-26" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-26" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-26"></a>In hac habitasse platea dictumst. Ut sed mi arcu. Nullam id massa eu orci
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-27" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-27" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-27"></a>convallis accumsan. Nunc faucibus sodales justo ac ornare. In eu congue eros.
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-28" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-28" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-28"></a>Pellentesque iaculis risus urna. Proin est lorem, scelerisque non elementum at,
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-29" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-29" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-29"></a>semper vel velit. Phasellus consectetur orci vel tortor tempus imperdiet. Class
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-30" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-30" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-30"></a>aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+<a id="rest_code_41b5b7695a204e3185760a42fd8e45f0-31" name="rest_code_41b5b7695a204e3185760a42fd8e45f0-31" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_41b5b7695a204e3185760a42fd8e45f0-31"></a>himenaeos.
+</pre></div>
+<aside class="admonition admonition-tip-nice-urls"><p class="admonition-title">TIP: Nice URLs</p>
+<p>If you like your URLs without the <code class="docutils literal">.html</code> then you want to create folders and
+put the pages in <code class="docutils literal">index.html</code> inside them using the <code class="docutils literal">PRETTY_URLS</code> option
+(on by default)</p>
+</aside><p>And that's it. You will want to change the NAVIGATION_LINKS option to create a reasonable
+menu for your site, you may want to modify the theme (check <code class="docutils literal">nikola help subtheme</code>
+for a quick &amp; dirty solution), and you may want to add a blog later on, for company news
+or whatever.</p>
+<aside class="admonition admonition-tip-so-how-do-i-add-a-blog-now"><p class="admonition-title">TIP: So, how do I add a blog now?</p>
+<p>First, change the <code class="docutils literal">POSTS</code> option like this:</p>
+<div class="code"><pre class="code python"><a id="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-1" name="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-1" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-1"></a><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<a id="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-2" name="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-2" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-2"></a>    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"blog"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a id="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-3" name="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-3" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-3"></a>    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"blog"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a id="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-4" name="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-4" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-4"></a>    <span class="p">(</span><span class="s2">"posts/*.html"</span><span class="p">,</span> <span class="s2">"blog"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+<a id="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-5" name="rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-5" href="creating-a-site-not-a-blog-with-nikola.html#rest_code_b64d3b3d0d044d7aaaae93ba7ad6fb81-5"></a><span class="p">)</span>
+</pre></div>
+<p>Create a post with <code class="docutils literal">nikola new_post</code> and that's it, you now have a blog
+in the <code class="docutils literal">/blog/</code> subdirectory of your site — you may want to link to
+it in <code class="docutils literal">NAVIGATION_LINKS</code>.</p>
+</aside><p>If you want to see a site implementing all of the above, check out <a class="reference external" href="https://getnikola.com/">the Nikola
+website</a>.</p>
+<p>I hope this was helpful!</p>
+    </div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A blog about Nikola, the static website generator.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikola (old posts, page 11) | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/blog/index-11.html">
+<link rel="prev" href="." type="text/html">
+<link rel="next" href="index-10.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="c6a8afada9aaa786aaafa4a3b4a7e8a5aea7b2">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+
+    
+
+
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v811-is-out.html" class="u-url">Nikola v8.1.1 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v811-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-05T21:44:00Z" itemprop="datePublished" title="2020-07-05 21:44">2020-07-05 21:44</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v811-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v811-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.1.1. This release is mainly due to an
+incorrect PGP key being used for the PyPI artifacts; three regressions
+were also fixed in this release.</p>
+<section id="what-is-nikola-5"><h2>What is Nikola?<a href="#what-is-nikola-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-5"><h2>Downloads<a href="#downloads-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-5"><h2>Changes<a href="#changes-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="bugfixes-5"><h3>Bugfixes<a href="#bugfixes-5" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Default to no line numbers in code blocks, honor CodeHilite
+requesting no line numbers. Listing pages still use line numbers
+(Issue #3426)</p></li>
+<li><p>Remove duplicate MathJax config in bootstrap themes (Issue #3427)</p></li>
+<li><p>Fix <code class="docutils literal">doit</code> requirement to <code class="docutils literal"><span class="pre">doit&gt;=0.32.0</span></code> (Issue #3422)</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v810-is-out.html" class="u-url">Nikola v8.1.0 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v810-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-06-27T13:38:55Z" itemprop="datePublished" title="2020-06-27 13:38">2020-06-27 13:38</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v810-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v810-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.1.0. This release makes a few feature changes,
+improvements, and fixes a few bugs.</p>
+<section id="what-is-nikola-4"><h2>What is Nikola?<a href="#what-is-nikola-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-4"><h2>Downloads<a href="#downloads-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-4"><h2>Changes<a href="#changes-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-2"><h3>Features<a href="#features-2" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support posts without titles (Issue #3408)</p></li>
+<li><p>Support WebP image scaling (Issue #3399)</p></li>
+<li><p>Use Luxon instead of Moment for fancy dates to make it more
+lightweight, going from 328k to 68k (Issue #3232)</p></li>
+<li><p>New <code class="docutils literal">nikola console <span class="pre">-s</span> script.py</code> option to run scripts that
+access your site (Issue #3385)</p></li>
+<li><p>Allow preview images to be relative to posts for bootblog4 featured
+posts</p></li>
+<li><p>Change the listings formatting to support word wrap with line
+numbers and improve appearance</p></li>
+<li><p>Put the current language’s feed links first so that feed readers
+prefer it (Issue #3248)</p></li>
+<li><p>Added support for default preview image for posts (Issue #3326)</p></li>
+<li><p>Added support for thumbnails in gallery lists (Issue #1771)</p></li>
+</ul></section><section id="bugfixes-4"><h3>Bugfixes<a href="#bugfixes-4" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support directory names in <code class="docutils literal">REDIRECTIONS</code> (Issue #3421)</p></li>
+<li><p>Return a non-zero error code when <code class="docutils literal">nikola github_deploy</code> fails</p></li>
+<li><p>Refactored scale_image causing performance increasing in image
+resizing.</p></li>
+<li><p>Don’t force absolute links for brand/languages (Issue #3229)</p></li>
+<li><p>Fix RTL mirroring in base theme (<code class="docutils literal">:dir()</code> pseudo-class is Firefox only)
+(Issue #3353)</p></li>
+<li><p>Work around Bootstrap 4 alignment bug for RTL languages
+(Issue #3353)</p></li>
+<li><p>Handle multiple level of inherit/import nesting in Mako templates
+correctly (Issue #3349)</p></li>
+<li><p>Output a more informative error when files are missing due to
+broken symlinks or incorrect <code class="docutils literal">TRANSLATIONS_PATTERN</code> values</p></li>
+<li><p>Avoid installing <code class="docutils literal">tests</code> package to site-packages, remove it from
+your environment if it was inadvertently added (Issue #3348)</p></li>
+<li><p>Sometimes hyphenation added hyphens at the beginning of words
+(Issue #3362)</p></li>
+<li><p>Mark gallery images as "dirty" if EXIF configuration changes (Issue
+#3357)</p></li>
+<li><p>Fix regression in gallery titles being "index" if there was a
+index.txt and no title (Issue #3360)</p></li>
+<li><p>Make gallery indexes depend on destination images to avoid
+multithreading race condition (Issue #3361)</p></li>
+<li><p>Mark gallery thumbnails as lazy loading (Issue #2918)</p></li>
+<li><p>Don't consider JPEG images with EXIF thumbnails as animated (Issue
+#3332)</p></li>
+<li><p>Use correct language for hyphenation in posts that are not
+translated to all languages (Issue #3377)</p></li>
+</ul></section><section id="internal"><h3>Internal<a href="#internal" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Added Post.source() method to get a Post's object unprocessed
+contents.</p></li>
+<li><p>Added Post.save() method to modify Post contents.</p></li>
+<li><p>Made is_two_file a property that uses save()</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="automating-nikola-rebuilds-with-github-actions.html" class="u-url">Automating Nikola rebuilds with GitHub Actions</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="automating-nikola-rebuilds-with-github-actions.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-04-24T22:24:48Z" itemprop="datePublished" title="2020-04-24 22:24">2020-04-24 22:24</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="automating-nikola-rebuilds-with-github-actions.html#disqus_thread" data-disqus-identifier="cache/posts/automating-nikola-builds-with-github-actions.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>In this guide, we’ll set up GitHub Actions to rebuild a <a class="reference external" href="https://getnikola.com/">Nikola</a> website and host it on GitHub Pages.</p>
+<section id="why"><h2>Why?<a href="#why" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>By using GitHub Actions to build your site, you can easily blog from anywhere
+you can edit text files. Which means you can blog with only a web
+browser and <a class="reference external" href="https://github.com">GitHub.com</a>.
+You also won’t need to install Nikola and Python to write. You won’t need a
+real computer either — a mobile phone could probably access GitHub.com and write something.</p>
+</section><section id="caveats"><h2>Caveats<a href="#caveats" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The build might take a couple minutes to finish (1:30 for the demo site;
+YMMV)</p></li>
+<li><p>When you commit and push to GitHub, the site will be published
+unconditionally. If you don’t have a copy of Nikola for local use, there is
+no way to preview your site.</p></li>
+</ul></section><section id="what-you-need"><h2>What you need<a href="#what-you-need" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A computer for the initial setup that can run Nikola. You can do it with any
+OS (Linux, macOS, *BSD, but also Windows).</p></li>
+<li><p>A GitHub account (free)</p></li>
+</ul></section><section id="setting-up-nikola"><h2>Setting up Nikola<a href="#setting-up-nikola" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Start by creating a new Nikola site and customizing it to your liking. Follow
+the <a class="reference external" href="https://getnikola.com/getting-started.html">Getting Started guide</a>. You
+might also want to add support for <a class="reference external" href="https://getnikola.com/handbook.html#configuring-other-input-formats">other input formats</a>, namely
+Markdown, but this is not a requirement.</p>
+<p>After you’re done, you must configure <a class="reference external" href="https://getnikola.com/handbook.html#deploying-to-github">deploying to GitHub</a> in Nikola. There
+are a few important things you need to take care of:</p>
+<ul class="simple">
+<li><p>Make your first deployment from your local computer and make sure your site
+works right. Don’t forget to set up <code class="docutils literal">.gitignore</code>.</p></li>
+<li><p>The <code class="docutils literal">GITHUB_COMMIT_SOURCE</code> and <code class="docutils literal">GITHUB_REMOTE_NAME</code> settings are
+overridden, so you can use values appropriate for your local builds.</p></li>
+<li><p>Ensure that the correct branch for GitHub Pages is set on GitHub.com.</p></li>
+</ul>
+<p>If everything works, you can make some change to your site (so you see that
+rebuilding works), but don’t commit it just yet.</p>
+</section><section id="setting-up-github-actions"><h2>Setting up GitHub Actions<a href="#setting-up-github-actions" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Next, we need to set up GitHub Actions. This is really straightforward.</p>
+<p>On your source branch, create a file named <code class="docutils literal">.github/workflows/main.yml</code> with the following contents:</p>
+<p><a class="reference external" href="../listings/github-workflow.yml.html">github-workflow.yml</a>  <a class="reference external" href="../listings/github-workflow.yml">(Source)</a></p>
+<div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-1"><code data-line-number=" 1"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-1" name="rest_code_350e9be37c2943ab9a28489e74a58554-1"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-2"><code data-line-number=" 2"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-2" name="rest_code_350e9be37c2943ab9a28489e74a58554-2"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-3"><code data-line-number=" 3"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-3" name="rest_code_350e9be37c2943ab9a28489e74a58554-3"></a><span class="nt">jobs</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-4"><code data-line-number=" 4"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-4" name="rest_code_350e9be37c2943ab9a28489e74a58554-4"></a><span class="w">  </span><span class="nt">nikola_build</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-5"><code data-line-number=" 5"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-5" name="rest_code_350e9be37c2943ab9a28489e74a58554-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-6"><code data-line-number=" 6"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-6" name="rest_code_350e9be37c2943ab9a28489e74a58554-6"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">'Deploy</span><span class="nv"> </span><span class="s">Nikola</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">GitHub</span><span class="nv"> </span><span class="s">Pages'</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-7"><code data-line-number=" 7"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-7" name="rest_code_350e9be37c2943ab9a28489e74a58554-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-8"><code data-line-number=" 8"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-8" name="rest_code_350e9be37c2943ab9a28489e74a58554-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check out</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-9"><code data-line-number=" 9"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-9" name="rest_code_350e9be37c2943ab9a28489e74a58554-9"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-10"><code data-line-number="10"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-10" name="rest_code_350e9be37c2943ab9a28489e74a58554-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build and Deploy Nikola</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-11"><code data-line-number="11"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-11" name="rest_code_350e9be37c2943ab9a28489e74a58554-11"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">getnikola/nikola-action@v2</span>
+</code></td>
+</tr>
+</table></div>
+<p>There might be a newer version of the action available, you can check the
+latest version in the <a class="reference external" href="https://github.com/getnikola/nikola-action">getnikola/nikola-action repo on GitHub</a>.</p>
+<p>By default, the action will install the latest stable release of <code class="docutils literal">Nikola[extras]</code>. If you want to use the bleeding-edge version from <code class="docutils literal">master</code>, or want to install some extra dependencies, you can provide a <code class="docutils literal">requirements.txt</code> file in the repository.</p>
+<p>Commit everything to GitHub:</p>
+<div class="code"><pre class="code console"><a id="rest_code_424074bc25e34f18a761a113a908f178-1" name="rest_code_424074bc25e34f18a761a113a908f178-1" href="automating-nikola-rebuilds-with-github-actions.html#rest_code_424074bc25e34f18a761a113a908f178-1"></a><span class="go">git add .</span>
+<a id="rest_code_424074bc25e34f18a761a113a908f178-2" name="rest_code_424074bc25e34f18a761a113a908f178-2" href="automating-nikola-rebuilds-with-github-actions.html#rest_code_424074bc25e34f18a761a113a908f178-2"></a><span class="go">git commit -am "Automate builds with GitHub Actions"</span>
+</pre></div>
+<p>Hopefully, GitHub will build your site and deploy. Check the Actions tab in
+your repository or your e-mail for build details. If there are any errors, make sure you followed this guide to the letter.</p>
+</section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v804-is-out.html" class="u-url">Nikola v8.0.4 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v804-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-02-06T19:38:25Z" itemprop="datePublished" title="2020-02-06 19:38">2020-02-06 19:38</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v804-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v804-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.0.4. This release fixes a few small bugs,
+including a date glitch that appeared around New Year’s Eve.</p>
+<section id="what-is-nikola-3"><h2>What is Nikola?<a href="#what-is-nikola-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-3"><h2>Downloads<a href="#downloads-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-3"><h2>Changes<a href="#changes-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola now supports Python 3.5 or newer. If you are on 3.4, please
+upgrade to a newer release of Python.</p>
+<section id="bugfixes-3"><h3>Bugfixes<a href="#bugfixes-3" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix hiding future posts in sitemaps for posts without pretty URLs
+(Issue #3339)</p></li>
+<li><p>Pass the correct parameters to shortcodes in jupyter notebooks</p></li>
+<li><p>Fix handling of conflicts between posts/pages and indexes generated
+by <code class="docutils literal">CATEGORY_PAGES_FOLLOW_DESTPATH</code></p></li>
+<li><p>Fix default date format to <code class="docutils literal"><span class="pre">yyyy-MM-dd</span></code> to avoid bug with ISO
+years (Issue #3337)</p></li>
+<li><p>Remove <code class="docutils literal">extra_header</code> and <code class="docutils literal">extra_footer</code> from <code class="docutils literal">base</code> theme
+due to incompatibility with Mako. The blocks are still available
+in <code class="docutils literal">bootstrap4</code> and <code class="docutils literal">bootblog4</code>. (Issue #3319 via #3291)</p></li>
+<li><p>Show tracebacks when <code class="docutils literal">conf.py</code> cannot be imported</p></li>
+<li><p>Fix loading complex config files that import modules (Issue #3314)</p></li>
+<li><p>Fix behavior of header demotion for negative values</p></li>
+<li><p>If <code class="docutils literal">FILE_METADATA_REGEXP</code> is set, load metadata from the filename
+first, then continue with the other sources (Issue #3344)</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v803-is-out.html" class="u-url">Nikola v8.0.3 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v803-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2019-11-02T19:17:53Z" itemprop="datePublished" title="2019-11-02 19:17">2019-11-02 19:17</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v803-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v803-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.0.3. This release fixes a few bugs, including
+a notable one with galleries not working on mobile.</p>
+<section id="what-is-nikola-2"><h2>What is Nikola?<a href="#what-is-nikola-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-2"><h2>Downloads<a href="#downloads-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-2"><h2>Changes<a href="#changes-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features"><h3>Features<a href="#features" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add Friulian translation by aoanla</p></li>
+<li><p>Add <code class="docutils literal">extra_header</code> and <code class="docutils literal">extra_footer</code> blocks to templates
+(Issue #3291)</p></li>
+<li><p>Add <code class="docutils literal">REST_FILE_INSERTION_ENABLED</code> config option to enable or
+disable reST external file inclusion directives (Issue #3311)</p></li>
+</ul></section><section id="bugfixes-2"><h3>Bugfixes<a href="#bugfixes-2" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support Markdown v3.x (Issue #3173)</p></li>
+<li><p>Fix galleries in Firefox Mobile and when resizing window
+(Issue #3258)</p></li>
+<li><p>Output <code class="docutils literal">&lt;code&gt;</code> tag for double backticks in reST (Issue #3276)</p></li>
+<li><p>Fully switch to HTML5 writer for reST (Issue #3276,
+getnikola/plugins#294)</p></li>
+<li><p>Make ipynb listings work again</p></li>
+<li><p>Correctly link to listings with spaces in their names</p></li>
+<li><p>import_wordpress plugin doesn't require anymore a translation and
+can use nikola's default if none provided</p></li>
+<li><p>Wordpress+qtranslate import (--qtranslate option) now works with
+more recent versions of plugins from the qtranslate family (namely
+qtranslate-X)</p></li>
+<li><p>Fixed a wordpress import exception when image metadata has floats
+formated with ',' instead of '.'</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v802-is-out.html" class="u-url">Nikola v8.0.2 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v802-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2019-02-22T19:34:20Z" itemprop="datePublished" title="2019-02-22 19:34">2019-02-22 19:34</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v802-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v802-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.0.2. This is a quality-of-life release
+with a handful of bug fixes, two new translations and a few extra features.</p>
+<section id="what-is-nikola"><h2>What is Nikola?<a href="#what-is-nikola" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads"><h2>Downloads<a href="#downloads" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>. (Python 3-only since v8.0.0.)</p>
+</section><section id="changes"><h2>Changes<a href="#changes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Make <code class="docutils literal">ARCHIVE_PATH</code>, <code class="docutils literal">ARCHIVE_FILENAME</code> translatable
+(Issue #3234)</p></li>
+<li><p>Support configuring Isso via <code class="docutils literal"><span class="pre">GLOBAL_CONTEXT['isso_config']</span></code>
+(Issue #3225)</p></li>
+<li><p>Handle fragments in doc role (Issue #3212)</p></li>
+<li><p>Slugify references in doc role.</p></li>
+<li><p>Add Interlingua translation by Alberto Mardegan</p></li>
+<li><p>Add Afrikaans translation by Friedel Wolff</p></li>
+<li><p>Support for docutils.conf (Issue #3188)</p></li>
+</ul>
+<section id="bugfixes"><h3>Bugfixes<a href="#bugfixes" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Avoid random rebuilds with sites whose locales are not fullly
+supported, and random rebuilds on multilingual sites using Python
+3.4/3.5 (Issue #3216)</p></li>
+<li><p>Apply modifications to <code class="docutils literal">default_metadata</code> before copying it to
+other languages</p></li>
+<li><p>Make Commento comments work (Issue #3198)</p></li>
+<li><p>Correctly handle separators in the relative path given to
+"ignored_assets" key in theme meta files (Issue #3210)</p></li>
+<li><p>Fix error when <code class="docutils literal">nikola new_post</code> receives directory name as
+path (Issue #3207)</p></li>
+<li><p>Add slashes to paths with query strings in <code class="docutils literal">nikola serve</code>
+only if there isn’t one before <code class="docutils literal">?</code></p></li>
+<li><p>Read listings files as UTF-8</p></li>
+<li><p>Set one-file status basing on default language only (Issue #3191)</p></li>
+<li><p>Don’t warn if post status is set to <code class="docutils literal">published</code> explicitly
+(Issue #3181)</p></li>
+<li><p>Remove mention of Twitter cards requiring an opt-in.
+This is not true anymore - anyone can use them.</p></li>
+<li><p>fancydates now workwith listdate items (eg. archives)</p></li>
+<li><p>bootstrap4 and bootblog4 themes no longer load moment.js when
+fancydates are off. (Issue #3231)</p></li>
+</ul></section></section>
+</div>
+    </article>
+</div>
+
+        <ul class="pager postindexpager clearfix">
+<li class="previous"><a href="." rel="prev">Newer posts</a></li>
+            <li class="next"><a href="index-10.html" rel="next">Older posts</a></li>
+        </ul>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var disqus_shortname="nikolaweb";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

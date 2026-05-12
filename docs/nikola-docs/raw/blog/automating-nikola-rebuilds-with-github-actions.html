@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automating Nikola rebuilds with GitHub Actions | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/blog/automating-nikola-rebuilds-with-github-actions.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Chris Warrick">
+<link rel="prev" href="nikola-v804-is-out.html" title="Nikola v8.0.4 is out!" type="text/html">
+<link rel="next" href="nikola-v810-is-out.html" title="Nikola v8.1.0 is out!" type="text/html">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Automating Nikola rebuilds with GitHub Actions">
+<meta property="og:url" content="https://getnikola.com/blog/automating-nikola-rebuilds-with-github-actions.html">
+<meta property="og:description" content="In this guide, we’ll set up GitHub Actions to rebuild a Nikola website and host it on GitHub Pages.
+
+Why?
+By using GitHub Actions to build your site, you can easily blog from anywhere
+you can edit tex">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-04-24T22:24:48Z">
+<meta property="article:tag" content="automation">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="GitHub Actions">
+<meta property="article:tag" content="tips">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="c3adaaa8acafa283afaaa1a6b1a2eda0aba2b7">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="automating-nikola-rebuilds-with-github-actions.rst" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Automating Nikola rebuilds with GitHub Actions</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2020-04-24T22:24:48Z" itemprop="datePublished" title="2020-04-24 22:24">2020-04-24 22:24</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="automating-nikola-rebuilds-with-github-actions.html#disqus_thread" data-disqus-identifier="cache/posts/automating-nikola-builds-with-github-actions.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="automating-nikola-rebuilds-with-github-actions.rst" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>In this guide, we’ll set up GitHub Actions to rebuild a <a class="reference external" href="https://getnikola.com/">Nikola</a> website and host it on GitHub Pages.</p>
+<section id="why"><h2>Why?<a href="#why" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>By using GitHub Actions to build your site, you can easily blog from anywhere
+you can edit text files. Which means you can blog with only a web
+browser and <a class="reference external" href="https://github.com">GitHub.com</a>.
+You also won’t need to install Nikola and Python to write. You won’t need a
+real computer either — a mobile phone could probably access GitHub.com and write something.</p>
+</section><section id="caveats"><h2>Caveats<a href="#caveats" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The build might take a couple minutes to finish (1:30 for the demo site;
+YMMV)</p></li>
+<li><p>When you commit and push to GitHub, the site will be published
+unconditionally. If you don’t have a copy of Nikola for local use, there is
+no way to preview your site.</p></li>
+</ul></section><section id="what-you-need"><h2>What you need<a href="#what-you-need" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A computer for the initial setup that can run Nikola. You can do it with any
+OS (Linux, macOS, *BSD, but also Windows).</p></li>
+<li><p>A GitHub account (free)</p></li>
+</ul></section><section id="setting-up-nikola"><h2>Setting up Nikola<a href="#setting-up-nikola" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Start by creating a new Nikola site and customizing it to your liking. Follow
+the <a class="reference external" href="https://getnikola.com/getting-started.html">Getting Started guide</a>. You
+might also want to add support for <a class="reference external" href="https://getnikola.com/handbook.html#configuring-other-input-formats">other input formats</a>, namely
+Markdown, but this is not a requirement.</p>
+<p>After you’re done, you must configure <a class="reference external" href="https://getnikola.com/handbook.html#deploying-to-github">deploying to GitHub</a> in Nikola. There
+are a few important things you need to take care of:</p>
+<ul class="simple">
+<li><p>Make your first deployment from your local computer and make sure your site
+works right. Don’t forget to set up <code class="docutils literal">.gitignore</code>.</p></li>
+<li><p>The <code class="docutils literal">GITHUB_COMMIT_SOURCE</code> and <code class="docutils literal">GITHUB_REMOTE_NAME</code> settings are
+overridden, so you can use values appropriate for your local builds.</p></li>
+<li><p>Ensure that the correct branch for GitHub Pages is set on GitHub.com.</p></li>
+</ul>
+<p>If everything works, you can make some change to your site (so you see that
+rebuilding works), but don’t commit it just yet.</p>
+</section><section id="setting-up-github-actions"><h2>Setting up GitHub Actions<a href="#setting-up-github-actions" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Next, we need to set up GitHub Actions. This is really straightforward.</p>
+<p>On your source branch, create a file named <code class="docutils literal">.github/workflows/main.yml</code> with the following contents:</p>
+<p><a class="reference external" href="../listings/github-workflow.yml.html">github-workflow.yml</a>  <a class="reference external" href="../listings/github-workflow.yml">(Source)</a></p>
+<div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-1"><code data-line-number=" 1"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-1" name="rest_code_350e9be37c2943ab9a28489e74a58554-1"></a><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">]</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-2"><code data-line-number=" 2"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-2" name="rest_code_350e9be37c2943ab9a28489e74a58554-2"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-3"><code data-line-number=" 3"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-3" name="rest_code_350e9be37c2943ab9a28489e74a58554-3"></a><span class="nt">jobs</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-4"><code data-line-number=" 4"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-4" name="rest_code_350e9be37c2943ab9a28489e74a58554-4"></a><span class="w">  </span><span class="nt">nikola_build</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-5"><code data-line-number=" 5"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-5" name="rest_code_350e9be37c2943ab9a28489e74a58554-5"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-6"><code data-line-number=" 6"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-6" name="rest_code_350e9be37c2943ab9a28489e74a58554-6"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">'Deploy</span><span class="nv"> </span><span class="s">Nikola</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">GitHub</span><span class="nv"> </span><span class="s">Pages'</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-7"><code data-line-number=" 7"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-7" name="rest_code_350e9be37c2943ab9a28489e74a58554-7"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-8"><code data-line-number=" 8"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-8" name="rest_code_350e9be37c2943ab9a28489e74a58554-8"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check out</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-9"><code data-line-number=" 9"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-9" name="rest_code_350e9be37c2943ab9a28489e74a58554-9"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-10"><code data-line-number="10"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-10" name="rest_code_350e9be37c2943ab9a28489e74a58554-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build and Deploy Nikola</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="automating-nikola-rebuilds-with-github-actions.html#rest_code_350e9be37c2943ab9a28489e74a58554-11"><code data-line-number="11"></code></a></td>
+<td class="code"><code><a id="rest_code_350e9be37c2943ab9a28489e74a58554-11" name="rest_code_350e9be37c2943ab9a28489e74a58554-11"></a><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">getnikola/nikola-action@v2</span>
+</code></td>
+</tr>
+</table></div>
+<p>There might be a newer version of the action available, you can check the
+latest version in the <a class="reference external" href="https://github.com/getnikola/nikola-action">getnikola/nikola-action repo on GitHub</a>.</p>
+<p>By default, the action will install the latest stable release of <code class="docutils literal">Nikola[extras]</code>. If you want to use the bleeding-edge version from <code class="docutils literal">master</code>, or want to install some extra dependencies, you can provide a <code class="docutils literal">requirements.txt</code> file in the repository.</p>
+<p>Commit everything to GitHub:</p>
+<div class="code"><pre class="code console"><a id="rest_code_424074bc25e34f18a761a113a908f178-1" name="rest_code_424074bc25e34f18a761a113a908f178-1" href="automating-nikola-rebuilds-with-github-actions.html#rest_code_424074bc25e34f18a761a113a908f178-1"></a><span class="go">git add .</span>
+<a id="rest_code_424074bc25e34f18a761a113a908f178-2" name="rest_code_424074bc25e34f18a761a113a908f178-2" href="automating-nikola-rebuilds-with-github-actions.html#rest_code_424074bc25e34f18a761a113a908f178-2"></a><span class="go">git commit -am "Automate builds with GitHub Actions"</span>
+</pre></div>
+<p>Hopefully, GitHub will build your site and deploy. Check the Actions tab in
+your repository or your e-mail for build details. If there are any errors, make sure you followed this guide to the letter.</p>
+</section>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/automation.html" rel="tag">automation</a></li>
+            <li><a class="tag p-category" href="../categories/github.html" rel="tag">GitHub</a></li>
+            <li><a class="tag p-category" href="../categories/github-actions.html" rel="tag">GitHub Actions</a></li>
+            <li><a class="tag p-category" href="../categories/tips.html" rel="tag">tips</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="nikola-v804-is-out.html" rel="prev" title="Nikola v8.0.4 is out!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="nikola-v810-is-out.html" rel="next" title="Nikola v8.1.0 is out!">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+    
+        <div id="disqus_thread"></div>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        var disqus_shortname ="nikolaweb",
+            disqus_url="https://getnikola.com/blog/automating-nikola-rebuilds-with-github-actions.html",
+        disqus_title="Automating Nikola rebuilds with GitHub Actions",
+        disqus_identifier="cache/posts/automating-nikola-builds-with-github-actions.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="nikolaweb";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

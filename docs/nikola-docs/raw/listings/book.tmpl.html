@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="book.tmpl">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>book.tmpl | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/listings/book.tmpl.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="0d63646662616c4d61646f687f6c236e656c79">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="../blog/index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="book.tmpl" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+
+<nav class="breadcrumbs"><ul class="breadcrumb">
+<li class="breadcrumb-item"><a href=".">listings</a></li>
+                <li class="breadcrumb-item active">book.tmpl</li>
+</ul></nav><h1>book.tmpl
+        <small><a href="book.tmpl">(Source)</a></small>
+    </h1>
+    <div class="code"><table class="codetable">
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-1"><code data-line-number="  1"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-1" name="listingsbooktmpl-1"></a><span class="c">## -*- coding: utf-8 -*-</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-2"><code data-line-number="  2"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-2" name="listingsbooktmpl-2"></a><span class="x">&lt;%namespace name="helper" file="post_helper.tmpl"/&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-3"><code data-line-number="  3"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-3" name="listingsbooktmpl-3"></a><span class="x">&lt;%namespace name="pheader" file="post_header.tmpl"/&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-4"><code data-line-number="  4"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-4" name="listingsbooktmpl-4"></a><span class="x">&lt;%namespace name="comments" file="comments_helper.tmpl"/&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-5"><code data-line-number="  5"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-5" name="listingsbooktmpl-5"></a><span class="x">&lt;%inherit file="post.tmpl"/&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-6"><code data-line-number="  6"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-6" name="listingsbooktmpl-6"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-7"><code data-line-number="  7"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-7" name="listingsbooktmpl-7"></a><span class="x">&lt;%block name="extra_head"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-8"><code data-line-number="  8"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-8" name="listingsbooktmpl-8"></a><span class="x">    </span><span class="cp">${</span><span class="n">parent</span><span class="o">.</span><span class="n">extra_head</span><span class="p">()</span><span class="cp">}</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-9"><code data-line-number="  9"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-9" name="listingsbooktmpl-9"></a><span class="x">    &lt;link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-10"><code data-line-number=" 10"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-10" name="listingsbooktmpl-10"></a><span class="x">    &lt;style&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-11"><code data-line-number=" 11"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-11" name="listingsbooktmpl-11"></a><span class="x">        .smallcaps {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-12"><code data-line-number=" 12"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-12" name="listingsbooktmpl-12"></a><span class="x">            font-variant: small-caps;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-13"><code data-line-number=" 13"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-13" name="listingsbooktmpl-13"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-14"><code data-line-number=" 14"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-14" name="listingsbooktmpl-14"></a><span class="x">        .chapter {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-15"><code data-line-number=" 15"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-15" name="listingsbooktmpl-15"></a><span class="x">            width: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-16"><code data-line-number=" 16"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-16" name="listingsbooktmpl-16"></a><span class="x">            padding: 10px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-17"><code data-line-number=" 17"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-17" name="listingsbooktmpl-17"></a><span class="x">            -webkit-column-gap: 40px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-18"><code data-line-number=" 18"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-18" name="listingsbooktmpl-18"></a><span class="x">               -moz-column-gap: 40px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-19"><code data-line-number=" 19"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-19" name="listingsbooktmpl-19"></a><span class="x">                    column-gap: 40px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-20"><code data-line-number=" 20"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-20" name="listingsbooktmpl-20"></a><span class="x">            -webkit-column-width: 400px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-21"><code data-line-number=" 21"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-21" name="listingsbooktmpl-21"></a><span class="x">               -moz-column-width: 400px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-22"><code data-line-number=" 22"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-22" name="listingsbooktmpl-22"></a><span class="x">                    column-width: 400px;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-23"><code data-line-number=" 23"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-23" name="listingsbooktmpl-23"></a><span class="x">            -webkit-column-count: 2;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-24"><code data-line-number=" 24"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-24" name="listingsbooktmpl-24"></a><span class="x">               -moz-column-count: 2;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-25"><code data-line-number=" 25"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-25" name="listingsbooktmpl-25"></a><span class="x">                    column-count: 2;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-26"><code data-line-number=" 26"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-26" name="listingsbooktmpl-26"></a><span class="x">            -webkit-column-rule: 1px solid </span><span class="cp">#ddd</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-27"><code data-line-number=" 27"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-27" name="listingsbooktmpl-27"></a><span class="x">               -moz-column-rule: 1px solid </span><span class="cp">#ddd</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-28"><code data-line-number=" 28"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-28" name="listingsbooktmpl-28"></a><span class="x">                    column-rule: 1px solid </span><span class="cp">#ddd</span><span class="p">;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-29"><code data-line-number=" 29"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-29" name="listingsbooktmpl-29"></a><span class="x">            height: 90vh;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-30"><code data-line-number=" 30"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-30" name="listingsbooktmpl-30"></a><span class="x">            font-family: 'Gentium Book Basic', serif;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-31"><code data-line-number=" 31"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-31" name="listingsbooktmpl-31"></a><span class="x">            color: #2d2e2e;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-32"><code data-line-number=" 32"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-32" name="listingsbooktmpl-32"></a><span class="x">            font-weight: 500;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-33"><code data-line-number=" 33"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-33" name="listingsbooktmpl-33"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-34"><code data-line-number=" 34"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-34" name="listingsbooktmpl-34"></a><span class="x">        div.frame {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-35"><code data-line-number=" 35"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-35" name="listingsbooktmpl-35"></a><span class="x">            overflow: hidden;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-36"><code data-line-number=" 36"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-36" name="listingsbooktmpl-36"></a><span class="x">            padding: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-37"><code data-line-number=" 37"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-37" name="listingsbooktmpl-37"></a><span class="x">            margin: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-38"><code data-line-number=" 38"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-38" name="listingsbooktmpl-38"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-39"><code data-line-number=" 39"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-39" name="listingsbooktmpl-39"></a><span class="x">        div.scrolling-cont {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-40"><code data-line-number=" 40"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-40" name="listingsbooktmpl-40"></a><span class="x">            overflow-x: scroll;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-41"><code data-line-number=" 41"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-41" name="listingsbooktmpl-41"></a><span class="x">            padding: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-42"><code data-line-number=" 42"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-42" name="listingsbooktmpl-42"></a><span class="x">            margin: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-43"><code data-line-number=" 43"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-43" name="listingsbooktmpl-43"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-44"><code data-line-number=" 44"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-44" name="listingsbooktmpl-44"></a><span class="x">        h1, h2, h3, h4 {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-45"><code data-line-number=" 45"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-45" name="listingsbooktmpl-45"></a><span class="x">            text-align: center;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-46"><code data-line-number=" 46"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-46" name="listingsbooktmpl-46"></a><span class="x">            width: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-47"><code data-line-number=" 47"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-47" name="listingsbooktmpl-47"></a><span class="x">            font-family: 'Gentium Book Basic', serif;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-48"><code data-line-number=" 48"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-48" name="listingsbooktmpl-48"></a><span class="x">            font-size: 120%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-49"><code data-line-number=" 49"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-49" name="listingsbooktmpl-49"></a><span class="x">            font-weight: 900;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-50"><code data-line-number=" 50"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-50" name="listingsbooktmpl-50"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-51"><code data-line-number=" 51"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-51" name="listingsbooktmpl-51"></a><span class="x">        h1 {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-52"><code data-line-number=" 52"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-52" name="listingsbooktmpl-52"></a><span class="x">            font-size: 150%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-53"><code data-line-number=" 53"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-53" name="listingsbooktmpl-53"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-54"><code data-line-number=" 54"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-54" name="listingsbooktmpl-54"></a><span class="x">        .subtitle {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-55"><code data-line-number=" 55"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-55" name="listingsbooktmpl-55"></a><span class="x">            text-align: center;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-56"><code data-line-number=" 56"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-56" name="listingsbooktmpl-56"></a><span class="x">            width: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-57"><code data-line-number=" 57"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-57" name="listingsbooktmpl-57"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-58"><code data-line-number=" 58"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-58" name="listingsbooktmpl-58"></a><span class="x">        .bookfig {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-59"><code data-line-number=" 59"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-59" name="listingsbooktmpl-59"></a><span class="x">            width: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-60"><code data-line-number=" 60"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-60" name="listingsbooktmpl-60"></a><span class="x">            height: auto;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-61"><code data-line-number=" 61"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-61" name="listingsbooktmpl-61"></a><span class="x">            max-width: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-62"><code data-line-number=" 62"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-62" name="listingsbooktmpl-62"></a><span class="x">            max-height: 100%;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-63"><code data-line-number=" 63"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-63" name="listingsbooktmpl-63"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-64"><code data-line-number=" 64"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-64" name="listingsbooktmpl-64"></a><span class="x">        div.figure {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-65"><code data-line-number=" 65"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-65" name="listingsbooktmpl-65"></a><span class="x">            height: 88vh;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-66"><code data-line-number=" 66"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-66" name="listingsbooktmpl-66"></a><span class="x">            margin: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-67"><code data-line-number=" 67"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-67" name="listingsbooktmpl-67"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-68"><code data-line-number=" 68"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-68" name="listingsbooktmpl-68"></a><span class="x">        div.topic {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-69"><code data-line-number=" 69"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-69" name="listingsbooktmpl-69"></a><span class="x">            margin: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-70"><code data-line-number=" 70"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-70" name="listingsbooktmpl-70"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-71"><code data-line-number=" 71"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-71" name="listingsbooktmpl-71"></a><span class="x">        div.section &gt; p {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-72"><code data-line-number=" 72"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-72" name="listingsbooktmpl-72"></a><span class="x">            text-indent: 1em;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-73"><code data-line-number=" 73"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-73" name="listingsbooktmpl-73"></a><span class="x">            margin-bottom: 0;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-74"><code data-line-number=" 74"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-74" name="listingsbooktmpl-74"></a><span class="x">            text-align: justify;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-75"><code data-line-number=" 75"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-75" name="listingsbooktmpl-75"></a><span class="x">        }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-76"><code data-line-number=" 76"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-76" name="listingsbooktmpl-76"></a><span class="x">    &lt;/style&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-77"><code data-line-number=" 77"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-77" name="listingsbooktmpl-77"></a><span class="x">&lt;/%block&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-78"><code data-line-number=" 78"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-78" name="listingsbooktmpl-78"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-79"><code data-line-number=" 79"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-79" name="listingsbooktmpl-79"></a><span class="x">&lt;%block name="content"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-80"><code data-line-number=" 80"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-80" name="listingsbooktmpl-80"></a><span class="x">&lt;article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-81"><code data-line-number=" 81"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-81" name="listingsbooktmpl-81"></a><span class="x">    &lt;div class="frame"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-82"><code data-line-number=" 82"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-82" name="listingsbooktmpl-82"></a><span class="x">    &lt;div class="scrolling-cont" id="scrolling-cont" name="scrolling-cont"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-83"><code data-line-number=" 83"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-83" name="listingsbooktmpl-83"></a><span class="x">    &lt;div class="e-content entry-content chapter" itemprop="articleBody text"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-84"><code data-line-number=" 84"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-84" name="listingsbooktmpl-84"></a><span class="x">    &lt;h1&gt;</span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="cp">}</span><span class="x">&lt;/h1&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-85"><code data-line-number=" 85"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-85" name="listingsbooktmpl-85"></a><span class="x">    </span><span class="cp">${</span><span class="n">post</span><span class="o">.</span><span class="n">text</span><span class="p">()</span><span class="cp">}</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-86"><code data-line-number=" 86"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-86" name="listingsbooktmpl-86"></a><span class="x">    &lt;/div&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-87"><code data-line-number=" 87"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-87" name="listingsbooktmpl-87"></a><span class="x">    &lt;/div&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-88"><code data-line-number=" 88"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-88" name="listingsbooktmpl-88"></a><span class="x">    &lt;/div&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-89"><code data-line-number=" 89"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-89" name="listingsbooktmpl-89"></a><span class="x">&lt;/article&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-90"><code data-line-number=" 90"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-90" name="listingsbooktmpl-90"></a><span class="x">&lt;/%block&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-91"><code data-line-number=" 91"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-91" name="listingsbooktmpl-91"></a>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-92"><code data-line-number=" 92"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-92" name="listingsbooktmpl-92"></a><span class="x">&lt;%block name="extra_js"&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-93"><code data-line-number=" 93"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-93" name="listingsbooktmpl-93"></a><span class="x">    &lt;script src="//cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js"&gt;&lt;/script&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-94"><code data-line-number=" 94"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-94" name="listingsbooktmpl-94"></a><span class="x">    &lt;script&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-95"><code data-line-number=" 95"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-95" name="listingsbooktmpl-95"></a><span class="x">        $('</span><span class="cp">#scrolling</span><span class="o">-</span><span class="n">cont</span><span class="s1">').flowtype({</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-96"><code data-line-number=" 96"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-96" name="listingsbooktmpl-96"></a><span class="x">            minimum: 500,</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-97"><code data-line-number=" 97"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-97" name="listingsbooktmpl-97"></a><span class="x">            maximum: 1200,</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-98"><code data-line-number=" 98"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-98" name="listingsbooktmpl-98"></a><span class="x">            minFont: 20,</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-99"><code data-line-number=" 99"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-99" name="listingsbooktmpl-99"></a><span class="x">            maxFont: 40,</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-100"><code data-line-number="100"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-100" name="listingsbooktmpl-100"></a><span class="x">            fontRatio: 50</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-101"><code data-line-number="101"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-101" name="listingsbooktmpl-101"></a><span class="x">        });</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-102"><code data-line-number="102"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-102" name="listingsbooktmpl-102"></a><span class="x">        $(document).ready(function() {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-103"><code data-line-number="103"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-103" name="listingsbooktmpl-103"></a><span class="x">            var elem = $('</span><span class="cp">#scrolling</span><span class="o">-</span><span class="n">cont</span><span class="s1">');</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-104"><code data-line-number="104"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-104" name="listingsbooktmpl-104"></a><span class="x">            elem.click(function(event) {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-105"><code data-line-number="105"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-105" name="listingsbooktmpl-105"></a><span class="x">                var x1 = elem.position().left;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-106"><code data-line-number="106"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-106" name="listingsbooktmpl-106"></a><span class="x">                var pw = elem.width() + 20;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-107"><code data-line-number="107"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-107" name="listingsbooktmpl-107"></a><span class="x">                var x2 = event.pageX;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-108"><code data-line-number="108"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-108" name="listingsbooktmpl-108"></a><span class="x">                if (x2 - x1 &lt; pw / 2) {</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-109"><code data-line-number="109"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-109" name="listingsbooktmpl-109"></a><span class="x">                    pw = -pw;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-110"><code data-line-number="110"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-110" name="listingsbooktmpl-110"></a><span class="x">                }</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-111"><code data-line-number="111"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-111" name="listingsbooktmpl-111"></a><span class="x">                elem.animate({</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-112"><code data-line-number="112"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-112" name="listingsbooktmpl-112"></a><span class="x">                    scrollLeft: '+=' + pw</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-113"><code data-line-number="113"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-113" name="listingsbooktmpl-113"></a><span class="x">                }, 500)</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-114"><code data-line-number="114"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-114" name="listingsbooktmpl-114"></a><span class="x">            });</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-115"><code data-line-number="115"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-115" name="listingsbooktmpl-115"></a><span class="x">        });</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-116"><code data-line-number="116"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-116" name="listingsbooktmpl-116"></a><span class="x">    &lt;/script&gt;</span>
+</code></td>
+</tr>
+<tr>
+<td class="linenos linenodiv"><a href="#listingsbooktmpl-117"><code data-line-number="117"></code></a></td>
+<td class="code"><code><a id="listingsbooktmpl-117" name="listingsbooktmpl-117"></a><span class="x">&lt;/%block&gt;</span>
+</code></td>
+</tr>
+</table></div>
+
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

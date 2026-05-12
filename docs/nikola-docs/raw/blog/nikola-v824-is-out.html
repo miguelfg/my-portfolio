@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikola v8.2.4 is out! | Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/blog/nikola-v824-is-out.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Chris Warrick">
+<link rel="prev" href="nikola-v823-is-out.html" title="Nikola v8.2.3 is out!" type="text/html">
+<link rel="next" href="nikola-v830-is-out.html" title="Nikola v8.3.0 is out!" type="text/html">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Nikola v8.2.4 is out!">
+<meta property="og:url" content="https://getnikola.com/blog/nikola-v824-is-out.html">
+<meta property="og:description" content="On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.4. This release comes with some new features
+and a handful of bug fixes.
+
+What is Nikola?
+Nikola is a s">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-04-30T10:09:56Z">
+<meta property="article:tag" content="nikola">
+<meta property="article:tag" content="planet">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="release">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="a4cacdcfcbc8c5e4c8cdc6c1d6c58ac7ccc5d0">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="nikola-v824-is-out.txt" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Nikola v8.2.4 is out!</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2023-04-30T10:09:56Z" itemprop="datePublished" title="2023-04-30 10:09">2023-04-30 10:09</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v824-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v824-is-out.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="nikola-v824-is-out.txt" class="sourcelink">Source</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.4. This release comes with some new features
+and a handful of bug fixes.</p>
+<section id="what-is-nikola"><h2>What is Nikola?<a href="#what-is-nikola" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads"><h2>Downloads<a href="#downloads" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes"><h2>Changes<a href="#changes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features"><h3>Features<a href="#features" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal"><span class="pre">-q</span></code>, <code class="docutils literal"><span class="pre">--ignore-query-strings</span></code> option to ignore query strings
+for internal links, allowing their use for cache busting</p></li>
+<li><p>Update reST stylesheets (Issue #3657)</p></li>
+<li><p>Add a <code class="docutils literal"><span class="pre">--timeout</span></code> parameter to the <code class="docutils literal">check</code> plugin, defaulting to
+30s. (Issue #3643)</p></li>
+<li><p>GZIP compression is now deterministic for automatic deploys (Issue #3650)</p></li>
+</ul></section><section id="bugfixes"><h3>Bugfixes<a href="#bugfixes" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix failures to build with a "Document is empty" error in default themes
+(Issue #3679)</p></li>
+<li><p>Fix <code class="docutils literal">PAGE_INDEX</code> skipping generation when there exists a conflicting post</p></li>
+<li><p>Fix RSS generation of galleries containing WebP images, which caused
+an unhandled exception due to not having a known MIME type (Issue #3671)</p></li>
+<li><p>Fix <code class="docutils literal">auto</code> command infinite loop (Issue #3677)</p></li>
+<li><p>Fix API URL in CSS and JS minifiers (Issue #3658)</p></li>
+<li><p>Fix <code class="docutils literal">:align: center</code> for images in reST (Issue #3657)</p></li>
+<li><p><code class="docutils literal">GZIP_COMMAND</code> parsing on <code class="docutils literal">win32</code> platforms (Issue #3649)</p></li>
+</ul></section></section>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/nikola.html" rel="tag">nikola</a></li>
+            <li><a class="tag p-category" href="../categories/planet.html" rel="tag">planet</a></li>
+            <li><a class="tag p-category" href="../categories/programming.html" rel="tag">programming</a></li>
+            <li><a class="tag p-category" href="../categories/python.html" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../categories/release.html" rel="tag">release</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="nikola-v823-is-out.html" rel="prev" title="Nikola v8.2.3 is out!">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="nikola-v830-is-out.html" rel="next" title="Nikola v8.3.0 is out!">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+    
+        <div id="disqus_thread"></div>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        var disqus_shortname ="nikolaweb",
+            disqus_url="https://getnikola.com/blog/nikola-v824-is-out.html",
+        disqus_title="Nikola v8.2.4 is out!",
+        disqus_identifier="cache/posts/nikola-v824-is-out.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="nikolaweb";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

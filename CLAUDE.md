@@ -216,7 +216,8 @@ uv run nikola tags --auto-tag posts/my-post.md
 - **Working directory**: All Nikola commands run from `portfolio/` directory
 - **Python environment**: Always use `uv run` prefix for Nikola commands
 - **Build artifacts**: `output/` and `cache/` are git-ignored
-- **GitHub deployment**: Source is on `src` branch, output goes to `gh-pages`
+- **Deployment Syncing**: Before deploying (`make nk-github-deploy`), always ensure the local `main` branch is up to date with the remote: `git pull origin main`.
+- **Documentation**: Local offline documentation is available in `docs/nikola-docs/`.
 - **Timezone**: Europe/Madrid (configured in `conf.py`)
 - **Hidden tags**: `mathjax` tag is hidden from public display
 - **Pretty URLs**: Enabled (pages at `/slug/` instead of `/slug.html`)

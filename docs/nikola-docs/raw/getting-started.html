@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting Started | Nikola</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://getnikola.com/getting-started.html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Getting Started">
+<meta property="og:url" content="https://getnikola.com/getting-started.html">
+<meta property="og:description" content="Setting up a Nikola site is really easy. You will need a few minutes’ time and a Python 3 interpreter.
+
+    Step 1. Install Nikola
+    
+    Nikola is free open-source software, under the MIT license.
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-07-08T11:42:36Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href=".">
+            <img src="assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="#" class="dropdown-item active"><strong>Getting Started</strong> <span class="sr-only">(active)</span></a>
+                    <a href="handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="conf.html" class="dropdown-item">conf.py</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="extending.html" class="dropdown-item">Extending</a>
+                    <a href="internals.html" class="dropdown-item">Internals</a>
+                    <a href="creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="731d1a181c1f12331f1a111601125d101b1207">[email&#160;protected]</span>)</a>
+                    <a href="contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="license.html" class="dropdown-item">License</a>
+                    <a href="authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="blog/index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="getting-started.src.html" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Getting Started</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <p class="lead">Setting up a Nikola site is really easy. You will need a few minutes’ time and a Python 3 interpreter.</p>
+<div class="row">
+    <h2 class="col-md-12" id="install">Step 1. Install Nikola<a href="#install" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+    <p class="text-muted">Nikola is free open-source software, under the <a href="license.html">MIT license</a>.</p>
+        <ul class="list-inline">
+<li class="list-inline-item"><a href="getting-started.html#installAny" class="btn btn-primary"><i class="fab fa-python"></i> Any OS</a></li>
+            <li class="list-inline-item"><a href="getting-started.html#installWindows" class="btn btn-secondary"><i class="fab fa-windows"></i> Windows</a></li>
+            <li class="list-inline-item"><a href="getting-started.html#installMac" class="btn btn-secondary"><i class="fab fa-apple"></i> macOS</a></li>
+            <li class="list-inline-item"><a href="getting-started.html#installLinux" class="btn btn-secondary"><i class="fab fa-linux"></i> Linux <small>packages</small></a></li>
+        </ul>
+<ul class="list-inline">
+<li class="list-inline-item"><a href="getting-started.html#installGitHub" class="btn btn-dark"><i class="fab fa-github"></i> GitHub <small>bleeding edge</small></a></li>
+            <li class="list-inline-item"><a href="getting-started.html#installCExtensions" class="btn btn-secondary"><i class="fa fa-exclamation-triangle"></i> C extension issues</a></li>
+            <li class="list-inline-item"><a href="getting-started.html#installDocker" class="btn btn-secondary"><i class="fab fa-docker"></i> Docker</a></li>
+        </ul>
+<div id="installAny">
+            <h3>
+<i class="fab fa-python"></i> Any OS/general instructions<a href="#installAny" class="headerlink" title="Permalink to this heading">¶</a></h3>
+            <p>The best way to install Nikola is to use <code class="gs-code gs-command">pip</code> in a virtual environment. We recommend installing the <code class="gs-code">"Nikola[extras]"</code> distribution to access all built-in Nikola features. <strong>Follow instructions <span class="d-print-none d-none d-md-inline">on the right</span><span class="d-none">/</span><span class="d-inline d-md-none">below</span>.</strong></p>
+            <p>If you’ve never worked with Python virtual environments, you might want to read <a href="https://chriswarrick.com/blog/2018/09/04/python-virtual-environments/">Python Virtual Environments in Five Minutes</a>.</p>
+            <p class="small">Installing <code class="gs-code">"Nikola[extras]"</code> as explained above installs software that Nikola <em>might</em> use.  This is quite a lot of software.  Alternatively, you can drop the <code class="gs-code">[extras]</code> specifier and install such software later, as you find out you want it. Nikola makes this reasonably convenient, as explained <a href="getting-started.html#extrasExplained">below</a>.</p>
+            <p class="small">We don’t recommend using Pipenv, Poetry, or PDM to manage Nikola. Those package managers are aimed at people developing software using Python, not running software written in Python, so using them will not offer a good user experience.</p>
+        </div>
+        <div id="installWindows">
+            <h3>
+<i class="fab fa-windows"></i> Windows support<a href="#installWindows" class="headerlink" title="Permalink to this heading">¶</a></h3>
+            <p>Nikola supports Windows! Here are a few things to keep in mind:</p>
+            <ol>
+<li>If you are installing from Git, it is recommended to enable Developer Mode in Windows and run <code class="gs-code gs-command">git config --global core.symlinks true</code> before cloning the Nikola repo (recent versions of the git installer offer to do this for you). Nikola will work either way, but if you don’t enable symlinks, Nikola will have to fix them, which changes the working tree.</li>
+                <li>Nikola can work with both the Windows Python install and WSL. Both setups are fully supported and stable, and all Nikola features should work in both setups.</li>
+                <li>Windows has some differences over POSIX, which may cause some features to work incorrectly under Windows. If any problems occur, please do not hesitate to report them. Some of the differences that can cause problems include:
+                    <ul>
+<li>
+<code class="gs-code">\</code> as path separator (instead of <code class="gs-code">/</code>)</li>
+                        <li>the concept of HDD partitions and letters (instead of seamless mounting under one root)</li>
+                        <li>some characters in paths are disallowed</li>
+                        <li>CR+LF (aka <code class="gs-code">\r\n</code>) as the line separator (instead of LF <code class="gs-code">\n</code>)</li>
+                        <li>Certain OS and Python features being unavailable under Windows</li>
+                    </ul>
+</li>
+                <li>We run our test suite on Windows (as well as Linux and macOS), but not all Windows-specific bugs might be caught by it.</li>
+            </ol>
+</div>
+        <div id="installMac">
+            <h3>
+<i class="fab fa-apple"></i> Installing on macOS<a href="#installMac" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                        <p>Installing Nikola on macOS is easy. You can use Homebrew, MacPorts, Fink, or the Apple-provided Python 3 interpreter.</p>
+                        <p>We recommend using <a href="http://brew.sh/">Homebrew</a>. After you install it, you can run <code class="gs-code gs-command">brew install python3</code> to install Python 3. You can then follow the instructions <span class="d-print-none d-none d-md-inline">on the right</span><span class="d-none">/</span><span class="d-inline d-md-none">below</span>. Your venvs may require <a href="https://github.com/Kwpolska/scripts/blob/master/fix-venvs.sh">fixing</a>, <a href="https://github.com/Kwpolska/scripts/blob/master/venv-set-opt-link.sh">reconfiguration</a> or recreating if you update Python.</p>
+                        <p>Other package/port managers, such as MacPorts or Fink may be used if you prefer them and have those installed. Make sure to use only one manager to avoid conflicts.</p>
+                        <p>The Apple-provided Python 3 will work too. Starting with Catalina, Python 3 is available, and it seems to be updated reasonably often. You might need to install Xcode Command Line Tools (<code class="gs-code gs-command">xcode-select --install</code>), or possibly the full Xcode environment (from the App Store), to use it.</p>
+    </div>
+    <div id="installLinux">
+    <h3>
+<i class="fab fa-linux"></i> Linux packages<a href="#installLinux" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                        <p>Nikola is packaged for some Linux distributions, you may get that instead of installing via <code class="gs-code">pip</code> (which is the recommended way). Keep in mind that those packages might be <strong>outdated</strong> and that we don’t support versions that are too old. Proceed with care!</p>
+                        <ul>
+<li>Arch Linux: <a class="reference external" href="https://www.archlinux.org/packages/community/any/nikola/">nikola</a> ([community] repo) for the latest stable release or <a class="reference external" href="https://aur.archlinux.org/packages/nikola-git/">nikola-git</a> for the GitHub master (AUR)
+                            </li>
+                            <li>Gentoo: <a class="reference external" href="https://packages.gentoo.org/package/www-apps/nikola">www-apps/nikola</a>
+                            </li>
+                            <li>The Ubuntu package is <strong>broken and outdated</strong>. The Nikola developers strongly discourage using it and do not support this method of install — please install via pip instead.
+                            </li>
+                        </ul>
+</div>
+<div id="installGitHub">
+                <h3>
+<i class="fab fa-github"></i> GitHub (bleeding edge) installs<a href="#installGitHub" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                        <p>You can also install Nikola from GitHub. This will get you the code that is still under development. It probably has bugs, but there are often new features or bugfixes. Start by creating and activating a virtual environment.</p>
+                        <pre class="gs-console">
+<code>$ <span class="gs-command">pip install "git+https://github.com/getnikola/nikola#egg=Nikola[extras]"</span></code>
+</pre>
+<p>For development work, or if you otherwise want a local clone of the repository, use this:</p>
+                        <pre class="gs-console">
+<code>$ <span class="gs-command">git clone https://github.com/getnikola/nikola</span>  <em># wherever you store your projects; you may also use a ssh remote address</em>
+$ <span class="gs-command">cd nikola</span>
+$ <span class="gs-command">pip install -e ".[extras]"</span></code>
+</pre>
+            </div>
+
+                <div id="installCExtensions">
+                    <h3>
+<i class="fa fa-exclamation-triangle"></i> Issues with compiling C extensions (Python.h, lxml, Pillow)<a href="#installCExtensions" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                        <p>You should not need to compile any C extension modules to run Nikola. Both lxml and Pillow have pre-compiled wheels available for Windows, macOS and Linux (compatible with <em>all</em> distributions).</p>
+                        <p>However, if pip still attempts to compile those packages, you may need to do the following:</p>
+                        <ol>
+<li>Upgrade pip, setuptools, and wheel: <code class="gs-code gs-command">pip install -U pip setuptools wheel</code> (on Windows, use <code class="gs-code gs-command">py -m pip</code>)</li>
+                            <li>Wait a few days or try installing an older version of lxml/Pillow (wheels are not always available at the time of release)</li>
+                            <li>Install manually. <strong>Do this only if all other things fail.</strong> Here are some tips:
+                                <ul>
+<li>If you are getting errors about missing <code class="gs-code">Python.h</code>, you need to install development packages for Python (eg. python3-dev or python3-devel).</li>
+                                    <li>Install libxml2, libxslt, zlib and their development headers.</li>
+                                    <li>Use your package manager’s option to install build dependencies for their lxml and Pillow packages.</li>
+                                    <li>If you run out of RAM during the install (gcc/cc1 are killed), use a swap file.</li>
+                                </ul>
+</li>
+                        </ol>
+</div>
+                        <div id="installDocker">
+            <h3>
+<i class="fab fa-docker"></i> Docker (unofficial)<a href="#installDocker" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                        <p>There are unofficial <a href="https://gitlab.com/paddy-hack/nikola">Docker images by Olaf Meeuwissen</a> (based on Alpine Linux) available:</p>
+                        <pre class="gs-console">
+$ <span class="gs-command">docker pull registry.gitlab.com/paddy-hack/nikola</span>
+$ <span class="gs-command">docker run --rm -it -v $PWD:/site -w /site -u $(id -u):$(id -g) \
+    registry.gitlab.com/paddy-hack/nikola</span> <span class="gs-input">nikola init .</span>
+</pre>
+<p>Check out <a href="https://gitlab.com/paddy-hack/nikola">the image’s README</a> for details and usage hints.</p>
+<p>There is also a <a href="https://github.com/rbrewer123/docker_nikola">Dockerfile by Rob Brewer</a>, based on Arch Linux and official Arch packages.</p>
+                    </div>
+
+                    <div id="installOthers">
+                    <h3>Other options<a href="#installOthers" class="headerlink" title="Permalink to this heading">¶</a></h3>
+                    <p>There are also <a href="https://snapcraft.io/">Snapcraft</a> packages (<code class="gs-code gs-command">snap install nikola --edge</code>), but those inherit many limitations of the platform and are not recommended for daily use.</p>
+                    </div>
+
+
+        <h3 id="extrasExplained">What is this [extras]?<a href="#extrasExplained" class="headerlink" title="Permalink to this heading">¶</a></h3>
+        <p>The easy way to install Nikola is to include, in the installation, a lot of additional software that you may or may not need.  This is what happens when installing <code class="gs-code">Nikola[extras]</code> as mentioned above, and is recommended for casual and first-time users.</p>
+        <p>Maybe you have reason to be careful about which packages you download and install. If so, you can choose to install plain <code class="gs-code">Nikola</code> without <code class="gs-code">[extras]</code>.  This will get you going.  When, later, you ask Nikola to provide functionality that needs a dependency (i.e., additional software on which that Nikola functionality depends), and that dependency has not yet been installed, you will receive a helpful error message telling you what is missing. E.g., when using <code class="gs-code gs-command">nikola auto --browser</code> for the first time, you might see error message text telling you <code class="gs-code">aiohttp</code> and <code class="gs-code">watchdog</code> are needed to proceed:</p>
+        <pre class="gs-console">
+<code>In order to use the "auto" command, you must install the "aiohttp" and "watchdog" Python packages.
+Exiting due to missing dependencies.</code></pre>
+
+        <p>In this situation, run <code class="gs-code gs-command">pip install aiohttp watchdog</code> and then repeat your original <code class="gs-code gs-command">nikola auto --browser</code>.</p>
+    </div>
+    <div class="col-md-5 gs-right-col">
+        <div class="gs-sticky">
+            <h4 id="install-on-linuxnixmacos">Install on Linux/*nix/macOS<a href="#install-on-linuxnixmacos" class="headerlink" title="Permalink to this heading">¶</a></h4>
+            <pre class="gs-console">
+<em>First, make sure <span class="gs-input">Python 3</span> is installed.<br>On macOS, we recommend getting Python from <a class="gs-code-link" href="https://brew.sh/">Homebrew</a>.<br>On Debian/Ubuntu, you also need the <span class="gs-input">python3-venv</span> package.<br><br>When you are done installing, run:</em>
+<code>$ <span class="gs-command">python3 -m venv nikola-env</span>
+$ <span class="gs-command">cd nikola-env</span>
+$ <span class="gs-command">bin/python -m pip install -U pip setuptools wheel</span>
+$ <span class="gs-command">bin/python -m pip install -U "Nikola[extras]"</span>
+...snip...
+Successfully installed Nikola</code>
+
+<em>You can now use Nikola by launching the script directly:</em>
+$ <span class="gs-command">bin/nikola</span>
+
+<em>Or you can activate the environment before working
+with Nikola and use the <span class="gs-command">nikola</span> command:</em>
+$ <span class="gs-command">source bin/activate</span>
+$ <span class="gs-command">nikola</span></pre>
+            <h4 id="install-on-windows">Install on Windows<a href="#install-on-windows" class="headerlink" title="Permalink to this heading">¶</a></h4>
+            <pre class="gs-console">
+<em>First, install <a class="gs-code-link" href="https://www.python.org/downloads/">Python 3</a>. Then you can run:</em>
+<code>&gt; <span class="gs-command">py -m venv nikola-env</span>
+&gt; <span class="gs-command">cd nikola-env</span>
+&gt; <span class="gs-command">Scripts\python -m pip install -U pip setuptools wheel</span>
+&gt; <span class="gs-command">Scripts\python -m pip install -U "Nikola[extras]"</span>
+...snip...
+Successfully installed Nikola</code>
+
+<em>You can now use Nikola by launching the script directly:</em>
+&gt; <span class="gs-command">Scripts\nikola</span>
+
+<em>Or you can activate the environment before working
+with Nikola and use the <span class="gs-command">nikola</span> command:</em>
+&gt; <span class="gs-command">Scripts\activate</span>
+&gt; <span class="gs-command">nikola</span></pre>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-md-12" id="init">Step 2. Initialize a site<a href="#init" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+        <p>After installing Nikola, you should create a site. A site is a collection of all assets needed to create your site: configuration, posts, pages, images, and all other files and customizations. This is the important data, so put it where you put that kind of things.</p>
+        <p>To create a site, you need to run <code class="gs-code gs-command">nikola init --demo &lt;directory_name&gt;</code>. A friendly wizard will be launched, letting you configure your site easily. The <code class="gs-code">--demo</code> option is used to fill your site with some demo content. (If you do not want the wizard, use the <code class="gs-code">--quiet</code> argument.)</p>
+        <p>If you’re using a <strong>virtual environment</strong>, you should use the path to the Nikola script in your virtual environment (<code class="gs-code gs-command">bin/nikola <span class="gs-input">init</span></code> on *nix, <code class="gs-code gs-command">Scripts\nikola <span class="gs-input">init</span></code> on Windows), or alternatively, you can activate the environment (<code class="gs-code gs-command">source bin/activate</code> on *nix, <code class="gs-code gs-command">Scripts\activate</code> on Windows) and use the <code class="gs-code gs-command">nikola</code> command directly.</p>
+        <p><strong>Do not</strong> store your site inside your virtual environment. Virtual environments are meant to be ephemeral (you should be able to delete and recreate one at any time).</p>
+    </div>
+    <div class="col-md-5 gs-right-col">
+        <pre class="gs-console gs-sticky">
+<code>$ <span class="gs-command">nikola init --demo my_first_site</span>
+Creating Nikola Site
+====================
+
+This is Nikola.  We will now ask you a few easy questions about your new site.
+If you do not want to answer and want to go with the defaults instead, simply restart with the `-q` parameter.
+--- Questions about the site ---
+Site title [My Nikola Site]: <span class="gs-input">My First Nikola Site</span>
+...a couple more questions...
+
+That's it, Nikola is now configured.  Make sure to edit conf.py to your liking.
+If you are looking for themes and addons, check out https://themes.getnikola.com/ and https://plugins.getnikola.com/.
+Have fun!
+INFO: init: A new site with example data has been created at my_first_site.
+INFO: init: See README.txt in that folder for more information.</code></pre>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-md-12" id="build">Step 3. Build your site<a href="#build" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+        <p>You can now build the site you created. Just run <code class="gs-code gs-command">nikola build</code> inside your site directory. The output directory will then be filled with the contents of your site, which is now <strong>ready to deploy</strong>.</p>
+    </div>
+    <div class="col-md-5 gs-right-col">
+        <pre class="gs-console gs-sticky">
+<code>$ <span class="gs-command">cd my_first_site</span>
+$ <span class="gs-command">nikola build</span>
+Scanning posts....done!
+.  render_galleries:output/galleries
+.  render_galleries:output/galleries/demo
+.  render_galleries:output/galleries/index.html
+.  render_galleries:output/galleries/rss.xml
+.  render_galleries:output/galleries/demo/tesla4_lg.thumbnail.jpg
+...and many more files in between...
+.  render_tags:output/categories/cat_nikola.xml
+.  render_pages:output/stories/social_buttons/index.html
+.  render_pages:output/stories/quickref/index.html
+.  render_tags:output/categories/python.xml
+.  generate_rss:output/rss.xml
+.  render_pages:output/stories/a-study-in-scarlet/index.html
+.  sitemap:output/sitemap.xml
+.  sitemap:output/sitemapindex.xml
+.  robots_file:output/robots.txt</code></pre>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-md-12" id="newpost">Step 4. Write your first post<a href="#newpost" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+        <p>Your site currently contains demo content — that is, some Nikola documentation, a demo gallery and listing, and a blog post welcoming you.</p>
+        <p>You should make it more interesting and personal. Write your own post!</p>
+        <p>To do that, you can just use <code class="gs-code gs-command">nikola new_post -e</code>. (The <code class="gs-code">-e</code> option will open the post in your text editor of choice; many more options are available)</p>
+        <p>The command will create the file for you in the right place, with the metadata headers and a writing prompt.</p>
+        <p>By default, Nikola creates posts in reStructuredText. You can read <a href="https://getnikola.com/quickstart.html">the reStructuredText Primer</a> to get accustomed to the syntax.</p>
+        <p>If you prefer Markdown, it is also available and configured by default: run <code class="gs-code gs-command">nikola new_post -e -f markdown</code> to create a new Markdown post.</p>
+        <p>You can also use many other input formats; to do this, your site needs <a href="getting-started.html#markup">some special configuration</a>.</p>
+        <h4 id="what-if-i-dont-want-a-blog">What if I don’t want a blog?<a href="#what-if-i-dont-want-a-blog" class="headerlink" title="Permalink to this heading">¶</a></h4>
+        <p>If you want a static site that does not have any blog-related elements, see our <a href="https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html">Creating a Site (Not a Blog) with Nikola</a> guide.
+    </p>
+</div>
+    <div class="col-md-5 gs-right-col">
+        <pre class="gs-console gs-sticky">
+<code>$ <span class="gs-command">nikola new_post -e</span>
+Creating New Post
+-----------------
+
+Title: <span class="gs-input">My First Blog Post!</span>
+Scanning posts....done!
+INFO: new_post: Your post's text is at: posts/my-first-blog-post.rst</code></pre>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-md-12" id="rebuild">Step 5. Rebuild your site<a href="#rebuild" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+        <p>When you’re done writing your post, you must rebuild your site to make it visible on your site. Run <code class="gs-code gs-command">nikola build</code> again.</p>
+        <p>Note that the list of files is much <strong>shorter</strong> now: Nikola does <a href="features/fast.html">fast, incremental rebuilds</a> (courtesy of <a href="http://pydoit.org/">doit</a>). Nikola built only the pages for this post, the indexes, the feeds, and the previous post (to add a <em>Next post</em> navigation button). All the demo pages and assets were left <strong>untouched</strong>, saving you time and resources (it does not have to work on building some larger things, and <code class="gs-code">rsync</code> will not have to upload everything)</p>
+    </div>
+    <div class="col-md-5 gs-right-col">
+        <pre class="gs-console gs-sticky">
+<code>$ <span class="gs-command">nikola build</span>
+Scanning posts....done!
+.  render_posts:timeline_changes
+.  render_posts:cache/posts/my-first-blog-post.html
+.  render_sources:output/posts/my-first-blog-post/index.rst
+.  render_archive:output/2018/index.html
+.  render_archive:output/archive.html
+.  render_indexes:output/index.html
+.  render_pages:output/posts/welcome-to-nikola/index.html
+.  generate_rss:output/rss.xml
+.  render_pages:output/posts/my-first-blog-post/index.html
+.  sitemap:output/sitemap.xml
+.  sitemap:output/sitemapindex.xml</code></pre>
+    </div>
+</div>
+<div class="row">
+    <h2 class="col-md-12" id="serve">Step 6. Start the development server<a href="#serve" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <div class="col-md-7 gs-left-col">
+        <p>You’re done! You just created a Nikola site, wrote your first post and built your site. Congratulations!</p>
+        <p>Run <code class="gs-code gs-command">nikola serve --browser</code> to start the development server and open your site in a web browser. Press <kbd>Ctrl+C</kbd> to stop the server.</p>
+        <p>You can also use <a href="features/auto.html">a server with automatic rebuilds</a> by running <code class="gs-code gs-command">nikola auto --browser</code>.  Note that both servers should be used for development only; use <a href="getting-started.html#deploy">other deployment solutions</a> instead.</p>
+    </div>
+    <div class="col-md-5 gs-right-col">
+        <pre class="gs-console gs-sticky">
+<code>$ <span class="gs-command">nikola serve --browser</span>
+INFO: serve: Serving HTTP on 0.0.0.0 port 8000...
+INFO: serve: Opening http://0.0.0.0:8000/ in the default web browser...</code></pre>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+    <h2 id="nextsteps">Next steps<a href="#nextsteps" class="headerlink" title="Permalink to this heading">¶</a></h2>
+    <h3 id="explore">Explore!<a href="#explore" class="headerlink" title="Permalink to this heading">¶</a></h3>
+    <ul>
+<li>Check out the demo content installed with the site to see what Nikola can do — and that’s not all it has to offer!</li>
+        <li>Find out what other commands are available by using <code class="gs-code gs-command">nikola help</code>.</li>
+        <li>Read the <strong><a href="handbook.html">Nikola Handbook</a></strong> to learn more about Nikola.</li>
+        <li>Edit the <code class="gs-code">conf.py</code> file to your liking.</li>
+        <li>Check out <a href="https://themes.getnikola.com/">themes</a> and <a href="https://plugins.getnikola.com/">plugins</a> for Nikola, or write your own.
+        </li>
+    </ul>
+<h3 id="markup">Configuring other markup formats<a href="#markup" class="headerlink" title="Permalink to this heading">¶</a></h3>
+    <p>Input formats other than reStructuredText, Markdown, and raw HTML need some configuration, which has been described in <a href="handbook.html#configuring-other-input-formats">The Nikola Handbook</a>.</p>
+    <h3 id="rm-demo">Removing demo content<a href="#rm-demo" class="headerlink" title="Permalink to this heading">¶</a></h3>
+    <p>When you’re done exploring, you should remove the demo content before deploying it to your server. Remove the demo stories, welcome post, demo gallery and listing manually. Run <code class="gs-code gs-command">nikola build</code> to make them disappear from the archives. Note that this is not enough; you need to delete the now orphaned files. Nikola can do it for you — run <code class="gs-code gs-command">nikola check --clean-files</code>. Note that this command will delete all files in the output directory it does not know about, which can be dangerous — please back up your files or find out what will be deleted by using <code class="gs-code gs-command">nikola orphans</code>.</p>
+    <p><em>Hint:</em> files in the <code class="gs-code">files/</code> directory are copied to the output directory as-is.</p>
+    <h3 id="deploy">Deployment<a href="#deploy" class="headerlink" title="Permalink to this heading">¶</a></h3>
+    <p>The development server (<code class="gs-code gs-command">nikola serve</code>) should not be used outside of your local network. Instead, you should use a more serious web server. Nikola sites work on any web server which can host html files. You can use shared hosting, your own server (VPS/dedicated), GitHub Pages, or any other service that lets you host a website.  For more details on deployment and related configuration, see the <a href="handbook.html#deployment">Deployment</a> section in the Handbook.</p>
+</div>
+</div>
+    </div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

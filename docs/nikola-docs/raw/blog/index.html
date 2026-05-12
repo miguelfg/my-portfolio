@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="A blog about Nikola, the static website generator.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikola</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
+<link rel="canonical" href="https://getnikola.com/blog/">
+<link rel="next" href="index-11.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href="../">
+            <img src="../assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="../documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="../getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="../handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="../features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="../conf.html" class="dropdown-item">conf.py</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="../theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="../extending.html" class="dropdown-item">Extending</a>
+                    <a href="../internals.html" class="dropdown-item">Internals</a>
+                    <a href="../creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="d3bdbab8bcbfb293bfbab1b6a1b2fdb0bbb2a7">[email&#160;protected]</span>)</a>
+                    <a href="../contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="../changes.html" class="dropdown-item">Changelog</a>
+                    <a href="../license.html" class="dropdown-item">License</a>
+                    <a href="../authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="#" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right"></ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+
+    
+
+
+    
+<div class="postindex">
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v833-is-out.html" class="u-url">Nikola v8.3.3 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/roberto-alsina.html">Roberto Alsina</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v833-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2025-05-17T17:16:57Z" itemprop="datePublished" title="2025-05-17 17:16">2025-05-17 17:16</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v833-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v833-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce
+the immediate availability of Nikola v8.3.3. This is a bugfix release.</p>
+<p>We’ve had to release Nikola v8.3.3 immediately after releasing
+Nikola v8.3.2, as it is broken on Python 3.8. We would like to thank
+the Python packaging ecosystem for being an incomprehensible and
+incompatible trainwreck.</p>
+<section id="what-is-nikola-10"><h2>What is Nikola?<a href="#what-is-nikola-10" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-10"><h2>Downloads<a href="#downloads-10" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-from-v8-3-1"><h2>Changes from v8.3.1<a href="#changes-from-v8-3-1" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-8"><h3>Features<a href="#features-8" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Trace template usage when an environment variable <code class="docutils literal">NIKOLA_TEMPLATES_TRACE</code>
+is set to any non-empty value.</p></li>
+<li><p>Give user control over the raw underlying template engine
+(either <code class="docutils literal">mako.lookup.TemplateLookup</code> or <code class="docutils literal">jinja2.Environment</code>)
+via an optional <code class="docutils literal">conf.py</code> method <code class="docutils literal">TEMPLATE_ENGINE_FACTORY</code>.</p></li>
+<li><p>Switch to pyproject.toml</p></li>
+<li><p>Add path handler <code class="docutils literal">slug_source</code> linking to source of post.</p></li>
+</ul></section><section id="bugfixes-8"><h3>Bugfixes<a href="#bugfixes-8" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Ignore errors in parsing SVG files for shrinking them, copy original file to output instead
+(Issue #3785)</p></li>
+<li><p>Restore <code class="docutils literal">annotation_helper.tmpl</code> with dummy content - fix themes still mentioning it
+(Issue #3764, #3773)</p></li>
+<li><p>Fix compatibility with watchdog 4 (Issue #3766)</p></li>
+<li><p><code class="docutils literal">nikola serve</code> now works with non-root SITE_URL.</p></li>
+<li><p>Stack traces meaningless for end users now more reliably suppressed (Issue #3838).</p></li>
+</ul></section><section id="other-3"><h3>Other<a href="#other-3" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Changed filter for tidy from  <code class="docutils literal">tidy5</code> to <code class="docutils literal">tidy</code>.</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v831-is-out.html" class="u-url">Nikola v8.3.1 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v831-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2024-04-29T12:11:36Z" itemprop="datePublished" title="2024-04-29 12:11">2024-04-29 12:11</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v831-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v831-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.3.1. This release fixes some small bugs,
+including some introduced by the new Nikola Plugin Manager.</p>
+<p>The minimum Python version supported is now 3.8, and we have adopted
+a formal policy to define the Python versions supported by Nikola.</p>
+<section id="what-is-nikola-9"><h2>What is Nikola?<a href="#what-is-nikola-9" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-9"><h2>Downloads<a href="#downloads-9" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-9"><h2>Changes<a href="#changes-9" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-7"><h3>Features<a href="#features-7" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support passing <code class="docutils literal"><span class="pre">--poll</span></code> to <code class="docutils literal">nikola auto</code> to better deal with symlink farms.</p></li>
+</ul></section><section id="bugfixes-7"><h3>Bugfixes<a href="#bugfixes-7" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Remove insecure HTTP fallback from <code class="docutils literal">nikola plugin</code></p></li>
+<li><p>Fix the <code class="docutils literal">nikola plugin</code> command not working (Issue #3736, #3737)</p></li>
+<li><p>Fix <code class="docutils literal">nikola new_post <span class="pre">--available-formats</span></code> crashing with TypeError
+(Issue #3750)</p></li>
+<li><p>Fix the new plugin manager not loading plugins if the plugin folder is a symlink (Issue #3741)</p></li>
+<li><p>Fix the <code class="docutils literal">nikola plugin</code> command not working (Issue #3736)</p></li>
+<li><p>Remove no longer used leftovers of annotations support (Issue #3764)</p></li>
+</ul></section><section id="other-2"><h3>Other<a href="#other-2" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Nikola now requires Python 3.8 or newer.</p></li>
+<li><p>Nikola has adopted a policy for Python version support,
+promising support for versions supported by the Python core team,
+Ubuntu LTS, or Debian stable, and taking into consideration
+Debian oldstable and PyPy.</p></li>
+<li><p>Remove polyfill from <code class="docutils literal">polyfill.io</code>.</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v830-is-out.html" class="u-url">Nikola v8.3.0 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v830-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2024-01-10T20:34:26Z" itemprop="datePublished" title="2024-01-10 20:34">2024-01-10 20:34</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v830-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v830-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.3.0. This release adds support for Python 3.12,
+with some other features and bugfixes.</p>
+<p>Note that Nikola v8.3.0 no longer uses the Yapsy plugin manager,
+which has been replaced by a custom, minimal manager.
+The new Nikola Plugin Manager was tested with some typical plugins,
+but there might be issues if your plugins have an unusual structure
+or are outdated. Please update your plugins and report any bugs
+you may encounter.</p>
+<p>The Nikola developers would also like to express discontent with Python’s
+efforts to remove features from the standard library, causing breakage
+without a solid reason, other than “it’s old”.</p>
+<section id="what-is-nikola-8"><h2>What is Nikola?<a href="#what-is-nikola-8" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-8"><h2>Downloads<a href="#downloads-8" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-8"><h2>Changes<a href="#changes-8" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-6"><h3>Features<a href="#features-6" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Implement a new plugin manager from scratch to replace Yapsy,
+which does not work on Python 3.12 due to Python 3.12 carelessly
+removing parts of the standard library (Issue #3719)</p></li>
+<li><p>Support for Discourse as comment system (Issue #3689)</p></li>
+</ul></section><section id="bugfixes-6"><h3>Bugfixes<a href="#bugfixes-6" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix loading of templates from plugins with <code class="docutils literal">__init__.py</code> files
+(Issue #3725)</p></li>
+<li><p>Fix margins of paragraphs at the end of sections (Issue #3704)</p></li>
+<li><p>Ignore <code class="docutils literal">.DS_Store</code> files in listing indexes (Issue #3698)</p></li>
+<li><p>Fix baguetteBox.js invoking in the base theme (Issue #3687)</p></li>
+<li><p>Fix development (preview) server <code class="docutils literal">nikola auto</code>
+for non-root SITE_URL, in particular when URL_TYPE is full_path.
+(Issue #3715)</p></li>
+</ul></section><section id="for-plugin-developers"><h3>For plugin developers<a href="#for-plugin-developers" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Nikola now requires the <code class="docutils literal">.plugin</code> file to contain a <code class="docutils literal">[Nikola]</code>
+section with a <code class="docutils literal">PluginCategory</code> entry set to the name of the plugin
+category class. This was already required by <code class="docutils literal">plugins.getnikola.com</code>,
+but you may have custom plugins that don’t have this set.</p>
+</section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v824-is-out.html" class="u-url">Nikola v8.2.4 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v824-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2023-04-30T10:09:56Z" itemprop="datePublished" title="2023-04-30 10:09">2023-04-30 10:09</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v824-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v824-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.4. This release comes with some new features
+and a handful of bug fixes.</p>
+<section id="what-is-nikola-7"><h2>What is Nikola?<a href="#what-is-nikola-7" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-7"><h2>Downloads<a href="#downloads-7" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-7"><h2>Changes<a href="#changes-7" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-5"><h3>Features<a href="#features-5" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add a <code class="docutils literal"><span class="pre">-q</span></code>, <code class="docutils literal"><span class="pre">--ignore-query-strings</span></code> option to ignore query strings
+for internal links, allowing their use for cache busting</p></li>
+<li><p>Update reST stylesheets (Issue #3657)</p></li>
+<li><p>Add a <code class="docutils literal"><span class="pre">--timeout</span></code> parameter to the <code class="docutils literal">check</code> plugin, defaulting to
+30s. (Issue #3643)</p></li>
+<li><p>GZIP compression is now deterministic for automatic deploys (Issue #3650)</p></li>
+</ul></section><section id="bugfixes-5"><h3>Bugfixes<a href="#bugfixes-5" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix failures to build with a "Document is empty" error in default themes
+(Issue #3679)</p></li>
+<li><p>Fix <code class="docutils literal">PAGE_INDEX</code> skipping generation when there exists a conflicting post</p></li>
+<li><p>Fix RSS generation of galleries containing WebP images, which caused
+an unhandled exception due to not having a known MIME type (Issue #3671)</p></li>
+<li><p>Fix <code class="docutils literal">auto</code> command infinite loop (Issue #3677)</p></li>
+<li><p>Fix API URL in CSS and JS minifiers (Issue #3658)</p></li>
+<li><p>Fix <code class="docutils literal">:align: center</code> for images in reST (Issue #3657)</p></li>
+<li><p><code class="docutils literal">GZIP_COMMAND</code> parsing on <code class="docutils literal">win32</code> platforms (Issue #3649)</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v823-is-out.html" class="u-url">Nikola v8.2.3 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v823-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2022-08-01T20:56:26Z" itemprop="datePublished" title="2022-08-01 20:56">2022-08-01 20:56</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v823-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v823-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.3. This is a bugfix release, which fixes
+compatibility with python-markdown and two more minor bugs.</p>
+<section id="what-is-nikola-6"><h2>What is Nikola?<a href="#what-is-nikola-6" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-6"><h2>Downloads<a href="#downloads-6" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-6"><h2>Changes<a href="#changes-6" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Compatibility with Markdown 3.4.0 (Issue #3635)</p></li>
+<li><p>Find substring in string instead of using <code class="docutils literal">contains</code> in utils</p></li>
+<li><p>Don't add semicolon in docinfo fields via CSS (caused duplicated
+semicolons)</p></li>
+</ul>
+<p>Nikola now requires Python 3.7 or newer.</p>
+</section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v822-is-out.html" class="u-url">Nikola v8.2.2 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v822-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2022-05-01T17:02:54Z" itemprop="datePublished" title="2022-05-01 17:02">2022-05-01 17:02</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v822-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v822-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.2. This is a bugfix release, whose only
+change is support for the latest version of Pygments.</p>
+<section id="what-is-nikola-5"><h2>What is Nikola?<a href="#what-is-nikola-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-5"><h2>Downloads<a href="#downloads-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-5"><h2>Changes<a href="#changes-5" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Compatibility with Pygments 2.12.0 (Issue #3617, #3618)</p></li>
+</ul></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v821-is-out.html" class="u-url">Nikola v8.2.1 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v821-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2022-04-23T15:23:28Z" itemprop="datePublished" title="2022-04-23 15:23">2022-04-23 15:23</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v821-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v821-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.1. This is a minor release with a couple
+new features, as well as fixes for compatibility with the latest
+version of doit.</p>
+<section id="what-is-nikola-4"><h2>What is Nikola?<a href="#what-is-nikola-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-4"><h2>Downloads<a href="#downloads-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-4"><h2>Changes<a href="#changes-4" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-4"><h3>Features<a href="#features-4" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal">emphasize_lines</code> directive to code blocks (Issue #3607)</p></li>
+<li><p>Gallery index pages support the <code class="docutils literal">status</code> flag (Issue #3598)</p></li>
+<li><p>Add <code class="docutils literal">start_at</code> option to youtube directive (Issue #3603)</p></li>
+</ul></section><section id="bugfixes-4"><h3>Bugfixes<a href="#bugfixes-4" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add data files to dependency file (Issue #3608)</p></li>
+<li><p>Compatibility with doit 0.36.0 (Issue #3612)</p></li>
+</ul>
+<p>Note: <code class="docutils literal">nikola doit_auto</code> is not available if using <code class="docutils literal"><span class="pre">doit&gt;=0.36.0</span></code>.
+You can still use <code class="docutils literal">nikola auto</code>.</p>
+</section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v820-is-out.html" class="u-url">Nikola v8.2.0 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v820-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2021-12-27T18:13:14Z" itemprop="datePublished" title="2021-12-27 18:13">2021-12-27 18:13</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v820-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v820-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.2.0. This release includes some new features
+as well as a bunch of bugfixes.</p>
+<section id="what-is-nikola-3"><h2>What is Nikola?<a href="#what-is-nikola-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-3"><h2>Downloads<a href="#downloads-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-3"><h2>Changes<a href="#changes-3" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-3"><h3>Features<a href="#features-3" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Add <code class="docutils literal">category_titles</code>, <code class="docutils literal">category_descriptions</code>, <code class="docutils literal">tag_titles</code>,
+<code class="docutils literal">tag_descriptions</code> to default context of tags page (Issue #3584)</p></li>
+<li><p>Add Maori translation</p></li>
+<li><p>Add Occitan translation</p></li>
+<li><p>New <code class="docutils literal">auto_command_starting</code> signal when <code class="docutils literal">nikola auto</code> is
+starting</p></li>
+<li><p><code class="docutils literal">typogrify_custom</code> filter adds a default value for
+<code class="docutils literal">typogrify_filters</code> so that <code class="docutils literal">ignore_tags</code> can be specified
+as the only option.</p></li>
+<li><p>The default <code class="docutils literal">ignore_tags</code> are appended to the user-supplied
+<code class="docutils literal">ignore_tags</code> added via <code class="docutils literal">typogrify_custom</code>.</p></li>
+<li><p>Allow adding comment systems from a plugin (Issue #3544)</p></li>
+<li><p>New <code class="docutils literal">CommentSystem</code> plugin category (Issue #3544)</p></li>
+</ul></section><section id="bugfixes-3"><h3>Bugfixes<a href="#bugfixes-3" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix changes to <code class="docutils literal">INDEX_READ_MORE_LINK</code> and <code class="docutils literal">FEED_READ_MORE_LINK</code>
+not triggering rebuilds</p></li>
+<li><p>Make <code class="docutils literal">CATEGORY_TITLES</code>, <code class="docutils literal">CATEGORY_DESCRIPTIONS</code>, <code class="docutils literal">TAG_TITLES</code>,
+<code class="docutils literal">TAG_DESCRIPTIONS</code> translatable settings for consistency (Issue #3584)</p></li>
+<li><p>Fix bug with posts after the first one appearing shifted due to a
+<code class="docutils literal">&lt;div&gt;</code> closed too early (Issue #3573, #3564)</p></li>
+<li><p>Fix support for files outside of site root directory on Windows</p></li>
+<li><p>Support passing <code class="docutils literal"><span class="pre">--backend</span></code> and <code class="docutils literal"><span class="pre">--db-file</span></code> to <code class="docutils literal">nikola auto</code></p></li>
+<li><p>Support blank values in certain WordPress-imported structures
+(Issue #3535)</p></li>
+<li><p>Typogrify ignores <code class="docutils literal">div</code> elements with <code class="docutils literal">.math</code> CSS class.
+(Issue #3512)</p></li>
+<li><p>Adjust panorama aspect ratio to 3:1 and document behaviour.</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v813-is-out.html" class="u-url">Nikola v8.1.3 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v813-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2021-02-13T16:57:46Z" itemprop="datePublished" title="2021-02-13 16:57">2021-02-13 16:57</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v813-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v813-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.1.3. This release has some minor fixes, and
+a minor dependency change.</p>
+<section id="what-is-nikola-2"><h2>What is Nikola?<a href="#what-is-nikola-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads-2"><h2>Downloads<a href="#downloads-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes-2"><h2>Changes<a href="#changes-2" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features-2"><h3>Features<a href="#features-2" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Provide the full <code class="docutils literal">GLOBAL_CONTEXT</code> to the post list shortcode plugin
+(Issue #3481)</p></li>
+<li><p>Add <code class="docutils literal">BasePlugin.register_auto_watched_folder()</code></p></li>
+<li><p>Allow different <code class="docutils literal">PANDOC_OPTIONS</code> values based on input extensions
+by specifying a dict of <code class="docutils literal"><span class="pre">{".extension":</span> [options]}</code> (Issue #3492)</p></li>
+<li><p>Allow boolean/integer <code class="docutils literal">pretty_url</code> post meta values in YAML/TOML
+(Issue #3503)</p></li>
+</ul></section><section id="bugfixes-2"><h3>Bugfixes<a href="#bugfixes-2" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix an <code class="docutils literal">UnboundLocalError</code> crash in <code class="docutils literal">nikola deploy</code> (Issue
+#3479)</p></li>
+</ul></section><section id="other"><h3>Other<a href="#other" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>For <code class="docutils literal">nikola github_deploy</code>, the <code class="docutils literal"><span class="pre">ghp-import</span></code> PyPI package is now
+recommended instead of <code class="docutils literal"><span class="pre">ghp-import2</span></code>. Both versions should work,
+but you can’t have both installed at the same time. (Issue #3499)</p></li>
+</ul></section></section>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="nikola-v812-is-out.html" class="u-url">Nikola v8.1.2 is out!</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                <a href="../authors/chris-warrick.html">Chris Warrick</a>
+            </span></p>
+            <p class="dateline">
+            <a href="nikola-v812-is-out.html" rel="bookmark">
+            <time class="published dt-published" datetime="2020-11-15T13:35:00Z" itemprop="datePublished" title="2020-11-15 13:35">2020-11-15 13:35</time></a>
+            </p>
+                <p class="commentline">
+    
+    <a href="nikola-v812-is-out.html#disqus_thread" data-disqus-identifier="cache/posts/nikola-v812-is-out.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="e-content entry-content">
+    <p>On behalf of the Nikola team, I am pleased to announce the immediate
+availability of Nikola v8.1.2. This release has a bunch of new features,
+fixes some bugs, and improves compatibility with some dependencies and Windows.</p>
+<section id="what-is-nikola"><h2>What is Nikola?<a href="#what-is-nikola" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Nikola is a static site and blog generator, written in Python.
+It can use Mako and Jinja2 templates, and input in many popular markup
+formats, such as reStructuredText and Markdown — and can even turn
+Jupyter Notebooks into blog posts! It also supports image galleries,
+and is multilingual. Nikola is flexible, and page builds are extremely
+fast, courtesy of doit (which is rebuilding only what has been changed).</p>
+<p>Find out more at the website: <a class="reference external" href="https://getnikola.com/">https://getnikola.com/</a></p>
+</section><section id="downloads"><h2>Downloads<a href="#downloads" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Install using <code class="docutils literal">pip install Nikola</code>.</p>
+</section><section id="changes"><h2>Changes<a href="#changes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<section id="features"><h3>Features<a href="#features" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Support for multiple authors per post — comma-separated, enabled by
+<code class="docutils literal">MULTIPLE_AUTHORS_PER_POST</code> setting (Issue #3252)</p></li>
+<li><p>Add <code class="docutils literal">navbar_custom_bg</code> theme option to <code class="docutils literal">bootstrap4</code> and document
+options for <code class="docutils literal">bootstrap4</code> better (Issue #3443)</p></li>
+<li><p>Add Marathi translation</p></li>
+<li><p>Restore <code class="docutils literal">caps</code> typogrify filter (wraps strings of capital letters
+with <code class="docutils literal">&lt;span <span class="pre">class="caps"&gt;</span></code> (via Issue #3405)</p></li>
+<li><p>Improve <code class="docutils literal">nikola auto</code> performance with rate-limiting, support
+<code class="docutils literal"><span class="pre">-n</span></code> argument to pass to <code class="docutils literal">nikola build</code> (Issue #3401)</p></li>
+<li><p>Add support for the <a class="reference external" href="https://utteranc.es">Utterances</a> comment system</p></li>
+</ul></section><section id="bugfixes"><h3>Bugfixes<a href="#bugfixes" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fix previewimages (post- and root-relative) in bootblog4/galleries
+featured posts for non-server-root sites (Issue #3471)</p></li>
+<li><p>Windows: Also fix symlinks when installing from source with pip; if possible,
+enable Developer Mode and run <code class="docutils literal">git config <span class="pre">--global</span> core.symlinks true</code>
+before cloning the Nikola repo</p></li>
+<li><p>Fix clicking on links to image files. baguetteBox now requires a
+link (<code class="docutils literal">&lt;a&gt;</code>) to have an <code class="docutils literal">&lt;img&gt;</code> as a child in order to make the
+link activate the lightbox. (Issue #3472)</p></li>
+<li><p>Fix <code class="docutils literal">LINK_CHECK_WHITELIST</code> having issues due to mixing Unicode
+and bytestrings (Issue #3466)</p></li>
+<li><p>Add support for <code class="docutils literal"><span class="pre">nbconvert&gt;=6.0.0</span></code> (Issue #3457)</p></li>
+<li><p>Read files as utf-8-sig to allow BOM in input files</p></li>
+<li><p>Don’t break slugs with slashes in <code class="docutils literal">doc</code> directive (Issue #3450)</p></li>
+<li><p>Avoid warnings from type annotations in <code class="docutils literal">auto</code> caused by missing
+<code class="docutils literal">aiohttp</code> (Issue #3451)</p></li>
+<li><p>Ensure query strings and fragments are kept with <code class="docutils literal">URL_TYPE =
+"full_path"</code> (Issue #3448)</p></li>
+<li><p>Don’t run typogrify filters on <code class="docutils literal">&lt;title&gt;</code> tag to avoid adding extra
+tags (Issue #3405)</p></li>
+<li><p>Fix handling of duplicate plugins on Windows</p></li>
+<li><p>Allow else clause in post-list plugin. (Issue #3436)</p></li>
+<li><p>Ensure <code class="docutils literal">type</code> metadata value from plugins is preserved (Issue 3445)</p></li>
+<li><p>Fix path handlers with slashes on Windows</p></li>
+</ul></section></section>
+</div>
+    </article>
+</div>
+
+        <ul class="pager postindexpager clearfix">
+<li class="next"><a href="index-11.html" rel="next">Older posts</a></li>
+        </ul>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>var disqus_shortname="nikolaweb";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="../contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>

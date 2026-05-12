@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#
+" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Template variables | Nikola</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#f5ab14">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="rss.xml">
+<link rel="canonical" href="https://getnikola.com/template-variables.html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><meta name="author" content="The Nikola Team">
+<meta property="og:site_name" content="Nikola">
+<meta property="og:title" content="Template variables">
+<meta property="og:url" content="https://getnikola.com/template-variables.html">
+<meta property="og:description" content="Version:
+8.3.2
+Author:
+Chris Warrick &lt;chris@getnikola.com&gt;
+
+Variables available in templates are listed below.
+
+This list is maintained by humans, so it may not always be perfect.
+Variables whose type">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-04-13T12:00:00Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GetNikola">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-expand-md static-top mb-4
+navbar-dark
+bg-dark
+"><div class="container">
+<!-- This keeps the margins nice -->
+        <a class="navbar-brand" href=".">
+            <img src="assets/img/logo.svg" alt="Nikola" id="logo" class="d-inline-block align-top"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="bs-navbar">
+            <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+            <div class="dropdown-menu">
+                    <a href="documentation.html" class="dropdown-item"><strong>Documentation Index</strong></a>
+                    <a href="getting-started.html" class="dropdown-item"><strong>Getting Started</strong></a>
+                    <a href="handbook.html" class="dropdown-item"><strong>Handbook</strong></a>
+                    <a href="features/index.html" class="dropdown-item"><strong>Features</strong></a>
+                    <a href="conf.html" class="dropdown-item">conf.py</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="creating-a-theme.html" class="dropdown-item">Theming Tutorial</a>
+                    <a href="theming.html" class="dropdown-item">Theming Reference</a>
+                    <a href="extending.html" class="dropdown-item">Extending</a>
+                    <a href="internals.html" class="dropdown-item">Internals</a>
+                    <a href="creating-a-site-not-a-blog-with-nikola.html" class="dropdown-item">Creating a Site (Not a Blog)</a>
+                    <a href="license.html" class="dropdown-item">License</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support &amp; Contact</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">GitHub Issues</a>
+                    <a href="https://github.com/getnikola/nikola/discussions" class="dropdown-item">GitHub Discussions</a>
+                    <a href="https://x.com/GetNikola" class="dropdown-item">X/Twitter</a>
+                    <a href="https://irclogs.getnikola.com/" class="dropdown-item">IRC logs (#<span class="__cf_email__" data-cfemail="0c62656763606d4c60656e697e6d226f646d78">[email&#160;protected]</span>)</a>
+                    <a href="contact.html" class="dropdown-item"><strong>All support options</strong></a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add-ons</a>
+            <div class="dropdown-menu">
+                    <a href="https://themes.getnikola.com" class="dropdown-item">Themes</a>
+                    <a href="https://plugins.getnikola.com" class="dropdown-item">Plugins</a>
+                    <a href="https://github.com/getnikola/shortcodes" class="dropdown-item">Shortcodes</a>
+            </div>
+            </li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Development</a>
+            <div class="dropdown-menu">
+                    <a href="https://github.com/getnikola/nikola" class="dropdown-item"><strong>Source code (GitHub)</strong></a>
+                    <a href="https://github.com/getnikola/nikola/issues" class="dropdown-item">Issue Tracker</a>
+                    <a href="changes.html" class="dropdown-item">Changelog</a>
+                    <a href="license.html" class="dropdown-item">License</a>
+                    <a href="authors.html" class="dropdown-item">Contributors</a>
+            </div>
+                </li>
+<li class="nav-item">
+<a href="blog/index.html" class="nav-link">Blog</a>
+                </li>
+<li class="nav-item">
+<a href="https://users.getnikola.com" class="nav-link">Users</a>
+
+                
+            </li>
+</ul>
+<ul class="navbar-nav navbar-right">
+<li class="nav-item">
+    <a href="template-variables.rst" id="sourcelink" class="nav-link">Page Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Template variables</a></h1>
+
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <dl class="docinfo simple">
+<dt class="version">Version<span class="colon">:</span>
+</dt>
+<dd class="version">8.3.2</dd>
+<dt class="author">Author<span class="colon">:</span>
+</dt>
+<dd class="author"><p>Chris Warrick &lt;<a class="reference external" href="/cdn-cgi/l/email-protection#52313a203b21123537263c3b393d3e337c313d3f"><span class="__cf_email__" data-cfemail="34575c465d47745351405a5d5f5b58551a575b59">[email&#160;protected]</span></a>&gt;</p></dd>
+</dl>
+<p>Variables available in templates are listed below.</p>
+<ul class="simple">
+<li><p>This list is maintained by humans, so it may not always be perfect.</p></li>
+<li><p>Variables whose types are marked with <code class="docutils literal">?</code> may not always be available or may be None in some cases.</p></li>
+<li><p>Templates usually do not have access to the original TranslatableSetting
+variables, only to the current locale version (except <code class="docutils literal">NAVIGATION_LINKS</code>).</p></li>
+<li><p>For function and setting documentation, please consult <a class="reference external" href="https://docs.getnikola.com/en/latest/modules/">code documentation</a> and <a class="reference external" href="https://getnikola.com/conf.html">default configuration</a> respectively.</p></li>
+<li><p>Templates often create their own functions (macros), and import macros from
+other templates. Those macros are not listed here.</p></li>
+<li><p>This list has a partial documentation of post objects, but no other objects. For full docs, please consult
+the code, or auto-generated code docs on <a class="reference external" href="https://nikola.readthedocs.io/">ReadTheDocs</a>.</p></li>
+</ul>
+<p>Variables and functions come from three places:</p>
+<ul class="simple">
+<li><p>the global context</p></li>
+<li><p>the local context of a page</p></li>
+<li><p>the templates themselves and the templates they import</p></li>
+</ul>
+<nav class="contents alert alert-primary" id="contents" role="doc-toc"><p class="topic-title"><a class="reference internal" href="template-variables.html#top">Contents</a></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="template-variables.html#global-variables" id="toc-entry-1">Global variables</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#per-page-local-variables" id="toc-entry-2">Per-page local variables</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-post-pages-post-tmpl-page-tmpl-etc" id="toc-entry-3">Variables available in post pages (<code class="docutils literal">post.tmpl</code>, <code class="docutils literal">page.tmpl</code> etc.)</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-post-lists" id="toc-entry-4">Variables available in post lists</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-indexes" id="toc-entry-5">Variables available in indexes</a></p></li>
+<li>
+<p><a class="reference internal" href="template-variables.html#variables-available-in-taxonomies" id="toc-entry-6">Variables available in taxonomies</a></p>
+<ul>
+<li><p><a class="reference internal" href="template-variables.html#templates-and-settings-used-by-taxonomies" id="toc-entry-7">Templates and settings used by taxonomies</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#classification-overviews" id="toc-entry-8">Classification overviews</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#classification-pages-lists" id="toc-entry-9">Classification pages (lists)</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#subclassification-page" id="toc-entry-10">Subclassification page</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#hierarchical-lists" id="toc-entry-11">Hierarchical lists</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-archives" id="toc-entry-12">Variables available in archives</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-author-pages" id="toc-entry-13">Variables available in author pages</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-category-pages" id="toc-entry-14">Variables available in category pages</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-galleries" id="toc-entry-15">Variables available in galleries</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-listings" id="toc-entry-16">Variables available in listings</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-tag-pages" id="toc-entry-17">Variables available in tag pages</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-the-tags-and-categories-page-tags-tmpl" id="toc-entry-18">Variables available in the “Tags and categories” page (<code class="docutils literal">tags.tmpl</code>)</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-shortcodes" id="toc-entry-19">Variables available in shortcodes</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#variables-available-in-post-lists-1" id="toc-entry-20">Variables available in post lists</a></p></li>
+<li><p><a class="reference internal" href="template-variables.html#post-object-attributes" id="toc-entry-21">Post object attributes</a></p></li>
+</ul></nav><section id="global-variables"><h2><a class="toc-backref" href="template-variables.html#toc-entry-1" role="doc-backlink">Global variables</a><a href="#global-variables" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Some variables on the global variables list may be None (the <code class="docutils literal">?</code> symbol is not used).</p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">_link</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.link</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">abs_link</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.abs_link</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">atom_path</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">ATOM_PATH</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">author_pages_generated</code></p></td>
+<td><p>bool</p></td>
+<td><p>False</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">blog_author</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">BLOG_AUTHOR</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">blog_email</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">BLOG_EMAIL</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">blog_description</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">BLOG_DESCRIPTION</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">blog_title</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">BLOG_TITLE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">blog_url</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">SITE_URL</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">body_end</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">BODY_END</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">colorize_str_from_base_color</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">utils.colorize_str_from_base_color</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">color_hsl_adjust_hex</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">utils.color_hsl_adjust_hex</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">comment_system_id</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">COMMENT_SYSTEM_ID</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">comment_system</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">COMMENT_SYSTEM</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">content_footer</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">CONTENT_FOOTER</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">data</code></p></td>
+<td><p>dict</p></td>
+<td><p>data files (from the <code class="docutils literal">data/</code> directory)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">date_fanciness</code></p></td>
+<td><p>int</p></td>
+<td><p><code class="docutils literal">DATE_FANCINESS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">date_format</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">DATE_FORMAT</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">exists</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.file_exists</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">extra_head_data</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">EXTRA_HEAD_DATA</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">favicons</code></p></td>
+<td><p>tuple</p></td>
+<td><p><code class="docutils literal">FAVICONS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">front_index_header</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">FRONT_INDEX_HEADER</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">generate_atom</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">GENERATE_ATOM</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">generate_rss</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">GENERATE_RSS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">global_data</code></p></td>
+<td><p>dict</p></td>
+<td><p>alias for <code class="docutils literal">data</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">has_custom_css</code></p></td>
+<td><p>bool</p></td>
+<td><p>True if custom.css exists</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">hidden_authors</code></p></td>
+<td><p>list[str]</p></td>
+<td><p><code class="docutils literal">HIDDEN_AUTHORS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">hidden_categories</code></p></td>
+<td><p>list[str]</p></td>
+<td><p><code class="docutils literal">HIDDEN_CATEGORIES</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">hidden_tags</code></p></td>
+<td><p>list[str]</p></td>
+<td><p><code class="docutils literal">HIDDEN_TAGS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">hide_sourcelink</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">SHOW_SOURCELINK</code> setting, negated</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">index_display_post_count</code></p></td>
+<td><p>int</p></td>
+<td><p><code class="docutils literal">INDEX_DISPLAY_POST_COUNT</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">index_file</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">INDEX_FILE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">js_date_format</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">MOMENTJS_DATE_FORMAT</code> setting, JSONified</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">katex_auto_render</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">KATEX_AUTO_RENDER</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">license</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">LICENSE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">logo_url</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">LOGO_URL</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">luxon_date_format</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">LUXON_DATE_FORMAT</code> setting, JSONified</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">mathjax_config</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">MATHJAX_CONFIG</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">messages</code></p></td>
+<td><p>dict[dict[str, str]]</p></td>
+<td><p>translated messages (<code class="docutils literal">{language: {english: translated}}</code>)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">meta_generator_tag</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">META_GENERATOR_TAG</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">momentjs_locales</code></p></td>
+<td><p>defaultdict[str, str]</p></td>
+<td><p>dictionary of available Moment.js locales</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">multiple_authors_per_post</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">MULTIPLE_AUTHORS_PER_POST</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">navigation_links</code></p></td>
+<td><p>TranslatableSetting</p></td>
+<td><p><code class="docutils literal">NAVIGATION_LINKS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">navigation_alt_links</code></p></td>
+<td><p>TranslatableSetting</p></td>
+<td><p><code class="docutils literal">NAVIGATION_ALT_LINKS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">needs_ipython_css</code></p></td>
+<td><p>bool</p></td>
+<td><p>whether or not Jupyter CSS is needed by this site</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">rel_link</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.rel_link</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">rss_link</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">RSS_LINK</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">search_form</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">SEARCH_FORM</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">set_locale</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">LocaleBorg.set_locale</code> function (or None if not available)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">show_blog_title</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">SHOW_BLOG_TITLE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">show_sourcelink</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">SHOW_SOURCELINK</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">site_has_comments</code></p></td>
+<td><p>bool</p></td>
+<td><p>whether or not a comment system is configured</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">social_buttons_code</code></p></td>
+<td><p>TranslatableSetting[str]</p></td>
+<td><p><code class="docutils literal">SOCIAL_BUTTONS_CODE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">sort_posts</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">utils.sort_posts</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">smartjoin</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">utils.smartjoin</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">colorize_str</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">utils.colorize_str</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">template_hooks</code></p></td>
+<td><p>dict[str, TemplateHookRegistry]</p></td>
+<td><p>Template hooks registered by plugins</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">theme_color</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">THEME_COLOR</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">theme_config</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">THEME_CONFIG</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">timezone</code></p></td>
+<td><p>tzinfo</p></td>
+<td><p>Timezone object (represents the configured timezone)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">translations</code></p></td>
+<td><p>dict[str, str]</p></td>
+<td><p><code class="docutils literal">TRANSLATIONS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">twitter_card</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">TWITTER_CARD</code> setting, defaults to an empty dictionary</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">url_replacer</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.url_replacer</code> function</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">url_type</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">URL_TYPE</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">use_bundles</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">USE_BUNDLES</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">use_cdn</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">USE_CDN</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">use_katex</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">USE_KATEX</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">subtheme</code></p></td>
+<td><p>str?</p></td>
+<td><p><code class="docutils literal">THEME_REVEAL_CONFIG_SUBTHEME</code> setting (only if set — deprecated)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">transition</code></p></td>
+<td><p>str?</p></td>
+<td><p><code class="docutils literal">THEME_REVEAL_CONFIG_TRANSITION</code> setting (only if set — deprecated)</p></td>
+</tr>
+</tbody>
+</table></section><section id="per-page-local-variables"><h2><a class="toc-backref" href="template-variables.html#toc-entry-2" role="doc-backlink">Per-page local variables</a><a href="#per-page-local-variables" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Those variables are available on all pages, but their contents are dependent on page contents.</p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">description</code></p></td>
+<td><p>str</p></td>
+<td><p>Description of the page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_rtl</code></p></td>
+<td><p>bool</p></td>
+<td><p>Whether or not the language is left-to-right</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">lang</code></p></td>
+<td><p>str</p></td>
+<td><p>Current language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">pagekind</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>List of strings that identify the type of this page <a class="reference external" href="https://getnikola.com/theming.html#identifying-and-customizing-different-kinds-of-pages-with-a-shared-template">(docs)</a></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">title</code></p></td>
+<td><p>str</p></td>
+<td><p>Title of the page (taken from post, config, etc.)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">formatmsg</code></p></td>
+<td><p>function</p></td>
+<td><p>Wrapper over <code class="docutils literal">%</code> string formatting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">striphtml</code></p></td>
+<td><p>function</p></td>
+<td><p>Strips HTML tags (Mako only)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">crumbs</code></p></td>
+<td><p>list</p></td>
+<td><p>Breadcrumbs for this page</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-post-pages-post-tmpl-page-tmpl-etc"><h2><a class="toc-backref" href="template-variables.html#toc-entry-3" role="doc-backlink">Variables available in post pages (<code class="docutils literal">post.tmpl</code>, <code class="docutils literal">page.tmpl</code> etc.)</a><a href="#variables-available-in-post-pages-post-tmpl-page-tmpl-etc" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">post</code></p></td>
+<td><p>Post</p></td>
+<td><p>The post object</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">permalink</code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link to the post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">enable_comments</code></p></td>
+<td><p>bool</p></td>
+<td><p>True for posts, <code class="docutils literal">COMMENTS_IN_PAGES</code> setting for pages</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-post-lists"><h2><a class="toc-backref" href="template-variables.html#toc-entry-4" role="doc-backlink">Variables available in post lists</a><a href="#variables-available-in-post-lists" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">posts</code></p></td>
+<td><p>list[Post]</p></td>
+<td><p>List of post objects that appear in this list</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">prevlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to previous page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">nextlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to next page</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-indexes"><h2><a class="toc-backref" href="template-variables.html#toc-entry-5" role="doc-backlink">Variables available in indexes</a><a href="#variables-available-in-indexes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">posts</code></p></td>
+<td><p>list[Post]</p></td>
+<td><p>List of post objects that appear in this list</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">index_teasers</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">INDEX_TEASERS</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">show_index_page_navigation</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">SHOW_INDEX_PAGE_NAVIGATION</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">current_page</code></p></td>
+<td><p>int</p></td>
+<td><p>Number of current page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">page_links</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>Links to different pages</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">prevlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to previous page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">nextlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to next page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">prevfeedlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to previous page as an Atom feed</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">nextfeedlink</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to next page as an Atom feed</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">prev_next_links_reversed</code></p></td>
+<td><p>bool</p></td>
+<td><p>Whether or not previous and next links should be reversed (<code class="docutils literal">INDEXES_STATIC</code>)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_frontmost_index</code></p></td>
+<td><p>bool</p></td>
+<td><p>Whether or not this is the front-most index (page 0)</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-taxonomies"><h2><a class="toc-backref" href="template-variables.html#toc-entry-6" role="doc-backlink">Variables available in taxonomies</a><a href="#variables-available-in-taxonomies" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>Variable names enclosed in <code class="docutils literal">{}</code> are dependent on the taxonomy.</p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Taxonomy</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Value</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">archive</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p><code class="docutils literal">archive</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">author</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p><code class="docutils literal">authors</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p><code class="docutils literal">categories</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category</code></p></td>
+<td><p><code class="docutils literal">overview_page_items_variable_name</code></p></td>
+<td><p><code class="docutils literal">cat_items</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category</code></p></td>
+<td><p><code class="docutils literal">overview_page_hierarchy_variable_name</code></p></td>
+<td><p><code class="docutils literal">cat_hierarchy</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">index</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p>unavailable (None)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">page_index_folder</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p><code class="docutils literal">page_folder</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag</code></p></td>
+<td><p><code class="docutils literal">overview_page_variable_name</code></p></td>
+<td><p><code class="docutils literal">tags</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag</code></p></td>
+<td><p><code class="docutils literal">overview_page_items_variable_name</code></p></td>
+<td><p><code class="docutils literal">items</code></p></td>
+</tr>
+</tbody>
+</table>
+<section id="templates-and-settings-used-by-taxonomies"><h3><a class="toc-backref" href="template-variables.html#toc-entry-7" role="doc-backlink">Templates and settings used by taxonomies</a><a href="#templates-and-settings-used-by-taxonomies" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Taxonomy</p></th>
+<th class="head"><p>Has hierarchy</p></th>
+<th class="head"><p>List (one classification) template</p></th>
+<th class="head"><p>Index (one classification) template</p></th>
+<th class="head"><p>Overview (list of classifications) template</p></th>
+<th class="head"><p>Subcategories list template</p></th>
+<th class="head"><p>List is an index</p></th>
+<th class="head"><p>Show as list of subcategories</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p>(default settings)</p></td>
+<td><p>no</p></td>
+<td><p>tagindex.tmpl</p></td>
+<td><p>tagindex.tmpl</p></td>
+<td><p>list.tmpl</p></td>
+<td><p>taxonomy_list.tmpl (does not exist)</p></td>
+<td><p>no</p></td>
+<td><p>no</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">archive</code></p></td>
+<td><p>yes (0-3 levels)</p></td>
+<td><p>list_post.tmpl</p></td>
+<td><p>archiveindex.tmpl</p></td>
+<td><p>list.tmpl</p></td>
+<td><p>list.tmpl</p></td>
+<td><p><code class="docutils literal">ARCHIVES_ARE_INDEXES</code></p></td>
+<td><p><code class="docutils literal">not CREATE_FULL_ARCHIVES</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">author</code></p></td>
+<td><p>no</p></td>
+<td><p>author.tmpl</p></td>
+<td><p>authorindex.tmpl</p></td>
+<td><p>authors.tmpl</p></td>
+<td><p>n/a</p></td>
+<td><p><code class="docutils literal">AUTHOR_PAGES_ARE_INDEXES</code></p></td>
+<td><p>no</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category</code></p></td>
+<td><p>yes</p></td>
+<td><p>tag.tmpl</p></td>
+<td><p>tagindex.tmpl</p></td>
+<td><p>tags.tmpl (with tags)</p></td>
+<td><p>n/a</p></td>
+<td><p><code class="docutils literal">CATEGORY_PAGES_ARE_INDEXES</code></p></td>
+<td><p>n/a</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">index</code></p></td>
+<td><p>no</p></td>
+<td><p>n/a</p></td>
+<td><p>index.tmpl</p></td>
+<td><p>n/a</p></td>
+<td><p>n/a</p></td>
+<td><p>yes</p></td>
+<td><p>no</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">page_index_folder</code></p></td>
+<td><p>yes</p></td>
+<td><p>list.tmpl</p></td>
+<td><p>n/a</p></td>
+<td><p>n/a</p></td>
+<td><p>n/a</p></td>
+<td><p>no</p></td>
+<td><p>no</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag</code></p></td>
+<td><p>no</p></td>
+<td><p>tag.tmpl</p></td>
+<td><p>tagindex.tmpl</p></td>
+<td><p>tags.tmpl (with categories)</p></td>
+<td><p>n/a</p></td>
+<td><p><code class="docutils literal">TAG_PAGES_ARE_INDEXES</code></p></td>
+<td><p>no</p></td>
+</tr>
+</tbody>
+</table></section><section id="classification-overviews"><h3><a class="toc-backref" href="template-variables.html#toc-entry-8" role="doc-backlink">Classification overviews</a><a href="#classification-overviews" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>Hierarchy-related variables are available if and only if <code class="docutils literal">has_hierarchy</code> is True.</p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">{overview_page_variable_name}</code></p></td>
+<td><p>str</p></td>
+<td><p>List of classifications</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">{overview_page_items_variable_name}</code></p></td>
+<td><p>list</p></td>
+<td><p>List of items <em>(name, link)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">{overview_page_items_variable_name + "_with_postcount"}</code></p></td>
+<td><p>list</p></td>
+<td><p>List of items <em>(name, link, number of posts)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">{overview_page_hierarchy_variable_name}</code></p></td>
+<td><p>list?</p></td>
+<td><p>List of hierarchies <em>(name, full name, path, link, indent levels, indent to change before, indent to change after)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">{overview_page_hierarchy_variable_name + "_with_postcount"}</code></p></td>
+<td><p>list?</p></td>
+<td><p>List of hierarchies, with added counts <em>(name, full name, path, link, indent levels, indent to change before, indent to change after, number of children, number of posts)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">has_hierarchy</code></p></td>
+<td><p>bool</p></td>
+<td><p>Value of <code class="docutils literal">has_hierarchy</code> for the taxonomy</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">permalink</code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link to page</p></td>
+</tr>
+</tbody>
+</table></section><section id="classification-pages-lists"><h3><a class="toc-backref" href="template-variables.html#toc-entry-9" role="doc-backlink">Classification pages (lists)</a><a href="#classification-pages-lists" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">kind</code></p></td>
+<td><p>str</p></td>
+<td><p>The classification name</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">items</code></p></td>
+<td><p>list?</p></td>
+<td><p>List of items for <code class="docutils literal">list.tmpl</code> <em>(title, permalink, None)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">posts</code></p></td>
+<td><p>list[Post]?</p></td>
+<td><p>List of items for other templates</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">permalink</code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link to page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list[tuple]</p></td>
+<td><p>List of triples <code class="docutils literal">(other_lang, other_classification, title)</code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Index-style classification pages have <code class="docutils literal">kind</code> in addition to the usual index variables.</p>
+</section><section id="subclassification-page"><h3><a class="toc-backref" href="template-variables.html#toc-entry-10" role="doc-backlink">Subclassification page</a><a href="#subclassification-page" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">items</code></p></td>
+<td><p>list?</p></td>
+<td><p>List of items</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">permalink</code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link to page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list[tuple]</p></td>
+<td><p>List of triples <code class="docutils literal">(other_lang, other_classification, title)</code></p></td>
+</tr>
+</tbody>
+</table></section><section id="hierarchical-lists"><h3><a class="toc-backref" href="template-variables.html#toc-entry-11" role="doc-backlink">Hierarchical lists</a><a href="#hierarchical-lists" class="headerlink" title="Permalink to this heading">¶</a></h3>
+<p>The indenting information can be used to render the items as a tree. The values have the following meanings:</p>
+<blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal">indent levels</code> is a list of pairs <code class="docutils literal">(current_i, count_i)</code> giving the current position (<code class="docutils literal">0</code>, ..., <code class="docutils literal"><span class="pre">count_i-1</span></code>) and maximum (<code class="docutils literal">count_i</code>) in the hierarchy level <code class="docutils literal">i</code>;</p></li>
+<li><p><code class="docutils literal">indent to change before</code> is the difference of hierarchy levels between the previous and the current item; positive values indicate that the current item is indented further in and can be used to open HTML tags before the item;</p></li>
+<li><p><code class="docutils literal">indent to change after</code> is the difference of hierarchy levels between the current and the next item; negative values indicate that the current item is indented further in and can be used to close HTML tags after the item.</p></li>
+</ul>
+</blockquote>
+<p>Example:</p>
+<div class="code"><pre class="code text"><a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-1" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-1" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-1"></a>+--- levels:[(0,3)], before:1, after:0
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-2" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-2" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-2"></a>+-+- levels:[(1,3)], before:0, after:1
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-3" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-3" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-3"></a>| +--- levels:[(1,3), (0,2)], before:1, after:0
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-4" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-4" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-4"></a>| +-+- levels:[(1,3), (1,2)], before:0, after:1
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-5" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-5" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-5"></a>|   +--- levels:[(1,3), (1,2), (0, 1)], before:1, after:-2
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-6" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-6" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-6"></a>+-+- levels:[(2,3)], before:-2, after:1
+<a id="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-7" name="rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-7" href="template-variables.html#rest_code_5a7e5075d9b64b35bcf6378bbe04f4c8-7"></a>  +- levels:[(2,3), (0,1)], before:1, after:-2
+</pre></div>
+<p>See <code class="docutils literal">tags.tmpl</code> in the base themes for examples on how to render a tree as nested unordered lists in HTML.</p>
+</section></section><section id="variables-available-in-archives"><h2><a class="toc-backref" href="template-variables.html#toc-entry-12" role="doc-backlink">Variables available in archives</a><a href="#variables-available-in-archives" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p>The archive navigation variables are available only if <code class="docutils literal">create_archive_navigation</code> is True.</p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">kind</code></p></td>
+<td><p>str</p></td>
+<td><p>Always <code class="docutils literal">"archive"</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">archive_name</code></p></td>
+<td><p>str?</p></td>
+<td><p>Name of the archive (only if using indexes)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">create_archive_navigation</code></p></td>
+<td><p>bool</p></td>
+<td><p><code class="docutils literal">CREATE_ARCHIVE_NAVIGATION</code> setting</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">has_archive_navigation</code></p></td>
+<td><p>bool</p></td>
+<td><p>Whether or not archive navigation is available</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">up_archive</code></p></td>
+<td><p>str?</p></td>
+<td><p>Link to the archive one level up</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">up_archive_name</code></p></td>
+<td><p>str?</p></td>
+<td><p>Name of the archive one level up</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">previous_archive</code></p></td>
+<td><p>str?</p></td>
+<td><p>Link to the previous archive</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">previous_archive_name</code></p></td>
+<td><p>str?</p></td>
+<td><p>Name of the previous archive</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">next_archive</code></p></td>
+<td><p>str?</p></td>
+<td><p>Link to the next archive</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">next_archive_name</code></p></td>
+<td><p>str?</p></td>
+<td><p>Name of the next archive</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">archive_nodelevel</code></p></td>
+<td><p>int?</p></td>
+<td><p>Level of the archive</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list</p></td>
+<td><p>List of tuples <code class="docutils literal">(lang, path, name)</code> of same archive in other languages</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-author-pages"><h2><a class="toc-backref" href="template-variables.html#toc-entry-13" role="doc-backlink">Variables available in author pages</a><a href="#variables-available-in-author-pages" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">kind</code></p></td>
+<td><p>str</p></td>
+<td><p>Always <code class="docutils literal">"author"</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">author</code></p></td>
+<td><p>str</p></td>
+<td><p>Author name</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">rss_link</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to RSS (HTML fragment)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list[tuple]</p></td>
+<td><p>List of tuples <code class="docutils literal">(lang, author, name)</code> of same author in other languages</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-category-pages"><h2><a class="toc-backref" href="template-variables.html#toc-entry-14" role="doc-backlink">Variables available in category pages</a><a href="#variables-available-in-category-pages" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">kind</code></p></td>
+<td><p>str</p></td>
+<td><p>Always <code class="docutils literal">"category"</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category</code></p></td>
+<td><p>str</p></td>
+<td><p>Category name</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category_path</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>Category hierarchy</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">rss_link</code></p></td>
+<td><p>str?</p></td>
+<td><p>Link to RSS (HTML fragment, only if using indexes)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">subcategories</code></p></td>
+<td><p>list</p></td>
+<td><p>List of subcategories (contains <em>name, link</em> tuples)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag</code></p></td>
+<td><p>str</p></td>
+<td><p>Friendly category name</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list[tuple]</p></td>
+<td><p>List of tuples <code class="docutils literal">(lang, category, name)</code> of same category in other languages</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-galleries"><h2><a class="toc-backref" href="template-variables.html#toc-entry-15" role="doc-backlink">Variables available in galleries</a><a href="#variables-available-in-galleries" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">crumbs</code></p></td>
+<td><p>list</p></td>
+<td><p>Breadcrumbs for this page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">enable_comments</code></p></td>
+<td><p>bool</p></td>
+<td><p>Whether or not comments are enabled in galleries</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">folders</code></p></td>
+<td><p>list</p></td>
+<td><p>List of folders (contains <em>path, title</em> tuples)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">permalink</code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link to this page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">photo_array</code></p></td>
+<td><p>list</p></td>
+<td><p>Photo array (contains dicts with image data: <em>url, url_thumb, title, size{w, h}</em>)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">photo_array_json</code></p></td>
+<td><p>str</p></td>
+<td><p>Photo array in JSON format</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">post</code></p></td>
+<td><p>Post?</p></td>
+<td><p>The Post object for this gallery</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">thumbnail_size</code></p></td>
+<td><p>int</p></td>
+<td><p><code class="docutils literal">THUMBNAIL_SIZE</code> setting</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-listings"><h2><a class="toc-backref" href="template-variables.html#toc-entry-16" role="doc-backlink">Variables available in listings</a><a href="#variables-available-in-listings" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">code</code></p></td>
+<td><p>str</p></td>
+<td><p>Highlighted source code (HTML fragment)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">crumbs</code></p></td>
+<td><p>list</p></td>
+<td><p>Breadcrumbs for this page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">folders</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>List of subfolders</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">files</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>List of files in the folder</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">source_link</code></p></td>
+<td><p>str</p></td>
+<td><p>Link to the source file</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-tag-pages"><h2><a class="toc-backref" href="template-variables.html#toc-entry-17" role="doc-backlink">Variables available in tag pages</a><a href="#variables-available-in-tag-pages" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">kind</code></p></td>
+<td><p>str</p></td>
+<td><p>Always <code class="docutils literal">"tag"</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag</code></p></td>
+<td><p>str</p></td>
+<td><p>Tag name</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">other_languages</code></p></td>
+<td><p>list[tuple]</p></td>
+<td><p>List of tuples <code class="docutils literal">(lang, tag, name)</code> of same tag in other languages</p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-the-tags-and-categories-page-tags-tmpl"><h2><a class="toc-backref" href="template-variables.html#toc-entry-18" role="doc-backlink">Variables available in the “Tags and categories” page (<code class="docutils literal">tags.tmpl</code>)</a><a href="#variables-available-in-the-tags-and-categories-page-tags-tmpl" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">items</code></p></td>
+<td><p>list</p></td>
+<td><p>Tags <em>(name, link)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">cat_items</code></p></td>
+<td><p>list</p></td>
+<td><p>Categories <em>(name, full name, path, link, indent levels, indent to change before, indent to change after)</em></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category_titles</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">CATEGORY_TITLES</code> setting (dict for the current language only)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category_descriptions</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">CATEGORY_DESCRIPTIONS</code> setting (dict for the current language only)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag_titles</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">TAG_TITLES</code> setting (dict for the current language only)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tag_descriptions</code></p></td>
+<td><p>dict</p></td>
+<td><p><code class="docutils literal">TAG_DESCRIPTIONS</code> setting (dict for the current language only)</p></td>
+</tr>
+</tbody>
+</table>
+<p>For more details about hierarchies, see <a class="reference internal" href="template-variables.html#hierarchical-lists">Hierarchical lists</a></p>
+</section><section id="variables-available-in-shortcodes"><h2><a class="toc-backref" href="template-variables.html#toc-entry-19" role="doc-backlink">Variables available in shortcodes</a><a href="#variables-available-in-shortcodes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><em>The global context is available in templated shortcodes.</em></p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">lang</code></p></td>
+<td><p>str</p></td>
+<td><p>Current language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">_args</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>Arguments given to the shortcode</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">data</code></p></td>
+<td><p>str</p></td>
+<td><p>Shortcode contents</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">post</code></p></td>
+<td><p>Post</p></td>
+<td><p>Post object (if available)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">filename</code></p></td>
+<td><p>str?</p></td>
+<td><p>file name, if <code class="docutils literal">shortcode_function.nikola_shortcode_pass_filename = True</code></p></td>
+</tr>
+</tbody>
+</table></section><section id="variables-available-in-post-lists-1"><h2><a class="toc-backref" href="template-variables.html#toc-entry-20" role="doc-backlink">Variables available in post lists</a><a href="#variables-available-in-post-lists-1" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><em>The global context is NOT available in post lists.</em></p>
+<table class="table table-bordered table-striped">
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">posts</code></p></td>
+<td><p>list[Post]</p></td>
+<td><p>Posts that are on the list</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">lang</code></p></td>
+<td><p>str</p></td>
+<td><p>Current language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">date_format</code></p></td>
+<td><p>str</p></td>
+<td><p>The date format for current language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">post_list_id</code></p></td>
+<td><p>str</p></td>
+<td><p>GUID of post list</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">messages</code></p></td>
+<td><p>dict</p></td>
+<td><p>The messages dictionary</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">_link</code></p></td>
+<td><p>function</p></td>
+<td><p><code class="docutils literal">Nikola.link</code> function</p></td>
+</tr>
+</tbody>
+</table></section><section id="post-object-attributes"><h2><a class="toc-backref" href="template-variables.html#toc-entry-21" role="doc-backlink">Post object attributes</a><a href="#post-object-attributes" class="headerlink" title="Permalink to this heading">¶</a></h2>
+<p><em>Usable anywhere post objects are accessible.</em></p>
+<p>This list only includes variables that make sense for templates. Some function signatures have been shortened to save space, <code class="docutils literal">?</code> means the argument has default value.</p>
+<p>More docs: <a class="reference external" href="https://nikola.readthedocs.io/en/latest/nikola.html#nikola.post.Post">nikola.post.Post on ReadTheDocs</a>. Check out the source of the Post class as well.</p>
+<table>
+<thead><tr>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr></thead>
+<tbody>
+<tr>
+<td><p><code class="docutils literal">alltags</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>All tags for the post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">author(lang=None)</code></p></td>
+<td><p>str</p></td>
+<td><p>Localized author or <code class="docutils literal">BLOG_AUTHOR</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">base_path</code></p></td>
+<td><p>str</p></td>
+<td><p><code class="docutils literal">cache</code> path with local <code class="docutils literal">os.sep</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">category_from_destpath</code></p></td>
+<td><p>bool</p></td>
+<td><p>If category was set by <code class="docutils literal">CATEGORY_DESTPATH_AS_DEFAULT</code></p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">data(key, lang=None)</code></p></td>
+<td><p>?</p></td>
+<td><p>Access to post data</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">date</code></p></td>
+<td><p>datetime</p></td>
+<td><p>Date of post (from meta)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">description(key, lang=None)</code></p></td>
+<td><p>str</p></td>
+<td><p>Description of post (from meta)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">destination_path(lang?,</span> <span class="pre">extension?,</span> <span class="pre">sep?)</span></code></p></td>
+<td><p>str</p></td>
+<td><p>Destination path of post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">formatted_date(date_format, date=None)</code></p></td>
+<td><p>str</p></td>
+<td><p>Format a date (default: post date)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">formatted_updated(date_format)</code></p></td>
+<td><p>str</p></td>
+<td><p>Format the last update date</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">guid(lang=None)</code></p></td>
+<td><p>str</p></td>
+<td><p>GUID of post (used for feeds)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">has_math</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post has math</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">has_pretty_url(lang)</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post has a pretty URL</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_draft</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post is a draft</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_post</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post is not a page</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_private</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post is private</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_translation_available(lang)</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post is available in (translated to) a given language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">is_two_file</code></p></td>
+<td><p>bool</p></td>
+<td><p>If the post uses two-file metadata</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">meta(key, lang=None)</code></p></td>
+<td><p>?</p></td>
+<td><p>Metadata of the post (assumes current language)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">next_post</code></p></td>
+<td><p>Post</p></td>
+<td><p>Next post in the order</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">paragraph_count</code></p></td>
+<td><p>int</p></td>
+<td><p>Paragraph count for a post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">permalink(lang?,</span> <span class="pre">absolute?,</span> <span class="pre">extension?,</span> <span class="pre">query?)</span></code></p></td>
+<td><p>str</p></td>
+<td><p>Permanent link for a post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">post_name</code></p></td>
+<td><p>str</p></td>
+<td><p>Source path, without extension</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">post_status</code></p></td>
+<td><p>str</p></td>
+<td><p>Post status meta field (published, featured, private, draft)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">prev_post</code></p></td>
+<td><p>Post</p></td>
+<td><p>Previous post in the order</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">previewimage</code></p></td>
+<td><p>str</p></td>
+<td><p>Preview image of the post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">publish_later</code></p></td>
+<td><p>bool</p></td>
+<td><p>True if the post is not yet published (due to date)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">reading_time</code></p></td>
+<td><p>int</p></td>
+<td><p>Approximate reading time in minutes (220 wpm)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">remaining_paragraph_count</code></p></td>
+<td><p>int</p></td>
+<td><p>Paragraph count after the teaser</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">remaining_reading_time</code></p></td>
+<td><p>int</p></td>
+<td><p>Reading time after the teaser</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">source_link</code></p></td>
+<td><p>str</p></td>
+<td><p>Absolute link to the post's source</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tags</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>Tags for the current language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">tags_for_language(lang)</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>Tags for a given language</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal"><span class="pre">text(lang?,</span> <span class="pre">teaser_only?,</span> <span class="pre">strip_html?,</span> <span class="pre">show_read_more_link?,</span> …)</code></p></td>
+<td><p>str</p></td>
+<td><p>The text of a post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">title(lang=None)</code></p></td>
+<td><p>str</p></td>
+<td><p>Localized title of post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">translated_to</code></p></td>
+<td><p>list[str]</p></td>
+<td><p>List of languages of post</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">updated</code></p></td>
+<td><p>datetime</p></td>
+<td><p>Date of last update (from meta)</p></td>
+</tr>
+<tr>
+<td><p><code class="docutils literal">use_in_feeds</code></p></td>
+<td><p>bool</p></td>
+<td><p>If this post should be displayed in feeds</p></td>
+</tr>
+</tbody>
+</table>
+<!-- vim: nowrap textwidth=0 --></section>
+</div>
+    
+
+</article><!--End of body content--><footer id="footer">
+            Contents © 2012–2025 <a href="contact.html">Roberto Alsina and the Nikola contributors</a>  |  Powered by Nikola itself  |  
+<a href="https://twitter.com/intent/user?screen_name=GetNikola">Follow Nikola on Twitter</a>  |  Theme is <a href="https://bootswatch.com/cerulean/">Cerulean</a>
+
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script><!-- Start of StatCounter Code for Default Guide --><script type="text/javascript">
+var sc_project=7842875;
+var sc_invisible=1;
+var sc_security="3421486a";
+</script><script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="tumblr
+statistics" href="https://statcounter.com/tumblr/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/7842875/0/3421486a/1/" alt="tumblr statistics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</body>
+</html>
