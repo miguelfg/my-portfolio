@@ -1,6 +1,20 @@
 # -*- coding: utf-8 -*-
 
+import re
 import time
+
+
+def add_lazy_loading(filename):
+    """Add loading="lazy" to all img tags that don't already have a loading attribute."""
+    with open(filename, 'r', encoding='utf-8') as f:
+        content = f.read()
+    content = re.sub(
+        r'(<img\b(?![^>]*\bloading=)[^>]*?)(\s*/?>)',
+        r'\1 loading="lazy"\2',
+        content,
+    )
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(content)
 
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
@@ -20,7 +34,7 @@ BLOG_AUTHOR = "Miguel Fiandor"  # (translatable)
 BLOG_TITLE = "Miguel Fiandor - Data Analyst & Engineer"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://my-portfolio-app-hxdx6.ondigitalocean.app/"
+SITE_URL = "https://miguelfg.github.io/my-portfolio/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://example.com/"
@@ -741,6 +755,10 @@ OUTPUT_FOLDER = 'output/'
 #    ".jpg": ["jpegoptim --strip-all -m75 -v %s"],
 # }
 
+FILTERS = {
+    ".html": [add_lazy_loading],
+}
+
 # Executable for the "yui_compressor" filter (defaults to 'yui-compressor').
 # YUI_COMPRESSOR_EXECUTABLE = 'yui-compressor'
 
@@ -947,9 +965,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
 FAVICONS = (
-    ("icon", "/images/favicon.png", "16x16"),
-    ("icon", "/images/favicon.png", "128x128"),
-    # ("icon", "/icon_128x128.png", "128x128"),
+    ("icon", "/images/favicon.png", "512x512"),
 )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
