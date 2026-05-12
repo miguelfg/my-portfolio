@@ -14,20 +14,12 @@
   <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/cat_ai-news.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/cat_ai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/crewai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/daily.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/dashboard.xml</loc>
@@ -40,10 +32,6 @@
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/guide.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/news.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/ollama.xml</loc>
@@ -70,20 +58,12 @@
   <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/cat_ai-news.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/cat_ai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/crewai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/daily.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/dashboard.xml</loc>
@@ -96,10 +76,6 @@
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/guide.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/news.xml</loc>
-  <lastmod>2026-05-12T09:40:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/ollama.xml</loc>
@@ -127,6 +103,6 @@
  </sitemap>
  <sitemap>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/sitemap.xml</loc>
-  <lastmod>2026-05-12T09:46:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </sitemap>
 </sitemapindex>

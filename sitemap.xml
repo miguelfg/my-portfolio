@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/2025/</loc>
@@ -15,11 +15,11 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/archive.html</loc>
-  <lastmod>2026-05-12T09:46:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/agents/</loc>
@@ -30,19 +30,11 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/cat_ai-news/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/cat_ai/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/crewai/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/daily/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
@@ -55,10 +47,6 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/guide/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/categories/news/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
@@ -79,7 +67,7 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/2025/</loc>
@@ -87,11 +75,11 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/archive.html</loc>
-  <lastmod>2026-05-12T09:46:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/agents/</loc>
@@ -102,19 +90,11 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/cat_ai-news/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/cat_ai/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/crewai/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/daily/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
@@ -127,10 +107,6 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/guide/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/categories/news/</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
@@ -151,31 +127,23 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/pages/about-me/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/about-me/" />
  </url>
  <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/pages/ai-news/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
- </url>
- <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/pages/contact-me/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/contact-me/" />
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/pages/portfolio/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/portfolio/" />
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/pages/services/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/services/" />
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/ai-news-summary-2025-05-12/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/crewai-cli-quick-quide/</loc>
@@ -194,27 +162,19 @@
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/about-me/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/ai-news/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/contact-me/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/portfolio/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/pages/services/</loc>
-  <lastmod>2026-05-12T09:45:00Z</lastmod>
- </url>
- <url>
-  <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/posts/ai-news-summary-2025-05-12/</loc>
-  <lastmod>2026-05-12T09:07:00Z</lastmod>
+  <lastmod>2026-05-12T09:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://my-portfolio-app-hxdx6.ondigitalocean.app/posts/crewai-cli-quick-quide/</loc>
