@@ -1378,8 +1378,8 @@ EXTRA_HEAD_DATA = """
     /* ===== BLOG POST CONTENT ===== */
     .e-content {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
+        margin: 0;
+        padding: 2rem 0;
     }
 
     .e-content p {
@@ -1739,7 +1739,7 @@ EXTRA_HEAD_DATA = """
         }
 
         .e-content {
-            padding: 1rem 0.75rem;
+            padding: 1rem 0;
         }
 
         pre {
