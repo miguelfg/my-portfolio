@@ -5,13 +5,13 @@
 .. tags: data analysis, data engineering, data visualization, data journalism, osint, research, graph database
 .. category: services
 .. link: 
-.. description: 
+.. description: Freelance data analysis, ETL engineering, OSINT investigations, and data journalism services — 11+ years of experience including ICIJ Panama Papers, FinCEN Files, and Pandora Papers.
 .. type: text
 -->
 
-I am a freelance data analyst and engineer with a focus on data journalism and open source reasearch (OSINT) projects. I am specialized in the following areas:
+I am a freelance data analyst and engineer with a focus on data journalism and open source research (OSINT) projects. I specialize in the following areas:
 
-1. **ETL Development and Optimization**: Design and develop efficient Extract, Transform, Load (ETL) processes to manage and optimize data flows within organizations, including integration with cloud services like AWS and GCP. This includes web scraping projects or complex PDF processing, to extract and structure data from the web or internal docs, as carried out in prize-awarded ICIJ projects like the [Panama Papers](https://www.icij.org/investigations/panama-papers/), [Fincen Files](https://www.icij.org/investigations/fincen-files/), Paradise Papers, Implant Files, etc. 
+1. **ETL Development and Optimization**: Design and develop efficient Extract, Transform, Load (ETL) processes to manage and optimize data flows within organizations, including integration with cloud services like AWS and GCP. This includes web scraping projects or complex PDF processing, to extract and structure data from the web or internal docs, as carried out in award-winning ICIJ projects like the [Panama Papers](https://www.icij.org/investigations/panama-papers/), [FinCEN Files](https://www.icij.org/investigations/fincen-files/), Paradise Papers, Implant Files, etc. 
 
     Tools: Python, BeautifulSoup, py-camelot, [pdfplumber](https://github.com/jsvine/pdfplumber), [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/index.html), Google Geolocation API, [Neo4j Graph DB](https://neo4j.com/), [FollowTheMoney CLI](https://followthemoney.tech/docs/cli/), etc.
     
@@ -32,6 +32,6 @@ I am a freelance data analyst and engineer with a focus on data journalism and o
     
     Example sources: [OpenCorporates](https://opencorporates.com/), [OpenSanctions](https://www.opensanctions.org/), [ICIJ](https://icij.org/), [UN International Trading Database](https://comtrade.un.org/), [UK Companies House](https://www.gov.uk/government/organisations/companies-house), etc.
     
-    Example tools: OpenCorporates API, [EO Browser (Sentinel Hub)](https://apps.sentinel-hub.com/eo-browser/), Google Earth Engine, OpenStreetMap, [Global Forest Watch](https://www.globalforestwatch.org/map/), [OSINT Framework](https://osintframework.com/,) [Sherlock](https://github.com/sherlock-project/sherlock), [etc.
+    Example tools: OpenCorporates API, [EO Browser (Sentinel Hub)](https://apps.sentinel-hub.com/eo-browser/), Google Earth Engine, OpenStreetMap, [Global Forest Watch](https://www.globalforestwatch.org/map/), [OSINT Framework](https://osintframework.com/), [Sherlock](https://github.com/sherlock-project/sherlock), etc.
     
     Example projects: [Deforestation Inc (ICIJ)](https://www.icij.org/investigations/deforestation-inc/myanmars-controversial-timber-trade-persists-despite-western-sanctions/)
