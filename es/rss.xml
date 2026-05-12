@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer</title><link>https://my-portfolio-app-hxdx6.ondigitalocean.app/</link><description>Miguel Fiandor Data Analyst &amp; Engineer Freelance Site</description><atom:link href="https://my-portfolio-app-hxdx6.ondigitalocean.app/es/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 12 May 2026 10:27:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CrewAI CLI Quick Quide</title><link>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/crewai-cli-quick-quide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;CrewAI CLI Quick Guide&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer</title><link>https://miguelfg.github.io/my-portfolio/</link><description>Miguel Fiandor Data Analyst &amp; Engineer Freelance Site</description><atom:link href="https://miguelfg.github.io/my-portfolio/es/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 12 May 2026 11:32:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CrewAI CLI Quick Quide</title><link>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;CrewAI CLI Quick Guide&lt;/h2&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;CrewAI is a lean, lightning-fast Python framework for orchestrating autonomous AI agents. It offers both high-level simplicity and precise low-level control, with two main approaches:&lt;/p&gt;
 &lt;ul&gt;
@@ -450,7 +450,7 @@ pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&g
 &lt;li&gt;&lt;strong&gt;Beginners&lt;/strong&gt;: Sequential processes → Custom agents → Basic tools&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Intermediate&lt;/strong&gt;: Hierarchical processes → Conditional tasks → Async execution&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Advanced&lt;/strong&gt;: Custom tools → Multi-agent orchestration → Enterprise deployment&lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/crewai-cli-quick-quide/</guid><pubDate>Fri, 19 Sep 2025 10:28:39 GMT</pubDate></item><item><title>Ollama day-1 guide</title><link>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/ollama-day-1-guide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;p&gt;After installing &lt;a href="https://ollama.com/"&gt;&lt;strong&gt;Ollama&lt;/strong&gt;&lt;/a&gt;, quickly start using local AI models on Linux or macOS with a few lean commands in the terminal.&lt;/p&gt;
+&lt;/ul&gt;</description><guid>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</guid><pubDate>Fri, 19 Sep 2025 10:28:39 GMT</pubDate></item><item><title>Ollama day-1 guide</title><link>https://miguelfg.github.io/my-portfolio/es/posts/ollama-day-1-guide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;p&gt;After installing &lt;a href="https://ollama.com/"&gt;&lt;strong&gt;Ollama&lt;/strong&gt;&lt;/a&gt;, quickly start using local AI models on Linux or macOS with a few lean commands in the terminal.&lt;/p&gt;
 &lt;h3&gt;Installing and First Use&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Install via shell:
@@ -545,17 +545,17 @@ You are a Linux and Bash expert. Only provide concise, correct code with clear e
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Applies the system prompt for just that session.&lt;/p&gt;
-&lt;p&gt;This process lets you efficiently create, guide, and save your own specialized Ollama models for targeted tasks.&lt;/p&gt;</description><guid>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/ollama-day-1-guide/</guid><pubDate>Fri, 29 Aug 2025 11:59:36 GMT</pubDate></item><item><title>Toyota Used Car Dashboard [Personal project]</title><link>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/personal-project-toyota-used-car-dashboard/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;The Toyota Used Car Market in Spain: with Python Streamlit Dashboard on Google Cloud&lt;/h2&gt;
+&lt;p&gt;This process lets you efficiently create, guide, and save your own specialized Ollama models for targeted tasks.&lt;/p&gt;</description><guid>https://miguelfg.github.io/my-portfolio/es/posts/ollama-day-1-guide/</guid><pubDate>Fri, 29 Aug 2025 11:59:36 GMT</pubDate></item><item><title>Toyota Used Car Dashboard [Personal project]</title><link>https://miguelfg.github.io/my-portfolio/es/posts/personal-project-toyota-used-car-dashboard/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;The Toyota Used Car Market in Spain: with Python Streamlit Dashboard on Google Cloud&lt;/h2&gt;
 &lt;h3&gt;Introduction&lt;/h3&gt;
 &lt;p&gt;I built this dashboard to provide some hidden insights about the used car market in Spain. Toyota is probably the most sold brand of the country, and this dashboard allows users to explore Toyota’s used car listings through an interactive web application. The dashboard is built using Python and Streamlit, providing a user-friendly interface for data analysis.
-&lt;img alt="Bar charts" src="https://my-portfolio-app-hxdx6.ondigitalocean.app/es/images/toyota/barcharts-1.png"&gt;&lt;/p&gt;
+&lt;img alt="Bar charts" src="https://miguelfg.github.io/my-portfolio/es/images/toyota/barcharts-1.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Exploring the Dashboard&lt;/h3&gt;
 &lt;p&gt;The dashboard is divided into the following sections: geo, counts, price vs mileage, and price ranges. Each section provides python seaborn visualizations and filters to drill down into the data.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Mileage vs Price" src="https://my-portfolio-app-hxdx6.ondigitalocean.app/es/images/toyota/mileage-vs-price.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Mileage vs Price" src="https://miguelfg.github.io/my-portfolio/es/images/toyota/mileage-vs-price.png"&gt;&lt;/p&gt;
 &lt;p&gt;It currently contains close to 5000 used Toyota cars listed in Spain, with data sourced from the Toyota España website. Some of the car’s attributes are: model, year, mileage, transmission, fuel, eco badge, price, and dealer location.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Table" src="https://my-portfolio-app-hxdx6.ondigitalocean.app/es/images/toyota/tabla1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Table" src="https://miguelfg.github.io/my-portfolio/es/images/toyota/tabla1.png"&gt;&lt;/p&gt;
 &lt;p&gt;It maps the dealers’ locations, allowing users to see where the cars are being sold and how many. The dashboard also provides various statistics and analytics, such as the number of cars registered per year, the most common car packages, and the distribution of prices by model and package.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Map of Dealers" src="https://my-portfolio-app-hxdx6.ondigitalocean.app/es/images/toyota/map2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Map of Dealers" src="https://miguelfg.github.io/my-portfolio/es/images/toyota/map2.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Technology Stack&lt;/h3&gt;
 &lt;p&gt;The project is divided into two modules:
 The ETL (Extract, Transform, Load) module, which scrapes the Toyota España website to gather used car data, clean and transform it, to store it in a local SQLite database.
@@ -575,7 +575,7 @@ The ETL is scheduled to run on Tuesdays and Fridays with Github Actions, thanks 
 &lt;li&gt;LinkedIn&lt;/li&gt;
 &lt;li&gt;GitHub&lt;/li&gt;
 &lt;li&gt;X / Twitter&lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/personal-project-toyota-used-car-dashboard/</guid><pubDate>Fri, 30 May 2025 12:26:06 GMT</pubDate></item><item><title>2025-05-12 Daily AI News Summary</title><link>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/ai-news-summary-2025-05-12/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;2025-05-12 Daily AI News Summary&lt;/h2&gt;
+&lt;/ul&gt;</description><guid>https://miguelfg.github.io/my-portfolio/es/posts/personal-project-toyota-used-car-dashboard/</guid><pubDate>Fri, 30 May 2025 12:26:06 GMT</pubDate></item><item><title>2025-05-12 Daily AI News Summary</title><link>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2025-05-12/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;2025-05-12 Daily AI News Summary&lt;/h2&gt;
 &lt;p&gt;Hoy destacamos los siguientes avances y noticias del sector:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Evaluación de Modelos&lt;/strong&gt;: El gobierno de EE. UU. ha anunciado que implementará protocolos de evaluación para los nuevos modelos de IA de gran escala antes de su lanzamiento público, buscando mejorar la seguridad y transparencia.&lt;/li&gt;
@@ -586,4 +586,4 @@ The ETL is scheduled to run on Tuesdays and Fridays with Github Actions, thanks 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://es-us.finanzas.yahoo.com/noticias/gobierno-eeuu-evaluar%C3%A1-modelos-ia-180758041.html"&gt;El gobierno de EEUU evaluará los modelos de IA (Yahoo Finanzas)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://bcube.bitban.com/blog/en-el-radar-de-bcube-las-noticias-de-la-semana-12-mayo-2025"&gt;Fundación Maldita.es y su asistente IA (bCube)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><guid>https://my-portfolio-app-hxdx6.ondigitalocean.app/es/posts/ai-news-summary-2025-05-12/</guid><pubDate>Mon, 12 May 2025 09:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><guid>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2025-05-12/</guid><pubDate>Mon, 12 May 2025 09:00:00 GMT</pubDate></item></channel></rss>
