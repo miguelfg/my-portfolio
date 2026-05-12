@@ -1,4 +1,4 @@
-Sitemap: https://my-portfolio-app-hxdx6.ondigitalocean.app/sitemapindex.xml
+Sitemap: https://miguelfg.github.io/my-portfolio/sitemapindex.xml
 
 User-Agent: *
-Host: my-portfolio-app-hxdx6.ondigitalocean.app
+Host: miguelfg.github.io
