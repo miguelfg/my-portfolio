@@ -10,6 +10,8 @@
 
 List of all AI news summaries gathered:
 
+[2025-05-12 Daily AI News Summary](/posts/ai-news-summary-2025-05-12/)
+
 .. post-list::
    :category: AI News
    :sort: -date
