@@ -6,8 +6,6 @@
 .. description: List of daily AI news summaries
 .. type: text
 
-# Daily AI News Summaries
-
 List of all AI news summaries gathered:
 
 .. post-list::
