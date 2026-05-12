@@ -1312,7 +1312,6 @@ EXTRA_HEAD_DATA = """
         /* Text — warm charcoal, not cold */
         --c-text:        oklch(23%   0.010 55);
         --c-text-muted:  oklch(46%   0.014 50);
-        --c-text-subtle: oklch(55%   0.012 55);
 
         /* Accent — deep rust, calibrated cartographic precision */
         --c-accent:        oklch(48%   0.18  30);
@@ -1324,13 +1323,22 @@ EXTRA_HEAD_DATA = """
         /* Borders */
         --c-border:        oklch(88%   0.010 70);
 
-        /* On-accent text */
-        --c-on-accent:   oklch(97.5% 0.008 75);
+        /* On-accent text — two brightness levels for hierarchy */
+        --c-on-accent:     oklch(97.5% 0.008 75);
+        --c-nav-link:      oklch(91%   0.010 70);
+        --c-nav-toggler:   oklch(70%   0.10  50);
+
+        /* Elevation */
+        --c-shadow:        oklch(0% 0 0 / 0.08);
 
         /* Typography */
         --font-sans:    'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         --font-display: 'Barlow Semi Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         --font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+        /* Transitions */
+        --t-fast: 0.15s cubic-bezier(0.25, 0, 0, 1);
+        --t-base: 0.25s cubic-bezier(0.25, 0, 0, 1);
     }
 
     /* ===== TYPOGRAPHY FOUNDATION ===== */
@@ -1341,6 +1349,8 @@ EXTRA_HEAD_DATA = """
         color: var(--c-text);
         background-color: var(--c-bg);
         font-kerning: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -1479,7 +1489,7 @@ EXTRA_HEAD_DATA = """
     a {
         color: var(--c-accent);
         text-decoration: none;
-        transition: color 0.15s ease-out;
+        transition: color var(--t-fast);
     }
 
     a:hover {
@@ -1541,8 +1551,8 @@ EXTRA_HEAD_DATA = """
         border-radius: 20px;
         font-size: 0.875rem;
         color: var(--c-accent);
-        transition: background-color 0.15s ease-out, color 0.15s ease-out,
-                    border-color 0.15s ease-out;
+        transition: background-color var(--t-fast), color var(--t-fast),
+                    border-color var(--t-fast);
     }
 
     .tags a:hover {
@@ -1600,11 +1610,11 @@ EXTRA_HEAD_DATA = """
     .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link {
         font-family: var(--font-display);
-        color: oklch(91% 0.010 70) !important;
+        color: var(--c-nav-link) !important;
         font-weight: 600;
         letter-spacing: 0.01em;
         padding: 0.75rem 1rem;
-        transition: color 0.15s ease-out;
+        transition: color var(--t-fast);
     }
 
     .navbar-nav .nav-link:hover,
@@ -1620,7 +1630,7 @@ EXTRA_HEAD_DATA = """
     }
 
     .nbb-navbar-toggler {
-        border-color: oklch(70% 0.10 50) !important;
+        border-color: var(--c-nav-toggler) !important;
         background-color: transparent !important;
         min-width: 44px;
         min-height: 44px;
@@ -1664,7 +1674,8 @@ EXTRA_HEAD_DATA = """
         margin-bottom: 1rem;
         padding: 1.5rem;
         background-color: var(--c-bg);
-        transition: border-color 0.15s ease-out;
+        transition: border-color var(--t-fast);
+        min-width: 0;
     }
 
     .postlist .list-group-item:hover {
@@ -1676,6 +1687,14 @@ EXTRA_HEAD_DATA = """
         margin-bottom: 0.5rem;
     }
 
+    /* ===== IFRAMES ===== */
+    .e-content iframe,
+    .post-text iframe {
+        max-width: 100%;
+        width: 100% !important;
+        border: none;
+    }
+
     /* ===== IMAGES ===== */
     .e-content img {
         max-width: 100%;
@@ -1683,7 +1702,7 @@ EXTRA_HEAD_DATA = """
         display: block;
         margin: 2rem auto;
         border-radius: 6px;
-        box-shadow: 0 2px 8px oklch(0% 0 0 / 0.08);
+        box-shadow: 0 2px 8px var(--c-shadow);
     }
 
     /* ===== DIVIDERS ===== */
@@ -1756,6 +1775,18 @@ EXTRA_HEAD_DATA = """
         /* Tighten post list padding on narrow screens */
         .postlist .list-group-item {
             padding: 1rem;
+        }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
         }
     }
 
