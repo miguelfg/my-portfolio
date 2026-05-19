@@ -7,227 +7,276 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/</loc>
-  <lastmod>2026-05-12T10:28:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/2025/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/2026/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/archive.html</loc>
-  <lastmod>2026-05-12T11:52:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/agents/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/ai-news/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/anthropic/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/cat_ai-news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/cat_ai/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/crewai/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/daily/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/dashboard/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/gcp/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/guide/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/nist/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/nvidia/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ollama/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/python/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/seaborn/</loc>
-  <lastmod>2025-06-03T16:31:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/streamlit/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/</loc>
-  <lastmod>2026-05-12T10:28:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/2025/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/2026/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/archive.html</loc>
-  <lastmod>2026-05-12T11:52:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/agents/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai-news/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/anthropic/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/cat_ai-news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/cat_ai/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/crewai/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/daily/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/dashboard/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/gcp/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/guide/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/nist/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/nvidia/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ollama/</loc>
-  <lastmod>2025-08-29T18:13:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/python/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/seaborn/</loc>
-  <lastmod>2025-06-03T16:31:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/streamlit/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/pages/about-me/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/pages/about-me/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/pages/ai-news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/pages/ai-news/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/pages/contact-me/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/pages/contact-me/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/pages/portfolio/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/pages/portfolio/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/pages/services/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/pages/services/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2025-05-12/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2025-05-12/" />
  </url>
  <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-05-19/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-19/" />
+ </url>
+ <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/ollama-day-1-guide/</loc>
-  <lastmod>2025-08-29T18:08:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ollama-day-1-guide/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/personal-project-toyota-used-car-dashboard/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/personal-project-toyota-used-car-dashboard/" />
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/pages/about-me/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/pages/ai-news/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/pages/contact-me/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/pages/portfolio/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/pages/services/</loc>
-  <lastmod>2026-05-12T10:12:00Z</lastmod>
+  <lastmod>2026-05-14T18:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2025-05-12/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T10:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-19/</loc>
+  <lastmod>2026-05-19T14:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/</loc>
-  <lastmod>2026-05-12T10:59:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/ollama-day-1-guide/</loc>
-  <lastmod>2025-08-29T18:08:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/personal-project-toyota-used-car-dashboard/</loc>
-  <lastmod>2025-06-03T15:57:00Z</lastmod>
+  <lastmod>2026-05-12T09:07:00Z</lastmod>
  </url>
 </urlset>
