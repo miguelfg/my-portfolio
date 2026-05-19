@@ -2,7 +2,7 @@
 .. title: AI News Summary — 2026-05-19
 .. slug: ai-news-summary-2026-05-19
 .. date: 2026-05-19 09:00:00 UTC
-.. tags: AI News, Agents, Anthropic, NIST, NVIDIA
+.. tags: AI News, agents, Anthropic, NIST, NVIDIA
 .. category: AI News
 .. description: Daily AI news briefing focused on agent tooling, security standards, and infrastructure shifts.
 .. type: text
