@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer (Posts about AI News)</title><link>https://miguelfg.github.io/my-portfolio/</link><description></description><atom:link href="https://miguelfg.github.io/my-portfolio/categories/cat_ai-news.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 19 May 2026 14:52:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI News Summary — 2026-05-19</title><link>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-19/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h3&gt;Executive Brief&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer (Posts about AI News)</title><link>https://miguelfg.github.io/my-portfolio/</link><description></description><atom:link href="https://miguelfg.github.io/my-portfolio/categories/cat_ai-news.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Wed, 20 May 2026 07:52:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI News Summary 2026-05-20</title><link>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-20/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;AI News Summary — 2026-05-20&lt;/h2&gt;
+&lt;h3&gt;Executive snapshot&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Google I/O 2026 pushes an explicit &lt;em&gt;agentic&lt;/em&gt; Gemini product arc.&lt;/li&gt;
+&lt;li&gt;Anthropic posted multiple high-signal announcements (enterprise + ecosystem positioning).&lt;/li&gt;
+&lt;li&gt;xAI launched &lt;strong&gt;Grok Build&lt;/strong&gt; early beta, reinforcing terminal-native coding-agent competition.&lt;/li&gt;
+&lt;li&gt;NVIDIA expanded ecosystem strategy via &lt;strong&gt;Nemotron Coalition&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;AWS Bedrock AgentCore updates show concrete agent production primitives (evaluation + payments).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Top 5 stories (ranked)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Google I/O 2026 (agentic Gemini): https://blog.google/innovation-and-ai/sundar-pichai-io-2026/&lt;/li&gt;
+&lt;li&gt;Anthropic newsroom updates: https://www.anthropic.com/news&lt;/li&gt;
+&lt;li&gt;xAI Grok Build early beta: https://x.ai/news/grok-build-cli&lt;/li&gt;
+&lt;li&gt;NVIDIA Nemotron Coalition: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Nemotron-Coalition-of-Leading-Global-AI-Labs-to-Advance-Open-Frontier-Models/default.aspx&lt;/li&gt;
+&lt;li&gt;AWS AgentCore evaluators/payments:&lt;/li&gt;
+&lt;li&gt;https://aws.amazon.com/blogs/machine-learning/build-custom-code-based-evaluators-in-amazon-bedrock-agentcore/&lt;/li&gt;
+&lt;li&gt;https://aws.amazon.com/blogs/machine-learning/agents-that-transact-introducing-amazon-bedrock-agentcore-payments-built-with-coinbase-and-stripe/&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Facts vs interpretation&lt;/h3&gt;
+&lt;h4&gt;Facts&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;All top stories are backed by primary official URLs.&lt;/li&gt;
+&lt;li&gt;Microsoft and policy bodies continue publishing AI governance/evaluation updates:&lt;/li&gt;
+&lt;li&gt;https://blogs.microsoft.com/on-the-issues/2026/05/05/advancing-ai-evaluation-with-the-center-for-ai-standards-us-and-innovation-and-the-ai-security-institute-uk/&lt;/li&gt;
+&lt;li&gt;https://www.nist.gov/itl/ai-risk-management-framework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Interpretation&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Competitive moat is shifting from raw model quality to integrated &lt;strong&gt;agent operations&lt;/strong&gt; (eval, security, workflow, transaction rails).&lt;/li&gt;
+&lt;li&gt;Portfolio-relevant edge in 2026: proving deployability and governance, not only demos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Risks &amp;amp; opportunities&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Risks&lt;/strong&gt;
+- Vendor-led narratives can outpace independent benchmarking.
+- Compliance burden may increase deployment friction.
+- YouTube/newsletter coverage remains partially noisy without strong timestamp provenance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Opportunities&lt;/strong&gt;
+- Build practical content/projects on agent observability + eval pipelines.
+- Publish comparative deployment playbooks (managed APIs vs OSS inference stacks).
+- Track policy-readiness as a first-class engineering capability.&lt;/p&gt;</description><category>agents</category><category>AI News</category><category>llm</category><category>policy</category><guid>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-20/</guid><pubDate>Wed, 20 May 2026 07:45:00 GMT</pubDate></item><item><title>AI News Summary — 2026-05-19</title><link>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-05-19/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h3&gt;Executive Brief&lt;/h3&gt;
 &lt;p&gt;Today’s strongest AI signals came from official sources and cluster around one theme: &lt;strong&gt;the agent stack is maturing beyond model quality into connectivity, security, and infrastructure performance&lt;/strong&gt;.&lt;/p&gt;
 &lt;h4&gt;Top 5 stories&lt;/h4&gt;
 &lt;ol&gt;
