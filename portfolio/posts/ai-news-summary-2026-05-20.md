@@ -1,8 +1,8 @@
 <!--
 .. title: AI News Summary 2026-05-20
 .. slug: ai-news-summary-2026-05-20
-.. date: 2026-05-20 09:00:00 UTC
-.. tags: ai news, agents, llm, policy
+.. date: 2026-05-20 07:45:00 UTC
+.. tags: AI News, agents, llm, policy
 .. category: AI News
 .. description: Daily AI news summary with ranked signals and portfolio relevance.
 .. type: text
