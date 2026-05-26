@@ -272,7 +272,11 @@ PAGES = (
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
     ("pages/*.ipynb", "pages", "page.tmpl"),
+    # AI News se publica como artículo en /posts/, pero fuera del índice/feed principal del blog.
+    ("ai-news/*.md", "posts", "post.tmpl"),
+    ("ai-news/*.rst", "posts", "post.tmpl"),
 )
+
 
 
 # Below this point, everything is optional

@@ -83,7 +83,7 @@ Spanish translation: create `post-name.es.md` with translated metadata.
 
 ### AI News Posts
 
-Daily AI news summaries are auto-generated to `portfolio/posts/ai-news-summary-YYYY-MM-DD.md`. Posts **must** have `category: AI News` to appear in the automated listing page (`pages/ai-news.md`).
+Daily AI news summaries are auto-generated to `portfolio/ai-news/ai-news-summary-YYYY-MM-DD.md` and rendered under `/posts/ai-news-summary-YYYY-MM-DD/`. They must keep `category: AI News` for the AI News listing page (`pages/ai-news.md`).
 
 ## Deployment
 

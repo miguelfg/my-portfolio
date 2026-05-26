@@ -10,7 +10,7 @@ Este archivo guía a los agentes autónomos en la orquestación y mantenimiento 
 ## Flujos de Trabajo
 - **Diario (11:00 AM):**
   1. Recibir formulario de noticias de IA.
-  2. Generar archivo en `portfolio/posts/ai-news-summary-YYYY-MM-DD.md`.
+  2. Generar/actualizar archivo en `portfolio/ai-news/ai-news-summary-YYYY-MM-DD.md` (se publica en `/posts/...` pero fuera del índice/feed principal del blog).
   3. Ejecutar `uv run nikola build`.
   4. Ejecutar `uv run nikola github_deploy`.
 - **Mantenimiento:**
