@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/agents.xml</loc>
-  <lastmod>2026-05-22T10:28:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai-agents.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai-governance.xml</loc>
@@ -19,11 +19,11 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai-news.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai.xml</loc>
-  <lastmod>2026-05-12T10:27:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/anthropic.xml</loc>
@@ -31,7 +31,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/cat_ai-news.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/cat_ai.xml</loc>
@@ -55,7 +55,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/generative-ai.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/guide.xml</loc>
@@ -63,7 +63,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/llm-serving.xml</loc>
-  <lastmod>2026-05-25T19:50:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/llm.xml</loc>
@@ -107,11 +107,11 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/agents.xml</loc>
-  <lastmod>2026-05-22T10:28:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai-agents.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai-governance.xml</loc>
@@ -119,11 +119,11 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai-news.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai.xml</loc>
-  <lastmod>2026-05-12T10:27:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/anthropic.xml</loc>
@@ -131,7 +131,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/cat_ai-news.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/cat_ai.xml</loc>
@@ -155,7 +155,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/generative-ai.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/guide.xml</loc>
@@ -163,7 +163,7 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/llm-serving.xml</loc>
-  <lastmod>2026-05-25T19:50:00Z</lastmod>
+  <lastmod>2026-05-26T15:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/llm.xml</loc>
@@ -207,14 +207,14 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/rss.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/rss.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/sitemap.xml</loc>
-  <lastmod>2026-05-26T15:35:00Z</lastmod>
+  <lastmod>2026-05-26T15:59:00Z</lastmod>
  </sitemap>
 </sitemapindex>
