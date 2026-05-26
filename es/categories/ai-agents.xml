@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer (Publicaciones sobre AI Agents)</title><link>https://miguelfg.github.io/my-portfolio/</link><description></description><atom:link href="https://miguelfg.github.io/my-portfolio/es/categories/ai-agents.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 May 2026 15:35:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI News Summary 2026-05-26</title><link>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-05-26/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;AI News Summary — 2026-05-26&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer (Publicaciones sobre AI Agents)</title><link>https://miguelfg.github.io/my-portfolio/</link><description></description><atom:link href="https://miguelfg.github.io/my-portfolio/es/categories/ai-agents.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 May 2026 15:36:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI News Summary 2026-05-26</title><link>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-05-26/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;AI News Summary — 2026-05-26&lt;/h2&gt;
 &lt;h3&gt;Top 5 del día&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Vatican &lt;code&gt;Magnifica Humanitas&lt;/code&gt;&lt;/strong&gt;: cambia el foco del día hacia gobernanza, poder digital y coste ambiental de la IA.&lt;/li&gt;
@@ -78,24 +78,11 @@ El stack local sigue ganando madurez técnica, aunque hoy el peso informativo es
 &lt;li&gt;&lt;strong&gt;llama.cpp&lt;/strong&gt; mantiene velocidad extrema de releases y cobertura amplia de backends.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ollama/vLLM&lt;/strong&gt; sostienen el momentum técnico en inferencia local/híbrida y optimización de throughput.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Riesgos y oportunidades&lt;/h3&gt;
-&lt;h4&gt;Riesgos&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Drift de URLs oficiales puede romper cobertura diaria sin alertas.&lt;/li&gt;
-&lt;li&gt;Dependencia de páginas índice reduce precisión de “últimas 24h” cuando no se baja al post individual.&lt;/li&gt;
-&lt;li&gt;Alta densidad de ruido en agregadores aumenta riesgo de sobrevalorar señales débiles.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;Oportunidades&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Automatizar validación de fuentes primarias con fallback controlado.&lt;/li&gt;
-&lt;li&gt;Priorizar alertas por cambios de release en agentes y serving.&lt;/li&gt;
-&lt;li&gt;Convertir hallazgos en contenido portfolio orientado a decisiones técnicas y estratégicas.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Acciones sugeridas&lt;/h3&gt;
+&lt;h3&gt;Lectura editorial&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Actualizar entradas de fuentes de imagen generativa con enlaces vigentes.&lt;/li&gt;
-&lt;li&gt;Hacer post-extraction granular para las 5 fuentes con mayor impacto semanal.&lt;/li&gt;
-&lt;li&gt;Mantener scoring con penalización explícita a noticias sin corroboración primaria.&lt;/li&gt;
+&lt;li&gt;La señal dominante del día fue la consolidación de workflows agentic en producto e infraestructura.&lt;/li&gt;
+&lt;li&gt;En imagen generativa y serving local hubo continuidad técnica relevante, con menos rupturas puntuales de última hora.&lt;/li&gt;
+&lt;li&gt;El patrón transversal: menos foco en “demo de modelo” y más en operación real, observabilidad y despliegue.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Top 5 del día&lt;/h3&gt;
 &lt;ol&gt;

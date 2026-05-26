@@ -38,21 +38,10 @@
 - **llama.cpp** mantiene velocidad extrema de releases y cobertura amplia de backends.
 - **Ollama/vLLM** sostienen el momentum técnico en inferencia local/híbrida y optimización de throughput.
 
-## Riesgos y oportunidades
-### Riesgos
-1. Drift de URLs oficiales puede romper cobertura diaria sin alertas.
-2. Dependencia de páginas índice reduce precisión de “últimas 24h” cuando no se baja al post individual.
-3. Alta densidad de ruido en agregadores aumenta riesgo de sobrevalorar señales débiles.
-
-### Oportunidades
-1. Automatizar validación de fuentes primarias con fallback controlado.
-2. Priorizar alertas por cambios de release en agentes y serving.
-3. Convertir hallazgos en contenido portfolio orientado a decisiones técnicas y estratégicas.
-
-## Acciones sugeridas
-- Actualizar entradas de fuentes de imagen generativa con enlaces vigentes.
-- Hacer post-extraction granular para las 5 fuentes con mayor impacto semanal.
-- Mantener scoring con penalización explícita a noticias sin corroboración primaria.
+## Lectura editorial
+- La señal dominante del día fue la consolidación de workflows agentic en producto e infraestructura.
+- En imagen generativa y serving local hubo continuidad técnica relevante, con menos rupturas puntuales de última hora.
+- El patrón transversal: menos foco en “demo de modelo” y más en operación real, observabilidad y despliegue.
 
 ## Top 5 del día
 1. Google I/O 2026: expansión agentic end-to-end.
