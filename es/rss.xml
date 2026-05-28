@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer</title><link>https://miguelfg.github.io/my-portfolio/</link><description>Miguel Fiandor Data Analyst &amp; Engineer Freelance Site</description><atom:link href="https://miguelfg.github.io/my-portfolio/es/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Tue, 26 May 2026 15:59:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>CrewAI CLI Quick Quide</title><link>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;CrewAI CLI Quick Guide&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miguel Fiandor - Data Analyst &amp; Engineer</title><link>https://miguelfg.github.io/my-portfolio/</link><description>Miguel Fiandor Data Analyst &amp; Engineer Freelance Site</description><atom:link href="https://miguelfg.github.io/my-portfolio/es/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:miguel.fiandor.gutierrez@gmail.com"&gt;Miguel Fiandor&lt;/a&gt; </copyright><lastBuildDate>Thu, 28 May 2026 07:35:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Resumen de Noticias IA - 2026-05-28</title><link>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-05-28/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;Resumen de Noticias IA - 2026-05-28&lt;/h2&gt;
+&lt;h4&gt;GAFAM y grandes empresas de IA&lt;/h4&gt;
+&lt;p&gt;(Sin eventos destacados en las últimas 24 horas.)&lt;/p&gt;
+&lt;h4&gt;Influencers y blogs técnicos&lt;/h4&gt;
+&lt;p&gt;(Revisión de fuentes líderes sin actualizaciones en el periodo.)&lt;/p&gt;
+&lt;h4&gt;Imagen generativa&lt;/h4&gt;
+&lt;p&gt;(Sin actualizaciones en los canales oficiales supervisados.)&lt;/p&gt;
+&lt;h4&gt;Chatbots y agentes&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Liquid Co-Invest:&lt;/strong&gt; Un nuevo agente especializado en trading, capaz de integrar investigación de mercado y gestión de portafolio con ejecución confirmada (fuente: &lt;a href="https://aiagentstore.ai/"&gt;AIAgentStore.ai&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;IA local y serving&lt;/h4&gt;
+&lt;p&gt;(Sin cambios significativos en los repositorios o blogs de vLLM/Ollama supervisados.)&lt;/p&gt;</description><guid>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-05-28/</guid><pubDate>Thu, 28 May 2026 07:00:00 GMT</pubDate></item><item><title>CrewAI CLI Quick Quide</title><link>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</link><dc:creator>Miguel Fiandor</dc:creator><description>&lt;h2&gt;CrewAI CLI Quick Guide&lt;/h2&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;CrewAI is a lean, lightning-fast Python framework for orchestrating autonomous AI agents. It offers both high-level simplicity and precise low-level control, with two main approaches:&lt;/p&gt;
 &lt;ul&gt;
