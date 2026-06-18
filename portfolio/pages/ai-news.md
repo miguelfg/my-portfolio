@@ -8,6 +8,7 @@
 .. type: text
 -->
 
+* [2026-06-17 Daily AI News Summary](/posts/ai-news-summary-2026-06-17/)
 * [2026-06-13 Daily AI News Summary](/posts/ai-news-summary-2026-06-13/)
 * [2026-06-12 Daily AI News Summary](/posts/ai-news-summary-2026-06-12/)
 * [2026-06-10 Daily AI News Summary](/posts/ai-news-summary-2026-06-10/)
