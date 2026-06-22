@@ -10,15 +10,6 @@
 
 Below is a selection of my personal data analysis and visualization projects. Each showcases different aspects of my data engineering and analysis skills.
 
-CO2, Materials and Thermal Evidence Research
-============================================
-
-Research and communication project around CO2 metrics, surface materials, solar absorption, albedo and thermal imaging evidence. The work combines literature review, field-data protocols, CSV-based measurement, thermal photography and a staged editorial pipeline for publishing results responsibly.
-
-`Read the publication roadmap → </posts/co2-materials-climate-content-roadmap/>`_
-
----
-
 Toyota Second-Hand Dashboard
 ============================
 
