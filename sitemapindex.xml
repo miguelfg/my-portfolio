@@ -22,12 +22,28 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/cat_research.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/climate.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/co2.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/crewai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/dashboard.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/data.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/gcp.xml</loc>
@@ -38,12 +54,24 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/materials.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ollama.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/publishing.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/python.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/research.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/seaborn.xml</loc>
@@ -52,6 +80,10 @@
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/streamlit.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/categories/thermal-imaging.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/agents.xml</loc>
@@ -70,12 +102,28 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/cat_research.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/climate.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/co2.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/crewai.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/dashboard.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/data.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/gcp.xml</loc>
@@ -86,12 +134,24 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/materials.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ollama.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/publishing.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/python.xml</loc>
   <lastmod>2026-05-12T09:07:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/research.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/seaborn.xml</loc>
@@ -102,15 +162,19 @@
   <lastmod>2026-05-12T09:07:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://miguelfg.github.io/my-portfolio/es/categories/thermal-imaging.xml</loc>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/rss.xml</loc>
-  <lastmod>2026-05-28T07:35:00Z</lastmod>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/rss.xml</loc>
-  <lastmod>2026-05-28T07:35:00Z</lastmod>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/sitemap.xml</loc>
-  <lastmod>2026-06-21T10:35:00Z</lastmod>
+  <lastmod>2026-06-22T07:49:00Z</lastmod>
  </sitemap>
 </sitemapindex>
