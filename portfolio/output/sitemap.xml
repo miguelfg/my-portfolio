@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/archive.html</loc>
-  <lastmod>2026-06-26T13:45:00Z</lastmod>
+  <lastmod>2026-06-27T08:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/categories/</loc>
@@ -87,7 +87,7 @@
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/archive.html</loc>
-  <lastmod>2026-06-26T13:45:00Z</lastmod>
+  <lastmod>2026-06-27T08:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/</loc>
@@ -272,6 +272,11 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-06-26/" />
  </url>
  <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-06-27/</loc>
+  <lastmod>2026-06-27T08:49:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-06-27/" />
+ </url>
+ <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</loc>
   <lastmod>2026-06-22T10:24:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/" />
@@ -389,6 +394,10 @@
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-06-26/</loc>
   <lastmod>2026-06-26T13:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-06-27/</loc>
+  <lastmod>2026-06-27T08:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/</loc>
