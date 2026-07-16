@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/</loc>
-  <lastmod>2026-06-22T10:24:00Z</lastmod>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/2025/</loc>
@@ -292,6 +292,21 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-09/" />
  </url>
  <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-07-11/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-11/" />
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-07-13/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-13/" />
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/es/posts/ai-news-summary-2026-07-15/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-15/" />
+ </url>
+ <url>
   <loc>https://miguelfg.github.io/my-portfolio/es/posts/crewai-cli-quick-quide/</loc>
   <lastmod>2026-06-22T10:24:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/" />
@@ -425,6 +440,18 @@
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-09/</loc>
   <lastmod>2026-07-09T08:56:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-11/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-13/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-07-15/</loc>
+  <lastmod>2026-07-16T07:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://miguelfg.github.io/my-portfolio/posts/crewai-cli-quick-quide/</loc>
