@@ -16,8 +16,6 @@ nk-new-page:
 	cd portfolio && uv run nikola new_page
 
 nk-github-deploy:
-	git branch -D src
-	git push origin --delete src
 	cd portfolio && uv run nikola github_deploy
 
 nk-auto:
