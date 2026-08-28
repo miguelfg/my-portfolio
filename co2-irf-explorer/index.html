@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CO₂ Estimated vs Observed</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="hero-copy">
+      <h1>CO₂ Estimated vs Observed</h1>
+      <p class="lede">Compare CO₂ observations against predictions used by the <a href="https://www.ipcc.ch/site/assets/uploads/2018/07/WGI_AR5.Chap_.8_SM.pdf" target="_blank" rel="noopener">IPCC</a>.</p>
+    </div>
+
+  </header>
+
+  <main class="layout">
+    <aside class="panel controls">
+      <div class="panel-head">
+        <div>
+          <h2>Controls</h2>
+        </div>
+      </div>
+
+      <fieldset class="control-group">
+        <legend>Observed series</legend>
+        <select id="observedSeries">
+          <option value="global">NOAA global mean (1979–)</option>
+          <option value="spliced">Ice core + instrumental (1900–)</option>
+          <option value="mauna_loa">Mauna Loa (1959–)</option>
+        </select>
+        <p class="control-note" id="observedSeriesNote"></p>
+        <a class="source-link" id="observedSeriesSource" href="#" target="_blank" rel="noopener">Source for selected series</a>
+      </fieldset>
+
+      <fieldset class="control-group">
+        <legend>Baseline year</legend>
+        <div class="slider-wrapper">
+          <input id="baselineYear" type="range" min="1900" max="2024" value="1900" />
+          <span class="slider-value" id="baselineYearValue">1900</span>
+        </div>
+        <div class="slider-bounds"><span>1900</span><span>2024</span></div>
+      </fieldset>
+
+      <fieldset class="control-group control-group--preset">
+        <legend>IRF preset</legend>
+        <select id="preset">
+          <option value="default">Joos 2013 (AR5)</option>
+          <option value="forster_2007">Forster 2007 (AR4)</option>
+          <option value="short_tail">Short decay</option>
+          <option value="long_tail">Long decay</option>
+          <option value="custom">Custom</option>
+        </select>
+        <a class="source-link" id="presetSource" href="#" target="_blank" rel="noopener">Source for selected preset</a>
+      </fieldset>
+
+      <fieldset class="control-group">
+        <legend>Parameters</legend>
+        <label class="param-full">a₀ <span class="hint">airborne fraction (permanent)</span> <span class="info-tip" tabindex="0" title="Permanent airborne fraction: the share of a pulse that remains in the atmosphere in this simplified IRF.">i</span>
+          <input id="a0" type="number" step="0.0001" />
+        </label>
+        <div class="param-grid">
+          <label>a₁ <span class="info-tip" tabindex="0" title="Weight of the first exponential decay component.">i</span><input id="a1" type="number" step="0.0001" /></label>
+          <label>τ₁ <span class="hint">yr</span> <span class="info-tip" tabindex="0" title="E-folding time of the first decay component, in years.">i</span> <input id="tau1" type="number" step="0.1" /></label>
+          <label>a₂ <span class="info-tip" tabindex="0" title="Weight of the second exponential decay component.">i</span><input id="a2" type="number" step="0.0001" /></label>
+          <label>τ₂ <span class="hint">yr</span> <span class="info-tip" tabindex="0" title="E-folding time of the second decay component, in years.">i</span> <input id="tau2" type="number" step="0.1" /></label>
+          <label>a₃ <span class="info-tip" tabindex="0" title="Weight of the fast exponential decay component.">i</span><input id="a3" type="number" step="0.0001" /></label>
+          <label>τ₃ <span class="hint">yr</span> <span class="info-tip" tabindex="0" title="E-folding time of the fast decay component, in years.">i</span> <input id="tau3" type="number" step="0.1" /></label>
+        </div>
+      </fieldset>
+
+      <section class="info-panel">
+        <h3>The series, one by one</h3>
+        <details open>
+          <summary>Observed CO₂ — measured, not ours</summary>
+          <p>Atmospheric concentration in ppm. Two different kinds of measurement are spliced together: for 1900–1958 the annually interpolated <strong>Law Dome ice core</strong>, and from 1959 the instrumental record — NOAA's <strong>global annual mean</strong> wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap.</p>
+          <p class="caveat">The ice core is smoothed by gas diffusion in the firn, so year-to-year variability before 1958 is damped and not comparable with the instrumental part.</p>
+          <p>You can switch which record the model is scored against. Each one starts the comparison at its own first year, so the baseline moves with it: <strong>NOAA global mean</strong> from 1979, <strong>Mauna Loa</strong> from 1959, and the <strong>spliced</strong> series from 1900. Mauna Loa is one Northern-Hemisphere station and reads above the global mean by a margin that grows over time (+0.75 ppm in 2000, +1.8 ppm in 2024).</p>
+        </details>
+        <details>
+          <summary>Predicted CO₂ — computed here</summary>
+          <p>The only series we calculate. Each year's global emissions are treated as a pulse, multiplied by the Bern impulse-response function, and accumulated on top of the baseline year: <code>C(T) = C(base) + Σ E(t)·IRF(T−t)</code>, where <code>IRF(Δt) = a₀ + Σ aᵢ·e^(−Δt/τᵢ)</code>. It is recomputed in your browser whenever you change the observed record, baseline, or coefficients.</p>
+          <p>“Bern” names the impulse-response model family; “Joos 2013” names the published parameter set selected by default. Inputs are fossil/industry plus land-use-change emissions from <a href="https://ourworldindata.org/grapher/global-co2-emissions" target="_blank" rel="noopener">Our World in Data</a>, converted using 1 ppm = 2.124 GtC.</p>
+        </details>
+        <details>
+          <summary>Deviations — predicted minus observed</summary>
+          <p>The gap between the two series above, calculated as predicted minus observed. Positive values mean the prediction <strong>overshoots</strong> reality; negative values mean it underestimates. This is where the finding lives.</p>
+        </details>
+        <details>
+          <summary>Year-over-year change</summary>
+          <p>Annual deltas for both series. Useful because a model can land on the right level for the wrong reason: the deltas show whether it is absorbing too fast or too slow in a given decade.</p>
+        </details>
+        <details>
+          <summary>Emissions and the two conversions</summary>
+          <p>Emissions come from the Global Carbon Budget via Our World in Data: fossil-and-industry CO₂ plus net land-use change, for the world. They arrive as mass of CO₂ and are converted twice before entering the model.</p>
+          <p><strong>MtCO₂ → GtC, factor 12/44.</strong> The sinks retain the carbon atom, not the whole molecule, so we keep the carbon fraction of CO₂ by molar mass.</p>
+          <p><strong>GtC → ppm, factor 2.124.</strong> The atmosphere weighs about 5.135·10¹⁸ kg, so one part per million by volume holds roughly 2.124 gigatonnes of carbon. Same value used by the Global Carbon Budget and IPCC AR6.</p>
+        </details>
+        <details>
+          <summary>The coefficients, and what they are not</summary>
+          <p><strong>Joos 2013 (AR5)</strong> is the multi-model fit adopted by IPCC AR5: a₀ = 0.2173, then 0.2240/394.4 yr, 0.2824/36.54 yr and 0.2763/4.304 yr.</p>
+          <p><strong>Forster 2007 (AR4)</strong> is the previous IPCC reference, taken from the single Bern2.5CC carbon-cycle-climate model on a 378 ppm background: a₀ = 0.217, then 0.259/172.9 yr, 0.338/18.51 yr and 0.186/1.186 yr. Same functional form, different calibration — a shorter leading timescale and more weight on the fast term. Switching between the two shows how much of the deviation is a parameter choice rather than a measurement.</p>
+          <p>Both parameter sets have four weights summing to 1.0 — a pulse starts out entirely in the atmosphere.</p>
+          <p class="caveat">«Short decay» and «Long decay» are exploratory. Their weights are normalised to 1.0 but come from no paper; they are there to move the parameters by hand, not as published alternatives.</p>
+        </details>
+        <details>
+          <summary>What this model leaves out</summary>
+          <p>The Bern coefficients are calibrated for a single pulse on a given background. Applying them to the whole emissions trajectory from a fixed baseline ignores that sink capacity depends on the state of the system.</p>
+          <p class="caveat">This is a model with declared assumptions, not a measurement.</p>
+        </details>
+      </section>
+    </aside>
+
+    <section class="workspace">
+      <section class="panel charts">
+        <div class="chart-grid">
+          <div class="chart chart--main">
+            <h3>Observed vs predicted CO₂</h3>
+            <div class="chart-box chart-box--large"><canvas id="mainChart"></canvas></div>
+          </div>
+
+          <div class="chart" id="residualBlock">
+            <h3>Deviations</h3>
+            <div class="chart-box"><canvas id="residualChart"></canvas></div>
+          </div>
+
+          <div class="chart">
+            <h3>Year-over-year change</h3>
+            <div class="chart-box"><canvas id="deltaChart"></canvas></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <aside class="panel summary">
+      <div class="panel-head">
+        <div>
+          <h2>Comparison results</h2>
+          <p>These figures update live as you adjust the controls.</p>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card"><span>RMSE</span><strong id="rmse">—</strong></div>
+        <div class="kpi-card"><span>Bias</span><strong id="bias">—</strong></div>
+        <div class="kpi-card"><span>Final error</span><strong id="finalError">—</strong></div>
+        <div class="kpi-card"><span>Final error %</span><strong id="finalErrorPct">—</strong></div>
+        <div class="kpi-card"><span>Cumulative deviation (ppm)</span><strong id="cumulativeError">—</strong></div>
+      </div>
+
+      <div class="periods">
+        <div class="section-label">Period summary</div>
+        <div id="periodTable"></div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>Data:</span>
+    <a href="data/explorer_inputs.csv">Inputs (CSV)</a>
+    <a href="data/explorer_inputs.json">Inputs (JSON)</a>
+    <a href="methodology.html">Methodology &amp; data notes</a>
+  </footer>
+
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
