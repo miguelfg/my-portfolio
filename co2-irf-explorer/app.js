@@ -50,18 +50,24 @@ const PRESETS = {
 const OBSERVED_SERIES = {
   global: {
     label: 'NOAA global mean',
+    chartLabel: 'Observed: NOAA global mean',
+    deltaLabel: 'Observed: NOAA global mean Δ',
     field: 'observed_noaa_global_ppm',
     note: 'NOAA marine boundary layer global annual mean. Starts in 1979.',
     source: 'https://gml.noaa.gov/ccgg/trends/gl_trend.html',
   },
   spliced: {
-    label: 'Ice core + instrumental',
+    label: 'Reconstructed + instrumental',
+    chartLabel: 'Reconstructed / instrumental',
+    deltaLabel: 'Reconstructed / instrumental Δ',
     field: 'observed_law_dome_instrumental_spliced_ppm',
-    note: 'Law Dome ice core to 1958, then the instrumental record. Starts in 1900; the pre-1958 part is smoothed by firn diffusion.',
+    note: 'Law Dome reconstruction to 1958, then the instrumental record. Starts in 1900; the pre-1958 part is smoothed by firn diffusion.',
     source: 'data/explorer_inputs.csv',
   },
   mauna_loa: {
     label: 'Mauna Loa',
+    chartLabel: 'Observed: Mauna Loa',
+    deltaLabel: 'Observed: Mauna Loa Δ',
     field: 'observed_noaa_mauna_loa_ppm',
     note: 'One Northern-Hemisphere station, reading above the global mean by a margin that grows over time. Starts in 1959.',
     source: 'https://gml.noaa.gov/ccgg/trends/',
@@ -307,16 +313,47 @@ const lineDefaults = {
   tension: 0,
 };
 
+const reconstructionBandPlugin = {
+  id: 'reconstructionBand',
+  beforeDatasetsDraw(chart) {
+    if (state.observedSeries !== 'spliced') return;
+
+    const { chartArea, scales } = chart;
+    const first = chart.data.datasets[0].data[0]?.x;
+    const last = chart.data.datasets[0].data.at(-1)?.x;
+    if (!chartArea || first == null || last == null || first > 1958 || last < 1900) return;
+
+    const start = Math.max(1900, first);
+    const end = Math.min(1958, last);
+    const xStart = Math.max(chartArea.left, scales.x.getPixelForValue(start));
+    const xEnd = Math.min(chartArea.right, scales.x.getPixelForValue(end));
+    const ctx = chart.ctx;
+
+    ctx.save();
+    ctx.fillStyle = 'rgba(245, 190, 50, 0.14)';
+    ctx.fillRect(xStart, chartArea.top, Math.max(0, xEnd - xStart), chartArea.bottom - chartArea.top);
+    if (xEnd - xStart > 90) {
+      ctx.fillStyle = 'rgba(120, 82, 12, 0.78)';
+      ctx.font = '600 11px Inter, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      ctx.fillText('Law Dome reconstruction, 1900–1958', xStart + 8, chartArea.top + 8);
+    }
+    ctx.restore();
+  },
+};
+
 function createCharts() {
   charts.main = new Chart($('mainChart'), {
     type: 'line',
     data: {
       datasets: [
-        { label: 'Observed', borderColor: COLORS.observed, ...lineDefaults, data: [] },
+        { label: 'Reference series', borderColor: COLORS.observed, ...lineDefaults, data: [] },
         { label: 'Predicted', borderColor: COLORS.model, ...lineDefaults, data: [] },
       ],
     },
     options: baseOptions('Year', 'CO₂ (ppm)'),
+    plugins: [reconstructionBandPlugin],
   });
 
   charts.residual = new Chart($('residualChart'), {
@@ -334,7 +371,7 @@ function createCharts() {
     type: 'line',
     data: {
       datasets: [
-        { label: 'Observed Δ', borderColor: COLORS.deltaObserved, ...lineDefaults, data: [] },
+        { label: 'Reference Δ', borderColor: COLORS.deltaObserved, ...lineDefaults, data: [] },
         { label: 'Predicted Δ', borderColor: COLORS.deltaModel, ...lineDefaults, data: [] },
       ],
     },
@@ -418,6 +455,14 @@ function syncBaselineRange(resetToFirst = false) {
     bounds[1].textContent = String(last);
   }
   $('observedSeriesNote').textContent = OBSERVED_SERIES[state.observedSeries]?.note || '';
+  if (charts.main) {
+    charts.main.data.datasets[0].label = OBSERVED_SERIES[state.observedSeries]?.chartLabel || 'Reference series';
+    charts.delta.data.datasets[0].label = OBSERVED_SERIES[state.observedSeries]?.deltaLabel || 'Reference Δ';
+  }
+  const footnote = $('mainChartFootnote');
+  if (footnote) {
+    footnote.hidden = state.observedSeries !== 'spliced';
+  }
   const seriesSource = $('observedSeriesSource');
   seriesSource.href = OBSERVED_SERIES[state.observedSeries]?.source || '#';
   seriesSource.textContent = `Source: ${OBSERVED_SERIES[state.observedSeries]?.label || 'selected series'}`;

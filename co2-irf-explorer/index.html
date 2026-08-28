@@ -27,7 +27,7 @@
         <legend>Observed series</legend>
         <select id="observedSeries">
           <option value="global">NOAA global mean (1979–)</option>
-          <option value="spliced">Ice core + instrumental (1900–)</option>
+          <option value="spliced">Law Dome reconstruction + instrumental (1900–)</option>
           <option value="mauna_loa">Mauna Loa (1959–)</option>
         </select>
         <p class="control-note" id="observedSeriesNote"></p>
@@ -73,8 +73,8 @@
       <section class="info-panel">
         <h3>The series, one by one</h3>
         <details open>
-          <summary>Observed CO₂ — measured, not ours</summary>
-          <p>Atmospheric concentration in ppm. Two different kinds of measurement are spliced together: for 1900–1958 the annually interpolated <strong>Law Dome ice core</strong>, and from 1959 the instrumental record — NOAA's <strong>global annual mean</strong> wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap.</p>
+          <summary>Reference CO₂ series</summary>
+          <p>Atmospheric concentration in ppm. The 1900–1958 segment is a <strong>Law Dome ice-core reconstruction</strong> based on measured trapped air; from 1959 onward, the series uses instrumental observations — NOAA's <strong>global annual mean</strong> wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap.</p>
           <p class="caveat">The ice core is smoothed by gas diffusion in the firn, so year-to-year variability before 1958 is damped and not comparable with the instrumental part.</p>
           <p>You can switch which record the model is scored against. Each one starts the comparison at its own first year, so the baseline moves with it: <strong>NOAA global mean</strong> from 1979, <strong>Mauna Loa</strong> from 1959, and the <strong>spliced</strong> series from 1900. Mauna Loa is one Northern-Hemisphere station and reads above the global mean by a margin that grows over time (+0.75 ppm in 2000, +1.8 ppm in 2024).</p>
         </details>
@@ -116,8 +116,9 @@
       <section class="panel charts">
         <div class="chart-grid">
           <div class="chart chart--main">
-            <h3>Observed vs predicted CO₂</h3>
-            <div class="chart-box chart-box--large"><canvas id="mainChart"></canvas></div>
+          <h3>Reference vs predicted CO₂</h3>
+          <div class="chart-box chart-box--large"><canvas id="mainChart"></canvas></div>
+          <p class="chart-footnote" id="mainChartFootnote" hidden>“Reconstruction” refers to the historical atmospheric series inferred from measurements of air trapped in Law Dome ice and firn. The CO₂ was measured, but this is not a direct annual atmospheric measurement: the timing and atmospheric history are reconstructed because trapped air has an age distribution and firn diffusion smooths short-term variability. The series uses instrumental observations after 1958.</p>
           </div>
 
           <div class="chart" id="residualBlock">

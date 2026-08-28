@@ -36,7 +36,7 @@
       <h2>Observed CO₂ — measured, not ours</h2>
       <p>Three independent records are published, and the app scores the model against whichever one is selected. Each begins in a different year, so the baseline moves with the choice.</p>
       <table class="doc-table">
-        <thead><tr><th>Series</th><th>Column</th><th>Span</th><th>Source</th></tr></thead>
+        <thead><tr><th>Reference series</th><th>Column</th><th>Span</th><th>Source</th></tr></thead>
         <tbody>
           <tr>
             <td>NOAA global mean</td>
@@ -58,7 +58,7 @@
           </tr>
         </tbody>
       </table>
-      <p>The <strong>spliced</strong> series is the only observed series we assemble rather than adopt. It takes the annually interpolated <strong>Law Dome ice core</strong> for 1900–1958, then the instrumental record from 1959: NOAA's global annual mean wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap. Because it is a construction, its citable form is the published file itself, <code>data/explorer_inputs.csv</code>, not a single upstream paper.</p>
+      <p>The <strong>spliced</strong> series is the only reference series we assemble rather than adopt. It takes the annually interpolated <strong>Law Dome ice-core reconstruction</strong> for 1900–1958, then the instrumental record from 1959: NOAA's global annual mean wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap. Because it is a construction, its citable form is the published file itself, <code>data/explorer_inputs.csv</code>, not a single upstream paper.</p>
       <p class="caveat">Two caveats travel with it. The ice-core part is smoothed by gas diffusion in the firn, so year-to-year variability before 1958 is damped and not comparable with the instrumental part. And Mauna Loa is one Northern-Hemisphere station reading above the global mean by a margin that grows over time (+0.75 ppm in 2000, +1.8 ppm in 2024), so the 1959–1978 window carries a small upward offset relative to the rest.</p>
     </section>
 
@@ -145,6 +145,7 @@
         <li><a href="https://acp.copernicus.org/articles/13/2793/2013/" target="_blank" rel="noopener">Joos et al. 2013, <em>Atmos. Chem. Phys.</em> 13, 2793–2825</a> — the multi-model IRF fit.</li>
         <li><a href="https://www.ipcc.ch/site/assets/uploads/2018/02/ar4-wg1-chapter2-1.pdf" target="_blank" rel="noopener">IPCC AR4 WGI, Chapter 2 (Forster et al. 2007)</a> — the Bern2.5CC response function.</li>
         <li><a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA Global Monitoring Laboratory, CO₂ trends</a> — global mean and Mauna Loa records.</li>
+        <li><a href="https://www.ncei.noaa.gov/access/paleo-search/study/9959" target="_blank" rel="noopener">NOAA Law Dome dataset</a> — ice-core/firn CO₂ measurements and reconstruction metadata.</li>
         <li><a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data CO₂ dataset</a> — Global Carbon Budget emissions.</li>
       </ul>
     </section>
