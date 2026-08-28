@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Methodology &amp; data notes — CO₂ Estimated vs Observed</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="hero-copy">
+      <h1>Methodology &amp; data notes</h1>
+      <p class="lede">Everything needed to audit <a href="index.html">CO₂ Estimated vs Observed</a>: where the numbers come from, what is computed, and what each published column means.</p>
+    </div>
+  </header>
+
+  <main class="doc">
+    <section class="doc-block">
+      <h2>What this bundle contains</h2>
+      <p>This directory is self-contained. It is the whole publishable artifact — app, data and documentation — and it has no dependency on the repository it was generated in.</p>
+      <table class="doc-table">
+        <thead><tr><th>File</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td><code>index.html</code>, <code>app.js</code>, <code>styles.css</code></td><td>The app. All computation happens in the browser.</td></tr>
+          <tr><td><code>methodology.html</code></td><td>This page. The published methodology of record.</td></tr>
+          <tr><td><code>data/explorer_inputs.json</code></td><td>The input bundle the app fetches at load: metadata plus one object per year.</td></tr>
+          <tr><td><code>data/explorer_inputs.csv</code></td><td>The same rows as flat CSV, for spreadsheets and scripts. Not read by the app.</td></tr>
+          <tr><td><code>vendor/chart.umd.min.js</code></td><td>Chart.js, vendored. No network requests at runtime.</td></tr>
+        </tbody>
+      </table>
+      <p>To serve it, point any static file server at this directory — for example <code>python3 -m http.server 8000</code> from here, then open <code>http://localhost:8000/</code>. There is no build step and no backend.</p>
+      <p class="caveat">The bundle ships <strong>inputs only</strong>. No modelled series, deviation or metric is stored in the data files; all of them are recomputed in the browser from the coefficients on screen. That is deliberate — you cannot be handed a precomputed result that disagrees with the controls.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>Observed CO₂ — measured, not ours</h2>
+      <p>Three independent records are published, and the app scores the model against whichever one is selected. Each begins in a different year, so the baseline moves with the choice.</p>
+      <table class="doc-table">
+        <thead><tr><th>Series</th><th>Column</th><th>Span</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>NOAA global mean</td>
+            <td><code>observed_noaa_global_ppm</code></td>
+            <td>1979–</td>
+            <td><a href="https://gml.noaa.gov/ccgg/trends/gl_trend.html" target="_blank" rel="noopener">NOAA GML marine boundary layer global annual mean</a></td>
+          </tr>
+          <tr>
+            <td>Mauna Loa</td>
+            <td><code>observed_noaa_mauna_loa_ppm</code></td>
+            <td>1959–</td>
+            <td><a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA GML Mauna Loa annual mean</a></td>
+          </tr>
+          <tr>
+            <td>Ice core + instrumental (spliced)</td>
+            <td><code>observed_law_dome_instrumental_spliced_ppm</code></td>
+            <td>1900–</td>
+            <td>Constructed here — see below</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>The <strong>spliced</strong> series is the only observed series we assemble rather than adopt. It takes the annually interpolated <strong>Law Dome ice core</strong> for 1900–1958, then the instrumental record from 1959: NOAA's global annual mean wherever it exists (1979 onwards), with Mauna Loa filling only the 1959–1978 gap. Because it is a construction, its citable form is the published file itself, <code>data/explorer_inputs.csv</code>, not a single upstream paper.</p>
+      <p class="caveat">Two caveats travel with it. The ice-core part is smoothed by gas diffusion in the firn, so year-to-year variability before 1958 is damped and not comparable with the instrumental part. And Mauna Loa is one Northern-Hemisphere station reading above the global mean by a margin that grows over time (+0.75 ppm in 2000, +1.8 ppm in 2024), so the 1959–1978 window carries a small upward offset relative to the rest.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>Emissions, and the two conversions</h2>
+      <p>Global emissions come from the Global Carbon Budget via <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data</a>. Two fields are summed: <code>co2</code> (fossil fuels and industry, cement included) plus <code>land_use_change_co2</code>. <code>cement_co2</code> is deliberately <em>not</em> added separately, since that would double-count cement.</p>
+      <p><strong>MtCO₂ → GtC, factor 12/44.</strong> The sinks retain the carbon atom, not the whole molecule, so we keep the carbon fraction of CO₂ by molar mass. Published as <code>emissions_gtc</code>.</p>
+      <p><strong>GtC → ppm, factor 2.124.</strong> The atmosphere weighs about 5.135·10¹⁸ kg, so one part per million by volume holds roughly 2.124 gigatonnes of carbon. This is the value used by the Global Carbon Budget and IPCC AR6. Published as <code>emissions_ppm</code>, and this is the field that enters the model.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>The model</h2>
+      <p>For the selected observed series, baseline year <em>B</em> and active coefficients, the browser computes</p>
+      <p class="doc-formula"><code>C(T) = C_observed(B) + Σ E_ppm(t) · IRF(T − t)</code>, for <code>B &lt; t ≤ T</code></p>
+      <p>where the impulse-response function is a sum of one permanent term and three exponentials:</p>
+      <p class="doc-formula"><code>IRF(Δt) = a₀ + a₁·e^(−Δt/τ₁) + a₂·e^(−Δt/τ₂) + a₃·e^(−Δt/τ₃)</code></p>
+      <p>Each year's emissions are treated as a pulse; the IRF sets the fraction of that pulse still airborne in every later year. The baseline year contributes only its observed concentration — the model is anchored to measurement at one point and then runs free.</p>
+      <p><strong>Sign convention: deviation = predicted − observed.</strong> Positive means the prediction <strong>overshoots</strong> reality; negative means it underestimates. This holds in the charts, the KPI cards and the period table, without exception.</p>
+      <p>The year-over-year changes shown for both series are comparison diagnostics computed after the fact. They are <strong>not</strong> inputs to the IRF.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>Coefficients: two published sets, two exploratory ones</h2>
+      <p>The IRF form above is shared by both IPCC parameter sets. What differs is the calibration — which is the point of offering both.</p>
+      <table class="doc-table">
+        <thead><tr><th>Preset</th><th>a₀</th><th>a₁ / τ₁</th><th>a₂ / τ₂</th><th>a₃ / τ₃</th><th>Basis</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Joos 2013 (AR5)</strong></td>
+            <td>0.2173</td><td>0.2240 / 394.4 yr</td><td>0.2824 / 36.54 yr</td><td>0.2763 / 4.304 yr</td>
+            <td>Fit to the multi-model mean of a 15-model carbon-cycle intercomparison. Adopted by <a href="https://www.ipcc.ch/site/assets/uploads/2018/07/WGI_AR5.Chap_.8_SM.pdf" target="_blank" rel="noopener">IPCC AR5 WGI Ch.8 SM</a>; published in <a href="https://acp.copernicus.org/articles/13/2793/2013/" target="_blank" rel="noopener">Joos et al. 2013</a>.</td>
+          </tr>
+          <tr>
+            <td><strong>Forster 2007 (AR4)</strong></td>
+            <td>0.217</td><td>0.259 / 172.9 yr</td><td>0.338 / 18.51 yr</td><td>0.186 / 1.186 yr</td>
+            <td>Response of the single <strong>Bern2.5CC</strong> reduced-complexity carbon-cycle-climate model on a 378 ppm background. The AR4 reference response for metrics — <a href="https://www.ipcc.ch/site/assets/uploads/2018/02/ar4-wg1-chapter2-1.pdf" target="_blank" rel="noopener">IPCC AR4 WGI Ch.2</a>.</td>
+          </tr>
+          <tr>
+            <td>Short decay</td>
+            <td>0.17</td><td>0.21 / 120 yr</td><td>0.27 / 25 yr</td><td>0.35 / 3.5 yr</td>
+            <td class="caveat">Exploratory. Weights normalised to 1.0 but from no paper.</td>
+          </tr>
+          <tr>
+            <td>Long decay</td>
+            <td>0.27</td><td>0.19 / 600 yr</td><td>0.27 / 60 yr</td><td>0.27 / 8 yr</td>
+            <td class="caveat">Exploratory. Weights normalised to 1.0 but from no paper.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>In all four sets the weights sum to 1.0 — a pulse starts out entirely in the atmosphere.</p>
+      <p>The two published sets differ in more than digits. AR4 puts a shorter leading timescale (173 yr against 394 yr) and more weight on the fast term against AR5's flatter distribution. AR5's own supplementary material describes its values as <em>fitting parameters</em>, not process coefficients with direct physical meaning, and states the IRF was updated from AR4. Switching between the two in the app is therefore a useful control: it shows how much of any deviation is a parameter choice inside the accepted IPCC range rather than a claim about the measurements.</p>
+      <p class="caveat">Editing any coefficient by hand switches the preset to «Custom» and drops the source link, because at that point no publication stands behind the numbers.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>Published column dictionary</h2>
+      <table class="doc-table">
+        <thead><tr><th>Column</th><th>Unit</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><code>year</code></td><td>calendar year</td><td>1900–2024, one row per year, sorted, no duplicates, no gaps.</td></tr>
+          <tr><td><code>emissions_gtc</code></td><td>GtC/yr</td><td>Global fossil-and-industry plus net land-use-change emissions, as carbon.</td></tr>
+          <tr><td><code>emissions_ppm</code></td><td>ppm/yr</td><td>The same emissions divided by 2.124. The model input.</td></tr>
+          <tr><td><code>observed_law_dome_instrumental_spliced_ppm</code></td><td>ppm</td><td>Spliced observed series, 1900 onwards.</td></tr>
+          <tr><td><code>observed_noaa_global_ppm</code></td><td>ppm</td><td>NOAA global annual mean. Empty before 1979.</td></tr>
+          <tr><td><code>observed_noaa_mauna_loa_ppm</code></td><td>ppm</td><td>Mauna Loa annual mean. Empty before 1959.</td></tr>
+        </tbody>
+      </table>
+      <p>Empty cells are genuine absences of measurement, never zeros and never interpolated. The app starts each comparison at the first year the selected series actually has a value.</p>
+      <p>The JSON file carries the same rows under <code>rows</code>, plus a <code>metadata</code> block recording row count, the observed-series column names, and the relative path of the upstream CSV the bundle was generated from.</p>
+      <p>Validation applied at generation time, and the build fails if any of it breaks: rows sorted by year, no duplicate years, a continuous run from 1900, and units fixed as above.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>What this model leaves out</h2>
+      <p>Both IPCC coefficient sets are calibrated for a <strong>single pulse on a given background</strong> — 378 ppm for AR4's Bern2.5CC basis. Applying them to a whole emissions trajectory from a fixed baseline ignores that sink capacity depends on the state of the system, so the deviation cannot be read as a measured failure of the carbon cycle.</p>
+      <p>The baseline is anchored to a single observed year, which imports that year's measurement error into every later prediction. The spliced series mixes two measurement techniques with different smoothing. And the reported metrics reward different things: RMSE and mean bias are per-year averages, while <em>cumulative deviation</em> is a signed sum that grows with the number of years compared and cancels overshoots against underestimates — a value near zero there means the two directions balanced, not that the fit is good.</p>
+      <p class="caveat">This is a model with declared assumptions, not a measurement.</p>
+    </section>
+
+    <section class="doc-block">
+      <h2>Sources</h2>
+      <ul class="doc-list">
+        <li><a href="https://www.ipcc.ch/site/assets/uploads/2018/07/WGI_AR5.Chap_.8_SM.pdf" target="_blank" rel="noopener">IPCC AR5 WGI, Chapter 8 Supplementary Material</a> — the AR5 CO₂ IRF and its coefficients.</li>
+        <li><a href="https://acp.copernicus.org/articles/13/2793/2013/" target="_blank" rel="noopener">Joos et al. 2013, <em>Atmos. Chem. Phys.</em> 13, 2793–2825</a> — the multi-model IRF fit.</li>
+        <li><a href="https://www.ipcc.ch/site/assets/uploads/2018/02/ar4-wg1-chapter2-1.pdf" target="_blank" rel="noopener">IPCC AR4 WGI, Chapter 2 (Forster et al. 2007)</a> — the Bern2.5CC response function.</li>
+        <li><a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA Global Monitoring Laboratory, CO₂ trends</a> — global mean and Mauna Loa records.</li>
+        <li><a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data CO₂ dataset</a> — Global Carbon Budget emissions.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="index.html">← Back to the explorer</a>
+    <span>Data:</span>
+    <a href="data/explorer_inputs.csv">Inputs (CSV)</a>
+    <a href="data/explorer_inputs.json">Inputs (JSON)</a>
+  </footer>
+</body>
+</html>

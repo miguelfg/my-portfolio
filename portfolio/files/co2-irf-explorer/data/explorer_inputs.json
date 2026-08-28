@@ -1,0 +1,1013 @@
+{
+  "metadata": {
+    "source_csv": "co2-lifetime/scripts-and-sims/outputs/co2_annual_convolution/annual_comparison.csv",
+    "rows": 125,
+    "observed_series": {
+      "noaa_global": "observed_noaa_global_ppm",
+      "noaa_mauna_loa": "observed_noaa_mauna_loa_ppm",
+      "law_dome_instrumental_spliced": "observed_law_dome_instrumental_spliced_ppm"
+    }
+  },
+  "rows": [
+    {
+      "year": 1900,
+      "emissions_gtc": 1.7518966363636364,
+      "emissions_ppm": 0.8248100924499229,
+      "observed_law_dome_instrumental_spliced_ppm": 296.3666666666667,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1901,
+      "emissions_gtc": 1.8030204545454547,
+      "emissions_ppm": 0.8488796866974834,
+      "observed_law_dome_instrumental_spliced_ppm": 296.3666666666666,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1902,
+      "emissions_gtc": 1.8285572727272728,
+      "emissions_ppm": 0.860902670775552,
+      "observed_law_dome_instrumental_spliced_ppm": 295.7,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1903,
+      "emissions_gtc": 1.8893705454545457,
+      "emissions_ppm": 0.8895341551104264,
+      "observed_law_dome_instrumental_spliced_ppm": 295.05,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1904,
+      "emissions_gtc": 1.9260444545454547,
+      "emissions_ppm": 0.9068005906522856,
+      "observed_law_dome_instrumental_spliced_ppm": 295.1,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1905,
+      "emissions_gtc": 1.9757634545454548,
+      "emissions_ppm": 0.9302087827426812,
+      "observed_law_dome_instrumental_spliced_ppm": 298.6499999999999,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1906,
+      "emissions_gtc": 2.0237689090909092,
+      "emissions_ppm": 0.9528102208525937,
+      "observed_law_dome_instrumental_spliced_ppm": 296.9,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1907,
+      "emissions_gtc": 2.1215012727272726,
+      "emissions_ppm": 0.9988235747303543,
+      "observed_law_dome_instrumental_spliced_ppm": 299.1333333333333,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1908,
+      "emissions_gtc": 2.1031999090909093,
+      "emissions_ppm": 0.990207113507961,
+      "observed_law_dome_instrumental_spliced_ppm": 299.76666666666665,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1909,
+      "emissions_gtc": 2.1563997272727273,
+      "emissions_ppm": 1.0152541088854647,
+      "observed_law_dome_instrumental_spliced_ppm": 300.4,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1910,
+      "emissions_gtc": 2.140480363636364,
+      "emissions_ppm": 1.0077591165896251,
+      "observed_law_dome_instrumental_spliced_ppm": 299.59999999999997,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1911,
+      "emissions_gtc": 2.1444068181818183,
+      "emissions_ppm": 1.0096077298407806,
+      "observed_law_dome_instrumental_spliced_ppm": 298.79999999999995,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1912,
+      "emissions_gtc": 2.160335454545455,
+      "emissions_ppm": 1.0171070878274269,
+      "observed_law_dome_instrumental_spliced_ppm": 299.16666666666663,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1913,
+      "emissions_gtc": 2.2213947272727275,
+      "emissions_ppm": 1.0458543913713405,
+      "observed_law_dome_instrumental_spliced_ppm": 300.7,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1914,
+      "emissions_gtc": 2.133945272727273,
+      "emissions_ppm": 1.0046823317925013,
+      "observed_law_dome_instrumental_spliced_ppm": 300.0,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1915,
+      "emissions_gtc": 2.1003733636363635,
+      "emissions_ppm": 0.988876348228043,
+      "observed_law_dome_instrumental_spliced_ppm": 301.0,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1916,
+      "emissions_gtc": 2.1658846363636366,
+      "emissions_ppm": 1.019719696969697,
+      "observed_law_dome_instrumental_spliced_ppm": 301.3,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1917,
+      "emissions_gtc": 2.186109,
+      "emissions_ppm": 1.0292415254237288,
+      "observed_law_dome_instrumental_spliced_ppm": 302.0692307692308,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1918,
+      "emissions_gtc": 2.160788181818182,
+      "emissions_ppm": 1.0173202362609142,
+      "observed_law_dome_instrumental_spliced_ppm": 302.8384615384616,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1919,
+      "emissions_gtc": 2.025367363636364,
+      "emissions_ppm": 0.9535627889060093,
+      "observed_law_dome_instrumental_spliced_ppm": 303.6,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1920,
+      "emissions_gtc": 2.2700427272727275,
+      "emissions_ppm": 1.0687583461736005,
+      "observed_law_dome_instrumental_spliced_ppm": 303.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1921,
+      "emissions_gtc": 2.2092575454545456,
+      "emissions_ppm": 1.040140087313816,
+      "observed_law_dome_instrumental_spliced_ppm": 303.4,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1922,
+      "emissions_gtc": 2.269447090909091,
+      "emissions_ppm": 1.0684779147406265,
+      "observed_law_dome_instrumental_spliced_ppm": 303.3,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1923,
+      "emissions_gtc": 2.419405363636364,
+      "emissions_ppm": 1.1390797380585518,
+      "observed_law_dome_instrumental_spliced_ppm": 303.2,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1924,
+      "emissions_gtc": 2.4081951818181815,
+      "emissions_ppm": 1.133801874678993,
+      "observed_law_dome_instrumental_spliced_ppm": 304.88571428571424,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1925,
+      "emissions_gtc": 2.4516774545454547,
+      "emissions_ppm": 1.1542737544940935,
+      "observed_law_dome_instrumental_spliced_ppm": 304.1,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1926,
+      "emissions_gtc": 2.439173727272727,
+      "emissions_ppm": 1.1483868772470467,
+      "observed_law_dome_instrumental_spliced_ppm": 304.8909090909091,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1927,
+      "emissions_gtc": 2.532047181818182,
+      "emissions_ppm": 1.19211260914227,
+      "observed_law_dome_instrumental_spliced_ppm": 304.9818181818182,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1928,
+      "emissions_gtc": 2.542632272727273,
+      "emissions_ppm": 1.1970961736004109,
+      "observed_law_dome_instrumental_spliced_ppm": 305.7200000000001,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1929,
+      "emissions_gtc": 2.637453545454546,
+      "emissions_ppm": 1.2417389573703135,
+      "observed_law_dome_instrumental_spliced_ppm": 305.7,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1930,
+      "emissions_gtc": 2.562587454545455,
+      "emissions_ppm": 1.2064912686183873,
+      "observed_law_dome_instrumental_spliced_ppm": 306.225,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1931,
+      "emissions_gtc": 2.471899090909091,
+      "emissions_ppm": 1.1637942989214176,
+      "observed_law_dome_instrumental_spliced_ppm": 306.75,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1932,
+      "emissions_gtc": 2.388525,
+      "emissions_ppm": 1.1245409604519774,
+      "observed_law_dome_instrumental_spliced_ppm": 307.275,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1933,
+      "emissions_gtc": 2.422795909090909,
+      "emissions_ppm": 1.1406760400616331,
+      "observed_law_dome_instrumental_spliced_ppm": 307.8,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1934,
+      "emissions_gtc": 2.5174418181818186,
+      "emissions_ppm": 1.185236260914227,
+      "observed_law_dome_instrumental_spliced_ppm": 307.6,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1935,
+      "emissions_gtc": 2.549253818181818,
+      "emissions_ppm": 1.2002136620441703,
+      "observed_law_dome_instrumental_spliced_ppm": 309.2,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1936,
+      "emissions_gtc": 2.6871199090909097,
+      "emissions_ppm": 1.2651223677452492,
+      "observed_law_dome_instrumental_spliced_ppm": 309.06666666666666,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1937,
+      "emissions_gtc": 2.760723,
+      "emissions_ppm": 1.2997754237288135,
+      "observed_law_dome_instrumental_spliced_ppm": 308.2142857142857,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1938,
+      "emissions_gtc": 2.698764,
+      "emissions_ppm": 1.2706045197740112,
+      "observed_law_dome_instrumental_spliced_ppm": 309.6,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1939,
+      "emissions_gtc": 2.7561081818181816,
+      "emissions_ppm": 1.2976027221366202,
+      "observed_law_dome_instrumental_spliced_ppm": 310.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1940,
+      "emissions_gtc": 2.898564,
+      "emissions_ppm": 1.3646723163841807,
+      "observed_law_dome_instrumental_spliced_ppm": 311.9,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1941,
+      "emissions_gtc": 2.9700654545454546,
+      "emissions_ppm": 1.3983359013867487,
+      "observed_law_dome_instrumental_spliced_ppm": 310.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1942,
+      "emissions_gtc": 2.969407636363637,
+      "emissions_ppm": 1.3980261941448384,
+      "observed_law_dome_instrumental_spliced_ppm": 310.9,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1943,
+      "emissions_gtc": 2.9917017272727273,
+      "emissions_ppm": 1.4085224704673858,
+      "observed_law_dome_instrumental_spliced_ppm": 310.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1944,
+      "emissions_gtc": 2.9968775454545455,
+      "emissions_ppm": 1.4109592963533641,
+      "observed_law_dome_instrumental_spliced_ppm": 311.4,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1945,
+      "emissions_gtc": 2.768918454545455,
+      "emissions_ppm": 1.303633923985619,
+      "observed_law_dome_instrumental_spliced_ppm": 309.6,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1946,
+      "emissions_gtc": 2.8462257272727274,
+      "emissions_ppm": 1.340030945043657,
+      "observed_law_dome_instrumental_spliced_ppm": 311.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1947,
+      "emissions_gtc": 2.984575090909091,
+      "emissions_ppm": 1.4051671802773498,
+      "observed_law_dome_instrumental_spliced_ppm": 310.8,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1948,
+      "emissions_gtc": 3.0470833636363635,
+      "emissions_ppm": 1.4345966872110938,
+      "observed_law_dome_instrumental_spliced_ppm": 310.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1949,
+      "emissions_gtc": 2.969277,
+      "emissions_ppm": 1.3979646892655366,
+      "observed_law_dome_instrumental_spliced_ppm": 309.9,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1950,
+      "emissions_gtc": 3.432119181818182,
+      "emissions_ppm": 1.615875321006677,
+      "observed_law_dome_instrumental_spliced_ppm": 312.6,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1951,
+      "emissions_gtc": 3.703361727272727,
+      "emissions_ppm": 1.7435789676425268,
+      "observed_law_dome_instrumental_spliced_ppm": 312.43333333333334,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1952,
+      "emissions_gtc": 3.741522272727273,
+      "emissions_ppm": 1.7615453261427838,
+      "observed_law_dome_instrumental_spliced_ppm": 312.2666666666667,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1953,
+      "emissions_gtc": 3.827634272727273,
+      "emissions_ppm": 1.8020876990241397,
+      "observed_law_dome_instrumental_spliced_ppm": 312.1,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1954,
+      "emissions_gtc": 3.980882727272727,
+      "emissions_ppm": 1.874238572162301,
+      "observed_law_dome_instrumental_spliced_ppm": 311.0,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1955,
+      "emissions_gtc": 4.21041,
+      "emissions_ppm": 1.9823022598870057,
+      "observed_law_dome_instrumental_spliced_ppm": 313.5,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1956,
+      "emissions_gtc": 4.360064727272727,
+      "emissions_ppm": 2.052761171032357,
+      "observed_law_dome_instrumental_spliced_ppm": 316.1222222222224,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1957,
+      "emissions_gtc": 4.490761909090909,
+      "emissions_ppm": 2.1142946841294297,
+      "observed_law_dome_instrumental_spliced_ppm": 314.0,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1958,
+      "emissions_gtc": 4.5354398181818185,
+      "emissions_ppm": 2.13532948125321,
+      "observed_law_dome_instrumental_spliced_ppm": 314.4,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": null
+    },
+    {
+      "year": 1959,
+      "emissions_gtc": 4.7857851818181825,
+      "emissions_ppm": 2.2531945300462253,
+      "observed_law_dome_instrumental_spliced_ppm": 315.98,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 315.98
+    },
+    {
+      "year": 1960,
+      "emissions_gtc": 4.635687,
+      "emissions_ppm": 2.1825268361581918,
+      "observed_law_dome_instrumental_spliced_ppm": 316.91,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 316.91
+    },
+    {
+      "year": 1961,
+      "emissions_gtc": 4.648676727272727,
+      "emissions_ppm": 2.1886425269645606,
+      "observed_law_dome_instrumental_spliced_ppm": 317.64,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 317.64
+    },
+    {
+      "year": 1962,
+      "emissions_gtc": 4.605174818181818,
+      "emissions_ppm": 2.168161402157165,
+      "observed_law_dome_instrumental_spliced_ppm": 318.45,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 318.45
+    },
+    {
+      "year": 1963,
+      "emissions_gtc": 4.696393363636364,
+      "emissions_ppm": 2.2111079866461223,
+      "observed_law_dome_instrumental_spliced_ppm": 318.99,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 318.99
+    },
+    {
+      "year": 1964,
+      "emissions_gtc": 4.768469454545454,
+      "emissions_ppm": 2.2450421160760143,
+      "observed_law_dome_instrumental_spliced_ppm": 319.62,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 319.62
+    },
+    {
+      "year": 1965,
+      "emissions_gtc": 4.826189181818181,
+      "emissions_ppm": 2.272217128916281,
+      "observed_law_dome_instrumental_spliced_ppm": 320.04,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 320.04
+    },
+    {
+      "year": 1966,
+      "emissions_gtc": 4.849027090909091,
+      "emissions_ppm": 2.2829694401643557,
+      "observed_law_dome_instrumental_spliced_ppm": 321.37,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 321.37
+    },
+    {
+      "year": 1967,
+      "emissions_gtc": 5.042154272727272,
+      "emissions_ppm": 2.373895608628659,
+      "observed_law_dome_instrumental_spliced_ppm": 322.18,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 322.18
+    },
+    {
+      "year": 1968,
+      "emissions_gtc": 5.245200545454545,
+      "emissions_ppm": 2.46949178222907,
+      "observed_law_dome_instrumental_spliced_ppm": 323.05,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 323.05
+    },
+    {
+      "year": 1969,
+      "emissions_gtc": 5.646093272727273,
+      "emissions_ppm": 2.6582360041088857,
+      "observed_law_dome_instrumental_spliced_ppm": 324.62,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 324.62
+    },
+    {
+      "year": 1970,
+      "emissions_gtc": 5.887857,
+      "emissions_ppm": 2.772060734463277,
+      "observed_law_dome_instrumental_spliced_ppm": 325.68,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 325.68
+    },
+    {
+      "year": 1971,
+      "emissions_gtc": 5.902707272727272,
+      "emissions_ppm": 2.779052388289676,
+      "observed_law_dome_instrumental_spliced_ppm": 326.32,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 326.32
+    },
+    {
+      "year": 1972,
+      "emissions_gtc": 6.180727363636365,
+      "emissions_ppm": 2.90994696969697,
+      "observed_law_dome_instrumental_spliced_ppm": 327.46,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 327.46
+    },
+    {
+      "year": 1973,
+      "emissions_gtc": 6.36315,
+      "emissions_ppm": 2.995833333333333,
+      "observed_law_dome_instrumental_spliced_ppm": 329.68,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 329.68
+    },
+    {
+      "year": 1974,
+      "emissions_gtc": 6.357521181818182,
+      "emissions_ppm": 2.9931832306111965,
+      "observed_law_dome_instrumental_spliced_ppm": 330.19,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 330.19
+    },
+    {
+      "year": 1975,
+      "emissions_gtc": 6.303265636363636,
+      "emissions_ppm": 2.9676391884951205,
+      "observed_law_dome_instrumental_spliced_ppm": 331.13,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 331.13
+    },
+    {
+      "year": 1976,
+      "emissions_gtc": 6.524392636363636,
+      "emissions_ppm": 3.0717479455572674,
+      "observed_law_dome_instrumental_spliced_ppm": 332.03,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 332.03
+    },
+    {
+      "year": 1977,
+      "emissions_gtc": 6.812217272727273,
+      "emissions_ppm": 3.207258602978942,
+      "observed_law_dome_instrumental_spliced_ppm": 333.84,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 333.84
+    },
+    {
+      "year": 1978,
+      "emissions_gtc": 6.978719727272727,
+      "emissions_ppm": 3.285649589111453,
+      "observed_law_dome_instrumental_spliced_ppm": 335.41,
+      "observed_noaa_global_ppm": null,
+      "observed_noaa_mauna_loa_ppm": 335.41
+    },
+    {
+      "year": 1979,
+      "emissions_gtc": 6.917568818181819,
+      "emissions_ppm": 3.2568591422701596,
+      "observed_law_dome_instrumental_spliced_ppm": 336.85,
+      "observed_noaa_global_ppm": 336.85,
+      "observed_noaa_mauna_loa_ppm": 336.84
+    },
+    {
+      "year": 1980,
+      "emissions_gtc": 6.93030190909091,
+      "emissions_ppm": 3.2628540061633284,
+      "observed_law_dome_instrumental_spliced_ppm": 338.91,
+      "observed_noaa_global_ppm": 338.91,
+      "observed_noaa_mauna_loa_ppm": 338.76
+    },
+    {
+      "year": 1981,
+      "emissions_gtc": 6.740819181818182,
+      "emissions_ppm": 3.173643682588598,
+      "observed_law_dome_instrumental_spliced_ppm": 340.11,
+      "observed_noaa_global_ppm": 340.11,
+      "observed_noaa_mauna_loa_ppm": 340.12
+    },
+    {
+      "year": 1982,
+      "emissions_gtc": 6.616716818181818,
+      "emissions_ppm": 3.1152150744735487,
+      "observed_law_dome_instrumental_spliced_ppm": 340.85,
+      "observed_noaa_global_ppm": 340.85,
+      "observed_noaa_mauna_loa_ppm": 341.48
+    },
+    {
+      "year": 1983,
+      "emissions_gtc": 6.747717000000001,
+      "emissions_ppm": 3.1768912429378533,
+      "observed_law_dome_instrumental_spliced_ppm": 342.53,
+      "observed_noaa_global_ppm": 342.53,
+      "observed_noaa_mauna_loa_ppm": 343.15
+    },
+    {
+      "year": 1984,
+      "emissions_gtc": 7.058740636363637,
+      "emissions_ppm": 3.3233242167437083,
+      "observed_law_dome_instrumental_spliced_ppm": 344.07,
+      "observed_noaa_global_ppm": 344.07,
+      "observed_noaa_mauna_loa_ppm": 344.87
+    },
+    {
+      "year": 1985,
+      "emissions_gtc": 7.345256181818182,
+      "emissions_ppm": 3.45821854134566,
+      "observed_law_dome_instrumental_spliced_ppm": 345.54,
+      "observed_noaa_global_ppm": 345.54,
+      "observed_noaa_mauna_loa_ppm": 346.35
+    },
+    {
+      "year": 1986,
+      "emissions_gtc": 7.467643909090909,
+      "emissions_ppm": 3.515839881869543,
+      "observed_law_dome_instrumental_spliced_ppm": 346.97,
+      "observed_noaa_global_ppm": 346.97,
+      "observed_noaa_mauna_loa_ppm": 347.61
+    },
+    {
+      "year": 1987,
+      "emissions_gtc": 7.528400181818181,
+      "emissions_ppm": 3.5444445300462246,
+      "observed_law_dome_instrumental_spliced_ppm": 348.68,
+      "observed_noaa_global_ppm": 348.68,
+      "observed_noaa_mauna_loa_ppm": 349.31
+    },
+    {
+      "year": 1988,
+      "emissions_gtc": 7.656937090909092,
+      "emissions_ppm": 3.6049609655880843,
+      "observed_law_dome_instrumental_spliced_ppm": 351.16,
+      "observed_noaa_global_ppm": 351.16,
+      "observed_noaa_mauna_loa_ppm": 351.69
+    },
+    {
+      "year": 1989,
+      "emissions_gtc": 7.685736272727273,
+      "emissions_ppm": 3.6185199024139703,
+      "observed_law_dome_instrumental_spliced_ppm": 352.79,
+      "observed_noaa_global_ppm": 352.79,
+      "observed_noaa_mauna_loa_ppm": 353.2
+    },
+    {
+      "year": 1990,
+      "emissions_gtc": 7.789422272727273,
+      "emissions_ppm": 3.667336286594761,
+      "observed_law_dome_instrumental_spliced_ppm": 354.06,
+      "observed_noaa_global_ppm": 354.06,
+      "observed_noaa_mauna_loa_ppm": 354.45
+    },
+    {
+      "year": 1991,
+      "emissions_gtc": 7.888879090909091,
+      "emissions_ppm": 3.7141615305598354,
+      "observed_law_dome_instrumental_spliced_ppm": 355.4,
+      "observed_noaa_global_ppm": 355.4,
+      "observed_noaa_mauna_loa_ppm": 355.7
+    },
+    {
+      "year": 1992,
+      "emissions_gtc": 7.769542363636364,
+      "emissions_ppm": 3.657976630713919,
+      "observed_law_dome_instrumental_spliced_ppm": 356.09,
+      "observed_noaa_global_ppm": 356.09,
+      "observed_noaa_mauna_loa_ppm": 356.54
+    },
+    {
+      "year": 1993,
+      "emissions_gtc": 7.768135909090909,
+      "emissions_ppm": 3.6573144581407293,
+      "observed_law_dome_instrumental_spliced_ppm": 356.84,
+      "observed_noaa_global_ppm": 356.84,
+      "observed_noaa_mauna_loa_ppm": 357.21
+    },
+    {
+      "year": 1994,
+      "emissions_gtc": 8.084592545454546,
+      "emissions_ppm": 3.8063053415511043,
+      "observed_law_dome_instrumental_spliced_ppm": 358.33,
+      "observed_noaa_global_ppm": 358.33,
+      "observed_noaa_mauna_loa_ppm": 358.96
+    },
+    {
+      "year": 1995,
+      "emissions_gtc": 8.125832727272728,
+      "emissions_ppm": 3.825721623009759,
+      "observed_law_dome_instrumental_spliced_ppm": 360.18,
+      "observed_noaa_global_ppm": 360.18,
+      "observed_noaa_mauna_loa_ppm": 360.97
+    },
+    {
+      "year": 1996,
+      "emissions_gtc": 8.393265,
+      "emissions_ppm": 3.951631355932203,
+      "observed_law_dome_instrumental_spliced_ppm": 361.93,
+      "observed_noaa_global_ppm": 361.93,
+      "observed_noaa_mauna_loa_ppm": 362.74
+    },
+    {
+      "year": 1997,
+      "emissions_gtc": 8.836347,
+      "emissions_ppm": 4.160238700564972,
+      "observed_law_dome_instrumental_spliced_ppm": 363.04,
+      "observed_noaa_global_ppm": 363.04,
+      "observed_noaa_mauna_loa_ppm": 363.88
+    },
+    {
+      "year": 1998,
+      "emissions_gtc": 8.478532090909091,
+      "emissions_ppm": 3.9917759373394968,
+      "observed_law_dome_instrumental_spliced_ppm": 365.7,
+      "observed_noaa_global_ppm": 365.7,
+      "observed_noaa_mauna_loa_ppm": 366.84
+    },
+    {
+      "year": 1999,
+      "emissions_gtc": 8.56353490909091,
+      "emissions_ppm": 4.031796096558809,
+      "observed_law_dome_instrumental_spliced_ppm": 367.8,
+      "observed_noaa_global_ppm": 367.8,
+      "observed_noaa_mauna_loa_ppm": 368.54
+    },
+    {
+      "year": 2000,
+      "emissions_gtc": 8.633793818181818,
+      "emissions_ppm": 4.0648746789933226,
+      "observed_law_dome_instrumental_spliced_ppm": 368.96,
+      "observed_noaa_global_ppm": 368.96,
+      "observed_noaa_mauna_loa_ppm": 369.71
+    },
+    {
+      "year": 2001,
+      "emissions_gtc": 8.49646309090909,
+      "emissions_ppm": 4.000218027734976,
+      "observed_law_dome_instrumental_spliced_ppm": 370.57,
+      "observed_noaa_global_ppm": 370.57,
+      "observed_noaa_mauna_loa_ppm": 371.32
+    },
+    {
+      "year": 2002,
+      "emissions_gtc": 8.825189454545454,
+      "emissions_ppm": 4.154985618900873,
+      "observed_law_dome_instrumental_spliced_ppm": 372.58,
+      "observed_noaa_global_ppm": 372.58,
+      "observed_noaa_mauna_loa_ppm": 373.45
+    },
+    {
+      "year": 2003,
+      "emissions_gtc": 9.538336363636365,
+      "emissions_ppm": 4.490742167437083,
+      "observed_law_dome_instrumental_spliced_ppm": 375.14,
+      "observed_noaa_global_ppm": 375.14,
+      "observed_noaa_mauna_loa_ppm": 375.98
+    },
+    {
+      "year": 2004,
+      "emissions_gtc": 9.560151272727273,
+      "emissions_ppm": 4.5010128402670775,
+      "observed_law_dome_instrumental_spliced_ppm": 376.95,
+      "observed_noaa_global_ppm": 376.95,
+      "observed_noaa_mauna_loa_ppm": 377.7
+    },
+    {
+      "year": 2005,
+      "emissions_gtc": 9.690017181818183,
+      "emissions_ppm": 4.5621549820236265,
+      "observed_law_dome_instrumental_spliced_ppm": 378.98,
+      "observed_noaa_global_ppm": 378.98,
+      "observed_noaa_mauna_loa_ppm": 379.98
+    },
+    {
+      "year": 2006,
+      "emissions_gtc": 9.989425363636363,
+      "emissions_ppm": 4.70311928608115,
+      "observed_law_dome_instrumental_spliced_ppm": 381.15,
+      "observed_noaa_global_ppm": 381.15,
+      "observed_noaa_mauna_loa_ppm": 382.09
+    },
+    {
+      "year": 2007,
+      "emissions_gtc": 10.116126,
+      "emissions_ppm": 4.762771186440678,
+      "observed_law_dome_instrumental_spliced_ppm": 382.9,
+      "observed_noaa_global_ppm": 382.9,
+      "observed_noaa_mauna_loa_ppm": 384.02
+    },
+    {
+      "year": 2008,
+      "emissions_gtc": 10.363821818181819,
+      "emissions_ppm": 4.8793888032871084,
+      "observed_law_dome_instrumental_spliced_ppm": 385.02,
+      "observed_noaa_global_ppm": 385.02,
+      "observed_noaa_mauna_loa_ppm": 385.83
+    },
+    {
+      "year": 2009,
+      "emissions_gtc": 10.376681181818181,
+      "emissions_ppm": 4.885443117616846,
+      "observed_law_dome_instrumental_spliced_ppm": 386.5,
+      "observed_noaa_global_ppm": 386.5,
+      "observed_noaa_mauna_loa_ppm": 387.64
+    },
+    {
+      "year": 2010,
+      "emissions_gtc": 10.864227545454545,
+      "emissions_ppm": 5.114984720082178,
+      "observed_law_dome_instrumental_spliced_ppm": 388.75,
+      "observed_noaa_global_ppm": 388.75,
+      "observed_noaa_mauna_loa_ppm": 390.1
+    },
+    {
+      "year": 2011,
+      "emissions_gtc": 11.147057454545454,
+      "emissions_ppm": 5.248143810991268,
+      "observed_law_dome_instrumental_spliced_ppm": 390.62,
+      "observed_noaa_global_ppm": 390.62,
+      "observed_noaa_mauna_loa_ppm": 391.85
+    },
+    {
+      "year": 2012,
+      "emissions_gtc": 11.355506181818182,
+      "emissions_ppm": 5.346283513097072,
+      "observed_law_dome_instrumental_spliced_ppm": 392.65,
+      "observed_noaa_global_ppm": 392.65,
+      "observed_noaa_mauna_loa_ppm": 394.06
+    },
+    {
+      "year": 2013,
+      "emissions_gtc": 11.34418390909091,
+      "emissions_ppm": 5.340952876219825,
+      "observed_law_dome_instrumental_spliced_ppm": 395.4,
+      "observed_noaa_global_ppm": 395.4,
+      "observed_noaa_mauna_loa_ppm": 396.74
+    },
+    {
+      "year": 2014,
+      "emissions_gtc": 11.420619818181818,
+      "emissions_ppm": 5.376939650744735,
+      "observed_law_dome_instrumental_spliced_ppm": 397.34,
+      "observed_noaa_global_ppm": 397.34,
+      "observed_noaa_mauna_loa_ppm": 398.81
+    },
+    {
+      "year": 2015,
+      "emissions_gtc": 11.43167781818182,
+      "emissions_ppm": 5.382145865434001,
+      "observed_law_dome_instrumental_spliced_ppm": 399.65,
+      "observed_noaa_global_ppm": 399.65,
+      "observed_noaa_mauna_loa_ppm": 401.01
+    },
+    {
+      "year": 2016,
+      "emissions_gtc": 11.118923181818182,
+      "emissions_ppm": 5.234897919876733,
+      "observed_law_dome_instrumental_spliced_ppm": 403.07,
+      "observed_noaa_global_ppm": 403.07,
+      "observed_noaa_mauna_loa_ppm": 404.41
+    },
+    {
+      "year": 2017,
+      "emissions_gtc": 11.25883009090909,
+      "emissions_ppm": 5.300767462763225,
+      "observed_law_dome_instrumental_spliced_ppm": 405.22,
+      "observed_noaa_global_ppm": 405.22,
+      "observed_noaa_mauna_loa_ppm": 406.76
+    },
+    {
+      "year": 2018,
+      "emissions_gtc": 11.349825545454546,
+      "emissions_ppm": 5.343609013867488,
+      "observed_law_dome_instrumental_spliced_ppm": 407.61,
+      "observed_noaa_global_ppm": 407.61,
+      "observed_noaa_mauna_loa_ppm": 408.72
+    },
+    {
+      "year": 2019,
+      "emissions_gtc": 11.447384727272727,
+      "emissions_ppm": 5.389540832049306,
+      "observed_law_dome_instrumental_spliced_ppm": 410.07,
+      "observed_noaa_global_ppm": 410.07,
+      "observed_noaa_mauna_loa_ppm": 411.65
+    },
+    {
+      "year": 2020,
+      "emissions_gtc": 10.82039181818182,
+      "emissions_ppm": 5.094346430405753,
+      "observed_law_dome_instrumental_spliced_ppm": 412.44,
+      "observed_noaa_global_ppm": 412.44,
+      "observed_noaa_mauna_loa_ppm": 414.21
+    },
+    {
+      "year": 2021,
+      "emissions_gtc": 11.324718,
+      "emissions_ppm": 5.331788135593221,
+      "observed_law_dome_instrumental_spliced_ppm": 414.7,
+      "observed_noaa_global_ppm": 414.7,
+      "observed_noaa_mauna_loa_ppm": 416.41
+    },
+    {
+      "year": 2022,
+      "emissions_gtc": 11.539954090909092,
+      "emissions_ppm": 5.433123394966615,
+      "observed_law_dome_instrumental_spliced_ppm": 417.08,
+      "observed_noaa_global_ppm": 417.08,
+      "observed_noaa_mauna_loa_ppm": 418.53
+    },
+    {
+      "year": 2023,
+      "emissions_gtc": 11.683524545454546,
+      "emissions_ppm": 5.5007177709296355,
+      "observed_law_dome_instrumental_spliced_ppm": 419.35,
+      "observed_noaa_global_ppm": 419.35,
+      "observed_noaa_mauna_loa_ppm": 421.08
+    },
+    {
+      "year": 2024,
+      "emissions_gtc": 11.777478000000002,
+      "emissions_ppm": 5.544951977401131,
+      "observed_law_dome_instrumental_spliced_ppm": 422.79,
+      "observed_noaa_global_ppm": 422.79,
+      "observed_noaa_mauna_loa_ppm": 424.61
+    }
+  ]
+}
