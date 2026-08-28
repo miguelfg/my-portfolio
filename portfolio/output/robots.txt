@@ -1,4 +1,0 @@
-Sitemap: https://miguelfg.github.io/my-portfolio/sitemapindex.xml
-
-User-Agent: *
-Host: miguelfg.github.io
