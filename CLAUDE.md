@@ -93,7 +93,7 @@ Daily AI news summaries are auto-generated to `portfolio/ai-news/ai-news-summary
 make nk-github-deploy
 ```
 
-**Warning**: this command force-deletes the local and remote `src` branch before deploying. Ensure `main` is up to date first: `git pull origin main`.
+Run `make nk-github-deploy` after ensuring local `main` is up to date with `origin/main`. Nikola builds the site and deploys the generated output from `main` to `gh-pages` according to `portfolio/conf.py`.
 
 If `git push` is rejected, resolve with `git fetch origin` then `git pull --rebase`. For binary conflicts on `.doit.db.db`, run `make nk-clean && make nk-build` after pulling.
 
