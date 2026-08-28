@@ -175,6 +175,7 @@ cython_debug/
 
 
 # Nicolas' stuff
+.worktrees/
 cache
 .doit.db
 .doit.db*
