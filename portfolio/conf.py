@@ -156,6 +156,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Blog"),
+        ("/co2-irf-explorer/", "CO₂ Explorer"),
         ("/pages/ai-news", "AI News"),
         ("/pages/services", "Services"),
         ("/pages/portfolio", "Portfolio"),
@@ -164,6 +165,7 @@ NAVIGATION_LINKS = {
     ),
 
     "es": (
+        ("/co2-irf-explorer/", "Explorador CO₂"),
         ("/es/pages/ai-news", "Noticias IA"),
         ("/es/pages/services", "Servicios"),
         ("/es/pages/portfolio", "Portfolio"),
