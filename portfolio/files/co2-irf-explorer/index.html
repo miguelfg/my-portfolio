@@ -40,10 +40,19 @@
           <input id="baselineYear" type="range" min="1900" max="2024" value="1900" />
           <span class="slider-value" id="baselineYearValue">1900</span>
         </div>
-        <div class="slider-bounds"><span>1900</span><span>2024</span></div>
-      </fieldset>
+          <div class="slider-bounds"><span>1900</span><span>2024</span></div>
+        </fieldset>
 
-      <fieldset class="control-group control-group--preset">
+        <fieldset class="control-group">
+          <legend>Prediction Series</legend>
+          <select id="predictionSeries">
+            <option value="fossil_excl_cement">Fossil fuels + flaring</option>
+            <option value="fossil_cement" selected>Fossil fuels + flaring + cement</option>
+            <option value="fossil_cement_luc">Fossil fuels + flaring + cement + change land-use</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="control-group control-group--preset">
         <legend>IRF preset</legend>
         <select id="preset">
           <option value="default">Joos 2013 (AR5)</option>
@@ -81,7 +90,7 @@
         <details>
           <summary>Predicted CO₂ — computed here</summary>
           <p>The only series we calculate. Each year's global emissions are treated as a pulse, multiplied by the Bern impulse-response function, and accumulated on top of the baseline year: <code>C(T) = C(base) + Σ E(t)·IRF(T−t)</code>, where <code>IRF(Δt) = a₀ + Σ aᵢ·e^(−Δt/τᵢ)</code>. It is recomputed in your browser whenever you change the observed record, baseline, or coefficients.</p>
-          <p>“Bern” names the impulse-response model family; “Joos 2013” names the published parameter set selected by default. Inputs are fossil/industry plus land-use-change emissions from <a href="https://ourworldindata.org/grapher/global-co2-emissions" target="_blank" rel="noopener">Our World in Data</a>, converted using 1 ppm = 2.124 GtC.</p>
+          <p>“Bern” names the impulse-response model family; “Joos 2013” names the published parameter set selected by default. Choose whether the inputs include fossil fuels and flaring alone, cement, and/or land-use change. Components come from <a href="https://ourworldindata.org/grapher/global-co2-emissions" target="_blank" rel="noopener">Our World in Data</a>, converted using 1 ppm = 2.124 GtC.</p>
         </details>
         <details>
           <summary>Deviations — predicted minus observed</summary>
@@ -93,7 +102,7 @@
         </details>
         <details>
           <summary>Emissions and the two conversions</summary>
-          <p>Emissions come from the Global Carbon Budget via Our World in Data: fossil-and-industry CO₂ plus net land-use change, for the world. They arrive as mass of CO₂ and are converted twice before entering the model.</p>
+          <p>Emissions come from the Global Carbon Budget via Our World in Data. The three choices are: fossil fuels and flaring excluding cement; those sources plus cement; or those sources plus cement and net land-use change. They arrive as mass of CO₂ and are converted twice before entering the model.</p>
           <p><strong>MtCO₂ → GtC, factor 12/44.</strong> The sinks retain the carbon atom, not the whole molecule, so we keep the carbon fraction of CO₂ by molar mass.</p>
           <p><strong>GtC → ppm, factor 2.124.</strong> The atmosphere weighs about 5.135·10¹⁸ kg, so one part per million by volume holds roughly 2.124 gigatonnes of carbon. Same value used by the Global Carbon Budget and IPCC AR6.</p>
         </details>
@@ -116,9 +125,8 @@
       <section class="panel charts">
         <div class="chart-grid">
           <div class="chart chart--main">
-          <h3>Reference vs predicted CO₂</h3>
-          <div class="chart-box chart-box--large"><canvas id="mainChart"></canvas></div>
-          <p class="chart-footnote" id="mainChartFootnote" hidden>“Reconstruction” refers to the historical atmospheric series inferred from measurements of air trapped in Law Dome ice and firn. The CO₂ was measured, but this is not a direct annual atmospheric measurement: the timing and atmospheric history are reconstructed because trapped air has an age distribution and firn diffusion smooths short-term variability. The series uses instrumental observations after 1958.</p>
+            <h3>Reference vs predicted CO₂</h3>
+            <div class="chart-box chart-box--large"><canvas id="mainChart"></canvas></div>
           </div>
 
           <div class="chart" id="residualBlock">
@@ -131,6 +139,10 @@
             <div class="chart-box"><canvas id="deltaChart"></canvas></div>
           </div>
         </div>
+        <ul class="chart-footnotes">
+          <li class="chart-footnote" id="lawDomeChartFootnote" hidden>“Reconstruction” refers to the historical atmospheric series inferred from measurements of air trapped in Law Dome ice and firn. The CO₂ was measured, but this is not a direct annual atmospheric measurement: the timing and atmospheric history are reconstructed because trapped air has an age distribution and firn diffusion smooths short-term variability. The series uses instrumental observations after 1958.</li>
+          <li class="chart-footnote" id="predictionChartFootnote"></li>
+        </ul>
       </section>
     </section>
 
@@ -143,11 +155,11 @@
       </div>
 
       <div class="kpi-grid">
-        <div class="kpi-card"><span>RMSE</span><strong id="rmse">—</strong></div>
-        <div class="kpi-card"><span>Bias</span><strong id="bias">—</strong></div>
-        <div class="kpi-card"><span>Final error</span><strong id="finalError">—</strong></div>
-        <div class="kpi-card"><span>Final error %</span><strong id="finalErrorPct">—</strong></div>
-        <div class="kpi-card"><span>Cumulative deviation (ppm)</span><strong id="cumulativeError">—</strong></div>
+        <div class="kpi-card"><span>RMSE <span class="info-tip" tabindex="0" title="Typical prediction error in ppm; larger errors count more heavily.">i</span></span><strong id="rmse">—</strong></div>
+        <div class="kpi-card"><span>Bias <span class="info-tip" tabindex="0" title="Average signed error in ppm; positive means overprediction, negative means underprediction.">i</span></span><strong id="bias">—</strong></div>
+        <div class="kpi-card"><span>Final error <span class="info-tip" tabindex="0" title="Prediction minus reference in the last year, in ppm.">i</span></span><strong id="finalError">—</strong></div>
+        <div class="kpi-card"><span>Final error % <span class="info-tip" tabindex="0" title="Final error relative to the reference value, as a percentage.">i</span></span><strong id="finalErrorPct">—</strong></div>
+        <div class="kpi-card"><span>Cumulative deviation (ppm) <span class="info-tip" tabindex="0" title="Sum of yearly signed deviations; positive and negative errors can cancel.">i</span></span><strong id="cumulativeError">—</strong></div>
       </div>
 
       <div class="periods">
@@ -162,6 +174,7 @@
     <a href="data/explorer_inputs.csv">Inputs (CSV)</a>
     <a href="data/explorer_inputs.json">Inputs (JSON)</a>
     <a href="methodology.html">Methodology &amp; data notes</a>
+    <p class="footer-attribution">Developed by <a href="https://miguelfg.github.io/my-portfolio/pages/contact-me/">Miguel Fiandor Gutiérrez</a> with assistance from GenAI and manual human checks; code, documentation, and visualizations are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.<br />Third-party data and software retain their respective licenses.</p>
   </footer>
 
   <script src="vendor/chart.umd.min.js"></script>

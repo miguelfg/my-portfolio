@@ -64,9 +64,18 @@
 
     <section class="doc-block">
       <h2>Emissions, and the two conversions</h2>
-      <p>Global emissions come from the Global Carbon Budget via <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data</a>. Two fields are summed: <code>co2</code> (fossil fuels and industry, cement included) plus <code>land_use_change_co2</code>. <code>cement_co2</code> is deliberately <em>not</em> added separately, since that would double-count cement.</p>
+      <p>Global emissions come from the Global Carbon Budget via <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">Our World in Data</a>. The app offers three prediction series, assembled from the component columns rather than from the aggregate <code>co2</code> column:</p>
+      <table class="doc-table">
+        <thead><tr><th>Prediction series</th><th>OWID components</th><th>Published ppm field</th></tr></thead>
+        <tbody>
+          <tr><td>Fossil fuels + flaring</td><td><code>coal_co2 + oil_co2 + gas_co2 + flaring_co2</code></td><td><code>emissions_fossil_excl_cement_ppm</code></td></tr>
+          <tr><td>Fossil fuels + flaring + cement</td><td>Previous series + <code>cement_co2</code></td><td><code>emissions_fossil_cement_ppm</code></td></tr>
+          <tr><td>Fossil fuels + flaring + cement + change land-use</td><td>Previous series + <code>land_use_change_co2</code></td><td><code>emissions_fossil_cement_luc_ppm</code></td></tr>
+        </tbody>
+      </table>
+      <p>The second series is the default. The third adds land-use change to the combined trajectory used previously. OWID component values are annual MtCO₂; blank component values are treated as zero before conversion.</p>
       <p><strong>MtCO₂ → GtC, factor 12/44.</strong> The sinks retain the carbon atom, not the whole molecule, so we keep the carbon fraction of CO₂ by molar mass. Published as <code>emissions_gtc</code>.</p>
-      <p><strong>GtC → ppm, factor 2.124.</strong> The atmosphere weighs about 5.135·10¹⁸ kg, so one part per million by volume holds roughly 2.124 gigatonnes of carbon. This is the value used by the Global Carbon Budget and IPCC AR6. Published as <code>emissions_ppm</code>, and this is the field that enters the model.</p>
+      <p><strong>GtC → ppm, factor 2.124.</strong> The atmosphere weighs about 5.135·10¹⁸ kg, so one part per million by volume holds roughly 2.124 gigatonnes of carbon. This is the value used by the Global Carbon Budget and IPCC AR6. The selected prediction-series ppm field enters the model.</p>
     </section>
 
     <section class="doc-block">
@@ -121,6 +130,9 @@
           <tr><td><code>year</code></td><td>calendar year</td><td>1900–2024, one row per year, sorted, no duplicates, no gaps.</td></tr>
           <tr><td><code>emissions_gtc</code></td><td>GtC/yr</td><td>Global fossil-and-industry plus net land-use-change emissions, as carbon.</td></tr>
           <tr><td><code>emissions_ppm</code></td><td>ppm/yr</td><td>The same emissions divided by 2.124. The model input.</td></tr>
+          <tr><td><code>emissions_fossil_excl_cement_gtc/ppm</code></td><td>GtC/yr; ppm/yr</td><td>Coal, oil, gas and flaring; excludes cement and land-use change.</td></tr>
+          <tr><td><code>emissions_fossil_cement_gtc/ppm</code></td><td>GtC/yr; ppm/yr</td><td>Coal, oil, gas, flaring and cement; excludes land-use change.</td></tr>
+          <tr><td><code>emissions_fossil_cement_luc_gtc/ppm</code></td><td>GtC/yr; ppm/yr</td><td>Coal, oil, gas, flaring, cement and land-use change.</td></tr>
           <tr><td><code>observed_law_dome_instrumental_spliced_ppm</code></td><td>ppm</td><td>Spliced observed series, 1900 onwards.</td></tr>
           <tr><td><code>observed_noaa_global_ppm</code></td><td>ppm</td><td>NOAA global annual mean. Empty before 1979.</td></tr>
           <tr><td><code>observed_noaa_mauna_loa_ppm</code></td><td>ppm</td><td>Mauna Loa annual mean. Empty before 1959.</td></tr>
