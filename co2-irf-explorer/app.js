@@ -74,6 +74,24 @@ const OBSERVED_SERIES = {
   },
 };
 
+const PREDICTION_SERIES = {
+  fossil_excl_cement: {
+    label: 'Fossil fuels + flaring',
+    field: 'emissions_fossil_excl_cement_ppm',
+    note: 'coal + oil + gas + flaring; excludes cement and land-use change. The global total includes international shipping and aviation bunker emissions',
+  },
+  fossil_cement: {
+    label: 'Fossil fuels + flaring + cement',
+    field: 'emissions_fossil_cement_ppm',
+    note: 'coal + oil + gas + flaring + cement; excludes land-use change. The global total includes international shipping and aviation bunker emissions',
+  },
+  fossil_cement_luc: {
+    label: 'Fossil fuels + flaring + cement + change land-use',
+    field: 'emissions_fossil_cement_luc_ppm',
+    note: 'coal + oil + gas + flaring + cement + land-use change. The global total includes international shipping and aviation bunker emissions',
+  },
+};
+
 const WINDOW_DEFS = [
   [1900, 1919],
   [1920, 1939],
@@ -103,6 +121,7 @@ const state = {
   metadata: {},
   baselineYear: 1900,
   observedSeries: 'global',
+  predictionSeries: 'fossil_cement',
   params: { ...PRESETS.default },
   preset: 'default',
 };
@@ -131,13 +150,6 @@ function formatParam(value) {
   return Number.isFinite(value) ? value.toFixed(4).replace(/0+$/, '').replace(/\.$/, '') : '—';
 }
 
-function statusFromResidual(value) {
-  if (!Number.isFinite(value) || Math.abs(value) < 0.05) {
-    return 'Matched';
-  }
-  return value > 0 ? 'Overshoot' : 'Underestimate';
-}
-
 function mean(values) {
   if (!values.length) return NaN;
   return values.reduce((acc, value) => acc + value, 0) / values.length;
@@ -145,6 +157,10 @@ function mean(values) {
 
 function observedField() {
   return (OBSERVED_SERIES[state.observedSeries] || OBSERVED_SERIES.global).field;
+}
+
+function predictionField() {
+  return (PREDICTION_SERIES[state.predictionSeries] || PREDICTION_SERIES.fossil_cement).field;
 }
 
 // Rows carrying a value for the selected record, with that value copied into
@@ -166,7 +182,7 @@ function impulseResponse(dt, params) {
 
 function buildModel(rows, baselineYear, params) {
   const obsByYear = new Map(rows.map((row) => [row.year, row.observed_co2_ppm]));
-  const emissionsByYear = new Map(rows.map((row) => [row.year, row.emissions_ppm || 0]));
+  const emissionsByYear = new Map(rows.map((row) => [row.year, row[predictionField()] || 0]));
   const years = rows.map((row) => row.year).sort((a, b) => a - b);
   const base = obsByYear.get(baselineYear);
 
@@ -209,7 +225,6 @@ function seriesMetrics(rows, modeled, baselineYear) {
   const maxAbsResidual = absResiduals.length ? Math.max(...absResiduals) : NaN;
   const maxAbsIndex = absResiduals.indexOf(maxAbsResidual);
   const maxAbsYear = maxAbsIndex >= 0 ? aligned[maxAbsIndex]?.year : NaN;
-  const signal = statusFromResidual(finalRow?.residual_ppm);
   const cumulativeError = residuals.reduce((total, value) => total + value, 0);
 
   return {
@@ -222,7 +237,6 @@ function seriesMetrics(rows, modeled, baselineYear) {
     finalModeled: finalRow?.modeled_co2_ppm ?? NaN,
     maxAbsResidual,
     maxAbsYear,
-    signal,
     cumulativeError,
   };
 }
@@ -241,7 +255,6 @@ function periodSummaries(rows, modeled, baselineYear) {
       bias: mean(residuals),
       rmse: Math.sqrt(mean(residuals.map((value) => value * value))),
       final: residuals.at(-1),
-      signal: statusFromResidual(residuals.at(-1)),
       observedDelta: mean(observedDeltas),
       modeledDelta: mean(modeledDeltas),
     };
@@ -360,7 +373,7 @@ function createCharts() {
     type: 'line',
     data: {
       datasets: [
-        { label: 'Deviation (predicted − observed)', borderColor: COLORS.residual, ...lineDefaults, data: [] },
+        { label: 'Deviation (predicted − reference)', borderColor: COLORS.residual, ...lineDefaults, data: [] },
         { label: 'Zero line', borderColor: COLORS.zero, borderWidth: 1.5, borderDash: [6, 6], pointRadius: 0, pointHoverRadius: 0, data: [] },
       ],
     },
@@ -414,7 +427,6 @@ function renderPeriodTable(allPeriodRows) {
           <th>Bias</th>
           <th>RMSE</th>
           <th>Final</th>
-          <th>Direction</th>
         </tr>
       </thead>
       <tbody>
@@ -425,7 +437,6 @@ function renderPeriodTable(allPeriodRows) {
             <td>${formatSigned(row.bias, 1)} ppm</td>
             <td>${formatNumber(row.rmse, 1)} ppm</td>
             <td>${formatSigned(row.final, 1)} ppm</td>
-            <td><span class="period-signal ${row.signal.toLowerCase()}">${row.signal}</span></td>
           </tr>
         `).join('')}
       </tbody>
@@ -459,13 +470,21 @@ function syncBaselineRange(resetToFirst = false) {
     charts.main.data.datasets[0].label = OBSERVED_SERIES[state.observedSeries]?.chartLabel || 'Reference series';
     charts.delta.data.datasets[0].label = OBSERVED_SERIES[state.observedSeries]?.deltaLabel || 'Reference Δ';
   }
-  const footnote = $('mainChartFootnote');
-  if (footnote) {
-    footnote.hidden = state.observedSeries !== 'spliced';
-  }
   const seriesSource = $('observedSeriesSource');
   seriesSource.href = OBSERVED_SERIES[state.observedSeries]?.source || '#';
   seriesSource.textContent = `Source: ${OBSERVED_SERIES[state.observedSeries]?.label || 'selected series'}`;
+}
+
+function syncPredictionFootnotes() {
+  const series = PREDICTION_SERIES[state.predictionSeries] || PREDICTION_SERIES.fossil_cement;
+  const predictionFootnote = $('predictionChartFootnote');
+  if (predictionFootnote) {
+    predictionFootnote.innerHTML = `<strong>${series.label}:</strong> ${series.note}. Values are converted from OWID's annual MtCO₂ components to GtC using 12/44, then to ppm-equivalent using 2.124 GtC per ppm. <a href="https://github.com/owid/co2-data" target="_blank" rel="noopener">OWID CO₂ dataset</a>`;
+  }
+  const lawFootnote = $('lawDomeChartFootnote');
+  if (lawFootnote) {
+    lawFootnote.hidden = state.observedSeries !== 'spliced';
+  }
 }
 
 function syncPresetSource(name) {
@@ -520,6 +539,7 @@ function render() {
 
   updateCharts(rows, modeled);
   updateReadout(metrics, periodRows);
+  syncPredictionFootnotes();
 }
 
 async function init() {
@@ -534,6 +554,7 @@ async function init() {
   state.annual = annualPayload.rows || [];
   state.metadata = annualPayload.metadata || {};
   applyPreset('default');
+  $('predictionSeries').value = state.predictionSeries;
   createCharts();
   syncBaselineRange(true);
   const presetSource = $('presetSource');
@@ -553,6 +574,11 @@ async function init() {
     state.observedSeries = event.target.value;
     syncBaselineRange(true);
     syncParamsFromUI();
+    render();
+  });
+
+  $('predictionSeries').addEventListener('change', (event) => {
+    state.predictionSeries = event.target.value;
     render();
   });
 
