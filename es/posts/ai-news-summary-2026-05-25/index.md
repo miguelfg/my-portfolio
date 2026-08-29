@@ -6,6 +6,7 @@
 .. category: AI News
 .. description: Resumen diario de novedades IA con foco en impacto técnico y de negocio.
 .. type: text
+.. status: draft
 -->
 
 # AI News Summary — 2026-05-25

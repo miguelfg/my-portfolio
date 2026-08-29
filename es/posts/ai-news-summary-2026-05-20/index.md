@@ -6,6 +6,7 @@
 .. category: AI News
 .. description: Daily AI news summary with ranked signals and portfolio relevance.
 .. type: text
+.. status: draft
 -->
 
 # AI News Summary — 2026-05-20

@@ -2,6 +2,7 @@
 .. title: AI News Summary 2026-06-07
 .. slug: ai-news-summary-2026-06-07
 .. category: AI News
+.. status: draft
 
 # AI News Summary 2026-06-07
 

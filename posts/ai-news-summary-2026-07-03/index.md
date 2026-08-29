@@ -7,7 +7,7 @@
 .. link:
 .. description: Daily AI news summary for 2026-07-03
 .. type: text
-.. status: published
+.. status: draft
 -->
 
 # AI News Summary 2026-07-03

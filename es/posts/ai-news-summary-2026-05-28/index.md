@@ -3,6 +3,7 @@ title: Resumen de Noticias IA - 2026-05-28
 slug: ai-news-summary-2026-05-28
 date: 2026-05-28 07:00:00 UTC
 tags: AI News
+status: draft
 ---
 
 # Resumen de Noticias IA - 2026-05-28

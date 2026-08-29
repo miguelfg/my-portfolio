@@ -6,6 +6,7 @@
 .. category: AI News
 .. description: Daily AI news briefing focused on agent tooling, security standards, and infrastructure shifts.
 .. type: text
+.. status: draft
 -->
 
 ## Executive Brief

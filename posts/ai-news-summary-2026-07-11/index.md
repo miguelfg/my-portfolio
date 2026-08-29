@@ -1,3 +1,10 @@
+.. title: AI News Summary 2026-07-11
+.. slug: ai-news-summary-2026-07-11
+.. date: 2026-07-11 08:00:00 UTC+00:00
+.. tags: AI News
+.. category: AI News
+.. status: draft
+
 # AI News Summary 2026-07-11
 
 ## GAFAM y grandes empresas de IA
