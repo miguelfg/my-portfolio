@@ -1,3 +1,10 @@
+.. title: AI News Summary 2026-07-13
+.. slug: ai-news-summary-2026-07-13
+.. date: 2026-07-13 08:00:00 UTC+00:00
+.. tags: AI News
+.. category: AI News
+.. status: draft
+
 # AI News Summary 2026-07-13
 
 La señal de hoy apunta a una sola dirección: más capacidad de modelo, más control de serving y más producto empaquetado para agentes, con OpenAI, OpenClaw y llama.cpp como las piezas más accionables para lectores técnicos.

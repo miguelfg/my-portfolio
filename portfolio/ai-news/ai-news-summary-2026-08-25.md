@@ -6,6 +6,7 @@
 .. category: AI News
 .. description: Daily AI news summary for 2026-08-25
 .. type: text
+.. status: draft
 -->
 
 # AI News Summary — 2026-08-25

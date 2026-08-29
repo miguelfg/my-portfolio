@@ -2,6 +2,7 @@
 .. title: AI News Summary 2026-06-12
 .. slug: ai-news-summary-2026-06-12
 .. category: AI News
+.. status: draft
 .. tags: AI News, AI, news, summary
 
 # AI News — 2026-06-12

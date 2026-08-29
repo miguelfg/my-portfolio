@@ -6,7 +6,7 @@
 .. category: AI News
 .. description: Resumen diario de noticias de IA
 .. type: text
-.. status: published
+.. status: draft
 -->
 
 # 2025-05-12 Daily AI News Summary

@@ -7,7 +7,7 @@
 .. link:
 .. description: Daily AI news summary for 2026-06-26
 .. type: text
-.. status: published
+.. status: draft
 -->
 
 # AI News Summary 2026-06-26

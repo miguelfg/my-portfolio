@@ -29,11 +29,25 @@ def extract_index_dates() -> list[str]:
     return LINK_RE.findall(text)
 
 
+def ai_news_files() -> list[Path]:
+    files: list[Path] = []
+    for folder in POST_DIRS:
+        if folder.exists():
+            files.extend(sorted(folder.glob("ai-news-summary-*.md")))
+    return files
+
+
 class AiNewsIndexTests(unittest.TestCase):
     def test_index_covers_all_post_files(self) -> None:
         post_dates = discover_posts()
         index_dates = extract_index_dates()
         self.assertEqual(index_dates, post_dates)
+
+    def test_all_ai_news_posts_are_drafts(self) -> None:
+        for path in ai_news_files():
+            text = path.read_text(encoding="utf-8")
+            self.assertIn("status: draft", text, msg=f"{path.name} must stay out of the Blog index")
+            self.assertNotIn("status: published", text, msg=f"{path.name} must stay out of the Blog index")
 
     def test_index_has_no_daily_label(self) -> None:
         text = PAGE.read_text(encoding="utf-8")
