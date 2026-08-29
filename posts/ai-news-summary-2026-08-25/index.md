@@ -1,13 +1,9 @@
-<!--
 .. title: AI News Summary 2026-08-25
 .. slug: ai-news-summary-2026-08-25
-.. date: 2026-08-25 09:00:00 UTC
+.. date: 2026-08-25 08:00:00 UTC+00:00
 .. tags: AI News
 .. category: AI News
-.. description: Daily AI news summary for 2026-08-25
-.. type: text
 .. status: draft
--->
 
 # AI News Summary — 2026-08-25
 
