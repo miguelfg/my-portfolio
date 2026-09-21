@@ -7,43 +7,44 @@
 .. description: Resumen diario de noticias de IA con hechos verificables e interpretación por vertical.
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary — 2026-05-26
+# AI News Summary — May 26, 2026
 
-## Top 5 del día
-1. **Vatican `Magnifica Humanitas`**: marco de gobernanza sobre poder digital, automatización y coste ambiental de la IA.
-2. **GitHub Agentic Workflows v0.75.4**: mejoras de hardening/observabilidad para agentes de coding.
-3. **Notion External Agents API + Workers**: integración de agentes externos en el workspace.
-4. **Hugging Face agent glossary**: claridad técnica entre modelo, scaffold, harness y agente.
-5. **Google Gemini Spark/Omni**: continuidad en agente personal y edición/generación conversacional de vídeo.
+## Top 5 Stories of the Day
+1. **Vatican `Magnifica Humanitas`**: a governance framework addressing digital power, automation, and the environmental cost of AI.
+2. **GitHub Agentic Workflows v0.75.4**: hardening and observability improvements for coding agents.
+3. **Notion External Agents API + Workers**: integration of external agents into the workspace.
+4. **Hugging Face Agent Glossary**: technical clarity on the differences between models, scaffolds, harnesses, and agents.
+5. **Google Gemini Spark/Omni**: continuity in personal agents and conversational video editing/generation.
 
-## GAFAM y grandes empresas de IA
-- El Vaticano publicó `Magnifica Humanitas` (25-May-2026), enfocando IA, poder digital y sostenibilidad.
-- Google documenta Gemini Spark (agente personal) y Gemini Omni (vídeo conversacional multimodal).
-- OpenAI mantiene mejoras recientes de Codex en app/IDE/CLI.
+## GAFAM and Major AI Companies
+- The Vatican published `Magnifica Humanitas` (May 25, 2026), focusing on AI, digital power, and sustainability.
+- Google documents Gemini Spark (personal agent) and Gemini Omni (multimodal conversational video).
+- OpenAI continues to roll out recent Codex improvements across its app, IDE, and CLI.
 
-## Influencers y blogs técnicos
-- Hugging Face publicó una guía técnica sobre terminología de agentes (25-May-2026).
-- Simon Willison se mantiene como lectura complementaria de gobernanza.
-- DataCamp fue revisado sin una novedad inequívoca de últimas 24h.
+## Influencers and Tech Blogs
+- Hugging Face published a technical guide on agent terminology (May 25, 2026).
+- Simon Willison remains a go-to resource for supplementary reading on governance.
+- DataCamp was reviewed with no clear new developments in the last 24 hours.
 
-## Imagen generativa
-- Gemini Omni consolida el frente de creación y edición de vídeo conversacional.
-- Canva AI 2.0 mantiene señal first-party de workflows creativos editables.
-- Pencil + GWI integra insights de audiencia en ejecución creativa.
+## Generative Imaging
+- Gemini Omni strengthens its position in conversational video creation and editing.
+- Canva AI 2.0 continues to emphasize first-party editable creative workflows.
+- Pencil + GWI integrates audience insights into creative execution.
 
-## Chatbots y agentes
-- GitHub Agentic Workflows v0.75.4 incluye hardening de Codex + fix de parsing Gemini + observabilidad.
-- Notion abre runtime y APIs para agentes externos en el workspace.
+## Chatbots and Agents
+- GitHub Agentic Workflows v0.75.4 includes Codex hardening, Gemini parsing fixes, and observability.
+- Notion opens its runtime and APIs to external agents within the workspace.
 
-## IA local y serving
-- LM Studio 0.4.14 Build 4 confirma avances en speculative decoding y serving local.
-- Ollama/vLLM/OpenRouter se mantienen como contexto estratégico del stack local.
+## On-Premises AI and Serving
+- LM Studio 0.4.14 Build 4 confirms progress in speculative decoding and on-premises serving.
+- Ollama/vLLM/OpenRouter remain key components of the on-premises stack.
 
-## Fuentes
+## Sources
 - Vatican bulletin: https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2026/05/25/260525f.html
-- `Magnifica Humanitas` (texto): https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20250525-magnifica-humanitas.html
+- `Magnifica Humanitas` (text): https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20250525-magnifica-humanitas.html
 - Google Gemini release notes (Spark/Omni): https://gemini.google/overview/release-notes/
 - OpenAI release notes (Codex): https://help.openai.com/en/articles/6825453-chatgpt-release-notes
 - Hugging Face blog (agent terms): https://huggingface.co/blog/harness-scaffold-and-the-ai-agent-terms-worth-getting-right

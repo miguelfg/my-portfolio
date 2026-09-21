@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-08-02
 
 La edición de hoy está dominada por una misma idea: hacer más con menos. OpenAI empuja el coste por unidad de inteligencia hacia abajo, mientras que el resto del ecosistema acelera en MCP, creativos generativos, agentes y serving local.

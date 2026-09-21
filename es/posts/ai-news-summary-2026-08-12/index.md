@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 ## GAFAM y grandes empresas de IA
 - No se verificó hoy un post nuevo y fiable de GAFAM dentro de la ventana de 24h. Las páginas de OpenAI devolvieron 403 en acceso directo, así que este bucket queda sin un lead confirmado para hoy.
 

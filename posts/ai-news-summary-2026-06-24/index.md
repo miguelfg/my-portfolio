@@ -8,54 +8,55 @@
 .. description: Daily AI news summary for 2026-06-24
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary 2026-06-24
+# AI News Summary June 24, 2026
 
-La jornada trae movimientos fuertes en agentes colaborativos, plataformas de modelos y serving local: Claude Tag abre una nueva forma de trabajar con Claude en Slack, OpenAI muestra impacto real de GPT-5 en investigación científica, Google formaliza Interactions API para Gemini, OpenClaw y llama.cpp publican releases frescos, y Adobe sigue empujando Firefly y Creative Cloud hacia flujos creativos más autónomos.
+Today brings major developments in collaborative agents, model platforms, and local serving: Claude Tag introduces a new way to work with Claude on Slack, OpenAI demonstrates the real-world impact of GPT-5 on scientific research, Google formalizes the Interactions API for Gemini, OpenClaw, and Llama.Cpp releases are out, and Adobe continues to push Firefly and Creative Cloud toward more autonomous creative workflows.
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### Anthropic lanza Claude Tag
+### Anthropic Launches Claude Tag
 
-Anthropic publicó `Introducing Claude Tag`, una nueva forma de trabajar con Claude en Slack. El sistema permite invitar a Claude a canales seleccionados, conectarlo con herramientas y datos, y delegarle tareas con `@Claude`. Fuente: [Anthropic](https://www.anthropic.com/news/introducing-claude-tag)
+Anthropic released `Introducing Claude Tag`, a new way to work with Claude in Slack. The system allows users to invite Claude to selected channels, connect it to tools and data, and delegate tasks to it using `@Claude`. Source: [Anthropic](https://www.anthropic.com/news/introducing-claude-tag)
 
-### OpenAI: GPT-5 ayuda a un inmunólogo a resolver un misterio de 3 años
+### OpenAI: GPT-5 Helps an Immunologist Solve a 3-Year-Old Mystery
 
-OpenAI contó cómo GPT-5 Pro ayudó al inmunólogo Derya Unutmaz a retomar un problema de investigación sobre células T y glucosa. Fuente: [OpenAI](https://openai.com/index/gpt-5-immunology-mystery/)
+OpenAI shared how GPT-5 Pro helped immunologist Derya Unutmaz revisit a research problem involving T cells and glucose. Source: [OpenAI](https://openai.com/index/gpt-5-immunology-mystery/)
 
-### Google anuncia Interactions API para Gemini models and agents
+### Google Announces Interactions API for Gemini Models and Agents
 
-Google presentó `Interactions API`, un endpoint unificado para Gemini con estado server-side, ejecución en background, combinación de herramientas y generación multimodal. Fuente: [Google](https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/)
+Google introduced `Interactions API`, a unified endpoint for Gemini featuring server-side state, background execution, tool integration, and multimodal generation. Source: [Google](https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/)
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Latent Space explica Claude Tag como agentes multipersona y persistentes
+### Latent Space Explains Claude Tag as Multi-Person and Persistent Agents
 
-Latent Space publicó `[AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack`, conectando el lanzamiento de Anthropic con la evolución hacia agentes proactivos y persistentes dentro del trabajo en equipo. Fuente: [Latent Space](https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive)
+Latent Space published `[AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack`, linking Anthropic’s launch to the evolution toward proactive and persistent agents within teamwork. Source: [Latent Space](https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive)
 
-### Simon Willison: señales técnicas recientes del feed
+### Simon Willison: Recent Technical Posts from His Feed
 
-El feed de Simon Willison recogió el 2026-06-23 entradas técnicas como `datasette 1.0a35` y `OPFS + Pyodide test harness`. Fuente: [feed atom](https://simonwillison.net/atom/everything/)
+Simon Willison’s feed featured technical posts such as `datasette 1.0a35` and `OPFS + Pyodide test harness` on June 23, 2026. Source: [Atom feed](https://simonwillison.net/atom/everything/)
 
-## Imagen generativa
+## Generative imagery
 
-### Adobe amplía Creative Agent sobre Firefly y Creative Cloud
+### Adobe Expands Creative Agent on Firefly and Creative Cloud
 
-Adobe listó `Adobe Unveils Major Expansion of Creative Agent Across Firefly and Creative Cloud Apps Including Photoshop and Premiere`, reforzando Firefly y Creative Cloud como parte de flujos creativos más autónomos. Fuente: [Adobe Newsroom](https://news.adobe.com/news)
+Adobe released `Adobe Unveils Major Expansion of Creative Agent Across Firefly and Creative Cloud Apps Including Photoshop and Premiere`, enhancing Firefly and Creative Cloud as part of more autonomous creative workflows. Source: [Adobe Newsroom](https://news.adobe.com/news)
 
-## Chatbots y agentes
+## Chatbots and Agents
 
 ### OpenClaw 2026.6.10
 
-OpenClaw publicó `openclaw 2026.6.10` con fast mode automático, routing de modelos más fiable, estado de sesión/canal más seguro y políticas confiables al componer hooks. Fuente: [GitHub](https://github.com/openclaw/openclaw/releases/tag/v2026.6.10)
+OpenClaw released `openclaw 2026.6.10` with automatic fast mode, more reliable model routing, more secure session/channel state, and trusted policies when composing hooks. Source: [GitHub](https://github.com/openclaw/openclaw/releases/tag/v2026.6.10)
 
-## IA local y serving
+## On-premises AI and serving
 
 ### llama.cpp b9776
 
-llama.cpp publicó el release `b9776`, con un fix de Vulkan para evitar overflow y binarios nuevos para múltiples plataformas. Fuente: [GitHub](https://github.com/ggml-org/llama.cpp/releases/tag/b9776)
+llama.cpp released `b9776`, featuring a Vulkan fix to prevent overflow and new binaries for multiple platforms. Source: [GitHub](https://github.com/ggml-org/llama.cpp/releases/tag/b9776)
 
-### OpenRouter sigue empujando gobernanza y residencia de datos en la capa de routing
+### OpenRouter continues to drive governance and data residency at the routing layer
 
-OpenRouter publicó `AI Governance Checklist: Your LLM Architecture Comes First` y `How to Enforce AI Data Residency Without Building Local Infrastructure`, reforzando la importancia del routing como punto de control para compliance y residencia. Fuentes: [checklist](https://openrouter.ai/blog/insights/ai-governance-checklist/) y [residency](https://openrouter.ai/blog/insights/ai-data-residency/)
+OpenRouter released `AI Governance Checklist: Your LLM Architecture Comes First` and `How to Enforce AI Data Residency Without Building Local Infrastructure`, reinforcing the importance of routing as a control point for compliance and residency. Sources: [checklist](https://openrouter.ai/blog/insights/ai-governance-checklist/) and [residency](https://openrouter.ai/blog/insights/ai-data-residency/)

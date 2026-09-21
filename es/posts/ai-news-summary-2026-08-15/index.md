@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-08-15
 
 Today’s cleanest signal is that the agent stack keeps getting more practical: stronger serving economics, more capable enterprise orchestration, and a steady push toward multimodal tools that can actually be used in workflows.

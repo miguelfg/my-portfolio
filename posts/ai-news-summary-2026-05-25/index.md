@@ -7,48 +7,49 @@
 .. description: Resumen diario de novedades IA con foco en impacto técnico y de negocio.
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary — 2026-05-25
+# AI News Summary — May 25, 2026
 
-## GAFAM y grandes empresas de IA
-- **Google I/O 2026** domina la agenda con una batería de anuncios agentic: Gemini 3.5 Flash, Gemini Omni, evolución de Search/AI Mode y componentes de agentes gestionados.
-- **NVIDIA Rubin** consolida el frente infra: foco explícito en economía de inferencia y despliegue a escala con hyperscalers.
-- **AWS/Microsoft/Meta** muestran continuidad de narrativa AI aplicada (agentes + productividad + plataforma), aunque con menor ruptura puntual en esta ventana.
+## GAFAM and Major AI Companies
+- **Google I/O 2026** dominates the agenda with a slew of agent-related announcements: Gemini 3.5 Flash, Gemini Omni, the evolution of Search/AI Mode, and managed agent components.
+- **NVIDIA Rubin** strengthens the infrastructure front: explicit focus on inference efficiency and deployment at scale with hyperscalers.
+- **AWS/Microsoft/Meta** demonstrate continuity in their applied AI narrative (agents + productivity + platform), though with fewer specific breakthroughs during this window.
 
-## Influencers y blogs técnicos
-- **Simon Willison** refuerza el mensaje “menos hype, más operación”: calidad de reportes, seguridad de agentes y rigor técnico.
-- **DataCamp + Hugging Face Blog** reflejan una ola de contenido práctico sobre agent harnesses, modelos frontier y serving reproducible.
-- Señal estructural: el valor está pasando de “qué modelo salió” a “cómo se opera de forma fiable”.
+## Influencers and Tech Blogs
+- **Simon Willison** reinforces the message “less hype, more operation”: quality of reports, agent security, and technical rigor.
+- **DataCamp + Hugging Face Blog** reflect a wave of practical content on agent harnesses, state-of-the-art models, and reproducible serving.
+- Structural trend: the focus is shifting from “which model was released” to “how to operate it reliably.”
 
-## Imagen generativa
-- **Canva** acelera integración AI en el flujo real (Gemini + Claude), no solo en generación aislada de assets.
-- **Freepik/Magnific** mantiene ritmo de mejoras orientadas a producción visual (tooling y onboarding de modelos).
-- **Pencil** muestra señales de novedades (p.ej. Veo 3) con verificación parcial; mantener en seguimiento con prudencia.
-- Nota de higiene de fuentes: URL configurada de OpenAI images devolvió 404 en este run (conviene actualizar mapeo).
+## Generative Imaging
+- **Canva** is accelerating AI integration into the actual workflow (Gemini + Claude), not just in isolated asset generation.
+- **Freepik/Magnific** maintains a steady pace of improvements focused on visual production (tooling and model onboarding).
+- **Pencil** shows signs of new developments (e.g., Veo 3) with partial verification; monitor with caution.
+- Source maintenance note: The configured OpenAI images URL returned a 404 in this run (mapping should be updated).
 
-## Chatbots y agentes
-- **Hermes Agent v0.14.0**: release de alto impacto (expansión de herramientas, integración plataformas y mejoras de performance).
-- **OpenClaw**: cadencia release muy alta con foco en gateway, aprobación y observabilidad.
-- **Gemini Spark** aparece como apuesta por agente personal persistente.
-- **Perplexity** avanza su tesis “Computer” como interfaz agentic integral.
+## Chatbots and Agents
+- **Hermes Agent v0.14.0**: high-impact release (expansion of tools, platform integration, and performance improvements).
+- **OpenClaw**: very high release cadence with a focus on gateways, approval, and observability.
+- **Gemini Spark** emerges as a bet on a persistent personal agent.
+- **Perplexity** advances its “Computer” thesis as a comprehensive agentic interface.
 
-## IA local y serving
-- **OpenRouter** publica capacidades relevantes para builders: human-in-the-loop tools, web tools consistentes, response caching y audio APIs.
-- **LM Studio** sigue reforzando compatibilidad API y despliegue local en entornos profesionales.
-- **llama.cpp** mantiene velocidad extrema de releases y cobertura amplia de backends.
-- **Ollama/vLLM** sostienen el momentum técnico en inferencia local/híbrida y optimización de throughput.
+## On-Premises AI and Serving
+- **OpenRouter** releases key capabilities for builders: human-in-the-loop tools, consistent web tools, response caching, and audio APIs.
+- **LM Studio** continues to strengthen API compatibility and on-premises deployment in professional environments.
+- **llama.cpp** maintains an extremely fast release cadence and broad backend coverage.
+- **Ollama/vLLM** sustain technical momentum in local/hybrid inference and throughput optimization.
 
-## Lectura editorial
-- La señal dominante del día fue la consolidación de workflows agentic en producto e infraestructura.
-- En imagen generativa y serving local hubo continuidad técnica relevante, con menos rupturas puntuales de última hora.
-- El patrón transversal: menos foco en “demo de modelo” y más en operación real, observabilidad y despliegue.
+## Editorial Roundup
+- The dominant trend of the day was the consolidation of agentic workflows in product and infrastructure.
+- In generative imaging and on-premises serving, there was significant technical continuity, with fewer last-minute disruptions.
+- The overarching trend: less focus on “model demos” and more on real-world operations, observability, and deployment.
 
-## Top 5 del día
-1. Google I/O 2026: expansión agentic end-to-end.
-2. NVIDIA Rubin: nueva capa de economía de inferencia.
-3. Hermes Agent v0.14.0: salto operativo en ecosistema de agentes.
-4. OpenRouter: piezas clave de orquestación multi-modelo.
-5. Canva AI pipeline: integración de diseño dentro de copilotos generalistas.
+## Top 5 of the Day
+1. Google I/O 2026: end-to-end agentic expansion.
+2. NVIDIA Rubin: a new layer for inference efficiency.
+3. Hermes Agent v0.14.0: an operational leap in the agent ecosystem.
+4. OpenRouter: key components of multi-model orchestration.
+5. Canva AI pipeline: design integration within general-purpose copilots.
 
-**Fuentes principales:** Google Blog, NVIDIA Investor Relations, Hermes/OpenClaw GitHub Releases, OpenRouter Announcements, Canva Newsroom, LM Studio Blog, llama.cpp Releases.
+**Main sources:** Google Blog, NVIDIA Investor Relations, Hermes/OpenClaw GitHub Releases, OpenRouter Announcements, Canva Newsroom, LM Studio Blog, llama.cpp Releases.

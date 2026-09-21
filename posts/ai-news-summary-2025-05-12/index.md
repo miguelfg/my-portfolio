@@ -7,16 +7,17 @@
 .. description: Resumen diario de noticias de IA
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# 2025-05-12 Daily AI News Summary
+# May 12, 2025 Daily AI News Summary
 
-Hoy destacamos los siguientes avances y noticias del sector:
+Today we highlight the following developments and news from the sector:
 
-* **Evaluación de Modelos**: El gobierno de EE. UU. ha anunciado que implementará protocolos de evaluación para los nuevos modelos de IA de gran escala antes de su lanzamiento público, buscando mejorar la seguridad y transparencia.
-* **IA contra la Desinformación**: La Fundación Maldita.es ha presentado un nuevo asistente basado en IA diseñado específicamente para combatir la desinformación en tiempo real.
-* **Impacto Económico y Laboral**: Analistas reflexionan sobre cómo los cientos de miles de millones de dólares invertidos en IA durante 2025 han reconfigurado el mercado laboral y las preocupaciones sobre salud mental en la fuerza de trabajo digital.
+* **Model Evaluation**: The U.S. government has announced that it will implement evaluation protocols for new large-scale AI models prior to their public release, seeking to improve safety and transparency.
+* **AI Against Disinformation**: The Maldita.es Foundation has unveiled a new AI-powered assistant designed specifically to combat disinformation in real time.
+* **Economic and Labor Impact**: Analysts reflect on how the hundreds of billions of dollars invested in AI through 2025 have reshaped the labor market and raised concerns about mental health among the digital workforce.
 
-## Enlaces de interés
-- [El gobierno de EEUU evaluará los modelos de IA (Yahoo Finanzas)](https://es-us.finanzas.yahoo.com/noticias/gobierno-eeuu-evaluar%C3%A1-modelos-ia-180758041.html)
-- [Fundación Maldita.es y su asistente IA (bCube)](https://bcube.bitban.com/blog/en-el-radar-de-bcube-las-noticias-de-la-semana-12-mayo-2025)
+## Links of Interest
+- [The U.S. government will evaluate AI models (Yahoo Finance)](https://es-us.finanzas.yahoo.com/noticias/gobierno-eeuu-evaluar%C3%A1-modelos-ia-180758041.html)
+- [The Maldita.es Foundation and its AI assistant (bCube)](https://bcube.bitban.com/blog/en-el-radar-de-bcube-las-noticias-de-la-semana-12-mayo-2025)

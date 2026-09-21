@@ -507,6 +507,73 @@
         }
     }
 
+    /* ===== LANGUAGE SWITCHER ===== */
+    .language-switcher {
+        position: relative;
+    }
+
+    .language-switcher__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        min-height: 44px;
+        padding: 0.55rem 0.8rem;
+        border: 1px solid color-mix(in srgb, var(--c-nav-link) 45%, transparent);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--c-nav-link);
+        font: 600 0.9rem var(--font-display);
+        cursor: pointer;
+    }
+
+    .language-switcher__toggle:hover,
+    .language-switcher__toggle[aria-expanded="true"] {
+        background: color-mix(in srgb, var(--c-on-accent) 12%, transparent);
+        color: var(--c-on-accent);
+    }
+
+    .language-switcher__menu {
+        position: absolute;
+        z-index: 20;
+        top: calc(100% + 0.35rem);
+        right: 0;
+        min-width: 9rem;
+        margin: 0;
+        padding: 0.35rem;
+        border: 1px solid var(--c-border);
+        border-radius: 6px;
+        background: var(--c-bg);
+        box-shadow: 0 8px 24px var(--c-shadow);
+        list-style: none;
+    }
+
+    .language-switcher__menu[hidden] {
+        display: none;
+    }
+
+    .language-switcher__menu a {
+        display: block;
+        padding: 0.6rem 0.7rem;
+        border-radius: 4px;
+        color: var(--c-text);
+        font: 600 0.9rem var(--font-display);
+        white-space: nowrap;
+    }
+
+    .language-switcher__menu a:hover,
+    .language-switcher__menu a:focus-visible {
+        background: var(--c-accent-tint);
+        color: var(--c-accent-dark);
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .language-switcher__menu {
+            left: 0;
+            right: auto;
+        }
+    }
+
     /* ===== PRINT ===== */
     @media print {
         body {
@@ -537,7 +604,69 @@
         }
     }
 </style>
-<meta name="author" content="Miguel Fiandor">
+<script>
+(function () {
+    "use strict";
+    function setupLanguageSwitcher() {
+        var list = document.querySelector(".bootblog4-right-nav");
+        if (!list || list.dataset.languageSwitcherReady === "true") return;
+        var links = Array.from(list.querySelectorAll('a[hreflang]'));
+        var current = document.documentElement.lang || "en";
+        var alternate = {};
+        alternate[current] = window.location.href;
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+            if (link.type !== "application/rss+xml") alternate[link.hreflang] = link.href;
+        });
+        ["en", "es"].forEach(function (lang) {
+            if (!alternate[lang]) {
+                var path = window.location.pathname.replace(/^\/my-portfolio/, "");
+                path = path.replace(/^\/es(?=\/|$)/, "");
+                alternate[lang] = new URL((lang === "es" ? "/my-portfolio/es" : "/my-portfolio") + (path || "/"), window.location.origin).href;
+            }
+        });
+        var wrapper = document.createElement("li");
+        wrapper.className = "nav-item language-switcher";
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "language-switcher__toggle";
+        button.setAttribute("aria-haspopup", "true");
+        button.setAttribute("aria-expanded", "false");
+        button.innerHTML = '<span aria-hidden="true">◎</span><span>' + current.toUpperCase() + '</span><span aria-hidden="true">▾</span>';
+        var menu = document.createElement("ul");
+        menu.className = "language-switcher__menu";
+        menu.hidden = true;
+        menu.setAttribute("aria-label", "Choose language");
+        [{ code: "en", label: "English" }, { code: "es", label: "Español" }].forEach(function (item) {
+            var entry = document.createElement("li");
+            var link = document.createElement("a");
+            link.href = alternate[item.code];
+            link.hreflang = item.code;
+            link.textContent = item.code.toUpperCase() + " — " + item.label;
+            if (item.code === current) link.setAttribute("aria-current", "page");
+            entry.appendChild(link);
+            menu.appendChild(entry);
+        });
+        button.addEventListener("click", function () {
+            var open = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!open));
+            menu.hidden = open;
+            if (!open) menu.querySelector("a").focus();
+        });
+        document.addEventListener("click", function (event) {
+            if (!wrapper.contains(event.target)) {
+                button.setAttribute("aria-expanded", "false");
+                menu.hidden = true;
+            }
+        });
+        wrapper.appendChild(button);
+        wrapper.appendChild(menu);
+        list.replaceChildren(wrapper);
+        list.dataset.languageSwitcherReady = "true";
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setupLanguageSwitcher);
+    else setupLanguageSwitcher();
+}());
+</script><meta name="author" content="Miguel Fiandor">
 <meta name="robots" content="noindex">
 <meta property="og:site_name" content="Miguel Fiandor - Data Analyst &amp; Engineer">
 <meta property="og:title" content="AI News Summary 2026-05-29">
@@ -634,57 +763,61 @@
 
         </div>
         
+        <div class="metadata posttranslations translations">
+            <h3 class="posttranslations-intro">Also available in:</h3>
+                <p><a href="../../es/posts/ai-news-summary-2026-05-29/" rel="alternate" hreflang="es">Español</a></p>
+        </div>
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <h2>AI News Summary — 2026-05-29</h2>
-<p><em>Nota: Resumen generado a partir de la actividad de fuentes monitorizadas al 29 de mayo de 2026.</em></p>
-<h3>Top 5 del día</h3>
+    <h2>AI News Summary — May 29, 2026</h2>
+<p><em>Note: Summary generated based on activity from monitored sources as of May 29, 2026.</em></p>
+<h3>Top 5 Stories of the Day</h3>
 <ol>
 <li>
-<strong>Mistral AI (Financiación y Infraestructura)</strong>: Mistral asegura 830 millones de dólares en deuda para un centro de datos en París, impulsando su independencia tecnológica frente a gigantes estadounidenses.</li>
+<strong>Mistral AI (Funding and Infrastructure)</strong>: Mistral secures $830 million in debt financing for a data center in Paris, bolstering its technological independence from U.S. giants.</li>
 <li>
-<strong>Ecosistema de Agentes (GitHub 2026)</strong>: GitHub Constellation 2026 destaca la transformación en la forma en que 27M de desarrolladores codifican mediante flujos de trabajo agente-céntricos.</li>
+<strong>Agent Ecosystem (GitHub 2026)</strong>: GitHub Constellation 2026 highlights the transformation in how 27 million developers code using agent-centric workflows.</li>
 <li>
-<strong>Hardware y Soberanía (Chips)</strong>: Analistas reportan que Mistral considera el desarrollo de chips de IA propios para reducir la dependencia de Nvidia, marcando una tendencia soberana europea.</li>
+<strong>Hardware and Sovereignty (Chips)</strong>: Analysts report that Mistral is considering developing its own AI chips to reduce dependence on Nvidia, marking a trend toward European sovereignty.</li>
 <li>
-<strong>Plataformas Empresariales (Mistral Forge)</strong>: Consolidación de "Mistral Forge" como plataforma enterprise para modelos customizados bajo demanda.</li>
+<strong>Enterprise Platforms (Mistral Forge)</strong>: Consolidation of “Mistral Forge” as an enterprise platform for on-demand, customized models.</li>
 <li>
-<strong>Consolidación del Era Agéntica (Google)</strong>: Google continúa su despliegue hacia la era agéntica con plataformas empresariales multimodales integradas.</li>
+<strong>Consolidation of the Agent-Centric Era (Google)</strong>: Google continues its push toward the agent-centric era with integrated multimodal enterprise platforms.</li>
 </ol>
-<h3>GAFAM y grandes empresas de IA</h3>
+<h3>GAFAM and Major AI Companies</h3>
 <ul>
 <li>
-<strong>Google</strong>: Continúa la estrategia agéntica iniciada en abril con la integración de Gemini Enterprise Agent Platform.</li>
+<strong>Google</strong>: Continues the agent-based strategy launched in April with the integration of the Gemini Enterprise Agent Platform.</li>
 <li>
-<strong>Mistral</strong>: Figura central de la semana tras anunciar deuda masiva para infraestructura propia, posicionándose como el contrapeso europeo a OpenAI y Anthropic.</li>
+<strong>Mistral</strong>: The central figure of the week after announcing massive debt financing for its own infrastructure, positioning itself as the European counterweight to OpenAI and Anthropic.</li>
 </ul>
-<h3>Influencers y blogs técnicos</h3>
+<h3>Influencers and Tech Blogs</h3>
 <ul>
 <li>
-<strong>Bismarck Brief</strong>: Analiza el ascenso de Mistral bajo la premisa de la disponibilidad de cómputo en 2026.</li>
+<strong>Bismarck Brief</strong>: Analyzes Mistral’s rise based on the premise of computing availability by 2026.</li>
 <li>
-<strong>GitHub</strong>: Foco en la adopción masiva de herramientas de IA por parte de su base de desarrolladores durante el evento Constellation.</li>
+<strong>GitHub</strong>: Focus on the widespread adoption of AI tools by its developer base during the Constellation event.</li>
 </ul>
-<h3>Imagen generativa</h3>
+<h3>Generative Imaging</h3>
 <ul>
-<li>La tendencia se desplaza hacia la personalización de modelos (Forge/Custom) más que a la mera generación masiva genérica, integrando insights específicos de usuario.</li>
+<li>The trend is shifting toward model customization (Forge/Custom) rather than mere generic mass generation, integrating user-specific insights.</li>
 </ul>
-<h3>Chatbots y agentes</h3>
+<h3>Chatbots and Agents</h3>
 <ul>
-<li>GitHub subraya la madurez de los flujos de trabajo "agent-first" en el desarrollo de software.</li>
-<li>Los agentes se definen cada vez más por su capacidad de realizar tareas integrales en lugar de ser solo interfaces conversacionales.</li>
+<li>GitHub highlights the maturity of “agent-first” workflows in software development.</li>
+<li>Agents are increasingly defined by their ability to perform comprehensive tasks rather than merely serving as conversational interfaces.</li>
 </ul>
-<h3>IA local y serving</h3>
+<h3>On-Premises AI and Serving</h3>
 <ul>
-<li>El sector mantiene una presión constante por la optimización de infraestructuras propias (caso Mistral/centros de datos) para no depender de la escalabilidad limitada de terceros.</li>
+<li>The industry continues to face constant pressure to optimize its own infrastructure (e.g., Mistral/data centers) to avoid reliance on the limited scalability of third-party providers.</li>
 </ul>
-<h3>Fuentes</h3>
+<h3>Sources</h3>
 <ul>
 <li>Mistral Debt/Data Center: https://seekingalpha.com/news/4598027-mistral-considers-developing-ai-chips-as-it-competes-with-openai-and-anthropic</li>
 <li>Mistral Forge: https://techcrunch.com/2026/03/17/mistral-forge-nvidia-gtc-build-your-own-ai-enterprise/</li>
 <li>GitHub Constellation 2026: https://www.youtube.com/watch?v=841bpUNJBU8&amp;vl=en</li>
 <li>Bismarck Analysis (Mistral/AI 2026): https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute</li>
-<li>Google AI Updates (Abril-Mayo 2026): https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/</li>
+<li>Google AI Updates (April–May 2026): https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/</li>
 </ul>
 </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">

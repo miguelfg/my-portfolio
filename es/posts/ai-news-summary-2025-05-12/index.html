@@ -507,6 +507,73 @@
         }
     }
 
+    /* ===== LANGUAGE SWITCHER ===== */
+    .language-switcher {
+        position: relative;
+    }
+
+    .language-switcher__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        min-height: 44px;
+        padding: 0.55rem 0.8rem;
+        border: 1px solid color-mix(in srgb, var(--c-nav-link) 45%, transparent);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--c-nav-link);
+        font: 600 0.9rem var(--font-display);
+        cursor: pointer;
+    }
+
+    .language-switcher__toggle:hover,
+    .language-switcher__toggle[aria-expanded="true"] {
+        background: color-mix(in srgb, var(--c-on-accent) 12%, transparent);
+        color: var(--c-on-accent);
+    }
+
+    .language-switcher__menu {
+        position: absolute;
+        z-index: 20;
+        top: calc(100% + 0.35rem);
+        right: 0;
+        min-width: 9rem;
+        margin: 0;
+        padding: 0.35rem;
+        border: 1px solid var(--c-border);
+        border-radius: 6px;
+        background: var(--c-bg);
+        box-shadow: 0 8px 24px var(--c-shadow);
+        list-style: none;
+    }
+
+    .language-switcher__menu[hidden] {
+        display: none;
+    }
+
+    .language-switcher__menu a {
+        display: block;
+        padding: 0.6rem 0.7rem;
+        border-radius: 4px;
+        color: var(--c-text);
+        font: 600 0.9rem var(--font-display);
+        white-space: nowrap;
+    }
+
+    .language-switcher__menu a:hover,
+    .language-switcher__menu a:focus-visible {
+        background: var(--c-accent-tint);
+        color: var(--c-accent-dark);
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .language-switcher__menu {
+            left: 0;
+            right: auto;
+        }
+    }
+
     /* ===== PRINT ===== */
     @media print {
         body {
@@ -537,7 +604,69 @@
         }
     }
 </style>
-<meta name="author" content="Miguel Fiandor">
+<script>
+(function () {
+    "use strict";
+    function setupLanguageSwitcher() {
+        var list = document.querySelector(".bootblog4-right-nav");
+        if (!list || list.dataset.languageSwitcherReady === "true") return;
+        var links = Array.from(list.querySelectorAll('a[hreflang]'));
+        var current = document.documentElement.lang || "en";
+        var alternate = {};
+        alternate[current] = window.location.href;
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+            if (link.type !== "application/rss+xml") alternate[link.hreflang] = link.href;
+        });
+        ["en", "es"].forEach(function (lang) {
+            if (!alternate[lang]) {
+                var path = window.location.pathname.replace(/^\/my-portfolio/, "");
+                path = path.replace(/^\/es(?=\/|$)/, "");
+                alternate[lang] = new URL((lang === "es" ? "/my-portfolio/es" : "/my-portfolio") + (path || "/"), window.location.origin).href;
+            }
+        });
+        var wrapper = document.createElement("li");
+        wrapper.className = "nav-item language-switcher";
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "language-switcher__toggle";
+        button.setAttribute("aria-haspopup", "true");
+        button.setAttribute("aria-expanded", "false");
+        button.innerHTML = '<span aria-hidden="true">◎</span><span>' + current.toUpperCase() + '</span><span aria-hidden="true">▾</span>';
+        var menu = document.createElement("ul");
+        menu.className = "language-switcher__menu";
+        menu.hidden = true;
+        menu.setAttribute("aria-label", "Choose language");
+        [{ code: "en", label: "English" }, { code: "es", label: "Español" }].forEach(function (item) {
+            var entry = document.createElement("li");
+            var link = document.createElement("a");
+            link.href = alternate[item.code];
+            link.hreflang = item.code;
+            link.textContent = item.code.toUpperCase() + " — " + item.label;
+            if (item.code === current) link.setAttribute("aria-current", "page");
+            entry.appendChild(link);
+            menu.appendChild(entry);
+        });
+        button.addEventListener("click", function () {
+            var open = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!open));
+            menu.hidden = open;
+            if (!open) menu.querySelector("a").focus();
+        });
+        document.addEventListener("click", function (event) {
+            if (!wrapper.contains(event.target)) {
+                button.setAttribute("aria-expanded", "false");
+                menu.hidden = true;
+            }
+        });
+        wrapper.appendChild(button);
+        wrapper.appendChild(menu);
+        list.replaceChildren(wrapper);
+        list.dataset.languageSwitcherReady = "true";
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setupLanguageSwitcher);
+    else setupLanguageSwitcher();
+}());
+</script><meta name="author" content="Miguel Fiandor">
 <meta name="robots" content="noindex">
 <meta property="og:site_name" content="Miguel Fiandor - Data Analyst &amp; Engineer">
 <meta property="og:title" content="2025-05-12 Daily AI News Summary">
@@ -629,6 +758,10 @@
 
         </div>
         
+        <div class="metadata posttranslations translations">
+            <h3 class="posttranslations-intro">También disponible en:</h3>
+                <p><a href="../../../posts/ai-news-summary-2025-05-12/" rel="alternate" hreflang="en">English</a></p>
+        </div>
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <h2>2025-05-12 Daily AI News Summary</h2>

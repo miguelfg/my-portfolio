@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-07-13
 
 La señal de hoy apunta a una sola dirección: más capacidad de modelo, más control de serving y más producto empaquetado para agentes, con OpenAI, OpenClaw y llama.cpp como las piezas más accionables para lectores técnicos.

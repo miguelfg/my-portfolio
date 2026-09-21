@@ -4,6 +4,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-06-06
 
 La senal principal de hoy es clara: la IA se esta moviendo hacia sistemas mas persistentes, controlables y productivos. Memoria en asistentes, agentes comerciales en mensajeria, diseno editable desde prompts y serving local mas fuerte apuntan a una misma direccion: menos demos aisladas y mas infraestructura para flujos reales.

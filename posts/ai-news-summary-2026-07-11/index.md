@@ -5,39 +5,40 @@
 .. category: AI News
 .. status: draft
 
-# AI News Summary 2026-07-11
+.. lang: en
+# AI News Summary July 11, 2026
 
-## GAFAM y grandes empresas de IA
-### GPT-5.6 entra en Microsoft 365 Copilot
-OpenAI dijo que [GPT-5.6 pasa a ser el modelo preferido en Microsoft 365 Copilot](https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/) y que llega a Word, Excel, PowerPoint, Chat y Cowork. La misma compañía presentó la familia [GPT-5.6](https://openai.com/index/gpt-5-6/) con un mensaje claro de más trabajo útil por token y mejor rendimiento por dólar, lo que convierte el anuncio en una historia de distribución enterprise y no solo de laboratorio.
+## GAFAM and Major AI Companies
+### GPT-5.6 Comes to Microsoft 365 Copilot
+OpenAI announced that [GPT-5.6 is now the default model in Microsoft 365 Copilot](https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/) and is coming to Word, Excel, PowerPoint, Chat, and Cowork. The company also introduced the [GPT-5.6](https://openai.com/index/gpt-5-6/) family with a clear message of more useful work per token and better value for money, making the announcement a story of enterprise deployment rather than just a lab experiment.
 
-### Anthropic abre la conversación pública sobre preguntas difíciles de IA
-Anthropic lanzó [hard questions about AI](https://www.anthropic.com/news/hard-questions), una iniciativa para recoger preguntas difíciles sobre empleo, sociedad, ciencia y riesgos. No es un lanzamiento de producto, pero sí una señal de cómo una gran empresa del sector quiere influir en el marco público de debate.
+### Anthropic Opens Public Conversation on Tough AI Questions
+Anthropic launched [hard questions about AI](https://www.anthropic.com/news/hard-questions), an initiative to collect tough questions about employment, society, science, and risks. It’s not a product launch, but it is a sign of how a major company in the sector wants to influence the public discourse.
 
-## Influencers y blogs técnicos
-### Simon Willison aterriza lo importante de GPT-5.6
-En su análisis de [GPT-5.6](https://simonwillison.net/2026/Jul/9/gpt-5-6/), Simon Willison destacó precios, context window, benchmarks y detalles de API como Programmatic Tool Calling, multi-agent, prompt cache breakpoints y `detail: original` para imágenes. Es la lectura más útil del bloque OpenAI para quien necesita convertir anuncio en criterio técnico.
+## Influencers and Tech Blogs
+### Simon Willison breaks down the key points of GPT-5.6
+In his analysis of [GPT-5.6](https://simonwillison.net/2026/Jul/9/gpt-5-6/), Simon Willison highlighted pricing, context window, benchmarks, and API details such as Programmatic Tool Calling, multi-agent, prompt cache breakpoints, and `detail: original` for images. It’s the most useful read from the OpenAI section for anyone who needs to translate marketing hype into technical criteria.
 
-### ChatGPT Work también reabre el debate sobre cloud, desktop y contexto
-En otra nota del [10 de julio](https://simonwillison.net/2026/Jul/10/openai/), Simon rescató la aclaración de OpenAI sobre ChatGPT Work, el contraste entre cloud y desktop y la pregunta práctica de dónde viven las conversaciones. Ese matiz convierte el anuncio en algo más que una demo: lo lleva al terreno de arquitectura y gobernanza del trabajo asistido por IA.
+### ChatGPT Work Also Reopens the Debate on Cloud, Desktop, and Context
+In another post from [July 10](https://simonwillison.net/2026/Jul/10/openai/), Simon highlighted OpenAI’s clarification on ChatGPT Work, the contrast between cloud and desktop, and the practical question of where conversations take place. That nuance turns the announcement into more than just a demo: it brings it into the realm of architecture and governance for AI-assisted work.
 
-## Imagen generativa
-### Magnific lleva la IA visual al interior del flujo creativo
-Magnific anunció [plugins](https://www.magnific.com/blog/magnific-plugins/) para After Effects, Premiere Pro, DaVinci Resolve, Final Cut Pro y Photoshop, con generación, upscale y edición dentro del propio software. La compañía reforzó ese posicionamiento en su nota sobre [Cannes Lions 2026](https://www.magnific.com/blog/magnific-at-cannes-lions-2026/), donde vinculó el corto `Candela` con el debate sobre control creativo humano.
+## Generative Imaging
+### Magnific Brings Visual AI Into the Creative Workflow
+Magnific announced [plugins](https://www.magnific.com/blog/magnific-plugins/) for After Effects, Premiere Pro, DaVinci Resolve, Final Cut Pro, and Photoshop, featuring generation, upscaling, and editing right within the software itself. The company reinforced this positioning in its press release on [Cannes Lions 2026](https://www.magnific.com/blog/magnific-at-cannes-lions-2026/), where it linked the short film `Candela` to the debate on human creative control.
 
-## Chatbots y agentes
-### ChatGPT Work enseña el producto agente que OpenAI quiere poner delante de GPT-5.6
-OpenAI presentó [ChatGPT Work](https://openai.com/index/chatgpt-for-your-most-ambitious-work/) como un agente dentro de ChatGPT para tareas ambiciosas capaz de recopilar información de apps y workflows y de crear sheets, slides, docs y web apps. La compañía añadió que GPT-5.6 impulsa ChatGPT Work y que Codex ya supera los 5 millones de usuarios semanales, enlazando el nuevo producto con la familia [GPT-5.6](https://openai.com/index/gpt-5-6/).
+## Chatbots and Agents
+### ChatGPT Work showcases the agent product that OpenAI wants to launch ahead of GPT-5.6
+OpenAI introduced [ChatGPT Work](https://openai.com/index/chatgpt-for-your-most-ambitious-work/) as an agent within ChatGPT for ambitious tasks, capable of gathering information from apps and workflows and creating spreadsheets, slides, documents, and web apps. The company added that GPT-5.6 powers ChatGPT Work and that Codex now has over 5 million weekly users, linking the new product to the [GPT-5.6](https://openai.com/index/gpt-5-6/) family.
 
-### Claude salta a physical AI con UST
-Anthropic dijo que [UST integra Claude](https://www.anthropic.com/news/ust-claude) en procesos de physical AI y que 20,000 ingenieros, arquitectos y consultores serán formados en la herramienta. El caso incluye lectura de schematics y pinouts, escritura y ejecución de tests, validación de chips y comparación con digital twin, una combinación que empuja el discurso de agentes fuera del escritorio.
+### Claude Makes the Leap to Physical AI with UST
+Anthropic said that [UST integrates Claude](https://www.anthropic.com/news/ust-claude) into physical AI processes and that 20,000 engineers, architects, and consultants will be trained on the tool. The use case includes reading schematics and pinouts, writing and running tests, validating chips, and comparing results with a digital twin—a combination that pushes the role of agents beyond the desktop.
 
-### Anthropic añade una capa de reflexión sobre el uso de Claude
-Con [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude), Anthropic lanzó en beta un dashboard con time patterns, quiet hours y reflexión sobre hábitos de uso. Es una señal de que la competencia entre asistentes también empieza a jugarse en ergonomía y autogestión del trabajo.
+### Anthropic Adds a Layer of Reflection on Claude Usage
+With [Reflect with Claude](https://www.anthropic.com/news/reflect-with-claude), Anthropic launched a beta dashboard featuring time patterns, quiet hours, and insights into usage habits. This is a sign that competition among assistants is also beginning to play out in the areas of ergonomics and work self-management.
 
-## IA local y serving
-### Ollama convierte el relato open en una historia de escala
-En [All aboard open models](https://ollama.com/blog/all-aboard-open-models), Ollama anunció 88M USD de financiación y 8.9M developers servidos, junto a un mensaje fuerte sobre ownership, privacy y hybrid inference. La combinación sugiere que el stack local/open ya compite no solo en filosofía, sino también en distribución y tracción.
+## On-premises AI and serving
+### Ollama Turns the “Open” Narrative into a Story of Scale
+In [All Aboard Open Models](https://ollama.com/blog/all-aboard-open-models), Ollama announced $88 million in funding and 8.9 million developers served, along with a strong message about ownership, privacy, and hybrid inference. This combination suggests that the on-premises/open-source stack is now competing not only on philosophy but also in terms of adoption and traction.
 
-### vLLM sigue apretando el rendimiento del serving open source
-vLLM publicó que [HPC-Ops attention and MoE backends](https://vllm.ai/blog/2026-07-06-vllm-hpc-ops) fueron upstreamed a `main`, con mejoras de hasta 2.95x y reducciones de TTFT del 24% y TPOT del 17% en H20 / Hy3. Para quien sigue serving e inferencia, es una de las señales más concretas del día en rendimiento real.
+### vLLM Continues to Push the Performance of Open-Source Serving
+vLLM reported that [HPC-Ops attention and MoE backends](https://vllm.ai/blog/2026-07-06-vllm-hpc-ops) were upstreamed to `main`, with improvements of up to 2.95x and reductions of 24% in TTFT and 17% in TPOT on H20 / Hy3. For anyone following serving and inference, this is one of the most concrete signs of the day in terms of real-world performance.

@@ -5,19 +5,20 @@
 .. category: AI News
 .. status: draft
 
-# AI News Summary — 2026-08-25
+.. lang: en
+# AI News Summary — August 25, 2026
 
-## GAFAM y grandes empresas de IA
-- [OpenAI News: Advancing price-performance for developers with GPT-5.6 in Kiro](https://openai.com/index/gpt-5-6-in-kiro/) — OpenAI sitúa GPT-5.6 dentro de Kiro como una mejora centrada en precio-rendimiento para flujos de desarrollo, con foco en utilidad práctica para developers.
+## GAFAM and Major AI Companies
+- [OpenAI News: Advancing price-performance for developers with GPT-5.6 in Kiro](https://openai.com/index/gpt-5-6-in-kiro/) — OpenAI positions GPT-5.6 within Kiro as a price-performance-focused improvement for development workflows, emphasizing practical utility for developers.
 
-## Influencers y blogs técnicos
-- [Simon Willison: Anthropic’s best AI model struggles to attract users as cheaper tools thrive](https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/) — Simon Willison resume un dato de FT que apunta a la tensión entre calidad de modelo y adopción real, con una lectura útil sobre precio, uso y preferencia del desarrollador.
+## Influencers and Tech Blogs
+- [Simon Willison: Anthropic’s best AI model struggles to attract users as cheaper tools thrive](https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/) — Simon Willison summarizes an FT report highlighting the tension between model quality and actual adoption, offering a useful analysis of price, usage, and developer preferences.
 
-## Imagen generativa
-- [OpenRouter Blog: Image Benchmarks: See the Capabilities of Every Model](https://openrouter.ai/blog/announcements/image-benchmarks/) — OpenRouter reúne benchmarks visuales de modelos de imagen en una sola página, útil para comparar calidad y coste de forma directa.
+## Generative Imaging
+- [OpenRouter Blog: Image Benchmarks: See the Capabilities of Every Model](https://openrouter.ai/blog/announcements/image-benchmarks/) — OpenRouter compiles visual benchmarks for image models on a single page, making it easy to directly compare quality and cost.
 
-## Chatbots y agentes
-- [Hermes Agent releases: Hermes Agent v0.20.5](https://github.com/NousResearch/hermes-agent/releases) — La release continúa la evolución del agente open source y refuerza el valor de los flujos tool-driven para asistentes y automatización.
+## Chatbots and Agents
+- [Hermes Agent releases: Hermes Agent v0.20.5](https://github.com/NousResearch/hermes-agent/releases) — This release continues the evolution of the open-source agent and reinforces the value of tool-driven workflows for assistants and automation.
 
-## IA local y serving
-- [vLLM Blog: Exploring Speculative Decoding in vLLM on AMD GPUs](https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus) — vLLM publica un artículo técnico sobre speculative decoding en GPUs AMD, una señal clara de que el serving local y abierto sigue mejorando en hardware heterogéneo.
+## On-Premises AI and Serving
+- [vLLM Blog: Exploring Speculative Decoding in vLLM on AMD GPUs](https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus) — vLLM publishes a technical article on speculative decoding on AMD GPUs, a clear sign that local, open serving continues to improve on heterogeneous hardware.

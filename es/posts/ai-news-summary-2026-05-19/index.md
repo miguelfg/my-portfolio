@@ -8,22 +8,23 @@
 .. type: text
 .. status: draft
 -->
+.. lang: es
 
-## Executive Brief
-Today’s strongest AI signals came from official sources and cluster around one theme: **the agent stack is maturing beyond model quality into connectivity, security, and infrastructure performance**.
+## Resumen ejecutivo
+Las señales más destacadas de hoy en materia de IA proceden de fuentes oficiales y giran en torno a un tema: **la pila de agentes está madurando más allá de la calidad de los modelos, hacia la conectividad, la seguridad y el rendimiento de la infraestructura**.
 
-### Top 5 stories
-1. **Anthropic acquires Stainless** (May 18, 2026) to deepen SDK/CLI/MCP capabilities for agent-to-tool connectivity.  
-   Source: https://www.anthropic.com/news/anthropic-acquires-stainless
-2. **NIST publishes AI-agent security analysis** (May 18, 2026), highlighting new agent-specific threats and adapted cyber controls.  
-   Source: https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai
-3. **NVIDIA delivers first Vera CPUs** to Anthropic, OpenAI, SpaceXAI, and OCI (May 18, 2026), framing CPU orchestration as a core bottleneck/opportunity in agentic AI.  
-   Source: https://blogs.nvidia.com/blog/vera-cpu-delivery/
-4. **Anthropic + Gates Foundation announce $200M partnership** (May 14, 2026) for global health, education, and mobility initiatives.  
-   Source: https://www.anthropic.com/news/gates-foundation-partnership
-5. **Anthropic raises Claude limits and signs SpaceX compute deal** (May 6, 2026), signaling continued capacity race.  
-   Source: https://www.anthropic.com/news/higher-limits-spacex
+### Las 5 noticias más destacadas
+1. **Anthropic adquiere Stainless** (18 de mayo de 2026) para ampliar las capacidades de SDK/CLI/MCP en la conectividad entre agentes y herramientas. 
+ Fuente: https://www.anthropic.com/news/anthropic-acquires-stainless
+2. **El NIST publica un análisis de seguridad de los agentes de IA** (18 de mayo de 2026), en el que se destacan nuevas amenazas específicas para los agentes y controles cibernéticos adaptados. 
+ Fuente: https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai
+3. **NVIDIA entrega las primeras CPU Vera** a Anthropic, OpenAI, SpaceXAI y OCI (18 de mayo de 2026), lo que sitúa la orquestación de las CPU como un cuello de botella y una oportunidad fundamentales en la IA agentiva.  
+   Fuente: https://blogs.nvidia.com/blog/vera-cpu-delivery/
+4. **Anthropic y la Fundación Gates anuncian una colaboración de 200 millones de dólares** (14 de mayo de 2026) para iniciativas globales en materia de salud, educación y movilidad. 
+ Fuente: https://www.anthropic.com/news/gates-foundation-partnership
+5. **Anthropic aumenta los límites de Claude y firma un acuerdo de computación con SpaceX** (6 de mayo de 2026), lo que indica que continúa la carrera por la capacidad. 
+ Fuente: https://www.anthropic.com/news/higher-limits-spacex
 
-## Risks and opportunities
-- **Risks:** expanding agent attack surface, platform lock-in, noisy secondary-source signals.
-- **Opportunities:** invest/build in agent observability, permissioning, rollback, and SDK/MCP integration layers.
+## Riesgos y oportunidades
+- **Riesgos:** ampliación de la superficie de ataque de los agentes, dependencia de una única plataforma, señales ruidosas de fuentes secundarias.
+- **Oportunidades:** invertir o desarrollar capas de observabilidad de los agentes, gestión de permisos, reversión de cambios e integración de SDK/MCP.

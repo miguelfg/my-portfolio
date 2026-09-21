@@ -5,50 +5,51 @@
 .. status: draft
 .. tags: AI News, AI, news, summary
 
-# AI News — 2026-06-13
+.. lang: en
+# AI News — June 13, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### Anthropic desactiva Claude Fable 5 y Mythos 5 por una directiva de control de exportaciones
+### Anthropic Shuts Down Claude Fable 5 and Mythos 5 Due to an Export Control Directive
 
-Anthropic publicó que una directiva de control de exportaciones del gobierno de EE. UU. le exigió desactivar Claude Fable 5 y Claude Mythos 5 para todos los clientes, mientras que otros modelos de la compañía no se vieron afectados. La noticia convierte una semana de lanzamiento frontier en una historia de gobernanza, disponibilidad y riesgo de dependencia para clientes que construyen sobre modelos cerrados. Fuente: [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
+Anthropic announced that a U.S. government export control directive required it to deactivate Claude Fable 5 and Claude Mythos 5 for all customers, while the company’s other models were unaffected. The news turns a week of frontier launches into a story of governance, availability, and dependency risk for customers building on closed models. Source: [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
 
-### NVIDIA presenta AgentPerf como benchmark de infraestructura para agentes
+### NVIDIA Introduces AgentPerf as an Infrastructure Benchmark for Agents
 
-NVIDIA publicó resultados de AgentPerf de Artificial Analysis y afirmó que GB300 NVL72 ejecutó hasta 20 veces más agentes por megavatio que sistemas Hopper/H200 en la carga evaluada. Más allá de la cifra concreta, el movimiento apunta a una tendencia importante: los agentes empiezan a medirse por coste, energía y eficiencia de infraestructura, no solo por calidad del modelo. Fuente: [NVIDIA](https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/).
+NVIDIA published AgentPerf results from Artificial Analysis and stated that the GB300 NVL72 ran up to 20 times more agents per megawatt than Hopper/H200 systems on the evaluated workload. Beyond the specific figure, this development points to an important trend: agents are beginning to be evaluated based on cost, energy consumption, and infrastructure efficiency—not just model quality. Source: [NVIDIA](https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/).
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Simon Willison muestra cómo se ve un agente de código realmente proactivo
+### Simon Willison Shows What a Truly Proactive Code Agent Looks Like
 
-Simon Willison documentó una sesión de depuración con Claude Fable 5 en Claude Code en la que el agente creó páginas HTML de prueba, usó capturas de Safari, ejecutó Playwright, modificó plantillas y levantó un servidor Python local para telemetría. El post es valioso porque baja la conversación sobre agentes a decisiones concretas de ingeniería: permisos, sandboxing, automatización de navegador, observabilidad y control de coste. Fuente: [Simon Willison](https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/).
+Simon Willison documented a debugging session with Claude Fable 5 on Claude Code in which the agent created test HTML pages, used Safari screenshots, ran Playwright, modified templates, and set up a local Python server for telemetry. The post is valuable because it grounds the conversation about agents in concrete engineering decisions: permissions, sandboxing, browser automation, observability, and cost control. Source: [Simon Willison](https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/).
 
-### La experiencia técnica con Fable queda marcada por la suspensión de acceso
+### The technical experience with Fable is marked by the suspension of access
 
-Simon Willison también comentó la declaración de Anthropic sobre la directiva que desactivó Fable 5 y Mythos 5. La combinación de experiencia práctica y suspensión posterior deja una lectura clara para builders: los agentes más capaces también exigen planes de fallback cuando el acceso a modelos específicos puede cambiar de forma abrupta. Fuentes: [Simon Willison](https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/) y [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
+Simon Willison also commented on Anthropic’s statement regarding the policy that disabled Fable 5 and Mythos 5. The combination of hands-on experience and subsequent suspension offers a clear lesson for builders: even the most capable agents require fallback plans when access to specific models can change abruptly. Sources: [Simon Willison](https://simonwillison.net/2026/Jun/13/us-government-directive-to-suspend-access/) and [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
 
-## Imagen generativa
+## Generative Imaging
 
-### Canva Magic Layers convierte imágenes generadas en diseños editables
+### Canva Magic Layers Turns Generated Images into Editable Designs
 
-Canva publicó el 7 de junio que Magic Layers está disponible dentro de Gemini y ChatGPT para convertir imágenes generadas por IA en diseños editables por capas en Canva. No apareció una fuente primaria más fresca para imagen generativa en la revisión del 13 de junio, así que esta pieza se mantiene con caveat de fecha: el punto relevante es que la imagen generada empieza a integrarse en flujos de edición y producción, no solo en generación de piezas finales. Fuente: [Canva](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/).
+Canva announced on June 7 that Magic Layers is available within Gemini and ChatGPT to convert AI-generated images into editable, layered designs in Canva. No more recent primary source on generative imagery appeared in the June 13 review, so this section remains subject to a date-related caveat: the key point is that generative imagery is beginning to be integrated into editing and production workflows, not just for generating final pieces. Source: [Canva](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/).
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### DoorDash lleva la conversación al flujo de compra
+### DoorDash Brings Conversation into the Purchase Process
 
-DoorDash anunció Ask DoorDash, una interfaz conversacional para buscar comida y productos de supermercado, usar enlaces de recetas, interpretar fotos de listas o libros de cocina, construir carritos y pedir reservas. La función está disponible en zonas seleccionadas de iOS y la compañía planea ampliarla. Es una señal de agentes integrados en superficies transaccionales reales, no solo en asistentes independientes. Fuente: [DoorDash](https://about.doordash.com/en-us/news/ask-doordash).
+DoorDash announced Ask DoorDash, a conversational interface for searching for food and grocery items, using recipe links, interpreting photos of shopping lists or cookbooks, building shopping carts, and making reservations. The feature is available in select iOS regions, and the company plans to expand it. This signals the integration of agents into actual transactional surfaces, not just standalone assistants. Source: [DoorDash](https://about.doordash.com/en-us/news/ask-doordash).
 
-### La disponibilidad de modelos se vuelve parte del diseño de agentes
+### Model availability becomes part of agent design
 
-La desactivación de Fable 5 y Mythos 5 por una directiva de control de exportaciones, comunicada por Anthropic, muestra que los equipos que construyen agentes sobre modelos frontier deben planificar continuidad de servicio, proveedores alternativos y degradación controlada de capacidades. El problema de producto no es solo elegir el mejor modelo, sino diseñar qué ocurre cuando ese modelo deja de estar disponible. Fuente: [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
+The deactivation of Fable 5 and Mythos 5 due to an export control directive, as announced by Anthropic, shows that teams building agents on frontier models must plan for service continuity, alternative providers, and controlled degradation of capabilities. The product challenge isn’t just choosing the best model, but designing what happens when that model becomes unavailable. Source: [Anthropic](https://www.anthropic.com/news/fable-mythos-access).
 
-## IA local y serving
+## On-Premises AI and Serving
 
-### vLLM añade serving day-0 para MiniMax M3 y contexto de 1M tokens
+### vLLM Adds Day-0 Serving for MiniMax M3 and 1M-Token Context
 
-vLLM publicó soporte de serving para MiniMax M3 con contexto de 1M tokens, MiniMax Sparse Attention, parsers multimodales y de razonamiento, pesos MXFP8 MoE, EAGLE3 speculative decoding, validación y guía de despliegue. Es la pieza técnica más fuerte del día para IA local y serving porque muestra cómo las pilas abiertas de inferencia intentan absorber modelos de largo contexto y razonamiento multimodal desde el lanzamiento. Fuente: [vLLM](https://vllm.ai/blog/2026-06-12-minimax-m3-vllm).
+vLLM released serving support for MiniMax M3 with 1M-token context, MiniMax Sparse Attention, multimodal and reasoning parsers, MXFP8 MoE weights, EAGLE3 speculative decoding, validation, and deployment guidance. This is the most significant technical development of the day for on-device AI and serving, as it demonstrates how open inference stacks are working to support long-context models and multimodal reasoning right from launch. Source: [vLLM](https://vllm.ai/blog/2026-06-12-minimax-m3-vllm).
 
-### Ollama mejora inferencia local en Apple Silicon con MLX
+### Ollama Improves On-Premises Inference on Apple Silicon with MLX
 
-Ollama publicó mejoras de su motor MLX para Apple Silicon, con foco en calidad, velocidad y uso de memoria, además de soporte NVFP4, snapshots para flujos de agentes y pruebas con hasta 20% más velocidad de salida en los escenarios descritos. Es una señal práctica para desarrolladores que quieren ejecutar modelos localmente con mejor rendimiento en hardware de consumo. Fuente: [Ollama](https://ollama.com/blog/mlx-performance).
+Ollama released improvements to its MLX engine for Apple Silicon, focusing on quality, speed, and memory usage, as well as NVFP4 support, snapshots for agent flows, and tests showing up to a 20% increase in output speed in the described scenarios. This is a practical development for developers who want to run models locally with better performance on consumer hardware. Source: [Ollama](https://ollama.com/blog/mlx-performance).

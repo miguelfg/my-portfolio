@@ -7,6 +7,7 @@
 .. description: Resumen diario de noticias de IA con hechos verificables e interpretación por vertical.
 .. type: text
 .. status: draft
+.. lang: es
 -->
 
 # AI News Summary — 2026-05-29

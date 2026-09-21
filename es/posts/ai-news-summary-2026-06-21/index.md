@@ -5,6 +5,7 @@
 .. status: draft
 .. tags: AI News, AI, news, summary
 
+.. lang: es
 # AI News — 2026-06-21
 
 ## GAFAM y grandes empresas de IA

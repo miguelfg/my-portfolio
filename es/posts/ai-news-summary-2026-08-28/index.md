@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 ## GAFAM y grandes empresas de IA
 - **OpenAI expands commercial operations in Brazil**. OpenAI lanzó operaciones comerciales en Brasil y amplía su compromiso con el país desde São Paulo, con foco en negocios, desarrolladores, investigación e instituciones públicas. La compañía señala que Brasil es uno de los tres mayores mercados de ChatGPT por usuarios activos semanales y que allí se envían aproximadamente 215 millones de mensajes al día. [Fuente primaria](https://openai.com/index/expanding-our-presence-in-brazil/)
 - **What students gain from ChatGPT and critical-thinking training**. OpenAI publica una lectura educativa: ChatGPT ayuda a mejorar respuestas, mientras que el entrenamiento en pensamiento crítico amplía ideas y ambos se complementan en el aprendizaje. [Fuente primaria](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/)

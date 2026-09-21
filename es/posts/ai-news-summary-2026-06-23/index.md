@@ -8,6 +8,7 @@
 .. description: Daily AI news summary for 2026-06-23
 .. type: text
 .. status: draft
+.. lang: es
 -->
 
 # AI News Summary 2026-06-23

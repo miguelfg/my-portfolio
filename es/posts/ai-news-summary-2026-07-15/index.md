@@ -5,6 +5,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-07-15
 
 Hoy el hilo conductor fue claro: las empresas están tratando AI como una capa operativa con métricas, gobernanza y despliegue real; al mismo tiempo, los agentes salen del chat y se acercan al sistema operativo, y el serving local sigue afinándose para cargas de baja latencia.

@@ -4,6 +4,7 @@
 .. category: AI News
 .. status: draft
 
+.. lang: es
 # AI News Summary 2026-06-01
 
 La noticia más clara del día está en agentes empresariales: el mercado empieza a mostrar una pila más definida, con una capa para ejecutar workflows y otra para controlar seguridad, gateways y gobernanza. Fuera de agentes, la señal más útil es AEO, que empieza a tratar la visibilidad en respuestas de IA como una disciplina operativa, no solo como una extensión de SEO.

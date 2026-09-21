@@ -506,6 +506,73 @@
         }
     }
 
+    /* ===== LANGUAGE SWITCHER ===== */
+    .language-switcher {
+        position: relative;
+    }
+
+    .language-switcher__toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        min-height: 44px;
+        padding: 0.55rem 0.8rem;
+        border: 1px solid color-mix(in srgb, var(--c-nav-link) 45%, transparent);
+        border-radius: 999px;
+        background: transparent;
+        color: var(--c-nav-link);
+        font: 600 0.9rem var(--font-display);
+        cursor: pointer;
+    }
+
+    .language-switcher__toggle:hover,
+    .language-switcher__toggle[aria-expanded="true"] {
+        background: color-mix(in srgb, var(--c-on-accent) 12%, transparent);
+        color: var(--c-on-accent);
+    }
+
+    .language-switcher__menu {
+        position: absolute;
+        z-index: 20;
+        top: calc(100% + 0.35rem);
+        right: 0;
+        min-width: 9rem;
+        margin: 0;
+        padding: 0.35rem;
+        border: 1px solid var(--c-border);
+        border-radius: 6px;
+        background: var(--c-bg);
+        box-shadow: 0 8px 24px var(--c-shadow);
+        list-style: none;
+    }
+
+    .language-switcher__menu[hidden] {
+        display: none;
+    }
+
+    .language-switcher__menu a {
+        display: block;
+        padding: 0.6rem 0.7rem;
+        border-radius: 4px;
+        color: var(--c-text);
+        font: 600 0.9rem var(--font-display);
+        white-space: nowrap;
+    }
+
+    .language-switcher__menu a:hover,
+    .language-switcher__menu a:focus-visible {
+        background: var(--c-accent-tint);
+        color: var(--c-accent-dark);
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+        .language-switcher__menu {
+            left: 0;
+            right: auto;
+        }
+    }
+
     /* ===== PRINT ===== */
     @media print {
         body {
@@ -536,15 +603,78 @@
         }
     }
 </style>
-<meta name="author" content="Miguel Fiandor">
+<script>
+(function () {
+    "use strict";
+    function setupLanguageSwitcher() {
+        var list = document.querySelector(".bootblog4-right-nav");
+        if (!list || list.dataset.languageSwitcherReady === "true") return;
+        var links = Array.from(list.querySelectorAll('a[hreflang]'));
+        var current = document.documentElement.lang || "en";
+        var alternate = {};
+        alternate[current] = window.location.href;
+        document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+            if (link.type !== "application/rss+xml") alternate[link.hreflang] = link.href;
+        });
+        ["en", "es"].forEach(function (lang) {
+            if (!alternate[lang]) {
+                var path = window.location.pathname.replace(/^\/my-portfolio/, "");
+                path = path.replace(/^\/es(?=\/|$)/, "");
+                alternate[lang] = new URL((lang === "es" ? "/my-portfolio/es" : "/my-portfolio") + (path || "/"), window.location.origin).href;
+            }
+        });
+        var wrapper = document.createElement("li");
+        wrapper.className = "nav-item language-switcher";
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "language-switcher__toggle";
+        button.setAttribute("aria-haspopup", "true");
+        button.setAttribute("aria-expanded", "false");
+        button.innerHTML = '<span aria-hidden="true">◎</span><span>' + current.toUpperCase() + '</span><span aria-hidden="true">▾</span>';
+        var menu = document.createElement("ul");
+        menu.className = "language-switcher__menu";
+        menu.hidden = true;
+        menu.setAttribute("aria-label", "Choose language");
+        [{ code: "en", label: "English" }, { code: "es", label: "Español" }].forEach(function (item) {
+            var entry = document.createElement("li");
+            var link = document.createElement("a");
+            link.href = alternate[item.code];
+            link.hreflang = item.code;
+            link.textContent = item.code.toUpperCase() + " — " + item.label;
+            if (item.code === current) link.setAttribute("aria-current", "page");
+            entry.appendChild(link);
+            menu.appendChild(entry);
+        });
+        button.addEventListener("click", function () {
+            var open = button.getAttribute("aria-expanded") === "true";
+            button.setAttribute("aria-expanded", String(!open));
+            menu.hidden = open;
+            if (!open) menu.querySelector("a").focus();
+        });
+        document.addEventListener("click", function (event) {
+            if (!wrapper.contains(event.target)) {
+                button.setAttribute("aria-expanded", "false");
+                menu.hidden = true;
+            }
+        });
+        wrapper.appendChild(button);
+        wrapper.appendChild(menu);
+        list.replaceChildren(wrapper);
+        list.dataset.languageSwitcherReady = "true";
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setupLanguageSwitcher);
+    else setupLanguageSwitcher();
+}());
+</script><meta name="author" content="Miguel Fiandor">
 <meta name="robots" content="noindex">
 <meta property="og:site_name" content="Miguel Fiandor - Data Analyst &amp; Engineer">
 <meta property="og:title" content="AI News Summary 2026-06-09">
 <meta property="og:url" content="https://miguelfg.github.io/my-portfolio/posts/ai-news-summary-2026-06-09/">
-<meta property="og:description" content="AI News — 2026-06-09
-GAFAM y grandes empresas de IA
-OpenAI convierte Codex en una plataforma de trabajo, no solo de código
-OpenAI anunció nuevas capacidades para Codex: plugins por rol, annotations y ">
+<meta property="og:description" content=".. lang: en
+AI News — June 9, 2026
+GAFAM and Major AI Companies
+OpenAI Transforms Codex into a Work Platform, Not Just a Coding Platform
+OpenAI announced new features for Codex: role-based plugins, an">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-06-09T00:00:00+02:00">
 <link rel="alternate" hreflang="es" href="../../es/posts/ai-news-summary-2026-06-09/">
@@ -631,50 +761,55 @@ OpenAI anunció nuevas capacidades para Codex: plugins por rol, annotations y ">
 
         </div>
         
+        <div class="metadata posttranslations translations">
+            <h3 class="posttranslations-intro">Also available in:</h3>
+                <p><a href="../../es/posts/ai-news-summary-2026-06-09/" rel="alternate" hreflang="es">Español</a></p>
+        </div>
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <h2>AI News — 2026-06-09</h2>
-<h3>GAFAM y grandes empresas de IA</h3>
-<h4>OpenAI convierte Codex en una plataforma de trabajo, no solo de código</h4>
-<p>OpenAI anunció nuevas capacidades para Codex: plugins por rol, annotations y una preview de Sites para crear y compartir apps o webs interactivas. También publicó un reporte donde afirma que Codex ya supera los 5 millones de usuarios semanales y que los perfiles no desarrolladores son cerca del 20% de la base de usuarios. Fuente: <a href="https://openai.com/index/codex-for-every-role-tool-workflow/">OpenAI — Codex for every role, tool, and workflow</a> y <a href="https://openai.com/index/codex-for-knowledge-work/">OpenAI — Codex is becoming a productivity tool for everyone</a>.</p>
-<p>La señal: los agentes empiezan a empaquetarse como herramientas de productividad general para analistas, marketing, operaciones, diseño e inversión, no solo como copilotos de desarrollo.</p>
-<h4>Google consolida la narrativa de Gemini como plataforma agentic y multimodal</h4>
-<p>Google publicó un recap de sus anuncios de mayo, destacando Gemini 3.5, Gemini Omni, Gemini Spark e information agents en Search. Las release notes de Gemini también registran Spark y Omni como parte de la evolución hacia asistentes más proactivos y creación de video conversacional. Fuente: <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google AI announcements from May 2026</a> y <a href="https://gemini.google/release-notes/">Gemini release notes</a>.</p>
-<p>La señal: Gemini se está articulando como capa de agentes, creación multimodal y acciones de fondo dentro del ecosistema Google.</p>
-<h4>Anthropic amplía Project Glasswing para ciberdefensa con IA</h4>
-<p>Anthropic anunció la expansión de Project Glasswing a unas 150 organizaciones adicionales en más de 15 países. La compañía afirma que sus socios iniciales ya identificaron más de 10.000 fallos de seguridad high/critical usando Claude Mythos Preview. Fuente: <a href="https://www.anthropic.com/news/expanding-project-glasswing">Anthropic — Expanding Project Glasswing</a>.</p>
-<p>La señal: los modelos avanzados de ciberseguridad se están convirtiendo en una pieza estratégica para proteger infraestructura crítica antes de que capacidades similares se generalicen.</p>
-<h3>Influencers y blogs técnicos</h3>
-<h4>Hugging Face rediseña el <code>hf</code> CLI para agentes</h4>
-<p>Hugging Face publicó cómo está adaptando el <code>hf</code> CLI para agentes de coding como Claude Code, Codex, Cursor y Gemini: menos output decorativo, valores completos, formatos más parseables y detección de entornos agentic. El post indica que, en tareas complejas, no usar CLI puede costar hasta 6× más tokens. Fuente: <a href="https://huggingface.co/blog/hf-cli-for-agents">Hugging Face — Designing the <code>hf</code> CLI as an agent-optimized way to work with the Hub</a>.</p>
-<p>La señal: la experiencia de desarrollador ya no se diseña solo para humanos. Las herramientas empiezan a optimizarse para agentes que leen stdout, ejecutan comandos y necesitan ahorrar contexto.</p>
-<h4>El blog de Hugging Face marca más foco en agentic RL y agentes locales</h4>
-<p>El índice de Hugging Face muestra artículos recientes sobre OpenEnv para agentic RL, Holo3.1 para computer-use agents locales y otros temas de seguridad/benchmarks. Fuente: <a href="https://huggingface.co/blog">Hugging Face Blog</a>.</p>
-<p>La señal: el ecosistema abierto está avanzando en dos direcciones a la vez: entrenamiento/evaluación de agentes y ejecución local de agentes que interactúan con ordenadores.</p>
-<h3>Imagen generativa</h3>
-<h4>Canva hace editables las imágenes generadas por AI dentro de Gemini y ChatGPT</h4>
-<p>Canva anunció que Magic Layers está disponible dentro de Gemini y ChatGPT para convertir imágenes generadas por AI en diseños Canva editables. Fuente: <a href="https://www.canva.com/newsroom/news/magic-layers-ai-assistants/">Canva — Magic Layers inside AI assistants</a> y <a href="https://www.canva.com/newsroom/news/">Canva Newsroom</a>.</p>
-<p>La señal: la imagen generativa se mueve del “render final” al “activo editable”. Para equipos de marca y marketing, esto reduce el salto entre ideación con IA y producción real.</p>
-<h4>Gemini Omni refuerza la apuesta por creación multimodal y video</h4>
-<p>Google describe Gemini Omni como un modelo para crear desde múltiples tipos de input, empezando por video, y las release notes lo posicionan como creación/edición de video conversacional. Fuente: <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google AI updates</a> y <a href="https://gemini.google/release-notes/">Gemini release notes</a>.</p>
-<p>La señal: Google está integrando generación multimedia directamente en asistentes, no como herramienta creativa aislada.</p>
-<h3>Chatbots y agentes</h3>
-<h4>OpenRouter baja la supervisión humana de agentes al SDK</h4>
-<p>OpenRouter publicó una guía sobre controles human-in-the-loop para agentes en contextos regulados por EU AI Act, Colorado ADMT y NIST AI RMF. Propone approval gates, logs de auditoría, timeouts, estado durable y reanudación de workflows. Fuente: <a href="https://openrouter.ai/blog/human-oversight-eu-ai-act-compliance-agent-sdk">OpenRouter — Human Oversight for AI Agents</a>.</p>
-<p>La señal: la gobernanza de agentes ya no es solo política interna; se está convirtiendo en patrón de arquitectura y runtime.</p>
-<h4>Codex empuja el asistente hacia la producción de artefactos de negocio</h4>
-<p>OpenAI afirma que knowledge workers están usando Codex para informes, spreadsheets, presentaciones, contratos, investigación, análisis de datos y automatización. Fuente: <a href="https://openai.com/index/codex-for-knowledge-work/">OpenAI — Codex productivity tool for everyone</a>.</p>
-<p>La señal: los chatbots/agentes más competitivos no solo conversan: producen entregables, coordinan herramientas y dejan trazas editables.</p>
-<h3>IA local y serving</h3>
-<h4>vLLM Semantic Router v0.3 apunta a routing de agentes en producción</h4>
-<p>vLLM publicó Themis v0.3 con una arquitectura de señales, proyecciones, decisiones, algoritmos y selección de modelos. El post complementario de SAAR describe routing consciente de sesión para agentes long-horizon, con controles de continuidad y trazas reproducibles. Fuente: <a href="https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release">vLLM — Themis v0.3</a> y <a href="https://vllm.ai/blog/2026-06-02-session-aware-agentic-routing">vLLM — Session-Aware Agentic Routing</a>.</p>
-<p>La señal: el serving de LLMs se está especializando para agentes persistentes, donde cambiar de modelo en el momento equivocado puede romper contexto, tool use o continuidad.</p>
-<h4>Ollama 0.30 mejora el stack local con GGUF y llama.cpp</h4>
-<p>Ollama anunció la versión 0.30 con mejor rendimiento, soporte GGUF mediante llama.cpp, Vulkan por defecto y compatibilidad con más familias de modelos. Fuente: <a href="https://ollama.com/blog/improved-performance-and-model-support-with-gguf">Ollama — Improved performance and model support with GGUF</a>.</p>
-<p>La señal: correr modelos locales variados se vuelve más sencillo, especialmente para asistentes y coding agents que necesitan tool calling y ejecución en hardware heterogéneo.</p>
-<h4>OpenRouter combina guardrails y HITL para operar agentes con control</h4>
-<p>Además del post sobre supervisión humana, OpenRouter publicó Guardrails para presupuesto, zero data retention, restricciones de modelos/proveedores, defensa contra prompt injection y DLP. Fuente: <a href="https://openrouter.ai/blog/guardrails">OpenRouter — Guardrails</a>.</p>
-<p>La señal: el routing multi-modelo está evolucionando hacia una capa de control operativo: costes, privacidad, seguridad y cumplimiento alrededor de agentes en producción.</p>
+    <p>.. lang: en</p>
+<h2>AI News — June 9, 2026</h2>
+<h3>GAFAM and Major AI Companies</h3>
+<h4>OpenAI Transforms Codex into a Work Platform, Not Just a Coding Platform</h4>
+<p>OpenAI announced new features for Codex: role-based plugins, annotations, and a preview of Sites for creating and sharing interactive apps or websites. It also published a report stating that Codex now has over 5 million weekly users and that non-developers account for about 20% of the user base. Source: <a href="https://openai.com/index/codex-for-every-role-tool-workflow/">OpenAI — Codex for every role, tool, and workflow</a> and <a href="https://openai.com/index/codex-for-knowledge-work/">OpenAI — Codex is becoming a productivity tool for everyone</a>.</p>
+<p>The takeaway: Agents are beginning to be positioned as general productivity tools for analysts, marketing, operations, design, and investment—not just as development co-pilots.</p>
+<h4>Google solidifies the narrative of Gemini as an agentic and multimodal platform</h4>
+<p>Google published a recap of its May announcements, highlighting Gemini 3.5, Gemini Omni, Gemini Spark, and information agents in Search. The Gemini release notes also list Spark and Omni as part of the evolution toward more proactive assistants and conversational video creation. Source: <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google AI announcements from May 2026</a> and <a href="https://gemini.google/release-notes/">Gemini release notes</a>.</p>
+<p>The takeaway: Gemini is positioning itself as a layer of agents, multimodal creation, and background actions within the Google ecosystem.</p>
+<h4>Anthropic Expands Project Glasswing for AI-Powered Cybersecurity</h4>
+<p>Anthropic announced the expansion of Project Glasswing to approximately 150 additional organizations in more than 15 countries. The company states that its initial partners have already identified more than 10,000 high/critical security flaws using Claude Mythos Preview. Source: <a href="https://www.anthropic.com/news/expanding-project-glasswing">Anthropic — Expanding Project Glasswing</a>.</p>
+<p>The takeaway: Advanced cybersecurity models are becoming a strategic asset for protecting critical infrastructure before similar capabilities become widespread.</p>
+<h3>Influencers and Tech Blogs</h3>
+<h4>Hugging Face Redesigns the <code>hf</code> CLI for Agents</h4>
+<p>Hugging Face published details on how it is adapting the <code>hf</code> CLI for coding agents such as Claude Code, Codex, Cursor, and Gemini: less decorative output, complete values, more parseable formats, and detection of agent-based environments. The post notes that, for complex tasks, not using the CLI can cost up to 6× more tokens. Source: <a href="https://huggingface.co/blog/hf-cli-for-agents">Hugging Face — Designing the <code>hf</code> CLI as an agent-optimized way to work with the Hub</a>.</p>
+<p>The takeaway: the developer experience is no longer designed solely for humans. Tools are beginning to be optimized for agents that read stdout, execute commands, and need to conserve context.</p>
+<h4>The Hugging Face blog is placing greater emphasis on agentic RL and local agents</h4>
+<p>The Hugging Face index features recent articles on OpenEnv for agentic RL, Holo3.1 for local computer-use agents, and other topics related to security and benchmarks. Source: <a href="https://huggingface.co/blog">Hugging Face Blog</a>.</p>
+<p>The takeaway: The open ecosystem is moving in two directions at once: training/evaluation of agents and local execution of agents that interact with computers.</p>
+<h3>Generative Imaging</h3>
+<h4>Canva Makes AI-Generated Images Editable Within Gemini and ChatGPT</h4>
+<p>Canva announced that Magic Layers is available within Gemini and ChatGPT to convert AI-generated images into editable Canva designs. Source: <a href="https://www.canva.com/newsroom/news/magic-layers-ai-assistants/">Canva — Magic Layers inside AI assistants</a> and <a href="https://www.canva.com/newsroom/news/">Canva Newsroom</a>.</p>
+<p>The takeaway: Generative imagery is shifting from a “final render” to an “editable asset.” For brand and marketing teams, this bridges the gap between AI-driven ideation and actual production.</p>
+<h4>Gemini Omni reinforces the focus on multimodal creation and video</h4>
+<p>Google describes Gemini Omni as a model for creating content from multiple types of input, starting with video, and the release notes position it as conversational video creation/editing. Source: <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">Google AI updates</a> and <a href="https://gemini.google/release-notes/">Gemini release notes</a>.</p>
+<p>The takeaway: Google is integrating multimedia generation directly into assistants, rather than as a standalone creative tool.</p>
+<h3>Chatbots and Agents</h3>
+<h4>OpenRouter shifts human oversight of agents to the SDK</h4>
+<p>OpenRouter published a guide on human-in-the-loop controls for agents in contexts regulated by the EU AI Act, Colorado ADMT, and NIST AI RMF. It proposes approval gates, audit logs, timeouts, persistent state, and workflow resumption. Source: <a href="https://openrouter.ai/blog/human-oversight-eu-ai-act-compliance-agent-sdk">OpenRouter — Human Oversight for AI Agents</a>.</p>
+<p>The takeaway: agent governance is no longer just an internal policy; it is becoming an architectural and runtime standard.</p>
+<h4>Codex Puts the Assistant to Work Producing Business Artifacts</h4>
+<p>OpenAI states that knowledge workers are using Codex for reports, spreadsheets, presentations, contracts, research, data analysis, and automation. Source: <a href="https://openai.com/index/codex-for-knowledge-work/">OpenAI — Codex productivity tool for everyone</a>.</p>
+<p>The takeaway: The most competitive chatbots/agents don’t just converse—they produce deliverables, coordinate tools, and leave editable traces.</p>
+<h3>On-premises AI and serving</h3>
+<h4>vLLM Semantic Router v0.3 targets agent routing in production</h4>
+<p>vLLM released Themis v0.3 with an architecture featuring signals, projections, decisions, algorithms, and model selection. The accompanying SAAR post describes session-aware routing for long-horizon agents, with continuity checks and reproducible traces. Source: <a href="https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release">vLLM — Themis v0.3</a> and <a href="https://vllm.ai/blog/2026-06-02-session-aware-agentic-routing">vLLM — Session-Aware Agentic Routing</a>.</p>
+<p>The takeaway: LLM serving is becoming specialized for persistent agents, where switching models at the wrong time can disrupt context, tool use, or continuity.</p>
+<h4>Ollama 0.30 improves the local stack with GGUF and llama.cpp</h4>
+<p>Ollama announced version 0.30 with improved performance, GGUF support via llama.cpp, Vulkan by default, and compatibility with more model families. Source: <a href="https://ollama.com/blog/improved-performance-and-model-support-with-gguf">Ollama — Improved performance and model support with GGUF</a>.</p>
+<p>The takeaway: Running a variety of local models becomes easier, especially for assistants and coding agents that require tool calling and execution on heterogeneous hardware.</p>
+<h4>OpenRouter Combines Guardrails and HITL to Operate Agents with Control</h4>
+<p>In addition to the post on human supervision, OpenRouter published Guardrails for budget, zero data retention, model/vendor restrictions, defense against prompt injection, and DLP. Source: <a href="https://openrouter.ai/blog/guardrails">OpenRouter — Guardrails</a>.</p>
+<p>The takeaway: Multi-model routing is evolving into a layer of operational control—covering costs, privacy, security, and compliance—for agents in production.</p>
     </div>
     <aside class="postpromonav"><nav></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2026         <a href="mailto:miguel.fiandor.gutierrez@gmail.com">Miguel Fiandor</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
