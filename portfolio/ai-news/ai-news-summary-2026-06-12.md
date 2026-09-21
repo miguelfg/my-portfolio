@@ -5,62 +5,63 @@
 .. status: draft
 .. tags: AI News, AI, news, summary
 
-# AI News — 2026-06-12
+.. lang: en
+# AI News — June 12, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### DiffusionGemma ya no es solo un paper o una demo: entra en el stack real
+### DiffusionGemma Is No Longer Just a Paper or a Demo: It’s Entering the Real-World Stack
 
-- Google publicó la guía de [DiffusionGemma](https://developers.googleblog.com/diffusiongemma-the-developer-guide/), vLLM anunció [soporte nativo](https://vllm.ai/blog/2026-06-10-diffusion-gemma) y NVIDIA lo presentó como optimizado para [RTX, RTX PRO y DGX Spark](https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/).
+- Google published the [DiffusionGemma](https://developers.googleblog.com/diffusiongemma-the-developer-guide/) guide, vLLM announced [native support](https://vllm.ai/blog/2026-06-10-diffusion-gemma), and NVIDIA presented it as optimized for [RTX, RTX PRO, and DGX Spark](https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/).
 
-### OpenAI acerca Codex a la infraestructura empresarial
+### OpenAI Brings Codex Closer to Enterprise Infrastructure
 
-- OpenAI anunció que clientes elegibles de Oracle Cloud pueden usar compromisos OCI para modelos de OpenAI y [Codex](https://openai.com/index/openai-on-oracle-cloud/). También anunció su intención de adquirir [Ona](https://openai.com/index/openai-to-acquire-ona/) para reforzar Codex con entornos cloud persistentes y controlados por clientes.
+- OpenAI announced that eligible Oracle Cloud customers can use OCI commitments for OpenAI models and [Codex](https://openai.com/index/openai-on-oracle-cloud/). It also announced its intention to acquire [Ona](https://openai.com/index/openai-to-acquire-ona/) to enhance Codex with persistent, customer-controlled cloud environments.
 
-### Anthropic introduce capacidad con control de acceso
+### Anthropic Introduces Access-Controlled Capabilities
 
-- Anthropic lanzó [Claude Fable 5 y Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5). Fable 5 está ampliamente disponible; Mythos 5 se limita a usuarios de confianza en dominios sensibles.
+- Anthropic launched [Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5). Fable 5 is widely available; Mythos 5 is limited to trusted users in sensitive domains.
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### La conversación técnica sobre Claude se mueve hacia gobernanza
+### The technical conversation around Claude is shifting toward governance
 
-- Simon Willison destacó el 11 de junio un ángulo de gobernanza alrededor de Claude y políticas para investigadores, trazable desde su [archivo diario](https://simonwillison.net/2026/Jun/11/). El lanzamiento confirmado sigue siendo el de [Claude Fable 5/Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5).
+- On June 11, Simon Willison highlighted a governance angle regarding Claude and policies for researchers, as documented in his [daily log](https://simonwillison.net/2026/Jun/11/). The confirmed release remains [Claude Fable 5/Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5).
 
-### Hugging Face aporta señales de ingeniería aplicada en agentes de voz
+### Hugging Face Provides Insights into Applied Engineering for Voice Agents
 
-- El [blog de Hugging Face](https://huggingface.co/blog) recogió actividad técnica reciente, incluyendo el análisis de [code-switching en ASR para agentes de voz](https://huggingface.co/blog/ServiceNow-AI/code-switching).
+- The [Hugging Face blog](https://huggingface.co/blog) covered recent technical activity, including an analysis of [code-switching in ASR for voice agents](https://huggingface.co/blog/ServiceNow-AI/code-switching).
 
-## Imagen generativa
+## Generative Imaging
 
-### Canva mueve la imagen generativa hacia edición y producción
+### Canva Expands Generative Imaging into Editing and Production
 
-- Canva anunció que [Magic Layers](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) funciona dentro de Gemini y ChatGPT para convertir imágenes generadas por IA en diseños editables de Canva.
+- Canva announced that [Magic Layers](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) works within Gemini and ChatGPT to convert AI-generated images into editable Canva designs.
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### Codex se perfila como agente empresarial persistente
+### Codex Emerges as a Persistent Business Agent
 
-- OpenAI anunció acceso a modelos y [Codex vía Oracle Cloud](https://openai.com/index/openai-on-oracle-cloud/) y un plan para adquirir [Ona](https://openai.com/index/openai-to-acquire-ona/), infraestructura cloud para agentes Codex de larga duración.
+- OpenAI announced access to models and [Codex via Oracle Cloud](https://openai.com/index/openai-on-oracle-cloud/) and a plan to acquire [Ona](https://openai.com/index/openai-to-acquire-ona/), cloud infrastructure for long-running Codex agents.
 
-### JumpCloud pone identidad y auditoría en el centro de los agentes
+### JumpCloud Puts Identity and Auditing at the Heart of Agents
 
-- [JumpCloud Agentic IAM](https://jumpcloud.com/press/jumpcloud-launches-agentic-iam-on-google-cloud) se lanzó en Google Cloud, optimizado para Gemini Enterprise, con foco en descubrimiento, registro, gobernanza y auditoría de identidades de agentes.
+- [JumpCloud Agentic IAM](https://jumpcloud.com/press/jumpcloud-launches-agentic-iam-on-google-cloud) launched on Google Cloud, optimized for Gemini Enterprise, with a focus on discovery, registration, governance, and auditing of agent identities.
 
-### Cresta apunta al ciclo de vida de agentes en producción
+### Cresta Targets the Lifecycle of Agents in Production
 
-- [Cresta Conductor](https://cresta.com/press/cresta-launches-conductor-the-agent-for-ai-agent-development) promete ayudar a construir, probar y mejorar agentes de IA usando conversaciones reales de clientes, con más contexto en el [blog de Cresta](https://cresta.com/blog/cresta-conductor-the-agent-for-ai-agent-development).
+- [Cresta Conductor](https://cresta.com/press/cresta-launches-conductor-the-agent-for-ai-agent-development) promises to help build, test, and improve AI agents using real customer conversations; more context is available on the [Cresta blog](https://cresta.com/blog/cresta-conductor-the-agent-for-ai-agent-development).
 
-### Anthropic vincula agentes frontier con disponibilidad por riesgo
+### Anthropic links Frontier agents with risk-based availability
 
-- [Claude Fable 5 y Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) separan disponibilidad general y acceso restringido para capacidades sensibles.
+- [Claude Fable 5 and Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) separate general availability from restricted access for sensitive capabilities.
 
-## IA local y serving
+## On-Premises AI and Serving
 
-### vLLM empieza a servir modelos de texto por difusión
+### vLLM Begins Serving Text Models via Diffusion
 
-- [vLLM](https://vllm.ai/blog/2026-06-10-diffusion-gemma) añadió soporte nativo para DiffusionGemma. Google documentó el modelo en su [guía para desarrolladores](https://developers.googleblog.com/diffusiongemma-the-developer-guide/) y NVIDIA publicó su ángulo de aceleración local en [RTX/PRO/DGX Spark](https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/).
+- [vLLM](https://vllm.ai/blog/2026-06-10-diffusion-gemma) added native support for DiffusionGemma. Google documented the model in its [developer guide](https://developers.googleblog.com/diffusiongemma-the-developer-guide/), and NVIDIA published its approach to local acceleration on [RTX/PRO/DGX Spark](https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/).
 
-### llama.cpp sigue con cadencia alta de mantenimiento
+### llama.cpp continues to see frequent updates
 
-- Las [releases de llama.cpp](https://github.com/ggml-org/llama.cpp/releases) muestran actividad automatizada del 11 y 12 de junio, con varios builds y fixes recientes.
+- The [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases) show automated activity on June 11 and 12, with several recent builds and fixes.

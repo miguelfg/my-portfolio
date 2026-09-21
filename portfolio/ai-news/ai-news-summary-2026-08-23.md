@@ -5,19 +5,20 @@
 .. category: AI News
 .. status: draft
 
-# AI News Summary 2026-08-23
+.. lang: en
+# AI News Summary August 23, 2026
 
-## GAFAM y grandes empresas de IA
-- OpenAI presentó [AI Futures](https://openai.com/index/introducing-ai-futures/) y avanzó [Zero Data Retention para frontier models](https://openai.com/index/offering-zero-data-retention-for-frontier-models/). La primera pieza abre un blog del Strategic Futures team centrado en cómo preservar derechos y agencia mientras emerge la IA transformadora; la segunda describe Private Safety Processing para detectar patrones de abuso sin exponer contenido a personal de OpenAI.
+## GAFAM and Major AI Companies
+- OpenAI unveiled [AI Futures](https://openai.com/index/introducing-ai-futures/) and announced [Zero Data Retention for frontier models](https://openai.com/index/offering-zero-data-retention-for-frontier-models/). The first post launches a blog by the Strategic Futures team focused on preserving rights and agency as transformative AI emerges; the second describes Private Safety Processing to detect patterns of abuse without exposing content to OpenAI staff.
 
-## Influencers y blogs técnicos
-- LlamaIndex publicó [ExtractBench: The Most Comprehensive Extraction Benchmark](https://www.llamaindex.ai/blog/introducing-extractbench). El benchmark es abierto y reproducible, cubre 370 documentos empresariales, 4,869 páginas, 8 dominios, 67 tipos de documento y 14 sistemas evaluados, e incluye Agentic Plus como nueva capa de LlamaExtract.
+## Influencers and Technical Blogs
+- LlamaIndex published [ExtractBench: The Most Comprehensive Extraction Benchmark](https://www.llamaindex.ai/blog/introducing-extractbench). The benchmark is open and reproducible; it covers 370 business documents, 4,869 pages, 8 domains, 67 document types, and 14 evaluated systems, and includes Agentic Plus as a new layer of LlamaExtract.
 
-## Imagen generativa
-- Microsoft AI destacó [MAI-Image-2.6 launches at No. 2 on Arena ahead of Google, Meta and xAI](https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/). La pieza afirma que MAI-Image-2.6 quedó en el puesto 2 del leaderboard text-to-image de Arena, en el puesto 3 de image editing, y mejora +79 Elo respecto a MAI-Image-2.5.
+## Generative Imaging
+- Microsoft AI highlighted [MAI-Image-2.6 launches at No. 2 on Arena ahead of Google, Meta, and xAI](https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/). The article states that MAI-Image-2.6 ranked 2nd on Arena’s text-to-image leaderboard, 3rd in image editing, and improved by +79 Elo points compared to MAI-Image-2.5.
 
-## Chatbots y agentes
-- Microsoft AI publicó [MAI-Code-1.1-Flash: Better, faster, at a quarter of the cost](https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/). El modelo se describe como ligero y agentic, integrado en GitHub Copilot y VS Code, con 25% más eficiencia de tokens y menor coste por tarea.
+## Chatbots and Agents
+- Microsoft AI published [MAI-Code-1.1-Flash: Better, faster, at a quarter of the cost](https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/). The model is described as lightweight and agentic, integrated into GitHub Copilot and VS Code, with 25% greater token efficiency and lower cost per task.
 
-## IA local y serving
-- vLLM publicó [Exploring Speculative Decoding in vLLM on AMD GPUs](https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus). La entrada, fechada 2026-08-23, explica speculative decoding como un flujo draft-and-verify y reporta pruebas en AMD Instinct MI300X y MI355X con cinco métodos de drafting.
+## On-Premises AI and Serving
+- vLLM published [Exploring Speculative Decoding in vLLM on AMD GPUs](https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus). The post, dated August 23, 2026, explains speculative decoding as a draft-and-verify workflow and reports on tests conducted on AMD Instinct MI300X and MI355X using five drafting methods.

@@ -8,56 +8,57 @@
 .. description: Daily AI news summary for 2026-06-23
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary 2026-06-23
+# AI News Summary June 23, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### AWS Weekly Roundup: Grok 4.3 en Bedrock, agentes y reducciones de precio
+### AWS Weekly Roundup: Grok 4.3 on Bedrock, Agents, and Price Cuts
 
-AWS publicó su Weekly Roundup del 22 de junio con novedades que incluyen Grok 4.3 en Amazon Bedrock, agentes y reducciones de precio. Es una señal relevante para adopción enterprise porque une disponibilidad de modelos, automatización agentica y coste operativo dentro del ecosistema AWS. Fuente: [AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/).
+AWS published its June 22 Weekly Roundup with updates including Grok 4.3 on Amazon Bedrock, agents, and price cuts. This is a significant signal for enterprise adoption because it brings together model availability, agent-based automation, and operational costs within the AWS ecosystem. Source: [AWS](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/).
 
-### Anthropic abre oficina en Seúl y anuncia alianzas en Corea
+### Anthropic Opens Office in Seoul and Announces Partnerships in Korea
 
-Anthropic anunció la apertura de una oficina en Seúl y nuevas alianzas en el ecosistema coreano de IA. La noticia apunta a expansión comercial y de ecosistema en Asia, un frente cada vez más importante en la competencia global entre proveedores de modelos. Fuente: [Anthropic](https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem).
+Anthropic announced the opening of an office in Seoul and new partnerships within the Korean AI ecosystem. The news points to commercial and ecosystem expansion in Asia, an increasingly important front in the global competition among model providers. Source: [Anthropic](https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem).
 
-### Google AMIE: investigación para gestión de condiciones de salud
+### Google AMIE: Research for Health Condition Management
 
-Google publicó una actualización de investigación sobre AMIE y su posible uso para ayudar en la gestión de condiciones de salud. Es una señal de investigación con impacto potencial alto, especialmente por el peso de la IA médica, aunque todavía debe leerse como avance investigador y no como despliegue general de producto. Fuente: [Google](https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/).
+Google published a research update on AMIE and its potential use in managing health conditions. This signals research with high potential impact, especially given the growing importance of medical AI, though it should still be viewed as a research advancement rather than a general product rollout. Source: [Google](https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/).
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
 ### Simon Willison: Prompt Injection as Role Confusion
 
-Simon Willison publicó un análisis sobre prompt injection entendido como confusión de roles en sistemas con LLM. La pieza destaca porque traduce un riesgo central de chatbots y agentes en un marco técnico claro para diseñar, evaluar y explicar fallos de seguridad. Fuente: [Simon Willison](https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/).
+Simon Willison published an analysis on prompt injection, understood as role confusion in systems using large language models (LLMs). The piece stands out because it translates a core risk of chatbots and agents into a clear technical framework for designing, evaluating, and explaining security flaws. Source: [Simon Willison](https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/).
 
-## Imagen generativa
+## Generative Imaging
 
-### Simon Willison: Moebius 0.2B image inpainting en navegador
+### Simon Willison: Moebius 0.2B Image Inpainting in the Browser
 
-Simon Willison documentó el port de Moebius 0.2B, un modelo de image inpainting, para ejecutarlo en el navegador con Claude Code. El caso es interesante porque muestra cómo modelos visuales pequeños pueden acercar tareas de imagen generativa al cliente, con menos dependencia de servicios remotos para ciertos flujos especializados. Fuente: [Simon Willison](https://simonwillison.net/2026/Jun/22/porting-moebius/).
+Simon Willison documented the port of Moebius 0.2B, an image inpainting model, to run in the browser using Claude Code. This is interesting because it shows how small visual models can bring generative image tasks closer to the client, with less reliance on remote services for certain specialized workflows. Source: [Simon Willison](https://simonwillison.net/2026/Jun/22/porting-moebius/).
 
-## Chatbots y agentes
+## Chatbots and Agents
 
 ### Hermes Agent v0.17.0 "The Reach Release"
 
-Hermes Agent publicó el release v0.17.0 "The Reach Release" en GitHub. La señal mantiene el seguimiento sobre frameworks agenticos abiertos y su evolución hacia herramientas más completas para construir y operar agentes. Fuente: [GitHub](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19).
+Hermes Agent released v0.17.0, "The Reach Release," on GitHub. The project continues to track open-source agent frameworks and their evolution toward more comprehensive tools for building and operating agents. Source: [GitHub](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.6.19).
 
 ### OpenClaw 2026.6.10-beta.2
 
-OpenClaw publicó el release 2026.6.10-beta.2 con mejoras señaladas en fast mode, routing de modelos, estado de sesión/canal y políticas. La noticia encaja en la evolución práctica de agentes y herramientas de desarrollo donde la fiabilidad del routing y del estado empieza a ser tan importante como la capacidad del modelo. Fuente: [GitHub](https://github.com/openclaw/openclaw/releases/tag/v2026.6.10-beta.2).
+OpenClaw released version 2026.6.10-beta.2, featuring improvements in fast mode, model routing, session/channel state, and policies. This news aligns with the practical evolution of agents and development tools, where the reliability of routing and state management is becoming just as important as model capability. Source: [GitHub](https://github.com/openclaw/openclaw/releases/tag/v2026.6.10-beta.2).
 
-## IA local y serving
+## On-Premises AI and Serving
 
-### OpenRouter levanta $113M Series B
+### OpenRouter Raises $113M in Series B Funding
 
-OpenRouter anunció una Series B de 113 millones de dólares. Es la señal más fuerte del día porque refuerza el papel del routing, la agregación de modelos y el serving como capa estratégica entre aplicaciones, proveedores de modelos y operación en producción. Fuente: [OpenRouter](https://openrouter.ai/blog/announcements/series-b/).
+OpenRouter announced a $113 million Series B funding round. This is the day’s most significant development because it reinforces the role of routing, model aggregation, and serving as a strategic layer between applications, model providers, and production operations. Source: [OpenRouter](https://openrouter.ai/blog/announcements/series-b/).
 
-### OpenRouter: residencia de datos y checklist de gobernanza en la capa de routing
+### OpenRouter: Data Residency and Governance Checklist at the Routing Layer
 
-OpenRouter publicó dos piezas conectadas sobre residencia de datos en la capa de routing y gobernanza de IA aplicada al stack. Juntas muestran cómo el routing puede convertirse en punto de control para compliance, residencia, políticas y operación enterprise, no solo en una capa técnica para escoger modelos. Fuentes: [residencia de datos](https://openrouter.ai/blog/insights/ai-data-residency/) y [checklist de gobernanza](https://openrouter.ai/blog/insights/ai-governance-checklist/).
+OpenRouter published two related articles on data residency at the routing layer and AI governance applied to the stack. Together, they demonstrate how routing can become a control point for compliance, residency, policies, and enterprise operations—not just a technical layer for selecting models. Sources: [data residency](https://openrouter.ai/blog/insights/ai-data-residency/) and [governance checklist](https://openrouter.ai/blog/insights/ai-governance-checklist/).
 
-### Hugging Face: modelos locales para triage de OpenClaw
+### Hugging Face: On-Premises Models for OpenClaw Triage
 
-Hugging Face publicó un caso práctico sobre uso de modelos locales para triage del repositorio OpenClaw. La historia conecta IA local con automatización de mantenimiento de software: evaluar issues o pull requests cerca del entorno de desarrollo puede reducir coste operativo y dependencia de APIs externas en tareas repetitivas. Fuente: [Hugging Face](https://huggingface.co/blog/local-models-pr-triage).
+Hugging Face published a case study on using on-premises models for triage in the OpenClaw repository. The case study links on-premises AI with software maintenance automation: evaluating issues or pull requests close to the development environment can reduce operational costs and dependence on external APIs for repetitive tasks. Source: [Hugging Face](https://huggingface.co/blog/local-models-pr-triage).

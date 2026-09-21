@@ -8,52 +8,53 @@
 .. description: Daily AI news summary for 2026-06-22
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary 2026-06-22
+# AI News Summary June 22, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### OpenAI refuerza controles enterprise y respuestas de salud en ChatGPT
+### OpenAI Strengthens Enterprise Controls and Health Metrics in ChatGPT
 
-OpenAI publico el 18 de junio dos actualizaciones relevantes para ChatGPT: nuevos analytics de uso y controles de gasto para ChatGPT Enterprise, y mejoras de respuestas de salud en ChatGPT. En Enterprise, la compania describe visibilidad por usuarios, productos/modelos, tendencias y top users, limites por workspace/grupos/individuos y acceso via Cost API. En salud, OpenAI atribuye mejoras a GPT-5.5 Instant, HealthBench/HealthBench Professional, una red de mas de 260 medicos en 60 paises y una reduccion reportada del 71% en respuestas con problemas de factualidad detectados en trafico de salud en dos meses. Fuentes: [OpenAI Product releases](https://openai.com/news/product-releases/), [ChatGPT Enterprise spend controls](https://openai.com/index/chatgpt-enterprise-spend-controls/) y [Improving health intelligence in ChatGPT](https://openai.com/index/improving-health-intelligence-in-chatgpt/).
+On June 18, OpenAI released two significant updates for ChatGPT: new usage analytics and spending controls for ChatGPT Enterprise, and improvements to health metrics in ChatGPT. For Enterprise, the company highlights visibility by users, products/models, trends, and top users, as well as limits by workspace/groups/individuals and access via the Cost API. In the healthcare sector, OpenAI attributes improvements to GPT-5.5 Instant, HealthBench/HealthBench Professional, a network of more than 260 doctors in 60 countries, and a reported 71% reduction in responses with detected factual errors in healthcare traffic over two months. Sources: [OpenAI Product Releases](https://openai.com/news/product-releases/), [ChatGPT Enterprise Spend Controls](https://openai.com/index/chatgpt-enterprise-spend-controls/), and [Improving Health Intelligence in ChatGPT](https://openai.com/index/improving-health-intelligence-in-chatgpt/).
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Hugging Face publica una demo de multimedia por agente
+### Hugging Face Publishes a Multi-Agent Multimedia Demo
 
-Un Community Article de Hugging Face describe una app que encadena los Spaces `black-forest-labs/FLUX.2-dev` y `microsoft/TRELLIS.2`, usando `agents.md` como contrato de ejecucion para agentes. El flujo convierte una foto en una figurine 3D sin Photoshop ni Blender, una muestra concreta de agentes como coordinadores entre modelos de imagen, 3D y ejecucion de tareas. Fuente: [Hugging Face - No Photoshop, No Blender: Multimedia by Agent](https://huggingface.co/blog/mishig/multimedia-by-agent).
+A Hugging Face Community Article describes an app that chains the Spaces `black-forest-labs/FLUX.2-dev` and `microsoft/TRELLIS.2`, using `agents.md` as an execution contract for agents. The workflow converts a photo into a 3D figurine without Photoshop or Blender, a concrete example of agents acting as coordinators between image models, 3D models, and task execution. Source: [Hugging Face - No Photoshop, No Blender: Multimedia by Agent](https://huggingface.co/blog/mishig/multimedia-by-agent).
 
-### Falconer lleva el debate de retrieval enterprise a benchmarks publicos
+### Falconer Brings the Enterprise Retrieval Debate to Public Benchmarks
 
-Un Community Article alojado en Hugging Face reporta benchmarks con 200 preguntas y dos datasets publicos para herramientas enterprise AI, incluyendo Notion, Atlassian Rovo, Claude Code y Codex. El articulo usa jueces Claude Opus 4.8, GPT-5.5 y Gemini 3.1 Pro, y debe leerse como una senal metodologica escrita por una parte interesada, no como evaluacion independiente definitiva. Fuente: [Hugging Face - Enterprise AI benchmarks](https://huggingface.co/blog/maxifalconer/falconer-notion-confluence-benchmarks).
+A Community Article hosted on Hugging Face reports benchmarks using 200 questions and two public datasets for enterprise AI tools, including Notion, Atlassian Rovo, Claude Code, and Codex. The article uses Claude Opus 4.8, GPT-5.5, and Gemini 3.1 Pro as evaluators and should be read as a methodological statement written by a stakeholder, not as a definitive independent evaluation. Source: [Hugging Face - Enterprise AI benchmarks](https://huggingface.co/blog/maxifalconer/falconer-notion-confluence-benchmarks).
 
-## Imagen generativa
+## Generative Imaging
 
-### Canva lleva Magic Layers a asistentes y flujos de Gemini
+### Canva Brings Magic Layers to Gemini Assistants and Workflows
 
-Canva afirma que Magic Layers esta disponible dentro de Gemini y ChatGPT y convierte imagenes generadas por IA en disenos Canva editables por capas. El articulo indica que Magic Layers se uso mas de 9 millones de veces en sus primeras cuatro semanas. Canva tambien anuncia integracion con Google Gemini mediante AI Connector/MCP Server para generar disenos, buscar y resumir contenido de Canva, editar texto e imagenes por prompt, convertir imagenes Gemini en layouts editables, redimensionar o reutilizar contenido y completar brand templates para Enterprise. Fuentes: [Canva - Magic Layers inside AI assistants](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) y [Canva - design creation inside Google Gemini](https://www.canva.com/newsroom/news/google-gemini/).
+Canva states that Magic Layers is available within Gemini and ChatGPT and converts AI-generated images into editable, layer-based Canva designs. The article notes that Magic Layers was used more than 9 million times in its first four weeks. Canva also announces integration with Google Gemini via AI Connector/MCP Server to generate designs, search for and summarize Canva content, edit text and images via prompts, convert Gemini images into editable layouts, resize or reuse content, and populate brand templates for Enterprise. Sources: [Canva - Magic Layers inside AI assistants](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) and [Canva - design creation inside Google Gemini](https://www.canva.com/newsroom/news/google-gemini/).
 
-### Gemini API actualiza el contexto tecnico para imagen y video
+### Gemini API Updates Technical Context for Images and Video
 
-El changelog oficial de Gemini API lista deprecaciones de modelos Imagen 4, Gemini 3 Image y Veo el 15 de junio, y disponibilidad GA previa de `gemini-3.1-flash-image` y `gemini-3-pro-image` el 28 de mayo, incluyendo soporte video-to-image en `gemini-3.1-flash-image`. Es contexto util para entender el stack visual de Google alrededor de integraciones como Canva/Gemini. Fuente: [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog).
+The official Gemini API changelog lists the deprecation of the Image 4, Gemini 3 Image, and Veo models on June 15, and the early general availability (GA) of `gemini-3.1-flash-image` and `gemini-3-pro-image` on May 28, including video-to-image support in `gemini-3.1-flash-image`. This context is useful for understanding Google’s visual stack around integrations such as Canva/Gemini. Source: [Gemini API release notes](https://ai.google.dev/gemini-api/docs/changelog).
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### OpenClaw 2026.6.9 apunta a agentes mas robustos
+### OpenClaw 2026.6.9 Aims for More Robust Agents
 
-GitHub marca `openclaw 2026.6.9` como latest con fecha 2026-06-21 01:44. Los highlights verificados incluyen entrega Telegram con HTML/markdown mas fiel, recuperacion de agentes mas dependiente, continuidad de sesiones/turnos interrumpidos y mejoras de integracion Codex. La senal principal es operacional: agentes con mejor recuperacion, continuidad y ejecucion de herramientas. Fuente: [OpenClaw releases](https://github.com/openclaw/openclaw/releases).
+GitHub marks `openclaw 2026.6.9` as “latest” with a date of 2026-06-21 01:44. Verified highlights include more accurate Telegram delivery with HTML/Markdown, more reliable agent recovery, continuity for interrupted sessions/turns, and Codex integration improvements. The main focus is operational: agents with better recovery, continuity, and tool execution. Source: [OpenClaw releases](https://github.com/openclaw/openclaw/releases).
 
-### OpenRouter agrupa senales recientes sobre routing y tooling agentico
+### OpenRouter compiles recent updates on routing and agent tooling
 
-OpenRouter lista posts recientes sobre tooling agentico, comparativas de gateway/routing, Codex CLI, Claude Code, `Subagent`, governance y resiliencia ante desaparicion de modelos. El material funciona como contexto de mercado para la misma direccion que muestra OpenClaw: orquestacion, proveedores, subagentes y control de ejecucion como piezas centrales del stack agentico. Fuentes: [OpenRouter all posts](https://openrouter.ai/blog/all/) y [OpenRouter blog](https://openrouter.ai/blog/).
+OpenRouter lists recent posts on agent tooling, gateway/routing comparisons, the Codex CLI, Claude Code, `Subagent`, governance, and resilience in the face of model disappearance. This content serves as market context aligned with OpenClaw’s focus: orchestration, providers, sub-agents, and execution control as central components of the agent-based stack. Sources: [OpenRouter all posts](https://openrouter.ai/blog/all/) and [OpenRouter blog](https://openrouter.ai/blog/).
 
-## IA local y serving
+## Local AI and serving
 
-### llama.cpp b9754 publica una mejora fresca para generacion gramatical
+### llama.cpp b9754 releases a fresh improvement for grammatical generation
 
-GitHub marca `b9754` de llama.cpp como latest con fecha 2026-06-21 21:55. El release esta firmado/verificado por GitHub Actions. La nota principal observada es `common/peg : implement ac parser for stricter grammar generation`, y el release publica artefactos para macOS/iOS, Linux, Android, Windows, ROCm, OpenVINO, SYCL, CUDA, Vulkan y UI. Fuente: [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases).
+GitHub marks `b9754` of llama.cpp as "latest" with a date of 2026-06-21 21:55. The release is signed/verified by GitHub Actions. The main note is `common/peg : implement ac parser for stricter grammar generation`, and the release includes artifacts for macOS/iOS, Linux, Android, Windows, ROCm, OpenVINO, SYCL, CUDA, Vulkan, and UI. Source: [llama.cpp releases](https://github.com/ggml-org/llama.cpp/releases).
 
-### vLLM v0.23.0 sigue marcando contexto de serving en produccion
+### vLLM v0.23.0 continues to set the standard for production serving
 
-vLLM lista `v0.23.0` como latest, publicado el 15 de junio, con 408 commits de 200 contributors. Las notas normalizadas mencionan hardening y optimizaciones para DeepSeek-V4, Model Runner V2 por defecto para modelos dense Llama/Mistral, Rust frontend con streaming `generate`, endpoints dynamic LoRA y mas parsers de tools. Aunque no es la novedad mas fresca del dia, sigue siendo contexto tecnico fuerte para serving. Fuente: [vLLM releases](https://github.com/vllm-project/vllm/releases).
+vLLM lists `v0.23.0` as the latest release, published on June 15, with 408 commits from 200 contributors. The release notes mention hardening and optimizations for DeepSeek-V4, Model Runner V2 as the default for dense Llama/Mistral models, a Rust frontend with `generate` streaming, dynamic LoRA endpoints, and additional tool parsers. Although it’s not the freshest news of the day, it still provides a strong technical foundation for serving. Source: [vLLM releases](https://github.com/vllm-project/vllm/releases).

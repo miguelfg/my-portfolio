@@ -181,6 +181,14 @@ def main() -> int:
     for path in files:
         if ".es.md" in path.name:
             continue
+        source_language = detect_language(path.read_text(encoding="utf-8"))
+        if source_language == args.target:
+            print(f"skip {path.name}: already {args.target}")
+            continue
+        destination = translated_path(path, source_language, args.target)
+        if destination.exists() and not args.force:
+            print(f"skip {destination.name}: translation already exists")
+            continue
         destination = translate_file(path, args.target, args.force)
         print(f"wrote {destination.relative_to(ROOT)}")
     return 0

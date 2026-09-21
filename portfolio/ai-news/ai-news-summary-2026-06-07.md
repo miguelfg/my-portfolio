@@ -4,56 +4,57 @@
 .. category: AI News
 .. status: draft
 
-# AI News Summary 2026-06-07
+.. lang: en
+# AI News Summary June 7, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### Microsoft quiere más modelos propios dentro del trabajo diario
+### Microsoft Wants More In-House Models for Day-to-Day Work
 
-Microsoft presentó en Build 2026 su familia MAI, incluyendo MAI-Thinking-1, MAI-Code-1 y MAI-Image-2.5. El anuncio oficial sitúa estos modelos alrededor de Foundry, Copilot y aplicaciones de productividad, con MAI-Thinking-1 en private preview. Fuente: [Microsoft Official Blog](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/).
+At Build 2026, Microsoft unveiled its MAI family, including MAI-Thinking-1, MAI-Code-1, and MAI-Image-2.5. The official announcement positions these models within Foundry, Copilot, and productivity apps, with MAI-Thinking-1 currently in private preview. Source: [Microsoft Official Blog](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/).
 
-La lectura: Microsoft está convirtiendo el control de modelos en una pieza de plataforma. No se trata solo de añadir más IA a Office o Azure, sino de controlar mejor coste, disponibilidad y capacidades estratégicas en razonamiento, código e imagen.
+Takeaway: Microsoft is making model control a core part of its platform. It’s not just about adding more AI to Office or Azure, but about better controlling costs, availability, and strategic capabilities in reasoning, code, and image processing.
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Simon Willison pone el foco en ejecutar código de LLMs dentro de sandboxes pequeños
+### Simon Willison Focuses on Running LLM Code Within Small Sandboxes
 
-Simon Willison publicó una prueba técnica sobre ejecución de Python en un sandbox con MicroPython y WASM, conectada con su trabajo en Datasette Agent. Fuente: [Simon Willison's Weblog](https://simonwillison.net/).
+Simon Willison published a technical experiment on running Python in a sandbox using MicroPython and WASM, tied to his work on the Datasette Agent. Source: [Simon Willison’s Weblog](https://simonwillison.net/).
 
-La lectura: los agentes útiles necesitan operar sobre herramientas, no solo responder. Eso convierte la seguridad del entorno de ejecución en una parte central del producto. Un sandbox pequeño y auditable puede ser una respuesta práctica, siempre que se trate como mitigación y no como garantía absoluta.
+Key takeaway: useful agents need to operate on tools, not just respond. This makes the security of the execution environment a central part of the product. A small, auditable sandbox can be a practical solution, as long as it is treated as a mitigation rather than an absolute guarantee.
 
-## Imagen generativa
+## Generative Imaging
 
-### MAI-Image-2.5 muestra cómo la generación visual entra en herramientas de productividad
+### MAI-Image-2.5 Shows How Visual Generation Is Being Integrated into Productivity Tools
 
-Microsoft incluyó MAI-Image-2.5 y MAI-Image-2.5 flash dentro de la familia MAI, con capacidades text-to-image e image-to-image y presencia anunciada en PowerPoint, OneDrive y Foundry. Fuente: [Microsoft Official Blog](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/).
+Microsoft included MAI-Image-2.5 and MAI-Image-2.5 Flash in the MAI family, with text-to-image and image-to-image capabilities and announced integration with PowerPoint, OneDrive, and Foundry. Source: [Microsoft Official Blog](https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/).
 
-La lectura: el movimiento importante está en la distribución. La generación de imagen empieza a vivir dentro de los documentos, presentaciones y archivos donde se trabaja, no solo en interfaces creativas separadas.
+Key takeaway: The major shift is in distribution. Image generation is beginning to live within the documents, presentations, and files where people work—not just in separate creative interfaces.
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### vLLM Themis apunta a agentes con sesiones, memoria y routing observable
+### vLLM Themis Aims for Agents with Sessions, Memory, and Observable Routing
 
-vLLM publicó Semantic Router v0.3 Themis con routing agentic session-aware, dashboard, herramientas de despliegue y hooks para safety, replay, memory y RAG. Fuente: [vLLM Blog](https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release).
+vLLM released Semantic Router v0.3 Themis with session-aware agent routing, a dashboard, deployment tools, and hooks for safety, replay, memory, and RAG. Source: [vLLM Blog](https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release).
 
-La lectura: los agentes de producción necesitan una capa de control que decida qué modelo usar, cómo mantener contexto de sesión y cómo observar decisiones. Themis encaja en esa transición desde demos de agentes hacia sistemas operables.
+Key takeaway: Production agents need a control layer that decides which model to use, how to maintain session context, and how to observe decisions. Themis fits into this transition from agent demos to operational systems.
 
-### El sandboxing de código también es infraestructura de agentes
+### Code sandboxing is also agent infrastructure
 
-La entrada de Simon Willison sobre MicroPython y WASM es relevante también para agentes porque aborda la ejecución de código generado por modelos dentro de un entorno restringido. Fuente: [Simon Willison's Weblog](https://simonwillison.net/).
+Simon Willison’s post on MicroPython and WASM is also relevant to agents because it addresses the execution of model-generated code within a restricted environment. Source: [Simon Willison’s Weblog](https://simonwillison.net/).
 
-La lectura: cuando un agente puede escribir y ejecutar código, el runtime se vuelve parte del perímetro de seguridad. La calidad del agente dependerá tanto del modelo como de los límites técnicos que rodean su ejecución.
+Key takeaway: When an agent can write and execute code, the runtime becomes part of the security perimeter. The quality of the agent will depend both on the model and on the technical constraints surrounding its execution.
 
-## IA local y serving
+## On-device AI and serving
 
-### Gemma 4 QAT refuerza el camino hacia modelos locales más prácticos
+### Gemma 4 QAT strengthens the path toward more practical on-device models
 
-Google publicó checkpoints Gemma 4 con quantization-aware training para reducir memoria y facilitar inferencia on-device, con compatibilidad señalada para rutas como GGUF/llama.cpp, vLLM, Ollama, LM Studio, LiteRT-LM, Transformers.js, SGLang y MLX. Fuente: [Google Blog](https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/).
+Google released Gemma 4 checkpoints with quantization-aware training to reduce memory usage and facilitate on-device inference, with noted compatibility for frameworks such as GGUF/llama.cpp, vLLM, Ollama, LM Studio, LiteRT-LM, Transformers.js, SGLang, and MLX. Source: [Google Blog](https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/).
 
-La lectura: el avance relevante está en hacer que modelos open-weight funcionen mejor en los formatos que ya usan los desarrolladores. Menos memoria y más compatibilidad significan más posibilidades reales para productos locales, edge y prototipos que no dependen siempre de una API remota.
+Key takeaway: The significant advancement lies in making open-weight models perform better in the formats developers already use. Less memory and greater compatibility mean more real-world possibilities for local, edge, and prototype products that don’t always rely on a remote API.
 
-### Ollama 0.30 suma madurez al stack local basado en GGUF
+### Ollama 0.30 Brings Greater Maturity to the GGUF-Based Local Stack
 
-Ollama 0.30 se presenta como una mejora de rendimiento y soporte de modelos con GGUF vía llama.cpp, con soporte MLX para Apple Silicon. Fuente: [Ollama Blog](https://ollama.com/blog).
+Ollama 0.30 delivers performance improvements and support for GGUF models via llama.cpp, with MLX support for Apple Silicon. Source: [Ollama Blog](https://ollama.com/blog).
 
-La lectura: el stack local avanza por mejoras incrementales pero muy prácticas. Cada mejora de compatibilidad reduce fricción para evaluar modelos, correrlos en hardware propio y construir herramientas pequeñas sin depender por defecto de serving centralizado.
+Takeaway: The on-premises stack is advancing through incremental but highly practical improvements. Each compatibility enhancement reduces friction when evaluating models, running them on proprietary hardware, and building small tools without relying by default on centralized serving.

@@ -5,29 +5,30 @@
 .. category: AI News
 .. status: draft
 
-# AI News Summary 2026-07-15
+.. lang: en
+# AI News Summary July 15, 2026
 
-Hoy el hilo conductor fue claro: las empresas están tratando AI como una capa operativa con métricas, gobernanza y despliegue real; al mismo tiempo, los agentes salen del chat y se acercan al sistema operativo, y el serving local sigue afinándose para cargas de baja latencia.
+Today’s overarching theme was clear: companies are treating AI as an operational layer with metrics, governance, and real-world deployment; at the same time, agents are moving beyond chat and approaching the operating system, and local serving continues to be refined for low-latency workloads.
 
-## GAFAM y grandes empresas de IA
-### How to manage AI investments in the agentic era
-OpenAI publicó una guía para invertir con más confianza en la era agentic y afirma que el precio por millón de tokens cayó un 97% desde GPT-4 hasta GPT-5.4; además, GPT-5.6 mejora el Artificial Analysis Coding Agent Index con 54% menos tokens de salida y 57% menos tiempo por tarea. [OpenAI article](https://openai.com/index/managing-ai-investments-in-agentic-era/) · [OpenAI news](https://openai.com/news/)
+## GAFAM and Major AI Companies
+### How to Manage AI Investments in the Agentic Era
+OpenAI published a guide for investing with greater confidence in the agentic era and states that the cost per million tokens fell by 97% from GPT-4 to GPT-5.4; furthermore, GPT-5.6 improves the Artificial Analysis Coding Agent Index with 54% fewer output tokens and 57% less time per task. [OpenAI article](https://openai.com/index/managing-ai-investments-in-agentic-era/) · [OpenAI news](https://openai.com/news/)
 
 ### How Gemini is speaking the language of Southeast Asia
-Google dice que los usuarios activos de Gemini en el Sudeste Asiático se han más que duplicado en el último año y que Gemini Spark se está desplegando en idiomas locales para suscriptores de Gemini Advanced. [Google article](https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026/) · [Innovation & AI](https://blog.google/innovation-and-ai/)
+Google says that active Gemini users in Southeast Asia have more than doubled in the last year and that Gemini Spark is being rolled out in local languages for Gemini Advanced subscribers. [Google article](https://blog.google/innovation-and-ai/products/gemini-app/gemini-southeast-asia-report-2026/) · [Innovation & AI](https://blog.google/innovation-and-ai/)
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 ### TIL: Using uvx in GitHub Actions in a cache-friendly way
-Simon Willison comparte un patrón práctico para cachear `uvx` en GitHub Actions usando `UV_EXCLUDE_NEWER`, con el objetivo de evitar descargas repetidas desde PyPI en cada ejecución. [post](https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/) · [Atom feed](https://simonwillison.net/atom/everything/)
+Simon Willison shares a practical pattern for caching `uvx` in GitHub Actions using `UV_EXCLUDE_NEWER`, with the goal of avoiding repeated downloads from PyPI on every run. [post](https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/) · [Atom feed](https://simonwillison.net/atom/everything/)
 
-## Imagen generativa
+## Generative imaging
 ### Introducing Muse Image and Muse Video
-Meta presentó Muse Image para seguimiento de instrucciones, edición y composición con múltiples referencias, y Muse Video con soporte nativo de audio. Aunque no es la novedad más fresca del día, sigue siendo el ancla más sólida que apareció en la revisión de fuentes para imagen generativa. [Meta AI](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) · [blog](https://ai.meta.com/blog/)
+Meta introduced Muse Image for following instructions, editing, and composition with multiple references, and Muse Video with native audio support. Although it isn’t the freshest news of the day, it remains the most solid highlight to emerge from the generative image source review. [Meta AI](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) · [blog](https://ai.meta.com/blog/)
 
-## Chatbots y agentes
+## Chatbots and Agents
 ### Personal Computer Is Here
-Perplexity ha empezado a desplegar Personal Computer, una expansión de Perplexity Computer que lleva la orquestación multimodelo a archivos locales, apps nativas, conectores y la web, manteniendo al usuario al mando de las acciones sensibles. [Perplexity blog](https://www.perplexity.ai/hub/blog/personal-computer-is-here) · [hub](https://www.perplexity.ai/hub/blog)
+Perplexity has begun rolling out Personal Computer, an expansion of Perplexity Computer that brings multimodal orchestration to local files, native apps, connectors, and the web, while keeping the user in control of sensitive actions. [Perplexity blog](https://www.perplexity.ai/hub/blog/personal-computer-is-here) · [hub](https://www.perplexity.ai/hub/blog)
 
-## IA local y serving
+## On-Premises AI and Serving
 ### vLLM x TileRT: Specialized Decode for Latency-Critical Serving
-vLLM introduce una ruta de decode enchufable con TileRT para cargas de baja latencia, manteniendo el prefill y el resto del stack de vLLM intactos. [vLLM article](https://vllm.ai/blog/2026-07-14-vllm-tilert-pd) · [blog](https://vllm.ai/blog/)
+vLLM introduces a pluggable decode path with TileRT for low-latency workloads, while keeping the prefill and the rest of the vLLM stack intact. [vLLM article](https://vllm.ai/blog/2026-07-14-vllm-tilert-pd) · [blog](https://vllm.ai/blog/)

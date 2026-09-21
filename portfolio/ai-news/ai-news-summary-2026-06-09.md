@@ -4,74 +4,75 @@
 .. category: AI News
 .. status: draft
 
-# AI News — 2026-06-09
+.. lang: en
+# AI News — June 9, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
-### OpenAI convierte Codex en una plataforma de trabajo, no solo de código
-OpenAI anunció nuevas capacidades para Codex: plugins por rol, annotations y una preview de Sites para crear y compartir apps o webs interactivas. También publicó un reporte donde afirma que Codex ya supera los 5 millones de usuarios semanales y que los perfiles no desarrolladores son cerca del 20% de la base de usuarios. Fuente: [OpenAI — Codex for every role, tool, and workflow](https://openai.com/index/codex-for-every-role-tool-workflow/) y [OpenAI — Codex is becoming a productivity tool for everyone](https://openai.com/index/codex-for-knowledge-work/).
+### OpenAI Transforms Codex into a Work Platform, Not Just a Coding Platform
+OpenAI announced new features for Codex: role-based plugins, annotations, and a preview of Sites for creating and sharing interactive apps or websites. It also published a report stating that Codex now has over 5 million weekly users and that non-developers account for about 20% of the user base. Source: [OpenAI — Codex for every role, tool, and workflow](https://openai.com/index/codex-for-every-role-tool-workflow/) and [OpenAI — Codex is becoming a productivity tool for everyone](https://openai.com/index/codex-for-knowledge-work/).
 
-La señal: los agentes empiezan a empaquetarse como herramientas de productividad general para analistas, marketing, operaciones, diseño e inversión, no solo como copilotos de desarrollo.
+The takeaway: Agents are beginning to be positioned as general productivity tools for analysts, marketing, operations, design, and investment—not just as development co-pilots.
 
-### Google consolida la narrativa de Gemini como plataforma agentic y multimodal
-Google publicó un recap de sus anuncios de mayo, destacando Gemini 3.5, Gemini Omni, Gemini Spark e information agents en Search. Las release notes de Gemini también registran Spark y Omni como parte de la evolución hacia asistentes más proactivos y creación de video conversacional. Fuente: [Google AI announcements from May 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/) y [Gemini release notes](https://gemini.google/release-notes/).
+### Google solidifies the narrative of Gemini as an agentic and multimodal platform
+Google published a recap of its May announcements, highlighting Gemini 3.5, Gemini Omni, Gemini Spark, and information agents in Search. The Gemini release notes also list Spark and Omni as part of the evolution toward more proactive assistants and conversational video creation. Source: [Google AI announcements from May 2026](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/) and [Gemini release notes](https://gemini.google/release-notes/).
 
-La señal: Gemini se está articulando como capa de agentes, creación multimodal y acciones de fondo dentro del ecosistema Google.
+The takeaway: Gemini is positioning itself as a layer of agents, multimodal creation, and background actions within the Google ecosystem.
 
-### Anthropic amplía Project Glasswing para ciberdefensa con IA
-Anthropic anunció la expansión de Project Glasswing a unas 150 organizaciones adicionales en más de 15 países. La compañía afirma que sus socios iniciales ya identificaron más de 10.000 fallos de seguridad high/critical usando Claude Mythos Preview. Fuente: [Anthropic — Expanding Project Glasswing](https://www.anthropic.com/news/expanding-project-glasswing).
+### Anthropic Expands Project Glasswing for AI-Powered Cybersecurity
+Anthropic announced the expansion of Project Glasswing to approximately 150 additional organizations in more than 15 countries. The company states that its initial partners have already identified more than 10,000 high/critical security flaws using Claude Mythos Preview. Source: [Anthropic — Expanding Project Glasswing](https://www.anthropic.com/news/expanding-project-glasswing).
 
-La señal: los modelos avanzados de ciberseguridad se están convirtiendo en una pieza estratégica para proteger infraestructura crítica antes de que capacidades similares se generalicen.
+The takeaway: Advanced cybersecurity models are becoming a strategic asset for protecting critical infrastructure before similar capabilities become widespread.
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Hugging Face rediseña el `hf` CLI para agentes
-Hugging Face publicó cómo está adaptando el `hf` CLI para agentes de coding como Claude Code, Codex, Cursor y Gemini: menos output decorativo, valores completos, formatos más parseables y detección de entornos agentic. El post indica que, en tareas complejas, no usar CLI puede costar hasta 6× más tokens. Fuente: [Hugging Face — Designing the `hf` CLI as an agent-optimized way to work with the Hub](https://huggingface.co/blog/hf-cli-for-agents).
+### Hugging Face Redesigns the `hf` CLI for Agents
+Hugging Face published details on how it is adapting the `hf` CLI for coding agents such as Claude Code, Codex, Cursor, and Gemini: less decorative output, complete values, more parseable formats, and detection of agent-based environments. The post notes that, for complex tasks, not using the CLI can cost up to 6× more tokens. Source: [Hugging Face — Designing the `hf` CLI as an agent-optimized way to work with the Hub](https://huggingface.co/blog/hf-cli-for-agents).
 
-La señal: la experiencia de desarrollador ya no se diseña solo para humanos. Las herramientas empiezan a optimizarse para agentes que leen stdout, ejecutan comandos y necesitan ahorrar contexto.
+The takeaway: the developer experience is no longer designed solely for humans. Tools are beginning to be optimized for agents that read stdout, execute commands, and need to conserve context.
 
-### El blog de Hugging Face marca más foco en agentic RL y agentes locales
-El índice de Hugging Face muestra artículos recientes sobre OpenEnv para agentic RL, Holo3.1 para computer-use agents locales y otros temas de seguridad/benchmarks. Fuente: [Hugging Face Blog](https://huggingface.co/blog).
+### The Hugging Face blog is placing greater emphasis on agentic RL and local agents
+The Hugging Face index features recent articles on OpenEnv for agentic RL, Holo3.1 for local computer-use agents, and other topics related to security and benchmarks. Source: [Hugging Face Blog](https://huggingface.co/blog).
 
-La señal: el ecosistema abierto está avanzando en dos direcciones a la vez: entrenamiento/evaluación de agentes y ejecución local de agentes que interactúan con ordenadores.
+The takeaway: The open ecosystem is moving in two directions at once: training/evaluation of agents and local execution of agents that interact with computers.
 
-## Imagen generativa
+## Generative Imaging
 
-### Canva hace editables las imágenes generadas por AI dentro de Gemini y ChatGPT
-Canva anunció que Magic Layers está disponible dentro de Gemini y ChatGPT para convertir imágenes generadas por AI en diseños Canva editables. Fuente: [Canva — Magic Layers inside AI assistants](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) y [Canva Newsroom](https://www.canva.com/newsroom/news/).
+### Canva Makes AI-Generated Images Editable Within Gemini and ChatGPT
+Canva announced that Magic Layers is available within Gemini and ChatGPT to convert AI-generated images into editable Canva designs. Source: [Canva — Magic Layers inside AI assistants](https://www.canva.com/newsroom/news/magic-layers-ai-assistants/) and [Canva Newsroom](https://www.canva.com/newsroom/news/).
 
-La señal: la imagen generativa se mueve del “render final” al “activo editable”. Para equipos de marca y marketing, esto reduce el salto entre ideación con IA y producción real.
+The takeaway: Generative imagery is shifting from a “final render” to an “editable asset.” For brand and marketing teams, this bridges the gap between AI-driven ideation and actual production.
 
-### Gemini Omni refuerza la apuesta por creación multimodal y video
-Google describe Gemini Omni como un modelo para crear desde múltiples tipos de input, empezando por video, y las release notes lo posicionan como creación/edición de video conversacional. Fuente: [Google AI updates](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/) y [Gemini release notes](https://gemini.google/release-notes/).
+### Gemini Omni reinforces the focus on multimodal creation and video
+Google describes Gemini Omni as a model for creating content from multiple types of input, starting with video, and the release notes position it as conversational video creation/editing. Source: [Google AI updates](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/) and [Gemini release notes](https://gemini.google/release-notes/).
 
-La señal: Google está integrando generación multimedia directamente en asistentes, no como herramienta creativa aislada.
+The takeaway: Google is integrating multimedia generation directly into assistants, rather than as a standalone creative tool.
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### OpenRouter baja la supervisión humana de agentes al SDK
-OpenRouter publicó una guía sobre controles human-in-the-loop para agentes en contextos regulados por EU AI Act, Colorado ADMT y NIST AI RMF. Propone approval gates, logs de auditoría, timeouts, estado durable y reanudación de workflows. Fuente: [OpenRouter — Human Oversight for AI Agents](https://openrouter.ai/blog/human-oversight-eu-ai-act-compliance-agent-sdk).
+### OpenRouter shifts human oversight of agents to the SDK
+OpenRouter published a guide on human-in-the-loop controls for agents in contexts regulated by the EU AI Act, Colorado ADMT, and NIST AI RMF. It proposes approval gates, audit logs, timeouts, persistent state, and workflow resumption. Source: [OpenRouter — Human Oversight for AI Agents](https://openrouter.ai/blog/human-oversight-eu-ai-act-compliance-agent-sdk).
 
-La señal: la gobernanza de agentes ya no es solo política interna; se está convirtiendo en patrón de arquitectura y runtime.
+The takeaway: agent governance is no longer just an internal policy; it is becoming an architectural and runtime standard.
 
-### Codex empuja el asistente hacia la producción de artefactos de negocio
-OpenAI afirma que knowledge workers están usando Codex para informes, spreadsheets, presentaciones, contratos, investigación, análisis de datos y automatización. Fuente: [OpenAI — Codex productivity tool for everyone](https://openai.com/index/codex-for-knowledge-work/).
+### Codex Puts the Assistant to Work Producing Business Artifacts
+OpenAI states that knowledge workers are using Codex for reports, spreadsheets, presentations, contracts, research, data analysis, and automation. Source: [OpenAI — Codex productivity tool for everyone](https://openai.com/index/codex-for-knowledge-work/).
 
-La señal: los chatbots/agentes más competitivos no solo conversan: producen entregables, coordinan herramientas y dejan trazas editables.
+The takeaway: The most competitive chatbots/agents don’t just converse—they produce deliverables, coordinate tools, and leave editable traces.
 
-## IA local y serving
+## On-premises AI and serving
 
-### vLLM Semantic Router v0.3 apunta a routing de agentes en producción
-vLLM publicó Themis v0.3 con una arquitectura de señales, proyecciones, decisiones, algoritmos y selección de modelos. El post complementario de SAAR describe routing consciente de sesión para agentes long-horizon, con controles de continuidad y trazas reproducibles. Fuente: [vLLM — Themis v0.3](https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release) y [vLLM — Session-Aware Agentic Routing](https://vllm.ai/blog/2026-06-02-session-aware-agentic-routing).
+### vLLM Semantic Router v0.3 targets agent routing in production
+vLLM released Themis v0.3 with an architecture featuring signals, projections, decisions, algorithms, and model selection. The accompanying SAAR post describes session-aware routing for long-horizon agents, with continuity checks and reproducible traces. Source: [vLLM — Themis v0.3](https://vllm.ai/blog/2026-06-05-v0.3-vllm-sr-themis-release) and [vLLM — Session-Aware Agentic Routing](https://vllm.ai/blog/2026-06-02-session-aware-agentic-routing).
 
-La señal: el serving de LLMs se está especializando para agentes persistentes, donde cambiar de modelo en el momento equivocado puede romper contexto, tool use o continuidad.
+The takeaway: LLM serving is becoming specialized for persistent agents, where switching models at the wrong time can disrupt context, tool use, or continuity.
 
-### Ollama 0.30 mejora el stack local con GGUF y llama.cpp
-Ollama anunció la versión 0.30 con mejor rendimiento, soporte GGUF mediante llama.cpp, Vulkan por defecto y compatibilidad con más familias de modelos. Fuente: [Ollama — Improved performance and model support with GGUF](https://ollama.com/blog/improved-performance-and-model-support-with-gguf).
+### Ollama 0.30 improves the local stack with GGUF and llama.cpp
+Ollama announced version 0.30 with improved performance, GGUF support via llama.cpp, Vulkan by default, and compatibility with more model families. Source: [Ollama — Improved performance and model support with GGUF](https://ollama.com/blog/improved-performance-and-model-support-with-gguf).
 
-La señal: correr modelos locales variados se vuelve más sencillo, especialmente para asistentes y coding agents que necesitan tool calling y ejecución en hardware heterogéneo.
+The takeaway: Running a variety of local models becomes easier, especially for assistants and coding agents that require tool calling and execution on heterogeneous hardware.
 
-### OpenRouter combina guardrails y HITL para operar agentes con control
-Además del post sobre supervisión humana, OpenRouter publicó Guardrails para presupuesto, zero data retention, restricciones de modelos/proveedores, defensa contra prompt injection y DLP. Fuente: [OpenRouter — Guardrails](https://openrouter.ai/blog/guardrails).
+### OpenRouter Combines Guardrails and HITL to Operate Agents with Control
+In addition to the post on human supervision, OpenRouter published Guardrails for budget, zero data retention, model/vendor restrictions, defense against prompt injection, and DLP. Source: [OpenRouter — Guardrails](https://openrouter.ai/blog/guardrails).
 
-La señal: el routing multi-modelo está evolucionando hacia una capa de control operativo: costes, privacidad, seguridad y cumplimiento alrededor de agentes en producción.
+The takeaway: Multi-model routing is evolving into a layer of operational control—covering costs, privacy, security, and compliance—for agents in production.

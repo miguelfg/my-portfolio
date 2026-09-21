@@ -8,46 +8,47 @@
 .. description: Daily AI news summary for 2026-07-01
 .. type: text
 .. status: draft
+.. lang: en
 -->
 
-# AI News Summary 2026-07-01
+# AI News Summary July 1, 2026
 
-## GAFAM y grandes empresas de IA
+## GAFAM and Major AI Companies
 
 ### Claude Sonnet 5
-Anthropic publicó [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) el 30 de junio y lo posiciona como su Sonnet más agentic hasta ahora, con mejoras pensadas para coding y tareas autónomas.
+Anthropic released [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) on June 30 and positions it as its most agent-like Sonnet yet, with improvements designed for coding and autonomous tasks.
 
 ### Claude Science
-Anthropic presentó [Claude Science, an AI workbench for scientists](https://www.anthropic.com/news/claude-science-ai-workbench) el 30 de junio, una propuesta para investigación científica con herramientas integradas y artefactos auditables.
+Anthropic introduced [Claude Science, an AI workbench for scientists](https://www.anthropic.com/news/claude-science-ai-workbench) on June 30, a solution for scientific research featuring integrated tools and auditable artifacts.
 
 ### Gemini Spark updates
-Google lanzó [Gemini Spark updates: macOS launch, connected apps and more](https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/) el 30 de junio: Spark llega a macOS, se conecta con más apps y mejora el seguimiento de temas en tiempo real.
+Google released [Gemini Spark updates: macOS launch, connected apps, and more](https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/) on June 30: Spark is now available on macOS, connects with more apps, and improves real-time topic tracking.
 
-## Influencers y blogs técnicos
+## Influencers and Tech Blogs
 
-### Simon Willison sobre Claude Sonnet 5
-En [What's new in Claude Sonnet 5](https://simonwillison.net/2026/Jun/30/claude-sonnet-5/), Simon Willison pone el foco en los docs de producto y en lo que el lanzamiento implica para builders, más allá del anuncio oficial.
+### Simon Willison on Claude Sonnet 5
+In [What’s New in Claude Sonnet 5](https://simonwillison.net/2026/Jun/30/claude-sonnet-5/), Simon Willison focuses on the product documentation and what the release means for builders, beyond the official announcement.
 
-### Hugging Face y la metacognición en LLMs
-Hugging Face publicó [Does Your LLM Know *When It's About to Be Wrong*?](https://huggingface.co/blog/ginigen-ai/metacognition) el 1 de julio, una pieza interesante sobre confianza, autoseñalización de error y evaluación de modelos.
+### Hugging Face and Metacognition in LLMs
+Hugging Face published [Does Your LLM Know *When It’s About to Be Wrong*?](https://huggingface.co/blog/ginigen-ai/metacognition) on July 1, an interesting piece on confidence, error self-signaling, and model evaluation.
 
-## Imagen generativa
+## Generative Imaging
 
 ### Nano Banana 2 Lite
-Simon Willison resumió [Nano Banana 2 Lite](https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/) como el modelo de imagen más rápido y barato de Gemini, con foco en velocidad y escala.
+Simon Willison summarized [Nano Banana 2 Lite](https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/) as Gemini’s fastest and most cost-effective image model, with a focus on speed and scale.
 
-## Chatbots y agentes
+## Chatbots and Agents
 
-### Claude Sonnet 5 se vuelve más agentic
-Anthropic describe [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) como su versión más agentic hasta la fecha, con mejor uso de herramientas y ejecución de tareas largas.
+### Claude Sonnet 5 Becomes More Agent-Like
+Anthropic describes [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) as its most agent-like version to date, with improved tool usage and execution of long-running tasks.
 
 ### OpenClaw 2026.6.11
-La release [openclaw 2026.6.11](https://github.com/openclaw/openclaw/releases/tag/v2026.6.11) llega con fixes de fiabilidad para replies, reconexiones, envíos atascados y defaults más seguros para administración.
+The [OpenClaw 2026.6.11](https://github.com/openclaw/openclaw/releases/tag/v2026.6.11) release includes reliability fixes for replies, reconnections, and stuck submissions, as well as safer defaults for administration.
 
 ### Claude Science
-Anthropic presentó [Claude Science](https://www.anthropic.com/news/claude-science-ai-workbench) como un entorno de trabajo para científicos con herramientas integradas y cómputo flexible.
+Anthropic introduced [Claude Science](https://www.anthropic.com/news/claude-science-ai-workbench) as a workspace for scientists featuring integrated tools and flexible computing.
 
-## IA local y serving
+## On-Premises AI and Serving
 
 ### llama.cpp b9852
-El release [b9852 de llama.cpp](https://github.com/ggml-org/llama.cpp/releases/tag/b9852) salió el 1 de julio e incorpora soporte OpenCL q1_0, otra señal de avance en serving local y compatibilidad de hardware.
+The [b9852 release of llama.cpp](https://github.com/ggml-org/llama.cpp/releases/tag/b9852) was released on July 1 and includes OpenCL q1_0 support, another sign of progress in on-premises serving and hardware compatibility.
