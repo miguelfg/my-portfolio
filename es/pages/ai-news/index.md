@@ -10,18 +10,18 @@
 
 <section class="ai-news-page" aria-labelledby="ai-news-title">
   <header class="ai-news-page__intro">
-    <div><p class="ai-news-page__kicker">AI News / Daily signal</p><h1 id="ai-news-title">AI News Summaries</h1></div>
-    <p class="ai-news-page__dek">A sharper daily read on the launches, research, products, and people changing AI.</p>
+    <div><p class="ai-news-page__kicker">AI News / Signal</p><h1 id="ai-news-title">AI News Summaries</h1></div>
+    <p class="ai-news-page__dek">A sharper read on the launches, research, products, and people changing AI.</p>
   </header>
   <div class="ai-news-grid">
     <article class="ai-news-card featured">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-09-25</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-09-25">Sep 25, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-09-25">Sep 25, 2026</time></div>
         <h2>AI News Summary 2026-09-25</h2>
         <p>Infrastructure, models, agents, generative imagery, and local serving signals from the last 24 hours.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-09-25/">Read more <span aria-hidden="true">↗</span></a>
@@ -34,7 +34,7 @@
         <span class="ai-news-card__thumb-date">2026-08-29</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-29">Aug 29, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-29">Aug 29, 2026</time></div>
         <h2>AI News Summary 2026-08-29</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-08-29/">Read more <span aria-hidden="true">↗</span></a>
@@ -95,11 +95,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-08-24</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-24">Aug 24, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-24">Aug 24, 2026</time></div>
         <h2>AI News Summary 2026-08-24</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-08-24/">Read more <span aria-hidden="true">↗</span></a>
@@ -160,11 +160,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-08-19</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-19">Aug 19, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-19">Aug 19, 2026</time></div>
         <h2>AI News Summary 2026-08-19</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-08-19/">Read more <span aria-hidden="true">↗</span></a>
@@ -225,11 +225,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-08-11</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-11">Aug 11, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-08-11">Aug 11, 2026</time></div>
         <h2>AI News Summary 2026-08-11</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-08-11/">Read more <span aria-hidden="true">↗</span></a>
@@ -290,11 +290,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-07-13</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-07-13">Jul 13, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-07-13">Jul 13, 2026</time></div>
         <h2>AI News Summary 2026-07-13</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-07-13/">Read more <span aria-hidden="true">↗</span></a>
@@ -355,11 +355,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-06-27</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-27">Jun 27, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-27">Jun 27, 2026</time></div>
         <h2>AI News Summary 2026-06-27</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-06-27/">Read more <span aria-hidden="true">↗</span></a>
@@ -420,11 +420,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-06-21</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-21">Jun 21, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-21">Jun 21, 2026</time></div>
         <h2>AI News Summary 2026-06-21</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-06-21/">Read more <span aria-hidden="true">↗</span></a>
@@ -485,11 +485,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-06-09</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-09">Jun 9, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-06-09">Jun 9, 2026</time></div>
         <h2>AI News Summary 2026-06-09</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-06-09/">Read more <span aria-hidden="true">↗</span></a>
@@ -550,11 +550,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-05-28</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-05-28">May 28, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-05-28">May 28, 2026</time></div>
         <h2>AI News Summary 2026-05-28</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-05-28/">Read more <span aria-hidden="true">↗</span></a>
@@ -615,11 +615,11 @@
     <article class="ai-news-card">
       <div class="ai-news-card__thumb" aria-hidden="true">
         <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
-        <span class="ai-news-card__thumb-label">DAILY ROUNDUP</span>
+        <span class="ai-news-card__thumb-label">ROUNDUP</span>
         <span class="ai-news-card__thumb-date">2026-05-19</span>
       </div>
       <div class="ai-news-card__body">
-        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Daily roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-05-19">May 19, 2026</time></div>
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">Roundup</span><span class="ai-news-card__source">AI News digest</span><time datetime="2026-05-19">May 19, 2026</time></div>
         <h2>AI News Summary 2026-05-19</h2>
         <p>The key launches, deals, and research signals shaping the AI ecosystem today.</p>
         <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-05-19/">Read more <span aria-hidden="true">↗</span></a>
@@ -673,5 +673,28 @@
 .ai-news-card__link span { color: var(--news-accent); font-size: 1rem; margin-left: .2rem; }
 @media (max-width: 860px) { .ai-news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ai-news-card.featured { grid-column: span 2; } }
 @media (max-width: 560px) { .ai-news-page__intro { display: block; } .ai-news-page__dek { margin-top: 1rem; } .ai-news-grid { grid-template-columns: 1fr; } .ai-news-card.featured { grid-column: auto; display: flex; } .ai-news-card__thumb { min-height: 155px; } }
+.ai-news-card { cursor: pointer; }
+.ai-news-card__thumb::before { content: ''; position: absolute; inset: 0; z-index: -1; background: url('../../images/ai-news/ai-news-card-default.svg') center / cover no-repeat; opacity: .34; mix-blend-mode: screen; }
+.ai-news-card[tabindex="0"]:focus-visible { outline: 3px solid var(--news-accent-soft); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .ai-news-card { transition: none; } .ai-news-card:hover { transform: none; } }
 </style>
+<script>
+(() => {
+  document.querySelectorAll('.ai-news-card').forEach((card) => {
+    const link = card.querySelector('.ai-news-card__link');
+    if (!link) return;
+    card.setAttribute('role', 'link');
+    card.setAttribute('tabindex', '0');
+    const go = () => { window.location.href = link.href; };
+    card.addEventListener('click', (event) => {
+      if (!event.target.closest('a, button')) go();
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        go();
+      }
+    });
+  });
+})();
+</script>
