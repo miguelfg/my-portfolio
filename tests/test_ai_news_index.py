@@ -59,6 +59,13 @@ class AiNewsIndexTests(unittest.TestCase):
         dates = extract_index_dates()
         self.assertEqual(dates, sorted(dates, reverse=True))
 
+    def test_card_metadata_uses_digest_label_without_duplicate_thumbnail_dates(self) -> None:
+        text = PAGE.read_text(encoding="utf-8")
+        self.assertNotIn(">ROUNDUP<", text)
+        self.assertNotIn(">Roundup<", text)
+        self.assertNotIn('<span class="ai-news-card__thumb-date">', text)
+        self.assertEqual(text.count('ai-news-card__pill">AI News digest'), 11)
+
 
 if __name__ == "__main__":
     unittest.main()
