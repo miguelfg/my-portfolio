@@ -184,3 +184,7 @@ nikolaserve.pid
 
 
 .mcp.json
+
+# Local planning docs (superpowers)
+docs/superpowers/
+.superpowers/
