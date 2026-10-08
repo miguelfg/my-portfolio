@@ -45,6 +45,13 @@ class ServicesPageTests(unittest.TestCase):
         self.assertIn("/Miguel_Fiandor_CV.pdf", self.text)
         self.assertIn("/pages/contact-me", self.text)
 
+    def test_icij_investigations_backed_by_cv(self) -> None:
+        cv = (ROOT / "docs" / "Miguel_Fiandor_CV.md").read_text(encoding="utf-8")
+        for name in ("Panama Papers", "Pandora Papers", "Paradise Papers", "FinCEN Files", "Deforestation Inc"):
+            if name in self.text:
+                with self.subTest(name=name):
+                    self.assertIn(name, cv)
+
     def test_no_personal_phone(self) -> None:
         self.assertNotIn("666", self.text)
 
