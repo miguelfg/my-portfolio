@@ -1,136 +1,131 @@
-# Intro
+---
+pagetitle: Miguel Fiandor Gutiérrez · AI & Data Engineering Consultant
+---
 
-I am a computer engineer and I love to work on data projects. For the last 11 years my main activities have been to develop ETLs, perform data analysis, feature engineering, geolocate data, and smaller doses of visualization and data science. I am specialized in Neo4j Graph Databases, widely used in ICIJ's tax-havens related projects, that ended-up contributing to the Offshoreleaks Database. During last years I have also acquired a ML Scientist track at DataCamp and an OSINT certification.
+::: {.masthead}
+# Miguel Fiandor Gutiérrez
 
-# Personal Info
+[AI & Data Engineering Consultant]{.role}
 
-Miguel Fiandor Gutiérrez
+[miguel.fiandor.gutierrez@gmail.com](mailto:miguel.fiandor.gutierrez@gmail.com) · [github.com/miguelfg](https://github.com/miguelfg) · [linkedin.com/in/mfiandor](https://www.linkedin.com/in/mfiandor/) · [miguelfg.github.io/my-portfolio](https://miguelfg.github.io/my-portfolio/)
+:::
 
-Madrid, Spain
+::: {.rail}
+## Availability
 
-Borned in 1983
+Remote · EU and US East time zones\
+Full or part time, or project basis
 
-Phone: +34 666 91 62 99
+## Core stack
 
+**Language & data**\
+[Python · Pandas · NumPy · Jupyter · REST / OpenAPI]{.mono}
 
-[Email](miguel.fiandor.gutierrez@gmail.com) | [Website](https://miguelfg.github.io/my-portfolio/) | [Github](https://github.com/miguelfg) | [Linkedin](https://www.linkedin.com/in/mfiandor/) | [DataCamp](https://www.datacamp.com/portfolio/miguelfiandorgutierrez) | [Twitter](https://x.com/mfiandor)
+**GenAI & agents**\
+[Claude · Codex · MCP · CrewAI · LangChain · AI skills]{.mono}
 
+**Local models**\
+[llama.cpp · Ollama · Qwen]{.mono}
 
-# Employment experience
+**ML & NLP**\
+[Scikit-Learn · spaCy]{.mono}
 
-- **Jun 2015 → Current – Data analyst and engineer – [International Consortium of Investigative Journalists (ICIJ)](https://www.icij.org/about/)**
+**Storage & graph**\
+[Neo4j · PostgreSQL · SQLite · Elasticsearch]{.mono}
 
-	 I have been part of both, the Tech and Data & Research teams at ICIJ, participating in 9 awarded international investigation projects like: The Panama Papers, Mauritius Leaks, The Paradise Papers, The Implant Files, FinCEN Files, Pandora Papers, Uber Files, Deforestation Inc. and Cyprus Confidential summing over 50 recognized investigative journalism awards.
+**Apps & BI**\
+[Streamlit · Django · Metabase · Linkurious]{.mono}
 
-	 I have been responsible of multiple data tasks since the 'Panama Papers', Pulitzer winner project published by ICIJ. I transformed millions of documents into structured and graph databases to finally feed the OffshoreLeaks Database. Some data tasks performed are: web scraping, PDFs extraction and parsing, standardization, data analysis, dashboarding, features extraction, geolocation, country classification, Graph DB creation and management.
-	 I have also contributed optimizing research tasks and improving searches, finding new data sources, and helping to develop our tools [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula]().
+**Cloud & ops**\
+[GCP Cloud Run · AWS · Docker · Git]{.mono}
 
-	Tools and Skills: Python, Pandas, Jupyter Notebook, Neo4j Graph DB, Linkurious, Data Analysis, Visidata, Streamlit, Amazon AWS, NLP,Scikit-Learn, Docker.
+## Certifications
 
-- **Jul 2014 → Apr 2015 – Python/Django web developer – Freelance Developer**
+Neo4j Certified Professional [2018]{.mono}\
+Elastic Certified Engineer I [2020]{.mono}\
+OSINT Judicial Expert, UNED [2021]{.mono}
 
-	I worked on remote as web and rest API developer for two startups:
-		- Apparcando Startup: A project to build a renting market of private parking lots.
-		- Estigi: A shopping center online, multi-vendor e-commerce project.
+## Languages
 
-	Tools and Skills: Django, Django-Rest-Framework, Tastypie, Amazon Aws Boto, Git, Fabric, Postgresql, Celery, Jira, Celery.
+Spanish, native\
+English, professional
+:::
 
-- **May 2013 → Jun 2015 – Entrepeneur – Transparencia de Cuentas Públicas**
+::: {.main}
+## Profile
 
-	I have started my own project in opendata and transparency. The aim of the project was to increase the transparency of	the public administrations accounts in Spain by building an open-data website for the society and statistical reports for businesses and professionals in the public consulting sector.
+I design and build data and AI systems that turn messy sources into decisions. That covers scraping and extraction pipelines, graph databases, analytical dashboards and, more recently, agentic tools that run on hosted or local LLMs. Over 11 years at the ICIJ I engineered the data behind nine global investigations that won more than 50 journalism awards. I now help teams design, build and integrate GenAI solutions that hold up in production.
 
-	Tools and Skills: Python, Django, Django-Rest-Framework, D3.JS, Javascript, HTML, CSS
+## Services
 
-- **Sep 2010 → Sep 2012 – IT manager and support – [Acciona Energy](https://www.acciona-energia.com/)**
+1. **GenAI solutions & agentic systems.** Design, develop and integrate GenAI into products and workflows, from feasibility study to production, on hosted or on-premise local models.
+2. **Data pipelines & extraction.** Web scraping, PDF parsing, standardization and ETL from millions of documents into structured stores.
+3. **Graph & investigative data.** Entity resolution, Neo4j modeling and OSINT research for fraud, compliance and journalism.
+4. **Dashboards & internal tools.** Streamlit and Metabase analytics, CLIs and AI skills that non-engineers can operate.
 
-	Coordinator of the IT projects and activity at the electricity market department, like renewal of redundant servers responsible for the market trading, and deployment of a BI interface developed internally in Acciona. I also helped improving and automating tasks of our department about gathering data, Excel processing, and generation of reports.
+## Selected engagements
 
-	Tools and Skills: Python, VBA, Oracle, Oracle11, SQL
+### Ethon Shield · Cybersecurity
+[AI Lead, GenAI feasibility study · Jun 2026 → Oct 2026]{.meta}
 
-# Education
+Assessed whether GenAI can support baseband firmware security analysis. I defined the scope and success criteria, designed the analysis workflow, and built and evaluated a proof of concept on local models (llama.cpp, Qwen).
 
-- **2001 → 2009** - Masters Degree in Computer Engineering at [Universidad Politécnica de Madrid - Facultad de Informática](https://www.fi.upm.es/)
-	- **2006 → 2007** - Exchange Student at [Københavns Universitet - Datalogisk Institut](https://di.ku.dk/)
+### International Consortium of Investigative Journalists (ICIJ)
+[Data Analyst & Engineer, Tech and Data & Research teams · Jun 2015 → Oct 2026]{.meta}
 
-- **2009 -> 2010** - Masters Degree in Renewable Energies and Environmental Care at [Universidad Politécnica de Madrid - ETSIDI](https://upm.es/UPM/Centros/CentrosMadrid/ETSIDisenoIndustrial)
+Engineered data infrastructure for nine major cross-border investigations, including the Panama Papers and the Pandora Papers. I converted millions of leaked documents into structured and graph databases, built scraping and PDF-extraction pipelines and internal dashboards, and improved research and search workflows. I also contributed to open-source tools [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula](https://github.com/ICIJ/datashare-tarentula). **Outcome:** data foundations for work recognized with 50+ awards, including a Pulitzer Prize.
 
-# Other studies
+[Python · Pandas · Neo4j · Linkurious · Streamlit · AWS · NLP · Docker]{.stack}
+:::
 
-- **2012 → 2012**
-	- Young Entrepeneur Programme at Escuela Organización Industrial (EOI Entrepeneurshi
+::: {.page2}
+## Selected projects
 
-- **2021 (duration 7 months)**
-	- Perito Judicial Experto En Búsquedas A Través De Fuentes Abiertas (Osint) 2 Edición at [UNED](https://extension.uned.es/actividad/22068) & [Addpol.org](https://addpol.org/curso/curso-de-perito-judicial-experto-en-busquedas-a-traves-de-fuentes-abiertas-osint/)
+### [CourtListener CLI & AI skill](https://github.com/miguelfg/courtlistener-cli)
+A Python CLI for the CourtListener legal API with 18 command groups, batch processing and JSON/CSV/XLSX export. Its companion skill for Claude, Codex and Gemini turns plain-English legal research requests into CLI actions, which cuts inference-token use by design.
 
-- **2018**
-	- [Certified Neo4j Professional 3.X](https://graphacademy.neo4j.com/certifications/neo4j-certification/)
+### [API-to-CLI skillset](https://github.com/miguelfg/api-to-cli-skillset)
+Three published AI skills that turn API documentation into an OpenAPI spec, a PRD and a Python CLI scaffold, built for analysts and researchers working in Claude Code or Codex.
 
-- **2020**
-	-  [Certified ElasticSearch Engineer I](https://www.elastic.co/es/training/elasticsearch-engineer)
+### [Agentic Text2SQL](https://youtu.be/taSEfkEFEIs)
+A CrewAI and Streamlit app that lets non-technical users query business databases in natural language. A three-agent pipeline raises SQL quality, and a batch CLI benchmarks models and providers across databases.
 
-- **2022 -> 2024**
-	- [DataCamp Training](https://www.datacamp.com/portfolio/miguelfiandorgutierrez)
-		- Full Track: Machine Learning Scientist (25 courses)
-		- Other taken Courses:
-			- Advanced Deep Learning with Keras
-			- Advanced NLP with spaCy
-			- ChatGPT Prompt Engineering for Developers
-			- Extreme Gradient Boosting with XGBoost
-			- Image Modeling with Keras
-			- Intermediate Data Visualization with Seaborn
-			- Intermediate Network Analysis in Python
-			- Introduction to Deep Learning with Keras
-			- Introduction to Network Analysis in Python
-			- Introduction to TensorFlow in Python
-			- Machine Learning with scikit-learn
-	- [DeepLearning.ai](https://www.deeplearning.ai/)
-		- [Preprocessing Unstructured Data for LLM Applications](https://learn.deeplearning.ai/accomplishments/47e1f271-dc25-4338-8ea3-936da2878718?usp=sharing)
-		- [Functions, Tools and Agents with LangChain](https://learn.deeplearning.ai/accomplishments/32b0e6d3-1a08-4a03-9dce-f4f6335bde7e?usp=sharing)
-		- [LangChain for LLM Application Development](https://learn.deeplearning.ai/accomplishments/bb85353b-9f11-45d0-9c91-a311d4d2ce1a?usp=sharing)
-		- [Practical Multi AI Agents and Advanced Use Cases with crewAI](https://learn.deeplearning.ai/accomplishments/1417b3c6-12b7-4583-9156-0b73399e365a?usp=sharing)
-		- [Multi AI Agent Systems with crewAI](https://learn.deeplearning.ai/accomplishments/134da8eb-8eaf-463a-832b-d636870683d0?usp=sharing)
-		- [AI Agents in LangGraph](https://learn.deeplearning.ai/accomplishments/c95c4f6d-d4f7-481e-8c21-d4bd3ddbd940?usp=sharing)
-		- [Pair Programming with a Large Language Model](https://learn.deeplearning.ai/accomplishments/a375b650-18df-46ab-a3f8-f1f4ef888496?usp=sharing)
-		- [LangChain Chat with Your Data](https://learn.deeplearning.ai/accomplishments/a05d7091-ac93-42a2-9e31-cc00c2770e13?usp=sharing)
-		- [Open Source Models with Hugging Face](https://learn.deeplearning.ai/accomplishments/d3abd6a5-6707-4b78-995d-ebe1d3468fda?usp=sharing)
+### [Spanish public property auctions](https://subasta-data-tlwcqczo4a-no.a.run.app/dashboard/)
+A pipeline that collects and normalizes BOE auction data, with an analytical dashboard on Google Cloud Run and collection jobs run by Cloud Run Jobs and Scheduler.
 
-# Tools
+### Cancer Calculus
+Clinical-trial research for a published project, using a ClinicalTrials.gov MCP server and Claude's extended research.
 
-- VS Code
-- Streamlit
-- Github Copilot
-- Visidata
-- Jupyter Notebooks
-- OSINT
-- Metabase
+### Public-data dashboards
+Deployed analytics for [Toyota used-car sales in Spain](https://toyota-ocasion-stats-891726790351.europe-southwest1.run.app), [Roadsurfer European spots](https://roadsurfer-dashboard-891726790351.europe-southwest1.run.app) and [Madrid daily pollen](https://dashboard-polen-madrid-891726790351.europe-southwest1.run.app).
 
-# Personal projects
+## Earlier career
 
-### [Toyota Second-Hand Dashboard](https://toyota-ocasion-stats-891726790351.europe-southwest1.run.app)
+::: {.ledger}
+[2014 → 2015]{.mono} **Freelance Python/Django developer.** Built web platforms and REST APIs for two startups, Apparcando and Estigi.
 
-Dashboard with statistics of the second-hand cars sold in Spain by Toyota.
+[2013 → 2015]{.mono} **Founder, Transparencia de Cuentas Públicas.** Ran an open-data platform on Spanish public accounts.
 
-### [Roadsurfer Spots Analysis](https://roadsurfer-dashboard-891726790351.europe-southwest1.run.app)
+[2010 → 2012]{.mono} **IT manager, Acciona Energy.** Ran trading-system infrastructure, an internal BI rollout and reporting automation.
+:::
 
-Analysis and Dashboard of all european spots served in Road Surfer.
+## Education
 
-### [Madrid Polen Dashboard](https://dashboard-polen-madrid-891726790351.europe-southwest1.run.app)
+::: {.ledger}
+[2001 → 2009]{.mono} **MSc Computer Engineering**, Universidad Politécnica de Madrid. Exchange year at the University of Copenhagen (DIKU).
 
-Interactive dashboard with daily pollen levels in Madrid.
+[2009 → 2010]{.mono} **MSc Renewable Energies & Environment**, Universidad Politécnica de Madrid (ETSIDI).
 
-# Presentations & Talks
+[2022 → 2024]{.mono} **Continuing education.** [DataCamp](https://www.datacamp.com/portfolio/miguelfiandorgutierrez) Machine Learning Scientist track (25 courses) and [DeepLearning.ai](https://learn.deeplearning.ai/u/01JBFNWJHRACABBMKA829KXDHY?usp=sharing) courses on LLM apps, agents and LangGraph.
+:::
 
-#### 2024 - [Graph4Good: Building a better world with connected data](https://neo4j.com/connections/graphs4good-building-a-better-world-with-connected-data/)
+## Talks
 
-#### 2021 - [Las 4 Ps: Python y Pandas en Pandora Papers.](https://www.youtube.com/watch?v=KX_RD1SFHFg)
+::: {.ledger}
+[2024]{.mono} [Graphs4Good: Building a better world with connected data](https://neo4j.com/connections/graphs4good-building-a-better-world-with-connected-data/), Neo4j Connections
 
-#### 2017 - [El BackOffice de un Premio Pulitzer: Los Papeles de Panamá](https://discover.events.com/es/comunidad-de-madrid/salamanca/e/business/neo4j-fraud-masterclass-madrid-silken-puerta-america-209764174)
+[2021]{.mono} [Las 4 Ps: Python y Pandas en Pandora Papers](https://www.youtube.com/watch?v=KX_RD1SFHFg)
 
-#### 2016 - [SRCCON transcript - Tools to securely search millions of documents remotely and across borders](https://2016.srccon.org/transcriptions/SRCCON2016-tools-document-search/)
-
-
-# Likes
-
-- Padel and climbing.
-- Piano.
-- AI and OSINT.
+[2017]{.mono} El BackOffice de un Premio Pulitzer: Los Papeles de Panamá, Neo4j Masterclass Madrid
+:::
+:::
