@@ -88,6 +88,11 @@ class PortfolioPageTests(unittest.TestCase):
                 with self.subTest(title=title):
                     self.assertGreaterEqual(len(underline), len(title))
 
+    def test_named_link_texts_unique(self) -> None:
+        # docutils warns and drops the target when two named links share a text
+        names = re.findall(r"`([^`<]+?) <[^>]+>`_(?!_)", self.text)
+        self.assertEqual(len(names), len(set(names)), names)
+
     def test_images_exist(self) -> None:
         for ref in re.findall(r"\.\. image:: (/images/\S+)", self.text):
             with self.subTest(ref=ref):

@@ -35,7 +35,7 @@ CourtListener CLI & AI skill
 
 A Python CLI for the CourtListener legal API with 18 command groups, batch processing and JSON/CSV/XLSX export. Its companion skill for Claude, Codex and Gemini turns plain-English legal research requests into CLI actions, which cuts inference-token use by design.
 
-`View on GitHub → <https://github.com/miguelfg/courtlistener-cli>`_
+`View on GitHub → <https://github.com/miguelfg/courtlistener-cli>`__
 
 ----
 
@@ -44,7 +44,7 @@ API-to-CLI skillset
 
 Three published AI skills that turn API documentation into an OpenAPI spec, a PRD and a Python CLI scaffold, built for analysts and researchers working in Claude Code or Codex.
 
-`View on GitHub → <https://github.com/miguelfg/api-to-cli-skillset>`_
+`View on GitHub → <https://github.com/miguelfg/api-to-cli-skillset>`__
 
 ----
 

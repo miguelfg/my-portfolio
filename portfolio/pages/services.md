@@ -32,7 +32,7 @@ Web scraping, PDF parsing, standardization and ETL from millions of documents in
 Entity resolution, Neo4j modeling and OSINT research for fraud, compliance and journalism.
 
 - **Stack:** [Neo4j](https://neo4j.com/) (Certified Professional), Linkurious, [FollowTheMoney](https://followthemoney.tech/docs/cli/), [OpenCorporates](https://opencorporates.com/), [OpenSanctions](https://www.opensanctions.org/), [UK Companies House](https://www.gov.uk/government/organisations/companies-house), satellite imagery ([EO Browser](https://apps.sentinel-hub.com/eo-browser/), [Global Forest Watch](https://www.globalforestwatch.org/map/)). OSINT Judicial Expert, UNED.
-- **Recent work:** graph data for ICIJ investigations such as the [Panama Papers](https://www.icij.org/investigations/panama-papers/), [FinCEN Files](https://www.icij.org/investigations/fincen-files/) and [Deforestation Inc.](https://www.icij.org/investigations/deforestation-inc/). Contributions to ICIJ's open-source [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula](https://github.com/ICIJ/datashare-tarentula).
+- **Recent work:** graph data for ICIJ investigations such as the [Panama Papers](https://www.icij.org/investigations/panama-papers/), [FinCEN Files](https://www.icij.org/investigations/fincen-files/) and [Deforestation Inc](https://www.icij.org/investigations/deforestation-inc/). Contributions to ICIJ's open-source [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula](https://github.com/ICIJ/datashare-tarentula).
 
 ## Dashboards & internal tools
 
