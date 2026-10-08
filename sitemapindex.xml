@@ -10,10 +10,6 @@
   <lastmod>2026-05-12T11:32:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://miguelfg.github.io/my-portfolio/categories/ai-news.xml</loc>
-  <lastmod>2026-08-28T16:15:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/categories/ai.xml</loc>
   <lastmod>2026-05-12T11:32:00Z</lastmod>
  </sitemap>
@@ -56,10 +52,6 @@
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/agents.xml</loc>
   <lastmod>2026-05-12T11:32:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai-news.xml</loc>
-  <lastmod>2026-08-28T16:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/es/categories/ai.xml</loc>
@@ -111,6 +103,6 @@
  </sitemap>
  <sitemap>
   <loc>https://miguelfg.github.io/my-portfolio/sitemap.xml</loc>
-  <lastmod>2026-10-08T18:27:00Z</lastmod>
+  <lastmod>2026-10-08T19:02:00Z</lastmod>
  </sitemap>
 </sitemapindex>
