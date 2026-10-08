@@ -49,5 +49,50 @@ class ServicesPageTests(unittest.TestCase):
         self.assertNotIn("666", self.text)
 
 
+class PortfolioPageTests(unittest.TestCase):
+    PROJECT_URLS = [
+        "https://github.com/miguelfg/courtlistener-cli",
+        "https://github.com/miguelfg/api-to-cli-skillset",
+        "https://youtu.be/taSEfkEFEIs",
+        "https://subasta-data-tlwcqczo4a-no.a.run.app/dashboard/",
+        "https://toyota-ocasion-stats-891726790351.europe-southwest1.run.app",
+        "https://roadsurfer-dashboard-891726790351.europe-southwest1.run.app",
+        "https://dashboard-polen-madrid-891726790351.europe-southwest1.run.app",
+    ]
+
+    def setUp(self) -> None:
+        self.text = read_page("portfolio.rst")
+
+    def test_slug_and_title_unchanged(self) -> None:
+        meta = metadata(self.text)
+        self.assertEqual(meta["slug"], "portfolio")
+        self.assertEqual(meta["title"], "Portfolio")
+
+    def test_every_cv_project_linked(self) -> None:
+        for url in self.PROJECT_URLS:
+            with self.subTest(url=url):
+                self.assertIn(url, self.text)
+
+    def test_engagements_present(self) -> None:
+        self.assertIn("Ethon Shield", self.text)
+        self.assertIn("International Consortium of Investigative Journalists", self.text)
+
+    def test_cancer_calculus_has_no_link(self) -> None:
+        self.assertIn("Cancer Calculus", self.text)
+        self.assertNotIn("`Cancer Calculus <", self.text)
+
+    def test_heading_underlines_long_enough(self) -> None:
+        lines = self.text.splitlines()
+        for title, underline in zip(lines, lines[1:]):
+            if underline and set(underline) <= set("=-~") and len(underline) >= 3 and title.strip():
+                with self.subTest(title=title):
+                    self.assertGreaterEqual(len(underline), len(title))
+
+    def test_images_exist(self) -> None:
+        for ref in re.findall(r"\.\. image:: (/images/\S+)", self.text):
+            with self.subTest(ref=ref):
+                self.assertTrue((ROOT / "portfolio" / ref.lstrip("/")).is_file())
+
+
 if __name__ == "__main__":
     unittest.main()
