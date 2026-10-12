@@ -24,9 +24,18 @@ International Consortium of Investigative Journalists (ICIJ)
 
 *Data Analyst & Engineer, Tech and Data & Research teams · Jun 2015 → Oct 2026*
 
-Engineered data infrastructure for nine major cross-border investigations, including the Panama Papers and the Pandora Papers. I converted millions of leaked documents into structured and graph databases, built scraping and PDF-extraction pipelines and internal dashboards, and improved research and search workflows. I also contributed to open-source tools `Prophecies <https://github.com/icij/prophecies>`_ and `Datashare Tarentula <https://github.com/ICIJ/datashare-tarentula>`_. The data fed the `OffshoreLeaks Database <https://offshoreleaks.icij.org/>`_ and work recognized with 50+ awards, including a Pulitzer Prize.
+Engineered data infrastructure for nine major cross-border investigations, including the Panama Papers, the Pandora Papers and the Coin Laundry crypto investigation. I converted millions of leaked documents into structured and graph databases, built scraping and PDF-extraction pipelines and internal dashboards, and improved research and search workflows. I also contributed to open-source tools `Prophecies <https://github.com/icij/prophecies>`_ and `Datashare Tarentula <https://github.com/ICIJ/datashare-tarentula>`_. The data fed the `OffshoreLeaks Database <https://offshoreleaks.icij.org/>`_ and work recognized with 50+ awards, including a Pulitzer Prize.
 
 *Python · Pandas · Neo4j · Linkurious · Streamlit · AWS · NLP · Docker*
+
+----
+
+Talks & mentions
+================
+
+Cited by the Global Investigative Journalism Network in the `Reporter’s Guide to Investigating Cryptocurrency <https://gijn.org/resource/reporters-guide-to-investigating-cryptocurrency/>`__, `The People and the Technology Behind the Panama Papers <https://gijn.org/stories/the-people-and-the-technology-behind-the-panama-papers/>`__ and `How a Global Team Used Data to Interrogate Green Claims for Deforestation Inc. <https://gijn.org/stories/how-a-global-team-used-data-to-interrogate-green-claims-for-deforestation-inc/>`__.
+
+Selected talks: `Graphs4Good: Building a better world with connected data <https://neo4j.com/connections/graphs4good-building-a-better-world-with-connected-data/>`__, `Las 4 Ps: Python y Pandas en Pandora Papers <https://www.youtube.com/watch?v=KX_RD1SFHFg>`__ and El BackOffice de un Premio Pulitzer: Los Papeles de Panamá.
 
 ----
 
