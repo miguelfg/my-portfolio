@@ -47,7 +47,7 @@ class ServicesPageTests(unittest.TestCase):
 
     def test_icij_investigations_backed_by_cv(self) -> None:
         cv = (ROOT / "docs" / "Miguel_Fiandor_CV.md").read_text(encoding="utf-8")
-        for name in ("Panama Papers", "Pandora Papers", "Paradise Papers", "FinCEN Files", "Deforestation Inc"):
+        for name in ("Panama Papers", "Pandora Papers", "Paradise Papers", "FinCEN Files", "Deforestation Inc", "Coin Laundry"):
             if name in self.text:
                 with self.subTest(name=name):
                     self.assertIn(name, cv)
@@ -83,6 +83,11 @@ class PortfolioPageTests(unittest.TestCase):
     def test_engagements_present(self) -> None:
         self.assertIn("Ethon Shield", self.text)
         self.assertIn("International Consortium of Investigative Journalists", self.text)
+
+    def test_cv_mentions_present(self) -> None:
+        self.assertIn("Coin Laundry", self.text)
+        self.assertIn("Global Investigative Journalism Network", self.text)
+        self.assertIn("Reporter’s Guide to Investigating Cryptocurrency", self.text)
 
     def test_cancer_calculus_has_no_link(self) -> None:
         self.assertIn("Cancer Calculus", self.text)

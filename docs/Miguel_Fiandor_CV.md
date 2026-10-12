@@ -73,7 +73,7 @@ Assessed whether GenAI can support baseband firmware security analysis. I define
 ### International Consortium of Investigative Journalists (ICIJ)
 [Data Analyst & Engineer, Tech and Data & Research teams · Jun 2015 → Oct 2026]{.meta}
 
-Engineered data infrastructure for nine major cross-border investigations, including the Panama Papers and the Pandora Papers. I converted millions of leaked documents into structured and graph databases, built scraping and PDF-extraction pipelines and internal dashboards, and improved research and search workflows. I also contributed to open-source tools [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula](https://github.com/ICIJ/datashare-tarentula). **Outcome:** data foundations for work recognized with 50+ awards, including a Pulitzer Prize.
+Engineered data infrastructure for nine major cross-border investigations, including the Panama Papers, the Pandora Papers and the Coin Laundry crypto investigation. I converted millions of leaked documents into structured and graph databases, built scraping and PDF-extraction pipelines and internal dashboards, and improved research and search workflows. I also contributed to open-source tools [Prophecies](https://github.com/icij/prophecies) and [Datashare Tarentula](https://github.com/ICIJ/datashare-tarentula). **Outcome:** data foundations for work recognized with 50+ awards, including a Pulitzer Prize.
 
 [Python · Pandas · Neo4j · Linkurious · Streamlit · AWS · NLP · Docker]{.stack}
 :::
@@ -119,9 +119,11 @@ Deployed analytics for [Toyota used-car sales in Spain](https://toyota-ocasion-s
 [2022 → 2024]{.mono} **Continuing education.** [DataCamp](https://www.datacamp.com/portfolio/miguelfiandorgutierrez) Machine Learning Scientist track (25 courses) and [DeepLearning.ai](https://learn.deeplearning.ai/u/01JBFNWJHRACABBMKA829KXDHY?usp=sharing) courses on LLM apps, agents and LangGraph.
 :::
 
-## Talks
+## Talks & mentions
 
 ::: {.ledger}
+[GIJN]{.mono} Cited in the Global Investigative Journalism Network's [Reporter's Guide to Investigating Cryptocurrency](https://gijn.org/resource/reporters-guide-to-investigating-cryptocurrency/), [The People and the Technology Behind the Panama Papers](https://gijn.org/stories/the-people-and-the-technology-behind-the-panama-papers/) and [How a Global Team Used Data to Interrogate Green Claims for Deforestation Inc.](https://gijn.org/stories/how-a-global-team-used-data-to-interrogate-green-claims-for-deforestation-inc/)
+
 [2024]{.mono} [Graphs4Good: Building a better world with connected data](https://neo4j.com/connections/graphs4good-building-a-better-world-with-connected-data/), Neo4j Connections
 
 [2021]{.mono} [Las 4 Ps: Python y Pandas en Pandora Papers](https://www.youtube.com/watch?v=KX_RD1SFHFg)
