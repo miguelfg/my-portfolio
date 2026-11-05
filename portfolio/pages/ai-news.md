@@ -20,6 +20,18 @@
         <span class="ai-news-card__thumb-label">AI NEWS DIGEST</span>
       </div>
       <div class="ai-news-card__body">
+        <div class="ai-news-card__meta"><span class="ai-news-card__pill">AI News digest</span><time datetime="2026-11-05">Nov 5, 2026</time></div>
+        <h2>AI News Summary</h2>
+        <p>GPU infrastructure, visual generation, development tools, and new agent releases.</p>
+        <a class="ai-news-card__link" href="/posts/ai-news-summary-2026-11-05/">Read more <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    <article class="ai-news-card featured">
+      <div class="ai-news-card__thumb" aria-hidden="true">
+        <span class="ai-news-card__thumb-grid" aria-hidden="true"></span>
+        <span class="ai-news-card__thumb-label">AI NEWS DIGEST</span>
+      </div>
+      <div class="ai-news-card__body">
         <div class="ai-news-card__meta"><span class="ai-news-card__pill">AI News digest</span><time datetime="2026-11-04">Nov 4, 2026</time></div>
         <h2>AI News Summary</h2>
         <p>OpenAI strategy, coding agents, technical blogs, and the latest local-serving signals.</p>

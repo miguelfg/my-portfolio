@@ -64,7 +64,7 @@ class AiNewsIndexTests(unittest.TestCase):
         self.assertNotIn(">ROUNDUP<", text)
         self.assertNotIn(">Roundup<", text)
         self.assertNotIn('<span class="ai-news-card__thumb-date">', text)
-        self.assertEqual(text.count('ai-news-card__pill">AI News digest'), 12)
+        self.assertEqual(text.count('ai-news-card__pill">AI News digest'), 13)
 
 
 if __name__ == "__main__":
